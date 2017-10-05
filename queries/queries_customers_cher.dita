@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="queries_customers_cher" xml:lang="nl-NL">
+    <title>Taak: Klanten met doos Kers</title>
+    <shortdesc>Een selectiequery met drie tabellen.</shortdesc>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords>
+                <indexterm>Query<indexterm>selectiequery</indexterm></indexterm>
+            </keywords>
+        </metadata>
+    </prolog>
+    <taskbody>
+        <context>
+            <p>INFORMATIEBEHOEFTE</p>
+            <p>In de laatste maand van het kalenderjaar wordt geconstateerd dat de uiterste
+                verkoopdatum van de dozen KERS in zicht is. De verkoopafdeling wil daarom een
+                    <q>direct mail</q> campagne organiseren naar de klanten die ooit een doos KERS
+                gekocht hebben. Maak een overzicht van alle klanten met hun achternaam, voornaam en
+                volledige adres die ooit minstens 1 doos KERS gekocht hebben.</p>
+            <p>ANALYSE</p>
+            <p>De benodigde klantgegevens (voornaam, achternaam, straat, postcode, plaats) staan in
+                de tabel Klanten. De soort dozen die afgenomen zijn, zijn te vinden in het veld
+                Dooscode in de tabel Orderdetails. Om een order aan een klant kunnen koppelen is ook
+                nog de tabel Orders nodig. De tabel Orders vormt de verbindende schakel tussen de
+                tabel Klanten en de tabel Orderdetails. Verder moet als criterium in de query
+                gebruikt worden dat het veld Dooscode de waarde KERS heeft.</p>
+            <p>Bij het gebruik van de Wizard om de query te maken, kan volstaan worden met alleen de
+                benodigde velden uit de tabellen Klanten en Orderdetails toe te voegen. De Wizard
+                zorgt er dan voor dat automatisch de tabel Orders wordt toegevoegd omdat deze de
+                verbinding vormt tussen de tabellen Klanten en Orderdetails. Bij het handmatig vanaf
+                nul maken van de query moet je er zelf aan denken om de tabel Orders toe te voegen.
+                Daarom wordt in deze taak de voorkeur gegeven aan het gebruik van de Wizard.</p>
+            <note type="attention">Dat er minimaal 1 doos is afgenomen hoeft niet als criterium te
+                worden opgenomen omdat bij gekoppelde tabellen automatisch hieraan voldaan
+                wordt.</note>
+        </context>
+        <steps>
+            <step>
+                <cmd>Open de database <keyword keyref="example_db_file"/>.</cmd>
+            </step>
+            <step
+                conref="queries_customername_ordercodes.dita#queries_customername_ordercodes/wizard_customers_start"
+                conrefend="queries_customername_ordercodes.dita#queries_customername_ordercodes/wizard_customers_end">
+                <cmd/>
+            </step>
+            <step>
+                <cmd>Voeg de volgende velden toe: Voornaam, Achternaam, Straat, Postcode, Plaats.
+                    Selecteer het veld en gebruik dan de knop <uicontrol><image
+                            keyref="button_add_field"/></uicontrol>.</cmd>
+                <info>
+                    <note type="tip">Je kunt ook dubbelklikken op een veld om deze toe te voegen of
+                        weer te verwijderen.</note>
+                </info>
+            </step>
+            <step>
+                <cmd>Selecteer onder <uicontrol>Tabellen/query's</uicontrol>
+                    <option>Tabel: Orderdetails</option>.</cmd>
+                <stepresult>De velden van de tabel <varname>Orderdetails</varname> worden getoond in
+                    het vak <uicontrol>Beschikbare velden</uicontrol>.</stepresult>
+            </step>
+            <step>
+                <cmd>Voeg het veld <varname>Dooscode</varname> toe.</cmd>
+                <stepresult>
+                    <fig>
+                        <title>Wizard Selectiequery met toegevoegde velden</title>
+                        <image keyref="q_customers_cher_fields">
+                            <alt>Wizard selectiequery met toegevoegde velden</alt>
+                        </image>
+                    </fig>
+                </stepresult>
+            </step>
+            <step>
+                <cmd>Klik op <uicontrol>Volgende</uicontrol>.</cmd>
+                <stepresult>Je kunt nu aangegeven of Details of Totalen getoond moeten
+                    worden.</stepresult>
+            </step>
+            <step>
+                <cmd>Selecteer <uicontrol>Details (alle velden van alle records
+                        weergeven)</uicontrol> en klik op <uicontrol>Volgende</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Geef de query als naam <userinput>Klanten en Kers</userinput>, selecteer
+                        <uicontrol>Het queryontwerp wijzigen</uicontrol> en klik op
+                        <uicontrol>Voltooien</uicontrol>.</cmd>
+                <stepresult>De query wordt opgeslagen en verschijnt daarna in de ontwerpweergave.<fig>
+                        <title>Ontwerpweergave query <wintitle>Klanten en Kers</wintitle></title>
+                        <image keyref="q_customers_cher_design">
+                            <alt>Ontwerp selectiequery klanten en kers</alt>
+                        </image>
+                    </fig></stepresult>
+            </step>
+            <step>
+                <cmd>Typ onder <varname>Dooscode</varname> in het vak Criteria
+                        <userinput>KERS</userinput> en laat dit veld niet weergeven.</cmd>
+                <stepresult>
+                    <fig>
+                        <title>Selectiecriterium in ontwerp query</title>
+                        <image keyref="q_customers_cher_criteria">
+                            <alt>Criterium dooscode wordt kers</alt>
+                        </image>
+                    </fig>
+                </stepresult>
+            </step>
+            <step>
+                <cmd>Schakel naar de <uicontrol>Gegevensbladweergave</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Sluit de query en beantwoord de vraag om de wijzigingen op te slaan met
+                        <uicontrol>Ja</uicontrol>.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

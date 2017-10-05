@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="forms_controls_layout" xml:lang="nl-NL">
+    <title>Besturingselementen en Indelingen</title>
+    <shortdesc>Hoe je met besturingselementen kunt werken.</shortdesc>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords>
+                <indexterm>Besturingselement <indexterm>afhankelijk</indexterm>
+                    <indexterm>niet-afhankelijk</indexterm>
+                    <indexterm>berekend</indexterm>
+                    <indexterm>eigenschappen</indexterm>
+                </indexterm>
+                <indexterm>Indeling<indexterm>gestapeld</indexterm><indexterm>tabelvormig</indexterm></indexterm>
+                <indexterm>Gestapelde indeling</indexterm>
+                <indexterm>Tabelvormige indeling</indexterm>
+                <indexterm>Eigenschappenvenster</indexterm>
+            </keywords>
+        </metadata>
+    </prolog>
+    <conbody>
+        <p><term>Besturingselementen</term> zijn onderdelen van een formulier of rapport waarmee je
+            gegevens kunt invoeren, bewerken of weergeven. Een tekstvak is bijvoorbeeld het meest
+            gebruikte besturingselement voor het weergeven van gegevens. Andere veelgebruikte
+            besturingselementen zijn opdrachtknoppen, selectievakjes en keuzelijsten.</p>
+        <p>Besturingselementen kunnen afhankelijk, niet-afhankelijk of berekend zijn:<dl>
+                <dlentry>
+                    <dt>Afhankelijk besturingselement</dt>
+                    <dd>Een besturingselement waarvan de gegevensbron een veld in tabel of een query
+                        is. Je gebruikt afhankelijke besturingselementen om waarden weer te geven
+                        die afkomstig zijn uit velden.</dd>
+                </dlentry>
+                <dlentry>
+                    <dt>Niet-afhankelijk besturingselement</dt>
+                    <dd>Een besturingselement zonder gegevensbron. Je gebruikt niet-afhankelijke
+                        besturingselementen voor het weergeven van informatie, afbeeldingen, lijnen,
+                        ...</dd>
+                </dlentry>
+                <dlentry>
+                    <dt>Berekend besturingselement</dt>
+                    <dd>Een besturingselement waarvan de gegevensbron een expressie is en niet een
+                        veld.</dd>
+                </dlentry>
+            </dl></p>
+        <p><term>Indelingen</term> zijn hulpmiddelen waarmee je de besturingselementen horizontaal
+            en verticaal kunt uitlijnen. Indelingen zijn optioneel en worden meestal gebruikt om het
+            formulier een uniform uiterlijk te geven. Indelingen zijn er in twee soorten:<dl>
+                <dlentry>
+                    <dt>Tabelvormige indeling</dt>
+                    <dd>In tabelvormige besturingselementindelingen worden besturingselementen
+                        gerangschikt in rijen en kolommen zoals in een werkblad, met labels aan de bovenkant.<fig>
+                            <title>Voorbeeld tabelvormige indeling</title>
+                            <image keyref="layout_controls_tabular">
+                                <alt>Voorbeeld tabelvormige indeling</alt>
+                            </image>
+                        </fig></dd>
+                </dlentry>
+                <dlentry>
+                    <dt>Gestapelde indeling</dt>
+                    <dd>In gestapelde indelingen worden besturingselementen verticaal gerangschikt
+                        zoals op een papieren formulier, met een label links van elk besturingselement.<fig>
+                            <title>Voorbeeld gestapelde indeling</title>
+                            <image keyref="layout_controls_stacked">
+                                <alt>Voorbeeld gestapelde indeling</alt>
+                            </image>
+                        </fig></dd>
+                </dlentry>
+            </dl></p>
+        <p>Omdat op formulieren vaak besturingselementen anders geordend moeten worden is het van
+            belang om te weten hoe je besturingselementen kunt bewerken en verplaatsen. Veel
+            bewerkingen kun je op meerdere besturingselementen tegelijk uitvoeren. Om
+            besturingselementen te bewerken moet je deze altijd eerst selecteren. Zorg er ook voor
+            dat altijd het <wintitle>Eigenschappenvenster</wintitle> zichtbaar is.</p>
+        <dl>
+            <dlentry>
+                <dt>selecteren</dt>
+                <dd>Klik op het besturingselement.</dd>
+            </dlentry>
+            <dlentry>
+                <dt>meervoudige selectie</dt>
+                <dd>Klik met ingedrukte Shift toets op de besturingselementen, of sleep met de muis
+                    een rechthoekig kader om de besturingselementen.</dd>
+            </dlentry>
+            <dlentry>
+                <dt>selectie opheffen</dt>
+                <dd>Op een lege plek in het formulier klikken.</dd>
+            </dlentry>
+            <dlentry>
+                <dt>verplaatsen</dt>
+                <dd>Versleep het besturingselement via het vierkantje linksboven. Precieze plaats op
+                    het formulier kan via het Eigenschappenvenster ingesteld wordt.</dd>
+            </dlentry>
+            <dlentry>
+                <dt>afmetingen</dt>
+                <dd>Versleep een van de formaatgrepen (in het midden of in de hoekpunten van de
+                    selectierechthoek). Precieze afmetingen kunnen via het Eigenschappenvenster
+                    ingesteld worden.</dd>
+            </dlentry>
+            <dlentry>
+                <dt>uitlijnen</dt>
+                <dd>Via de opties bij <menucascade>
+                        <uicontrol>tabblad Schikken</uicontrol>
+                        <uicontrol>groep uitlijning bepalen</uicontrol>
+                    </menucascade>.</dd>
+            </dlentry>
+            <dlentry>
+                <dt>verwijderen</dt>
+                <dd><uicontrol>Delete</uicontrol> toets.</dd>
+            </dlentry>
+        </dl>
+    </conbody>
+</concept>

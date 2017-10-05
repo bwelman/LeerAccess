@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="queries_first_order_dates" xml:lang="nl-NL">
+    <title>Taak: Eerste order per klant</title>
+    <shortdesc>Oefening van een selectiequery met groeperen en berekening met de functie
+        Min.</shortdesc>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords>
+                <indexterm>Query<indexterm>groeperen</indexterm><indexterm>min</indexterm></indexterm>
+            </keywords>
+        </metadata>
+    </prolog>
+    <taskbody>
+        <context>
+            <p>INFORMATIEBEHOEFTE</p>
+            <p>Maak een overzicht van de eerste order per klant. Geef per klant de klantcode, de
+                naam en de datum waarop deze klant de eerste order heeft geplaatst.</p>
+            <p>ANALYSE</p>
+            <p>De benodigde gegevens staan in de tabellen Klanten en Orders. Er moet dus een query
+                gemaakt te worden die de klantgegevens en de orderdata toont. Het vinden van de
+                eerste order kan gerealiseerd worden door in de Totalen rij de “Group By” te
+                vervangen door “Min”.</p>
+        </context>
+        <steps>
+            <step>
+                <cmd>Open de database <keyword keyref="example_db_file"/>.</cmd>
+            </step>
+            <step>
+                <cmd>Kies <menucascade>
+                        <uicontrol>tab Maken</uicontrol>
+                        <uicontrol>Queryontwerp (groep Query's)</uicontrol>
+                    </menucascade>.</cmd>
+                <stepresult>Access maakt een nieuw leeg queryvenster en toont het dialoogvenster
+                        <wintitle>Tabel weergeven</wintitle>. <fig>
+                        <title>Dialoogvenster <wintitle>Tabel weergeven</wintitle></title>
+                        <image keyref="q_show_table">
+                            <alt>Dialoogvenster tabellen</alt>
+                        </image>
+                    </fig>
+                </stepresult>
+            </step>
+            <step>
+                <cmd>Voeg achtereenvolgens de tabellen <varname>Klanten</varname> en
+                        <varname>Orders</varname> toe en klik daarna op
+                        <uicontrol>Sluiten</uicontrol>.</cmd>
+                <stepresult>De tabellen zijn nu aan het queryvenster toegevoegd.</stepresult>
+            </step>
+            <step>
+                <cmd>Voeg achtereenvolgens de velden <varname>Klantcode</varname>,
+                        <varname>Achternaam</varname> en <varname>Voornaam</varname> (uit Klanten)
+                    en <varname>Orderdatum</varname> (uit Orders) aan het queryraster toe door
+                    dubbel te klikken op de velden.</cmd>
+            </step>
+            <step>
+                <cmd>Klik op <menucascade>
+                        <uicontrol>tab Ontwerp</uicontrol>
+                        <uicontrol>knop Totalen (groep Weergeven/verbergen)</uicontrol>
+                    </menucascade>.</cmd>
+            </step>
+            <step>
+                <cmd>Wijzig de kolomtitel voor <varname>Orderdatum</varname> door aan het begin van
+                    de veldnaam in te typen <userinput>Eerste orderdatum:</userinput>.</cmd>
+                <stepresult>
+                    <fig>
+                        <title>Tabellen en velden voor query Eerste order per klant</title>
+                        <image keyref="q_first_order_dates_design1">
+                            <alt>Tabellen en velden voor de query</alt>
+                        </image>
+                    </fig>
+                </stepresult>
+            </step>
+            <step>
+                <cmd>Klik in de kolom <varname>Orderdatum</varname> in het vak
+                        <varname>Totaal</varname>, klik dan op de keuzepijl die verschijnt en
+                    selecteer <option>Min</option>.</cmd>
+            </step>
+            <step>
+                <cmd>Zet de sorteervolgorde bij <varname>Achternaam</varname> en
+                        <varname>Voornaam</varname> op <uicontrol>Oplopend</uicontrol>.</cmd>
+                <stepresult>
+                    <fig>
+                        <title>Ontwerp query eerste order per klant</title>
+                        <image keyref="q_first_order_dates_design2">
+                            <alt>Ontwerp query eerste order per klant</alt>
+                        </image>
+                    </fig>
+                </stepresult>
+            </step>
+            <step>
+                <cmd>Schakel naar de <uicontrol>Gegevensbladweergave</uicontrol>.</cmd>
+                <stepresult>
+                    <fig>
+                        <title>Resultaat query eerste order per klant</title>
+                        <image keyref="q_first_order_dates_result">
+                            <alt>Resultaat query eerste order per klant</alt>
+                        </image>
+                    </fig>
+                </stepresult>
+            </step>
+            <step>
+                <cmd>Sluit de query en beantwoord de vraag of de wijzigingen bewaard moeten worden
+                    met <uicontrol>Ja</uicontrol>.</cmd>
+                <stepresult>Het venster <wintitle>Opslaan als</wintitle> verschijnt zodat de naam
+                    van de query kan worden opgegeven.</stepresult>
+            </step>
+            <step>
+                <cmd>Typ als naam in <userinput>Datum eerste order per klant</userinput> en klik op
+                        <uicontrol>OK</uicontrol>.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

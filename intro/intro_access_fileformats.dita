@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference id="intro_access_fileformats" xml:lang="nl-NL">
+  <title>Bestandsformaten van Access</title>
+  <shortdesc>Een overzicht van de nieuwe en oude bestandsformaten van Access.</shortdesc>
+  <prolog>
+    <critdates>
+        <created date="2017-10-05"/>
+        <revised modified="2017-10-05"/>
+    </critdates>
+    <metadata>
+      <keywords>
+        <indexterm>Bestandsformaat</indexterm>
+        <indexterm>ACCDB</indexterm>
+        <indexterm>MDB</indexterm>
+      </keywords>
+    </metadata>
+  </prolog>
+  <refbody>
+    <properties>
+      <property>
+        <proptype>ACCDB</proptype>
+        <propdesc>Dit is het standaardformaat voor bestanden gemaakt met Access 2007, 2010, 2013 en
+                        2016.<note type="attention">Omdat de bestandsformaten gelijk zijn kun je
+                        bijvoorbeeld in Access 2007 een database openen die met Access 2016 gemaakt
+                        is. Echter nieuwe functies die in de oudere versies niet beschikbaar zijn
+                        zullen niet werken. Hierdoor kunnen problemen optreden.</note></propdesc>
+      </property>
+      <property>
+        <proptype>MDB</proptype>
+        <propdesc>Dit is het bestandsformaat voor Access 2003 en eerder. Een dergelijk bestand kan
+                    ook door Access 2007, 2010, 2013 en 2016 geopend worden. Ook kan Access 2016 een
+                    database in dit oudere bestandsformaat opslaan.</propdesc>
+      </property>
+    </properties>
+  </refbody>
+</reference>

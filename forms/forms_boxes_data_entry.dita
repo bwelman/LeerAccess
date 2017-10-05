@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="forms_boxes_data_entry" xml:lang="nl-NL">
+    <title>Taak: Invoerformulier Dozen</title>
+    <shortdesc>In een bestaand subformulier wordt een tekstvak vervangen door een keuzelijst met
+        invoervak en moet een bijbehorende query gemaakt worden.</shortdesc>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords>
+                <indexterm>Formulier</indexterm>
+                <indexterm>Besturingselement<indexterm>keuzelijst met
+                    invoervak</indexterm></indexterm>
+            </keywords>
+        </metadata>
+    </prolog>
+    <taskbody>
+        <context>
+            <p>Met het bestaande formulier Dozen kan een bonbon alleen maar via de bonboncode
+                gekozen worden. De opdracht is om dat ook mogelijk te maken voor de naam van de
+                bonbon.</p>
+            <p>Het formulier <wintitle>Dozen</wintitle> bestaat uit het hoofdformulier
+                    <wintitle>Dozen</wintitle> en het subformulier <wintitle>Dozen
+                    subformulier</wintitle>. De keuze van de bonbon gebeurt in het subformulier. Dus
+                alleen het subformulier hoeft aangepast te worden. Daar moet het tekstvak
+                    <uicontrol>Bonbonnaam</uicontrol> vervangen worden door een
+                    <uicontrol>Keuzelijst met invoervak</uicontrol>.</p>
+            <p>Echter <wintitle>Dozen subformulier</wintitle> is gebaseerd op de tabel
+                    <wintitle>Doosdetails</wintitle> en hierin komt Bonbonnaam niet voor. Daarom zal
+                er een query gemaakt moeten worden, gebaseerd op de tabel
+                    <wintitle>Bonbons</wintitle>, die als resultaat de kolommen Bonbonnaam en
+                Bonboncode geeft en die gesorteerd is op Bonbonnaam. Deze nieuwe query is dan de
+                gegevensbron voor de keuzelijst met invoervak.</p>
+        </context>
+        <steps>
+            <step>
+                <cmd>Open de database <keyword keyref="example_db_file"/>.</cmd>
+            </step>
+            <step>
+                <cmd>Kies <menucascade>
+                        <uicontrol>tab Maken</uicontrol>
+                        <uicontrol>Queryontwerp (groep Query's)</uicontrol>
+                    </menucascade> en voeg de tabel <uicontrol>Bonbons</uicontrol> toe. Voeg van
+                    deze tabel de velden <uicontrol>Bonbonnaam</uicontrol> en
+                        <uicontrol>Bonboncode</uicontrol> toe. Sorteer Oplopend op
+                        <uicontrol>Bonbonnaam</uicontrol>.</cmd>
+                <stepresult>
+                    <fig>
+                        <title>Ontwerp query voor invoer bonbonkeuze</title>
+                        <image keyref="q_choose_praline_design">
+                            <alt>Ontwerp query voor invoer bonbonkeuze</alt>
+                        </image>
+                    </fig>
+                </stepresult>
+            </step>
+            <step>
+                <cmd>Sluit de query en bewaar deze onder de naam <userinput>Kies
+                        bonbonnaam</userinput>.</cmd>
+            </step>
+            <step>
+                <cmd>Open het formulier <wintitle>Dozen subformulier</wintitle> in de
+                        <uicontrol>Ontwerpweergave</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Verwijder in de sectie Details het veld
+                    <uicontrol>Bonbonnaam</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Selecteer <menucascade>
+                        <uicontrol>tab Ontwerp</uicontrol>
+                        <uicontrol>Keuzelijst met invoervak (groep Besturingselementen)</uicontrol>
+                    </menucascade> en trek een rechthoekig kader op de plaats van het verwijderde
+                    veld Bonbonnaam.</cmd>
+                <stepresult>De <wintitle>Wizard Keuzelijst met invoervak</wintitle> wordt
+                    opgestart.</stepresult>
+            </step>
+            <step>
+                <cmd>Beantwoord de vragen van de Wizard achtereenvolgens als volgt:</cmd>
+                <info>
+                    <ul>
+                        <li>De waarden voor de keuzelijst worden opgezocht in een tabel of
+                            query.</li>
+                        <li>De waarden voor de keuzelijst worden geleverd door de query
+                                <uicontrol>Kies bonbonnaam</uicontrol>.</li>
+                        <li>De toe te voegen velden zijn Bonbonnaam en Bonboncode.</li>
+                        <li>Sorteervolgorde is Oplopend op Bonbonnaam.</li>
+                        <li>Maak de kolombreedtes passend door een dubbelklik op de rechtergrens van
+                            elke kolom.</li>
+                        <li>De kolom Bonboncode bevat de waarde die opgeslagen moet worden.</li>
+                        <li>De waarde moet opgeslagen worden in het veld Code.</li>
+                        <li>Typ een willekeurige tekst voor het label in. Dit label wordt in de
+                            volgende stap verwijderd omdat de labeltekst al in de formulierkoptekst
+                            voorkomt.</li>
+                    </ul>
+                </info>
+            </step>
+            <step>
+                <cmd>Selecteer het zojuist ingevoerde label dat bij de Keuzelijst hoort en druk dan
+                    op de <uicontrol>Delete</uicontrol> toets om deze te verwijderen.</cmd>
+                <stepresult>
+                    <fig>
+                        <title>Keuzelijst op subformulier Dozen</title>
+                        <image keyref="f_boxes_subform">
+                            <alt>Keuzelijst op subformulier dozen</alt>
+                        </image>
+                    </fig>
+                </stepresult>
+            </step>
+            <step>
+                <cmd>Selecteer de <uicontrol>Keuzelijst met invoervak</uicontrol> en controleer in
+                        <wintitle>Eigenschappenvenster (tab Gegevens)</wintitle> de eigenschap
+                        <uicontrol>Alleen lijst</uicontrol> de waarde <option>Ja</option> heeft. Zo
+                    niet, dan de waarde wijzigen in <option>Ja</option>.</cmd>
+                <stepresult>
+                    <note type="note">Door deze instelling kunnen alleen bonbonnamen uit de lijst
+                        gekozen worden en kunnen er geen nieuwe bonbonnamen ingevoerd worden.</note>
+                </stepresult>
+            </step>
+            <step>
+                <cmd>Sluit het formulier <wintitle>Dozen subformulier</wintitle> en bewaar de
+                    wijzigingen.</cmd>
+            </step>
+            <step>
+                <cmd>Test de nieuwe keuzelijst uit.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

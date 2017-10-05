@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="explore_reports" xml:lang="nl-NL">
+    <title>Taak: Rapport verkennen</title>
+    <shortdesc>De weergavemogelijkheden van rapporten.</shortdesc>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords>
+                <indexterm>Rapport<indexterm>rapportweergave</indexterm><indexterm>ontwerpweergave</indexterm><indexterm>afdrukweergave</indexterm>Afdrukweergave<indexterm>rapport</indexterm></indexterm>
+                <indexterm>Ontwerpweergave<indexterm>rapport</indexterm></indexterm>
+                <indexterm>Rapportweergave</indexterm>
+            </keywords>
+        </metadata>
+    </prolog>
+    <taskbody>
+        <context>
+            <p>Met rapporten kun je de informatie uit de tabellen mooi opgemaakt op het scherm tonen
+                of op papier afdrukken. De getoonde gegevens kunnen afkomstig zijn uit meerdere
+                tabellen en/of query's. Ook berekende waarden zijn mogelijk. Verder kun je een
+                rapport opmaken met titels, kopjes en kop- en voetregels.</p>
+            <p>De belangrijkste weergaven van een rapport zijn:<ul>
+                    <li><uicontrol>Rapportweergave</uicontrol>. In deze weergave kun je de inhoud
+                        van het rapport zien.</li>
+                    <li><uicontrol>Afdrukvoorbeeld</uicontrol>. De weergave van het rapport wanneer
+                        deze wordt afgedrukt.</li>
+                    <li><uicontrol>Ontwerpweergave</uicontrol>. In deze weergave kun je het ontwerp
+                        van het rapport zien en deze aanpassen.</li>
+                </ul></p>
+        </context>
+        <steps>
+            <step>
+                <cmd>Open de database <keyword keyref="example_db_file"/>.</cmd>
+            </step>
+            <step>
+                <cmd>Open het rapport <wintitle>Bonbons per doos</wintitle>.</cmd>
+                <stepresult>
+                    <fig>
+                        <title>Rapport <wintitle>Bonbons per doos</wintitle> in
+                            Rapportweergave</title>
+                        <image keyref="report_pralines_box_report">
+                            <alt>Rapport bonbons per doos in rapportweergave</alt>
+                        </image>
+                    </fig>
+                </stepresult>
+            </step>
+            <step>
+                <cmd>Zet het rapport <varname>Bonbons per doos</varname> in de
+                        <uicontrol>Afdrukvoorbeeld</uicontrol> op een van de volgende
+                    manieren:</cmd>
+                <choices>
+                    <choice>Klik op de knop <uicontrol>Afdrukvoorbeeld</uicontrol> rechtsonder in
+                        het programmavenster <image keyref="button_print_preview"/></choice>
+                    <choice><menucascade>
+                            <uicontrol>tab Start</uicontrol>
+                            <uicontrol>Weergave (groep Weergaven)</uicontrol>
+                            <uicontrol>Afdrukvoorbeeld</uicontrol>
+                        </menucascade>.</choice>
+                </choices>
+                <info>
+                    <note type="tip">Je kunt het rapport ook direct in de Afdrukweergave openen via
+                        een rechter muisklik op de rapportnaam in het navigatiedeelvenster en dan
+                        uit het snelmenu te kiezen voor
+                        <uicontrol>Afdrukvoorbeeld</uicontrol>.</note>
+                </info>
+                <stepresult>Hetzelfde rapport wordt in een grotere weergave met zoommogelijkheden
+                    getoond.</stepresult>
+            </step>
+            <step>
+                <cmd>Zet het rapport <varname>Bonbons per doos</varname> in de
+                        <uicontrol>Ontwerpweergave</uicontrol> op een van de volgende
+                    manieren:</cmd>
+                <choices>
+                    <choice>Klik op de knop <uicontrol>Ontwerpweergave</uicontrol> rechtsonder in
+                        het programmavenster <image keyref="button_design_view"/></choice>
+                    <choice><menucascade>
+                            <uicontrol>tab Start</uicontrol>
+                            <uicontrol>Weergave (groep Weergaven)</uicontrol>
+                            <uicontrol>Ontwerpweergave</uicontrol>
+                        </menucascade>.</choice>
+                </choices>
+                <info>
+                    <note type="tip">Je kunt het rapport ook direct in de Ontwerpweergave openen via
+                        een rechter muisklik op de rapportnaam in het navigatiedeelvenster en dan
+                        uit het snelmenu te kiezen voor
+                        <uicontrol>Ontwerpweergave</uicontrol>.</note>
+                </info>
+                <stepresult>
+                    <fig>
+                        <title>Rapport <wintitle>Bonbons per doos</wintitle> in
+                            Ontwerpweergave</title>
+                        <image keyref="report_pralines_box_design">
+                            <alt>Rapport bonbons per doos in ontwerpweergave.</alt>
+                        </image>
+                    </fig>
+                    <p>In deze ontwerpweergave lijkt het rapport veel op een formulier en kun je het
+                        rapport opmaken en besturingselementen toevoegen zoals tekstvakken,
+                        labelvakken, keuzelijsten, aankruisvakjes, enz.</p>
+                </stepresult>
+            </step>
+            <step>
+                <cmd>Zet het rapport weer in de <uicontrol>Rapportweergave</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Sluit het rapport</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

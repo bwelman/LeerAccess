@@ -1,0 +1,14 @@
+<?xml version="1.0"  encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map id="keys_macros">
+    <title>Keys Macros</title>
+    <keydef keys="customercode_combobox_afterupdate" href="images/customercode_combobox_afterupdate.png" format="png"/>
+    <keydef keys="customercode_combobox_framework" href="images/customercode_combobox_framework.png" format="png"/>
+    <keydef keys="customercode_combobox_name" href="images/customercode_combobox_name.png" format="png"/>
+    <keydef keys="customername_comboboxes" href="images/customername_comboboxes.png" format="png"/>
+    <keydef keys="customername_formheader" href="images/customername_formheader.png" format="png"/>
+    <keydef keys="macro_customer_by_code" href="images/macro_customer_by_code.png" format="png"/>
+    <keydef keys="macro_customer_by_name" href="images/macro_customer_by_name.png" format="png"/>
+    <keydef keys="macro_customercode_gotocontrol" href="images/macro_customercode_gotocontrol.png" format="png"/>
+</map>
+

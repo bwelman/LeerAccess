@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="explore_printing" xml:lang="nl-NL">
+    <title>Afdrukken van Access onderdelen</title>
+    <shortdesc>Hoe de inhoud van tabellen, query's, formulieren en rapporten afdrukken.</shortdesc>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords>
+                <indexterm>Afdrukken<indexterm>opties</indexterm><indexterm>snel
+                        afdrukken</indexterm><indexterm>afdrukvoorbeeld</indexterm></indexterm>
+            </keywords>
+        </metadata>
+    </prolog>
+    <conbody>
+        <p>Voor het afdrukken maakt Access gebruik van de printers die onder Windows beschikbaar
+            zijn.</p>
+        <p>Afhankelijk van de gebruikte view binnen een Access object kan het resultaat afgedrukt
+            worden. Zo kan bijvoorbeeld afgedrukt worden in de gegevensbladweergave bij Tabellen en
+            Query's, de rapportweergave bij rapporten en de formulierweergave bij Formulieren.</p>
+        <note type="attention">Er is geen optie voor het afdrukken van de ontwerpweergave, maar
+            Access heeft een hulpmiddel genaamd <wintitle>Databasedocumentatie</wintitle> waarmee je
+            de ontwerp eigenschappen van de database objecten kunt afdrukken.</note>
+        <p>De afdrukopties zijn beschikbaar via <menucascade>
+                <uicontrol>Bestand</uicontrol>
+                <uicontrol>Afdrukken</uicontrol>
+            </menucascade>. Je hebt dan de volgende mogelijkheden: <fig>
+                <title>Afdrukopties</title>
+                <image keyref="print_options">
+                    <alt>Afdrukopties in Access.</alt>
+                </image>
+            </fig></p>
+        <p>Via de keuze <uicontrol>Afdrukvoorbeeld</uicontrol> zijn er een aantal instellingen
+            mogelijk, zoals paginaformaat, afdrukstand en marges.</p>
+    </conbody>
+</concept>

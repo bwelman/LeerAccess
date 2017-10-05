@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="tables_fields_validationrules" xml:lang="nl-NL">
+    <title>Validatieregel en tekst</title>
+    <shortdesc>Over</shortdesc>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords>
+                <indexterm>Validatie<indexterm>regel</indexterm><indexterm>tekst</indexterm></indexterm>
+                <indexterm>Expressies<indexterm>operatoren</indexterm><indexterm>jokertekens</indexterm></indexterm>
+            </keywords>
+        </metadata>
+    </prolog>
+    <conbody>
+        <p>Met validatieregels kun je beperkingen opleggen aan wat een gebruikers kan invoeren in
+            een bepaald veld. Zo kun je ervoor zorgen dat alleen waarden kunnen worden ingevoerd die
+            aan bepaalde voorwaarden voldoen. Voldoet de invoer niet aan de voorwaarden dan
+            verschijnt een melding op het scherm.</p>
+        <dl>
+            <dlentry>
+                <dt>Validatieregel</dt>
+                <dd>Een expressie die Waar moet zijn voor de ingevoerde waarde in het veld. Wanneer
+                    je een waarde in het veld invoert of wijzigt, dan controleert Access of de
+                    expressie waar is. Zo niet, dan wordt de inhoud van de eigenschapValidatietekst
+                    weergegeven. Je moet dan de waarde aanpassen totdat aan de validatieregel
+                    voldaan wordt.</dd>
+            </dlentry>
+            <dlentry>
+                <dt>Validatietekst</dt>
+                <dd>Hier komt de tekst die aan de gebruiker moet worden weergegeven wanneer deze een
+                    waarde invoert die niet voldoet aan de expressie in de eigenschap
+                    Validatieregel.</dd>
+            </dlentry>
+        </dl>
+        <p>Bij het maken van expressies moet je rekening houden met het volgende:<ul>
+                <li>Namen van tabelvelden moeten tussen vierkante haken staan, zoals bijvoorbeeld
+                    [Orderdatum].</li>
+                <li>Datums moeten tussen hekjes (#) staan, zoals bijvoorbeeld #31-12-2010#.</li>
+                <li>Teksten moeten tussen dubbele aanhalingstekens staan, zoals bijvoorbeeld
+                    "Amsterdam".</li>
+                <li>Jokertekens zijn toegestaan. De meest bekende zijn ? (één willekeurige letter),
+                    * (willekeurig aantal tekens) en # (één willekeurig cijfer).</li>
+            </ul></p>
+        <p>In de volgende tabel staan de meest gebruikte operatoren.</p>
+        <table>
+            <title>Operatoren invoermasker</title>
+            <tgroup cols="3">
+                <thead>
+                    <row>
+                        <entry>Operator</entry>
+                        <entry>Functie</entry>
+                        <entry>Voorbeeld</entry>
+                    </row>
+                </thead>
+                <tbody>
+                    <row>
+                        <entry>&lt;</entry>
+                        <entry>Kleiner dan</entry>
+                        <entry>&lt;100</entry>
+                    </row>
+                    <row>
+                        <entry>&lt;=</entry>
+                        <entry>Kleiner dan of gelijk aan</entry>
+                        <entry>&lt;=15</entry>
+                    </row>
+                    <row>
+                        <entry>></entry>
+                        <entry>Groter dan</entry>
+                        <entry>>10</entry>
+                    </row>
+                    <row>
+                        <entry>>=</entry>
+                        <entry>Groter dan of gelijk aan</entry>
+                        <entry>>=0</entry>
+                    </row>
+                    <row>
+                        <entry>=</entry>
+                        <entry>Is gelijk aan</entry>
+                        <entry>=21</entry>
+                    </row>
+                    <row>
+                        <entry>&lt;></entry>
+                        <entry>Is niet gelijk aan</entry>
+                        <entry>&lt;>0</entry>
+                    </row>
+                    <row>
+                        <entry>AND</entry>
+                        <entry>Logische EN</entry>
+                        <entry>>=1 AND &lt;=9</entry>
+                    </row>
+                    <row>
+                        <entry>OR</entry>
+                        <entry>Logische OF</entry>
+                        <entry>"m" OR "v"</entry>
+                    </row>
+                    <row>
+                        <entry>NOT</entry>
+                        <entry>Logische NIET</entry>
+                        <entry>NOT >10</entry>
+                    </row>
+                    <row>
+                        <entry>IN</entry>
+                        <entry>Moet voorkomen in een lijst</entry>
+                        <entry>IN ("Berlijn","Londen","Parijs")</entry>
+                    </row>
+                    <row>
+                        <entry>BETWEEN</entry>
+                        <entry>Moet liggen tussen twee waarden</entry>
+                        <entry>BETWEEN 1 AND 9</entry>
+                    </row>
+                    <row>
+                        <entry>LIKE</entry>
+                        <entry>Tekenreeks moet overeenkomen met patroon</entry>
+                        <entry>LIKE "Ams*"</entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+        <example>
+            <title>Voorbeeld: Datum validatie</title>
+            <p>Validatieregel: <codeph>>=#1-1-2010#</codeph></p>
+            <p>Validatietekst: <codeph>Voer een datum vanaf 1 januari 2010 in.</codeph></p>
+        </example>
+        <example>
+            <title>Voorbeeld: Factuurnummer validatie</title>
+            <p>Validatieregel: <codeph>Like "[0-9][0-9][0-9][0-9]"</codeph></p>
+            <p>Validatietekst: <codeph>Factuurnummer moet uit 4 cijfers bestaan.</codeph></p>
+        </example>
+        <example>
+            <title>Voorbeeld: Eenvoudige email adres validatie</title>
+            <p>Validatieregel: <codeph>Like "*@*.???"</codeph></p>
+            <p>Validatietekst: <codeph>Geen geldig email adres.</codeph></p>
+        </example>
+    </conbody>
+</concept>

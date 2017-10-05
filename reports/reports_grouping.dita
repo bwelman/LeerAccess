@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="reports_grouping" xml:lang="nl-NL">
+    <title>Taak: Groepsrapport</title>
+    <shortdesc>het maken van een gegroepeerd rapport, met de Wizard rapport op basis van een
+        query.</shortdesc>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords>
+                <indexterm>Rapport<indexterm>groeperen</indexterm></indexterm>
+            </keywords>
+        </metadata>
+    </prolog>
+    <taskbody>
+        <context>
+            <p>INFORMATIEBEHOEFTE</p>
+            <p>Maak een rapport waarop over een op te geven periode de verkoop per doos te zien is,
+                alsmede de detailgegevens van elke order. Zie als voorbeeld de figuur hierna waarin
+                een gedeelte van het rapport te zien is over november 2009.</p>
+            <fig>
+                <title>Gedeelte van een rapportweergave</title>
+                <image keyref="group_report_result">
+                    <alt>Weergave van het rapport</alt>
+                </image>
+            </fig>
+            <p>ANALYSE</p>
+            <p>De benodigde gegevens zijn <varname>Doosnaam</varname>, <varname>Ordercode</varname>,
+                    <varname>Orderdatum</varname>, <varname>Aantal</varname> en een veld
+                    <varname>Bedrag</varname> wat berekend wordt met de expressie
+                    <codeph>[Hoeveelheid]*[Doosprijs]</codeph>. Een query gemaakt voor deze gegevens
+                is reeds beschikbaar onder de naam <uicontrol>Omzet per doos per order per
+                    periode</uicontrol>.</p>
+        </context>
+        <steps>
+            <step>
+                <cmd>Open de database <keyword keyref="example_db_file"/>.</cmd>
+            </step>
+            <step>
+                <cmd>Selecteer query <uicontrol>Omzet per doos per order per
+                    periode</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Kies <menucascade>
+                        <uicontrol>tab Maken</uicontrol>
+                        <uicontrol>Wizard rapport (groep Rapporten)</uicontrol>
+                    </menucascade>.</cmd>
+                <stepresult>
+                    <fig>
+                        <title>Velden specificeren</title>
+                        <image keyref="group_wizard_fields">
+                            <alt>Selecteer de op te nemen velden</alt>
+                        </image>
+                    </fig>
+                </stepresult>
+            </step>
+            <step>
+                <cmd>Voeg alle velden van de query toe. Klik <uicontrol>Volgende</uicontrol>.</cmd>
+                <stepresult>In het scherm dat nu getoond wordt kun je aangeven of je groepeerniveaus
+                    wilt toevoegen. </stepresult>
+            </step>
+            <step>
+                <cmd>Verwijder eventuele reeds aanwezige groepeerniveaus (Ordercode) en voeg
+                        <varname>Doosnaam</varname> als groepeerniveau toe.</cmd>
+                <stepresult>
+                    <fig>
+                        <title>Groepeerniveaus specificeren</title>
+                        <image keyref="group_wizard_levels">
+                            <alt>Selecteer de velden waarop gegroepeerd moet worden.</alt>
+                        </image>
+                    </fig>
+                </stepresult>
+            </step>
+            <step>
+                <cmd>Klik <uicontrol>Volgende</uicontrol>.</cmd>
+                <stepresult>
+                    <p>In het scherm dat nu getoond wordt kun je de sorteervolgorde aangeven.</p>
+                </stepresult>
+            </step>
+            <step>
+                <cmd>Geef aan dat oplopend op <uicontrol>Ordercode</uicontrol> gesorteerd moet
+                    worden.</cmd>
+                <stepresult>
+                    <fig>
+                        <title>Sorteervelden en opties voor totalen specificeren</title>
+                        <image keyref="group_wizard_sort">
+                            <alt>Sorteervelden en opties voor totalen specificeren</alt>
+                        </image>
+                    </fig>
+                </stepresult>
+            </step>
+            <step>
+                <cmd>Klik op de knop <uicontrol>Opties voor totalen...</uicontrol> en geef aan dat
+                    voor de velden <varname>Aantal</varname> en <varname>Bedrag</varname> ook de
+                        <uicontrol>Som</uicontrol> moet worden afgedrukt.</cmd>
+                <stepresult>
+                    <fig>
+                        <title>Totaalwaarden specificeren</title>
+                        <image keyref="group_wizard_summary">
+                            <alt>Totaalwaarden specificeren</alt>
+                        </image>
+                    </fig>
+                </stepresult>
+            </step>
+            <step>
+                <cmd>Klik op <uicontrol>OK</uicontrol> en daarna op
+                    <uicontrol>Volgende</uicontrol>.</cmd>
+                <stepresult>Nu kun je aangeven hoe je het rapport opgemaakt wilt
+                    hebben.</stepresult>
+            </step>
+            <step>
+                <cmd>Selecteer indeling <uicontrol>Overzicht</uicontrol>.</cmd>
+                <stepresult>
+                    <fig>
+                        <title>Opmaak van het rapport aangeven</title>
+                        <image keyref="group_wizard_layout">
+                            <alt>Opmaak van het rapport aangeven</alt>
+                        </image>
+                    </fig>
+                </stepresult>
+            </step>
+            <step>
+                <cmd>Klik op <uicontrol>Volgende</uicontrol>.</cmd>
+                <stepresult>
+                    <p>Het laatste scherm van de Wizard wordt nu getoond. Hier kun je de naam voor
+                        het rapport specificeren.</p>
+                </stepresult>
+            </step>
+            <step>
+                <cmd>Geef het rapport de naam <userinput>Omzet per doos per order per
+                        periode</userinput> en klik op <uicontrol>Voltooien</uicontrol>.</cmd>
+                <stepresult>Het rapport wordt gemaakt en in weergave Afdrukvoorbeeld geopend. Omdat
+                    de query de parameters begindatum en einddatum kent vraagt Access om een waarde
+                    hiervoor.</stepresult>
+            </step>
+            <step>
+                <cmd>Test met Begindatum <userinput>1-11-2009</userinput> en Einddatum
+                        <userinput>30-11-2009</userinput>.</cmd>
+            </step>
+            <step>
+                <cmd>Sluit het rapport.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="forms_autoform" xml:lang="nl-NL">
+    <title>Taak: Automatisch formulier</title>
+    <shortdesc>Een oefening waarbij een formulier gegenereerd wordt en dan wat handmatige
+        aanpassingen worden verricht.</shortdesc>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords>
+                <indexterm>Formulier<indexterm>gestapelde indeling</indexterm></indexterm>
+                <indexterm>Besturingselement<indexterm>tekstvak</indexterm><indexterm>bijschrift</indexterm><indexterm>eigenschappen</indexterm></indexterm>
+                <indexterm>Tekstvak<indexterm>breedte</indexterm><indexterm>vergrendeling</indexterm></indexterm>
+                <indexterm>Bijschrift</indexterm>
+                <indexterm>Eigenschappenvenster</indexterm>
+            </keywords>
+        </metadata>
+    </prolog>
+    <taskbody>
+        <context>
+            <p>Wanneer nieuwe records aan een tabel moeten worden toegevoegd, is het meestal de
+                bedoeling dat alle velden een waarde kunnen krijgen. Zo'n formulier moet dan wel
+                alle velden van de tabel bevatten. De snelste manier om zo'n formulier te maken is
+                door eerst de tabel te selecteren en via de opdracht
+                    <uicontrol>Formulier</uicontrol> automatisch een formulier te laten genereren
+                dat alle velden bevat. Daarna kan desgewenst handmatig het formulier worden
+                aangepast.</p>
+            <p>In deze taak wordt een formulier gemaakt waarmee een magazijnmedewerker de
+                magazijnvoorraad van een doos kan wijzigen en eventueel aan kan geven of een doos al
+                dan niet uit productie is. De andere doosgegevens moet de medewerker niet via dit
+                formulier kunnen wijzigen. Het formulier moet er ongeveer als volgt uit gaan
+                zien:</p>
+            <fig>
+                <title>Formulier Inventaris</title>
+                <image keyref="f_stock-in-trade_result">
+                    <alt>Eindresultaat formulier inventaris</alt>
+                </image>
+            </fig>
+        </context>
+        <steps>
+            <step>
+                <cmd>Open de database <keyword keyref="example_db_file"/>.</cmd>
+            </step>
+            <step>
+                <cmd>Selecteer de tabel <uicontrol>Dozen</uicontrol>. Deze hoeft niet geopend te
+                    worden.</cmd>
+            </step>
+            <step>
+                <cmd>Klik <menucascade>
+                        <uicontrol>tab Maken</uicontrol>
+                        <uicontrol>Formulier (groep Formulieren)</uicontrol>
+                    </menucascade>.</cmd>
+                <stepresult>Het formulier wordt aangemaakt en geopend in de
+                        <uicontrol>Indelingsweergave</uicontrol>.</stepresult>
+            </step>
+            <stepsection>
+                <p>Als in Access een tabel wordt gevonden met een een-op-veel-relatie met de tabel
+                    of query waarmee je het formulier hebt gemaakt, wordt automatisch een
+                    subgegevensblad aan het formulier toegevoegd op basis van de gerelateerde tabel
+                    of query. In dit geval is het formulier gebaseerd op de tabel Dozen en is er een
+                    een-op-veel relatie tussen de tabel Dozen en de tabel Orderdetails. Het
+                    subgegevensblad geeft alle records uit Orderdetails weer die betrekking hebben
+                    op het huidige record van tabel Dozen. Als je het subgegevensblad niet in het
+                    formulier wilt hebben, kun je dit in de Indelingsweergave verwijderen door het
+                    gegevensblad te selecteren en op de Delete toets te drukken. Er worden geen
+                    gegevensbladen aan het formulier toegevoegd als er meer tabellen zijn die een
+                    een-op-veel-relatie hebben met de tabel op basis waarvan je het formulier hebt
+                    gemaakt.</p>
+            </stepsection>
+            <step>
+                <cmd>Selecteer het subgegevensblad en druk op <uicontrol>Delete</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Schakel over naar de <uicontrol>Ontwerpweergave</uicontrol>.</cmd>
+                <stepresult>
+                    <fig>
+                        <title>Formulier in ontwerpweergave</title>
+                        <image keyref="f_stock-in-trade_design">
+                            <alt>Ontwerpweergave formulier inventaris</alt>
+                        </image>
+                    </fig>
+                </stepresult>
+            </step>
+            <stepsection>
+                <p>Bij een formulier die op deze manier maakt wordt heeft elk veld twee
+                        <term>besturingselementen</term>: een <uicontrol>Tekstvak</uicontrol> en een
+                    daaraan gekoppeld <uicontrol>Bijschrift</uicontrol>.<fig>
+                        <title>Tekstvak met gekoppeld vak bijschrift</title>
+                        <image keyref="textbox_label">
+                            <alt>Tekstvak met gekoppeld vak bijschrift</alt>
+                        </image>
+                    </fig></p>
+                <p>Alle bijschriften staan verticaal gerangschikt en alle tekstvakken ook. Dit heet
+                    een <term>Gestapelde indeling</term>. Hierdoor kan een enkel besturingselement
+                    niet op een willekeurige plaats op het formulier gezet worden. Is dat wel de
+                    bedoeling, dan moet je eerst de indeling voor dat besturingselement verwijderen
+                    via <menucascade>
+                        <uicontrol>tab Schikken</uicontrol>
+                        <uicontrol>Indeling verwijderen (groep Tabel)</uicontrol>
+                    </menucascade>.</p>
+            </stepsection>
+            <step>
+                <cmd>Selecteer de tekst in het kader Dozen in de Formulierkoptekst en wijzig deze in
+                        <userinput>Inventaris</userinput>. Wijzig dan de eigenschappen
+                        <uicontrol>Tekengewicht</uicontrol> in <option>vet</option> en
+                        <uicontrol>Tekengrootte</uicontrol> in <option>20</option>.</cmd>
+                <info>
+                    <note type="tip">Het <wintitle>Eigenschappenvenster</wintitle> staat meestal aan
+                        de rechterkant van het scherm en kan zichtbaar en onzichtbaar gemaakt worden
+                        via sneltoets <uicontrol>F4</uicontrol>. En om sneller een bepaalde
+                        eigenschap te vinden kun je deze alfabetisch sorteren met de knop <image
+                            keyref="button_sort_ascending"/> rechtsboven in het venster.</note>
+                </info>
+            </step>
+            <step>
+                <cmd>Selecteer de tekstvakken van alle velden en wijzig de waarde van eigenschap
+                        <uicontrol>Breedte</uicontrol> in <userinput>8cm</userinput>. Hef daarna de
+                    selectie op door ergens anders in het formulier te klikken.</cmd>
+                <stepresult>
+                    <fig>
+                        <title>Instelling eigenschap Breedte</title>
+                        <image keyref="property_textboxes_width">
+                            <alt>Instelling eigenschap breedte</alt>
+                        </image>
+                    </fig>
+                </stepresult>
+            </step>
+            <stepsection>De eigenschap Vergrendeld kan gebruikt worden om de waarde in een veld te
+                beveiligen zodat de gebruiker deze niet kan wijzigen.</stepsection>
+            <step>
+                <cmd>Selecteer alle tekstvakken behalve <uicontrol>Magazijnvoorraad</uicontrol> en
+                        <uicontrol>Uit produktie</uicontrol> en wijzig de waarde van eigenschap
+                        <uicontrol>Vergrendeld</uicontrol> (tab Gegevens) in
+                    <option>Ja</option>.</cmd>
+                <stepresult>
+                    <fig>
+                        <title>Instelling vergrendeling tekstvak via eigenschappenvenster</title>
+                        <image keyref="property_textboxes_locked">
+                            <alt>Instelling vergrendeling tekstvak via eigenschappenvenster</alt>
+                        </image>
+                    </fig>
+                </stepresult>
+            </step>
+            <step>
+                <cmd>Houd deze velden geselecteerd en wijzig dan de achtergrondkleur van wit in een
+                    lichtgrijze grijs. Je kunt dat op een van de volgende manieren doen:</cmd>
+                <choices>
+                    <choice>Wijzig eigenschap <uicontrol>Achtergrondkleur</uicontrol>.</choice>
+                    <choice>Rechtermuisklik op een van de geselecteerde velden en kies uit het
+                        snelmenu voor <uicontrol>Opvul-/achtergrondkleur</uicontrol>.</choice>
+                </choices>
+            </step>
+            <step>
+                <cmd>Schakel over naar <uicontrol>Formulierweergave</uicontrol> om het resultaat te
+                    zien.</cmd>
+            </step>
+            <step>
+                <cmd>Sluit het formulier en beantwoord de vraag of de wijzigingen bewaard moeten
+                    worden met <uicontrol>Ja</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Noem het formulier in <userinput>Inventaris</userinput> en klik op
+                        <uicontrol>OK</uicontrol>.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map id="map_forms" xml:lang="nl-NL" title="Formulieren">
+    <title>Formulieren</title>
+    <topicmeta>
+        <author>Ben Welman</author>
+        <publisher>Softwijs</publisher>
+        <copyright>
+            <copyryear year="2017"/>
+            <copyrholder>Softwijs Neede</copyrholder>
+        </copyright>
+        <keywords/>        
+        <prodinfo>
+            <prodname>Access 2010</prodname>
+            <vrmlist>
+                <vrm version="" release=""/>
+            </vrmlist>
+        </prodinfo>
+    </topicmeta>
+    <!-- Keys -->
+    <mapref href="../common/keys_common.ditamap" processing-role="resource-only"/>
+    <mapref href="keys_forms.ditamap" processing-role="resource-only"/>
+    <!-- Schema's  -->
+    
+    <!-- Content -->
+    <topicref href="forms.dita" scope="local" type="concept">
+        <topicref href="forms_about.dita" scope="local" type="concept" format="dita" audience="level1">
+            <topicref href="forms_explanation_mainsub.dita" scope="local" type="concept" format="dita" audience="level1"/>
+            <topicref href="forms_explanation_linked.dita" scope="local" type="concept" format="dita" audience="level1"/>
+        </topicref>
+        <topicref href="forms_controls_layout.dita" scope="local" type="concept"  format="dita" audience="level1"/>
+        <topicref href="forms_autoform.dita" scope="local" type="task" format="dita" audience="level1"/>
+        <topicref href="forms_customers_orders.dita" scope="local" type="task" format="dita" audience="level1"/>
+        <topicref href="forms_customers_data_entry.dita" scope="local" type="task" format="dita" audience="level2"/>
+        <topicref href="forms_pralines_data_entry.dita" scope="local" type="task" format="dita" audience="level2"/>
+        <topicref href="forms_boxes_data_entry.dita" scope="local" type="task" format="dita" audience="level2"/>
+        <topicref href="forms_orders_data_entry.dita" scope="local" type="task" format="dita" audience="level2"/>
+        <topicref href="forms_orders_total.dita" scope="local" type="task" format="dita" audience="level2"/>
+        <topicref href="forms_sales_boxes.dita" scope="local" type="task" format="dita" audience="level2"/>
+        <topicref href="forms_customerorders.dita" scope="local" type="task" format="dita" audience="level2"/>
+    </topicref>
+</map>

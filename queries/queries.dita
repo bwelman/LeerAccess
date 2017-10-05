@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="queries" xml:lang="nl-NL">
+    <title>Query's</title>
+    <shortdesc/>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords/>
+        </metadata>
+    </prolog>
+    <conbody>
+        <p>Het opvragen van informatie uit een database is de meest voorkomen actie van
+            eindgebruikers. Om de gewenste informatie te leveren zijn query's nodig. Eenvoudige
+            query's maakt de eindgebruiker vaak zelf, voor de wat complexere query's is hulp van een
+            professional meestal gewenst.</p>
+    </conbody>
+</concept>

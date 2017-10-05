@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="explore_queries" xml:lang="nl-NL">
+    <title>Taak: Query verkennen</title>
+    <shortdesc>De twee belangrijkste weergaven (gegevensblad en ontwerp) van query's.</shortdesc>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords>
+                <indexterm>Query<indexterm>gegevensbladweergave</indexterm><indexterm>ontwerpweergave</indexterm></indexterm>
+                <indexterm>Gegevensbladweergave<indexterm>query</indexterm></indexterm>
+                <indexterm>Ontwerpweergave<indexterm>query</indexterm></indexterm>
+            </keywords>
+        </metadata>
+    </prolog>
+    <taskbody>
+        <context>
+            <p>Query's zijn van belang wanneer je gegevens uit tabellen wil selecteren of
+                samenvatten. Een query is eigenlijk een gespecificeerde vraag aan de database om
+                bepaalde informatie aan te leveren.</p>
+            <p>De twee belangrijkste weergaven van een query zijn:<ul>
+                    <li><uicontrol>Gegevensbladweergave</uicontrol>. In deze weergave kun je de
+                        inhoud van de query zien.</li>
+                    <li><uicontrol>Ontwerpweergave</uicontrol>. In deze weergave kun je het ontwerp
+                        van de query zien en deze aanpassen.</li>
+                </ul></p>
+        </context>
+        <steps>
+            <step>
+                <cmd>Open de database <keyword keyref="example_db_file"/>.</cmd>
+            </step>
+            <step>
+                <cmd>Open de query <wintitle>Bonbons per doos</wintitle>.</cmd>
+                <stepresult>
+                    <p>Access voert de query uit en produceert een gegevensblad met daarin de
+                        resultaten van de query.</p>
+                    <fig>
+                        <title>Query <wintitle>Bonbons per doos</wintitle> in de
+                            Gegevensbladweergave</title>
+                        <image keyref="query_pralines_box_datasheet">
+                            <alt>Query bonbons per doos in gegevensbladweergave.</alt>
+                        </image>
+                    </fig>
+                    <p>De resultaten van deze query zijn uit meerdere tabellen afkomstig. Om te
+                        weten welke tabellen gebruikt worden moet de query in de ontwerpweergave
+                        gezet worden.</p>
+                </stepresult>
+            </step>
+            <step>
+                <cmd>Zet de query <varname>Bonbons per doos</varname> in de
+                        <uicontrol>Ontwerpweergave</uicontrol> op een van de volgende
+                    manieren:</cmd>
+                <choices>
+                    <choice>Klik op de knop <uicontrol>Ontwerpweergave</uicontrol> rechtsonder in
+                        het programmavenster <image keyref="button_design_view"/></choice>
+                    <choice><menucascade>
+                            <uicontrol>tab Start</uicontrol>
+                            <uicontrol>Weergave (groep Weergaven)</uicontrol>
+                            <uicontrol>Ontwerpweergave</uicontrol>
+                        </menucascade>.</choice>
+                </choices>
+                <info>
+                    <note type="tip">Je kunt de query ook direct in de Ontwerpweergave openen via
+                        een rechter muisklik op de querynaam in het navigatiedeelvenster en dan uit
+                        het snelmenu te kiezen voor <uicontrol>Ontwerpweergave</uicontrol>.</note>
+                </info>
+                <stepresult>
+                    <fig>
+                        <title>Query <wintitle>Bonbons per doos</wintitle> in de
+                            Ontwerpweergave</title>
+                        <image keyref="query_pralines_box_design">
+                            <alt>Query bonbons per doos in ontwerpweergave.</alt>
+                        </image>
+                    </fig>
+                    <p>De bovenste drie rechthoeken geven de tabellen die voor deze query gebruikt
+                        zijn. De lijn met pijltjes verbinden de veldnamen waarmee twee tabellen aan
+                        elkaar gerelateerd zijn.</p>
+                    <p>In het onderste deel van het venster tref je in de eerste rij de namen van de
+                        gebruikte velden aan. In de derde kolom staat een expressie, een soort
+                        formule waarmee bewerkingen op de velden worden uitgevoerd. De hier
+                        geformuleerde expressie is
+                            <codeph>Som([Bonbons].[Bonbonkosten]*[Doosdetails].[Hoeveelheid])</codeph>.
+                        Tussen de blokhaken staan de namen van de tabellen en velden.</p>
+                    <note type="tip">Om de expressie in zijn geheel te kunnen zien moet je de kolom
+                        breder maken door de kolomrand naar rechts te slepen.</note>
+                </stepresult>
+            </step>
+            <step>
+                <cmd>Zet de query in de <uicontrol>Gegevensbladweergave</uicontrol> .</cmd>
+            </step>
+            <step>
+                <cmd>Sluit de query.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="explore_commandbutton" xml:lang="nl-NL">
+    <title>Taak: Opdrachtknop gebruiken</title>
+    <shortdesc>De werking van een opdrachtknop op een formulier.</shortdesc>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords>
+                <indexterm>Formulier<indexterm>opdrachtknop</indexterm></indexterm>
+                <indexterm>Opdrachtknop</indexterm>
+            </keywords>
+        </metadata>
+    </prolog>
+    <taskbody>
+        <context>
+            <p>Het formulier <varname>Dozen</varname> kan, behalve voor de invoer van gegevens, ook
+                gebruikt worden voor het bekijken van gegevens. Op het formulier
+                    <varname>Dozen</varname> staat een knop met de tekst
+                    <uicontrol>Verkoop</uicontrol>.</p>
+        </context>
+        <steps>
+            <step>
+                <cmd>Open de database <keyword keyref="example_db_file"/>.</cmd>
+            </step>
+            <step>
+                <cmd>Open het formulier <varname>Dozen</varname>.</cmd>
+            </step>
+            <step>
+                <cmd>Klik in het formulier op de knop <uicontrol>Verkoop</uicontrol>.</cmd>
+                <stepresult>Het formulier <wintitle>Doosverkoop</wintitle> wordt nu getoond. Je ziet
+                    nu alle orders die betrekking hebben op de geselecteerde doos uit het formulier
+                    Dozen en zelfs de totale verkoop van deze doos.</stepresult>
+            </step>
+            <step>
+                <cmd>Sluit alle formulieren.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

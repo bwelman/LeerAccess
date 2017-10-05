@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="forms_about" xml:lang="nl-NL">
+	<title>Over formulieren maken</title>
+	<shortdesc/>
+	<prolog>
+	    <critdates>
+	        <created date="2017-10-05"/>
+	        <revised modified="2017-10-05"/>
+	    </critdates>
+		<metadata>
+			<keywords>
+				<indexterm>Formulier<indexterm>hoofdformulier</indexterm><indexterm>subformulier</indexterm><indexterm>koppelen</indexterm></indexterm>
+				<indexterm>Hoofdformulier</indexterm>
+				<indexterm>Subformulier</indexterm>
+				<indexterm>Besturingselement</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>Gegevens kunnen rechtstreeks in de tabellen ingevoerd worden. In de praktijk gebeurt dat alleen
+            bij zeer eenvoudige tabellen. Meestal worden formulieren gebruikt voor de
+            gegevensinvoer. Eenvoudige formulieren zijn vaak gebaseerd op gegevens uit één tabel of
+            query. Daarnaast heb je geavanceerde formulieren zoals een
+                <term>hoofd-subformulier</term> of <term>gekoppelde formulieren</term>, waarvan de
+            gegevens uit gerelateerde tabellen of query's komen.</p>
+		<p>Behalve dat je formulieren een aantrekkelijk uiterlijk kunt geven, is het belangrijker
+			dat je hiermee mogelijkheden hebt om allerlei controles (validaties) op de invoer toe te
+			passen. En verder kun je op formulieren zogenaamde <term>besturingselementen</term>
+			plaatsen. Voorbeelden hiervan zijn keuzelijsten, selectievakjes, knoppen, toelichtende
+			tekst, enz.</p>
+		<p>Je kunt een formulier vanaf nul opbouwen, maar vaak laat je Access eerst automatisch een
+            formulier genereren, of maak je gebruik van de Wizard Formulier. Het dan ontstane
+            formulier kun je daarna handmatig aanpassen.</p>
+	</conbody>
+</concept>

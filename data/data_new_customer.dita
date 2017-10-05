@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="data_new_customer" xml:lang="nl-NL">
+    <title>Taak: Nieuwe klant toevoegen</title>
+    <shortdesc>Een nieuw record toevoegen met een formulier waarmee je alleen gegevens toe kunt
+        voegen..</shortdesc>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords>
+                <indexterm>Record<indexterm>toevoegen</indexterm></indexterm>
+            </keywords>
+        </metadata>
+    </prolog>
+    <taskbody>
+        <context>Met het formulier Inschrijving kunnen alleen nieuwe records worden toegevoegd aan
+            de tabel Klanten. Bladeren door de bestaande records is uitgeschakeld.</context>
+        <steps>
+            <step>
+                <cmd>Open database <keyword keyref="example_db_file"/>.</cmd>
+            </step>
+            <step>
+                <cmd>Open formulier <varname>Inschrijving</varname>.</cmd>
+                <stepresult>Het formulier Inschrijving bevat blanco vakken (velden) waar u de
+                    gegevens typt. Het invoegsymbool geeft aan waar de tekst verschijnt die je
+                    intypt. Je kunt het invoegsymbool verplaatsen door op een ander veld te klikken
+                    of door herhaaldelijk op de TAB te drukken.</stepresult>
+            </step>
+            <step>
+                <cmd>Voer de gegevens in die in de volgende afbeelding te zien zijn.</cmd>
+                <stepresult><fig>
+                        <title>Gegevensinvoer via formulier
+                            <wintitle>Inschrijving</wintitle></title>
+                        <image keyref="form_registration">
+                            <alt>Gegevensinvoer via formulier inschrijving</alt>
+                        </image>
+                    </fig>Er is weer een potlood te zien wat er op duidt dat het formulier in de
+                    bewerkingsmodus is en dat de gegevens nog niet zijn opgeslagen.<note>Het record
+                        wordt automatisch opgeslagen wanneer je het formulier sluit of naar een
+                        ander record gaat.</note></stepresult>
+            </step>
+            <step>
+                <cmd>Sluit het formulier via de sluitknop <uicontrol>X</uicontrol> rechtsboven in
+                    het documentvenster.</cmd>
+                <tutorialinfo>De records die je via het formulier <varname>Inschrijving</varname>
+                    toevoegt worden opgeslagen in de tabel <varname>Klanten</varname>. In de
+                    volgende stap ga je dit controleren.</tutorialinfo>
+            </step>
+            <step>
+                <cmd>Open tabel <varname>Klanten</varname>, ga naar het laatste record en controleer
+                    of dit het eerder toegevoegde record is.</cmd>
+            </step>
+            <step>
+                <cmd>Sluit tabel <varname>Klanten</varname>.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

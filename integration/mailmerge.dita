@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="mailmerge" xml:lang="nl-NL">
+    <title>Taak: Mailmerge</title>
+    <shortdesc>Vanuit Access wordt de Wizard Afdruk samenvoegen gestart om een standaardbrief in
+        Word te maken met een adressenbestand in Access.</shortdesc>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords>
+                <indexterm>Access<indexterm>integratie word</indexterm></indexterm>
+                <indexterm>Word<indexterm>integratie access</indexterm></indexterm>
+                <indexterm>Mailmerge</indexterm>
+                <indexterm>Standaardbrief</indexterm>
+                <indexterm>Integratie<indexterm>access - word</indexterm></indexterm>
+            </keywords>
+        </metadata>
+    </prolog>
+    <taskbody>
+        <context>
+            <p>In deze taak wordt aan klanten een standaardbrief gestuurd met daarin de aankondiging
+                van een nieuwe bonbondoos met de naam <q>Sneeuwwitje</q>. Als bron voor de adressen
+                wordt de tabel Klanten gebruikt.</p>
+            <note type="tip">Het is ook mogelijk om een query als gegevensbron te gebruiken.</note>
+        </context>
+        <steps>
+            <step>
+                <cmd>Open de database <keyword keyref="example_db_file"/>.</cmd>
+            </step>
+            <step>
+                <cmd>Selecteer de tabel <wintitle>Klanten</wintitle>.</cmd>
+            </step>
+            <step>
+                <cmd>Geef een rechter muisklik op de tabelnaam en kies <menucascade>
+                        <uicontrol>Exporteren</uicontrol>
+                        <uicontrol>Word Merge</uicontrol>
+                    </menucascade>.</cmd>
+                <stepresult>
+                    <fig>
+                        <title>Wizard Afdruk samenvoegen</title>
+                        <image keyref="word_mailmerge_wizard">
+                            <alt>Wizard Afdruk samenvoegen</alt>
+                        </image>
+                    </fig>
+                </stepresult>
+            </step>
+            <step>
+                <cmd>Selecteer <uicontrol>Gegevens koppelen aan een bestaand Word
+                        document</uicontrol> en klik op <uicontrol>OK</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Selecteer in het dialoogvenster <wintitle>Microsoft Word-document
+                        selecteren</wintitle> het hulpbestand <filepath>Sneeuwwitje.docx</filepath>
+                    en klik op <uicontrol>Openen</uicontrol>.</cmd>
+                <stepresult><p>Microsoft Word wordt opgestart en verschijnt met het document. Op het
+                        lint is de <uicontrol>tab Verzendlijsten</uicontrol> geactiveerd en aan de
+                        rechterkant is het paneel <wintitle>Afdruk samenvoegen</wintitle>
+                        verschenen. Onder in dit paneel is te zien dat de Wizard zich in stap 3 van
+                        de 6 zit.</p><fig>
+                        <title>Voortgang wizard samenvoegen: stap 3 van 6</title>
+                        <image keyref="mailmerge_wizard_step3">
+                            <alt>Voortgang wizard samenvoegen: stap 3 van 6</alt>
+                        </image>
+                    </fig>
+                </stepresult>
+            </step>
+            <step>
+                <cmd>Klik op de link <uicontrol>Volgende: Uw brief schrijven</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Plaats de cursor in de eerste regel, kies dan <menucascade>
+                        <uicontrol>tab Verzendlijsten</uicontrol>
+                        <uicontrol>Samenvoegvelden invoegen (groep Velden beschrijven en
+                            invoegen)</uicontrol>
+                        <uicontrol>Voornaam</uicontrol>
+                    </menucascade>.</cmd>
+            </step>
+            <step>
+                <cmd>Voeg daarna de velden Achternaam, Straat, Postcode en Plaats zoals in het model
+                    hierna te zien is.</cmd>
+                <stepresult>
+                    <codeblock>&lt;&lt;Voornaam>> &lt;&lt;Achternaam>>
+&lt;&lt;Straat>>
+&lt;&lt;Postcode>>  &lt;&lt;Plaats>></codeblock>
+                </stepresult>
+            </step>
+            <step>
+                <cmd>Klik in het paneel <wintitle>Afdruk samenvoegen</wintitle> onder
+                        <systemoutput>Stap 4 van 6</systemoutput> op de link <uicontrol>Volgende:
+                        Briefvoorbeeld</uicontrol>.</cmd>
+                <stepresult>
+                    <p>Een voorbeeldbrief voor de eerste klant wordt getoond.</p>
+                </stepresult>
+            </step>
+            <step>
+                <cmd>Klik in het paneel <wintitle>Afdruk samenvoegen</wintitle> onder
+                        <systemoutput>Stap 5 van 6</systemoutput> op de link <uicontrol>Volgende:
+                        Samenvoeging voltooien</uicontrol>.</cmd>
+                <stepresult>
+                    <p>In het paneel <wintitle>Afdruk Samenvoegen</wintitle> kan nu de samenvoeging
+                        afgerond worden.</p>
+                    <fig>
+                        <title>Voltooing van de samenvoeging</title>
+                        <image keyref="mailmerge_wizard_finishing">
+                            <alt>Voltooing van de samenvoeging</alt>
+                        </image>
+                    </fig>
+                    <p>Je hebt nu twee keuzes:<ul>
+                            <li>Met <option>Afdrukken</option> stuur je de brieven naar de
+                                printer.</li>
+                            <li>Met <option>Afzonderlijke brieven bewerken</option> wordt er één
+                                Word document gemaakt.</li>
+                        </ul>
+                    </p>
+                </stepresult>
+            </step>
+            <step>
+                <cmd>Klik op de link <uicontrol>Afzonderlijke brieven bewerken</uicontrol>.</cmd>
+                <stepresult>
+                    <fig>
+                        <title>Selectie van records</title>
+                        <image keyref="mailmerge_wizard_records">
+                            <alt>Selectie van records</alt>
+                        </image>
+                    </fig>
+                </stepresult>
+            </step>
+            <step>
+                <cmd>Geef aan dat je voor de eerste 10 klanten de de standaardbrief wilt maken en
+                    klik dan op <uicontrol>OK</uicontrol>.</cmd>
+                <stepresult>Er wordt een nieuw Word-document gemaakt met daarin 10
+                    brieven.</stepresult>
+            </step>
+            <step>
+                <cmd>Bewaar het document onder de naam <userinput>Uitnodiging nieuwe
+                        doos</userinput> en sluit daarna Word af.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

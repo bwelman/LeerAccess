@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="queries_actions" xml:lang="nl-NL">
+    <title>Actiequery's</title>
+    <shortdesc>Een introductie in query’s die gegevens veranderen.</shortdesc>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords>
+                <indexterm>Query<indexterm>actiequery</indexterm><indexterm>bijwerkquery</indexterm><indexterm>tabelmaakquery</indexterm><indexterm>toevoegquery</indexterm><indexterm>verwijderquery</indexterm></indexterm>
+                <indexterm>Actiequery</indexterm>
+                <indexterm>Bijwerkquery</indexterm>
+                <indexterm>Tabelmaakquery</indexterm>
+                <indexterm>Toevoegquery</indexterm>
+                <indexterm>Verwijderquery</indexterm>
+                <indexterm>Beveiliging</indexterm>
+                <indexterm>Vertrouwenscentrum</indexterm>
+            </keywords>
+        </metadata>
+    </prolog>
+    <conbody>
+        <p>De meeste query’s zijn selectiequery’s, die gebruikt worden om gegevens te verzamelen en
+            te tonen, maar deze gegevens niet veranderen. Maar Access heeft ook een andere categorie
+            query's waarmee je gegevens kunt wijzigen of bijwerken en records kunt toevoegen. Deze
+            categorie staat bekend als actiequery's. Het grote voordeel van een actiequery is dat je
+            hiermee een grote hoeveelheid records kunt wijzigen zonder dat je programmeerkennis
+            nodig hebt. De manier waarop je deze query’s  maakt en de wijze van werken is nagenoeg
+            steeds hetzelfde: eerst maak je een selectiequery en daarna wijzig je het type van de
+            query.</p>
+        <p>Access kent vier soorten actiequery’s:</p>
+        <dl>
+            <dlentry>
+                <dt>Tabelmaak</dt>
+                <dd>Selecteert een of meer records en maakt dan een nieuwe tabel hiervoor aan. Deze
+                    nieuwe tabel kan in de geopende database geplaatst worden, maar ook in een
+                    andere database. Je kunt een tabelmaakquery bijvoorbeeld gebruiken om verouderde
+                    gegevens naar een archief database te kopiëren.</dd>
+            </dlentry>
+            <dlentry>
+                <dt>Toevoeg</dt>
+                <dd>Selecteert een of meerdere records en voegt deze aan een andere tabel toe.
+                    Wanneer je bijvoorbeeld dat je nieuwe klanten hebt verworven waarvan de gegevens
+                    in een afzonderlijke tabel staan, dan kun je een toevoegquery gebruiken om de
+                    records naar de bestaande tabel klanten te verplaatsen.</dd>
+            </dlentry>
+            <dlentry>
+                <dt>Verwijder</dt>
+                <dd>Verwijdert een of meerdere records die aan een filter met voorwaarden voldoen.
+                    Je kunt bijvoorbeeld met een verwijderquery producten verwijderen die niet meer
+                    worden aangeboden.</dd>
+            </dlentry>
+            <dlentry>
+                <dt>Bijwerk</dt>
+                <dd>Verandert waarden in een of meerdere records. De bestaande waarden worden dan
+                    vervangen door nieuwe waarden, een soort zoek en vervang actie. De veranderingen
+                    kunnen niet teruggedraaid worden en daarom is het aan te bevelen om altijd eerst
+                    een backup of kopie van de database of van de tabel te maken voordat een
+                    toevoeqquery uitgevoerd wordt.</dd>
+            </dlentry>
+        </dl>
+        <p>Omdat actiequery's gegevens in de database veranderen kunnen deze query's een
+            beveiligingsrisico vormen. Om een beveiliging hiertegen te bieden worden in Access en
+            het Vertrouwenscentrum een aantal controles uitgevoerd. Het vertrouwenscentrum kan
+            inhoud uitschakelen. Bij het openen van een dergelijke database geeft Access de
+            berichtenbalk met een beveiligingswaarschuwing weer.</p>
+        <fig>
+            <title>Berichtenbalk met beveiligingswaarschuwing</title>
+            <image keyref="security_warning">
+                <alt>Berichtenbalk met beveiligingswaarschuwing</alt>
+            </image>
+        </fig>
+        <p>Wanneer je de uitgeschakelde inhoud wilt inschakelen, klik dan op <menucascade>
+                <uicontrol>Inhoud inschakelen</uicontrol>
+                <uicontrol>Opties</uicontrol>
+            </menucascade> en kies de gewenste optie in het dialoogvenster dat verschijnt. Access
+            schakelt uitgeschakelde inhoud in en de database wordt opnieuw geopend met volledige
+            functionaliteit.</p>
+        <p>Verder is het raadzaam om altijd eerst een backup te maken van de tabellen die gewijzigd
+            worden. Dat gaat het gemakkelijkste met kopieren en plakken. Werkwijze</p>
+        <ol>
+            <li>Geef in het navigatievenster een rechter muisklik op de naam van de tabel en kies
+                uit het snelmenu voor <uicontrol>Kopiëren</uicontrol>.</li>
+            <li>Geef opnieuw een rechter muisklik en kies nu voor <uicontrol>Plakken</uicontrol> en
+                geef de nieuwe tabel een verschillende naam.</li>
+        </ol>
+        <p>Om een tabel weer te herstellen na een wijziging ga je als volgt te werk:</p>
+        <ol>
+            <li>Geef in het navigatievenster een rechter muisklik op de naam van de gewijzigde tabel
+                en kies uit het snelmenu voor <uicontrol>Knippen</uicontrol>.</li>
+            <li>Geef een rechter muisklik op de naam van de kopietabel en kies nu voor
+                    <uicontrol>Naam wijzigen</uicontrol> en geef de tabel de oorspronkelijke
+                naam.</li>
+        </ol>
+        <note type="notice">Een aardige, maar wel omslachtige manier om een backup van een tabel te
+            maken is via een <term>Tabelmaakquery</term>. En met een <term>bijwerkquery</term> kun
+            je de inhoud van de gewijzigde velden herstellen.</note>
+    </conbody>
+</concept>

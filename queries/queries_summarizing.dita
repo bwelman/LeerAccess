@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="queries_summarizing" xml:lang="nl-NL">
+    <title>Groeperen en Berekeningen</title>
+    <shortdesc>Uitleg over groeperen en berekeningen in een query.</shortdesc>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords>
+                <indexterm>Query<indexterm>groeperen</indexterm><indexterm>group
+                        by</indexterm><indexterm>totalen</indexterm></indexterm>
+            </keywords>
+        </metadata>
+    </prolog>
+    <conbody>
+        <p>De eenvoudige selectiequery's werken met individuele records. Wanneer je via een query
+            bepaalde klanten uit de tabel Klanten selecteert dan zie je in het resultaat een record
+            voor elke klant die hieraan voldoet. Je kunt echter records ook groeperen en dan
+            berekeningen uitvoeren op de deelgroepen. Dat kun je vergelijken met het berekenen van
+            totalen en subtotalen.</p>
+        <p>Wanneer een query in de ontwerpweergave staat dan zie je op het lint <menucascade>
+                <uicontrol>tab Ontwerp</uicontrol>
+                <uicontrol>Totalen (groep Weergeven/verbergen)</uicontrol>
+            </menucascade>
+            <fig>
+                <title>Knop Totalen</title>
+                <image keyref="button_totals">
+                    <alt>Knop totalen</alt>
+                </image>
+            </fig>Met deze knop kun je de rij Totaal in het queryraster zichtbaar en onzichtbaar
+            maken. Access voegt een vak Totaal toe voor elk veld, net onder het vak Tabel.</p>
+        <fig>
+            <title>Rij Totaal zichtbaar in ontwerp query</title>
+            <image keyref="q_pralines_box_design">
+                <alt>Query ontwerp met de rij totaal</alt>
+            </image>
+        </fig>
+        <draft-comment author="benw">query: Bonbons per doos</draft-comment>
+        <p>Voor elk toegevoegd veld is een keuzevak beschikbaar. De gemaakte keuze bepaalt of een
+            veld gebruikt wordt voor een berekening of voor groeperen of voor filteren. De
+            beschikbare mogelijkheden zijn in drie categorieën onder te brengen:</p>
+        <dl>
+            <dlentry>
+                <dt>Groeperen</dt>
+                <dd>De keuze is dan: <userinput>Group By</userinput>. Het veld wordt gebruikt voor
+                    het maken van kleinere groepen waarop de berekeningen worden uitgevoerd. Deze
+                    keuze is ook de standaardwaarde.</dd>
+            </dlentry>
+            <dlentry>
+                <dt>Filteren</dt>
+                <dd>De keuze is dan: <userinput>Waar</userinput> (Engels: Where). Het vakje voor
+                    Weergeven wordt ook automatisch gewist en dat moet zo blijven. In het vak
+                        <varname>Criteria</varname> kun je met een expressie aangeven waarop
+                    gefilterd moet worden.</dd>
+            </dlentry>
+            <dlentry>
+                <dt>Berekeningen</dt>
+                <dd>Je kunt dan kiezen uit: <userinput>Som, Gem, Min, Max, Aantal, StDev,
+                        Var, Eerste, Laatste, Expressie</userinput>. De gekozen berekening wordt dan
+                    voor het veld uitgevoerd.</dd>
+            </dlentry>
+        </dl>
+        <table frame="all" rowsep="1" colsep="1">
+            <title>Opties voor het samenvatten van gegevens</title>
+            <tgroup cols="2">
+                <colspec colname="c1" colnum="1" colwidth="1*"/>
+                <colspec colname="c2" colnum="2" colwidth="3.44*"/>
+                <thead>
+                    <row>
+                        <entry>Keuze Totaal</entry>
+                        <entry>Toelichting</entry>
+                    </row>
+                </thead>
+                <tbody>
+                    <row>
+                        <entry>Group By</entry>
+                        <entry>Maakt subgroepen van records gebaseerd op de waarden in dit
+                            veld.</entry>
+                    </row>
+                    <row>
+                        <entry>Som</entry>
+                        <entry>Telt de waarden in dit veld op.</entry>
+                    </row>
+                    <row>
+                        <entry>Gem</entry>
+                        <entry>Berekent het gemiddelde van de waarden in dit veld.</entry>
+                    </row>
+                    <row>
+                        <entry>Min</entry>
+                        <entry>Bepaalt de kleinste waarde in dit veld.</entry>
+                    </row>
+                    <row>
+                        <entry>Max</entry>
+                        <entry>Bepaalt de grootste waarde in dit veld.</entry>
+                    </row>
+                    <row>
+                        <entry>Aantal</entry>
+                        <entry>Telt het aantal records.</entry>
+                    </row>
+                    <row>
+                        <entry>StDev</entry>
+                        <entry>Berekent de standaarddeviatie van de waarden in dit veld.</entry>
+                    </row>
+                    <row>
+                        <entry>Var</entry>
+                        <entry>Berekent de variantie van de waarden in dit veld.</entry>
+                    </row>
+                    <row>
+                        <entry>Eerste</entry>
+                        <entry>Bepaalt de eerste waarde in dit veld.</entry>
+                    </row>
+                    <row>
+                        <entry>Laatste</entry>
+                        <entry>Bepaalt de laatste waarde in dit veld.</entry>
+                    </row>
+                    <row>
+                        <entry>Expressie</entry>
+                        <entry>Berekent een expressie voor de waarden in dit veld.</entry>
+                    </row>
+                    <row>
+                        <entry>Waar</entry>
+                        <entry>Voor het filteren op waarden in dit veld.</entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+        <section>
+            <title>Berekend veld</title>
+            <p>Een berekend veld haalt waarden uit een of meerdere velden en voert er een berekening
+                mee uit om nieuwe informatie te produceren. Je kunt eenvoudige berekeningen
+                uitvoeren zoals optellen en vermenigvuldigen, maar ook de ingebouwde functies van
+                Access gebruiken zoals Som en Gem. Je kunt alleen velden gebruiken die aan de query
+                zijn toegevoegd. Ga als volgt te werk om een berekend veld te maken.</p>
+            <ol id="ol_qrp_vfh_zs">
+                <li>Klik in de rij <varname>Veld</varname> van een lege kolom.</li>
+                <li>Typ een naam voor berekening (het resultaat) in gevolgd door een dubbele punt
+                    (:).</li>
+                <li>Typ de expressie voor de berekening in.</li>
+            </ol>
+            <note type="attention">Je kunt veldnamen in de expressie opnemen. Veldnamen moeten
+                tussen blokhaken staan: [veldnaam]. Wanneer een veldnaam geen spaties bevat dan zet
+                Access deze blokhaken wanneer je de naam ingetypt hebt. Zitten er wel spaties in de
+                naam dan zul je zelf deze blokhaken moeten intypen.</note>
+            <note type="tip">Wanneer je een van de berekeningsopties voor het samenvatten gebruikt
+                is het ook aan te bevelen om een nieuwe naam voor de veldnaam in te typen, anders
+                genereert Access een naam voor het resultaat in de gegevensweergave. Deze nieuwe
+                naam moet ook eindigen met een dubbele punt.</note>
+            <p>Hierna volgen een paar voorbeelden. Bestudeer ze goed. Maak ze na en experimenteer er
+                mee.</p>
+        </section>
+        <example>
+            <title>Voorbeeld 1: Gemiddelde bonbonkosten per chocoladetype</title>
+            <p>In dit voorbeeld wordt het veld Chocoladetype gebruikt om te groeperen en het veld
+                Bonbonkosten voor de berekening van de gemiddelde bonbonkosten. Het resultaat
+                bestaat uit een record per chocoladetype met daarin de gemiddelde prijs.</p>
+            <fig>
+                <title>Ontwerp query gemiddelde bonbonkosten per chocoladetype</title>
+                <image keyref="q_pralinecosts_chocolatetype_design">
+                    <alt>Ontwerp query gemiddelde bonbonkosten per chocoladetype</alt>
+                </image>
+            </fig>
+            <fig>
+                <title>Resultaat query gemiddelde bonbonkosten per chocoladetype</title>
+                <image keyref="q_pralinecosts_chocolatetype_result">
+                    <alt>Resultaat query gemiddelde bonbonkosten per chocoladetype</alt>
+                </image>
+            </fig>
+            <p>Omdat voor de kolom met de gemiddelde kosten geen nieuwe naam is opgegeven, genereert
+                Access een naam hiervoor: <systemoutput>GemVanBonbonkosten</systemoutput>.</p>
+            <note conref="../common/reusable_topic_parts.dita#reusable_topic_parts/reservation"/>
+        </example>
+        <example>
+            <title>Voorbeeld 2: Doosprijs statistieken</title>
+            <p>In dit voorbeeld wordt het veld Doosprijs 4 keer gebruikt met verschillende
+                berekeningen. Het resultaat van de query is één record met daarin de 4 uitkomsten
+                van de berekeningen.</p>
+            <fig>
+                <title>Ontwerp query doosprijs statistieken</title>
+                <image keyref="q_boxprice_statistics_design">
+                    <alt>Ontwerp query doosprijs statistieken</alt>
+                </image>
+            </fig>
+            <fig>
+                <title>Resultaat query doosprijs statistieken</title>
+                <image keyref="q_boxprice_statistics_result">
+                    <alt>Resultaat query doosprijs statistieken</alt>
+                </image>
+            </fig>
+            <note conref="../common/reusable_topic_parts.dita#reusable_topic_parts/reservation"/>
+        </example>
+        <example>
+            <title>Voorbeeld 3: Gemiddelde doosprijs voor dozen van meer dan 200 gram</title>
+            <p>In dit voorbeeld wordt het veld Doosprijs gebruikt om het gemiddelde te berekenen.
+                Het veld Gewicht wordt gebruikt om te filteren op dozen van meer dan 200 gram.</p>
+            <fig>
+                <title>Ontwerp query gemiddelde doosprijs voor dozen van meer dan 200 gram</title>
+                <image keyref="q_boxprice_200g_design">
+                    <alt>Ontwerp query gemiddelde doosprijs dozen zwaarder dan 200 gram</alt>
+                </image>
+            </fig>
+            <fig>
+                <title>Resultaat query gemiddelde doosprijs voor dozen van meer dan 200 gram</title>
+                <image keyref="q_boxprice_200g_result">
+                    <alt>Resultaat query gemiddelde doosprijs dozen zwaarder dan 200 gram</alt>
+                </image>
+            </fig>
+            <note conref="../common/reusable_topic_parts.dita#reusable_topic_parts/reservation"/>
+        </example>
+    </conbody>
+</concept>

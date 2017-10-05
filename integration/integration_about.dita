@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="integration_about" xml:lang="nl-NL">
+    <title>Over integratie met Office</title>
+    <shortdesc>Mogelijkheden voor het uitwisselen van gegevens van Access met Excel en
+        Word.</shortdesc>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords>
+                <indexterm>Integratie<indexterm>access</indexterm><indexterm>excel</indexterm><indexterm>word</indexterm></indexterm>
+                <indexterm>Access</indexterm>
+                <indexterm>Excel</indexterm>
+                <indexterm>Word</indexterm>
+            </keywords>
+        </metadata>
+    </prolog>
+    <conbody>
+        <p>De afzonderlijke programma's binnen het Microsoft Office pakket kunnen goed met elkaar
+            samenwerken, zodat integratie binnen processen mogelijk is. Voor veel gebruikers echter
+            zijn Access, Excel en Word afzonderlijke programma's, elk met hun sterke en zwakke
+            kanten. Access voor databases, Excel voor het rekenwerk en Word voor
+            tekstverwerking.</p>
+        <p>Access kan gegevens uit tabellen, query's en formulieren exporteren naar Excel, zodat je
+            daar het rekenwerk kunt doen wat in Access niet kan. Daarnaast kan Acess gegevens uit
+            Excel werkbladen importeren.</p>
+        <p>Access kan ook gegevens van tabellen, query's en formulierenexporteren naar tabellen in
+            een Word RTF bestand. Verder kan een Access database uitstekend dienen als gegevensbron
+            bij het maken van standaardbrieven en etiketten in Word via de Wizard samenvoegen. Deze
+            Wizard kan zowel vanuit Access als vanuit Word opgestart worden.</p>
+    </conbody>
+</concept>

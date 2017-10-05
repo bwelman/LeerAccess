@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="intro_close" xml:lang="nl-NL">
+    <title>Taak: Access afsluiten</title>
+    <shortdesc>Hoe een database en Access zelf afgesloten kan worden.</shortdesc>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords>
+                <indexterm>Access<indexterm>afsluiten</indexterm></indexterm>
+                <indexterm>Afsluiten</indexterm>
+            </keywords>
+        </metadata>
+    </prolog>
+    <taskbody>
+        <context>
+            <p>Om een database af te sluiten kies je <menucascade>
+                <uicontrol>Bestand</uicontrol>
+                <uicontrol>Sluiten</uicontrol>
+            </menucascade>.</p>
+            <p>Om Access zelf af te sluiten klik je op de <term>sluitknop</term> van het
+                programmavenster. Dit is een knop met een <uicontrol>X</uicontrol> in de
+                rechterbovenhoek van het venster.</p>
+            <note type="attention">In tegenstelling tot de meeste andere programma's hoef je in
+                Access een database niet op te slaan. Alle gemaakte wijzigingen worden automatisch
+                bewaard.</note></context>
+        <steps>
+            <step>
+                <cmd>Sluit Access.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

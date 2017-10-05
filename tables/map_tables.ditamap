@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map id="map_tables" xml:lang="nl-NL" title="Tabellen">
+    <title>Tabellen</title>
+    <topicmeta>
+        <author>Ben Welman</author>
+        <publisher>Softwijs</publisher>
+        <copyright>
+            <copyryear year="2017"/>
+            <copyrholder>Softwijs Neede</copyrholder>
+        </copyright>
+        <keywords/>
+        <prodinfo>
+            <prodname>Access</prodname>
+            <vrmlist>
+                <vrm version="" release=""/>
+            </vrmlist>
+        </prodinfo>
+    </topicmeta>
+    <!-- Keys -->
+    <mapref href="../common/keys_common.ditamap" processing-role="resource-only"/>
+    <mapref href="keys_tables.ditamap" processing-role="resource-only"/>
+    <!-- Content -->
+    <topicref href="tables.dita" scope="local" type="concept" format="dita">
+        <topicref href="tables_about.dita" scope="local" type="concept" audience="level1"/>
+        <topicref href="tables_fields.dita" scope="local" type="concept" format="dita"
+            audience="level1">
+            <topicref href="tables_fields_names.dita" scope="local" type="concept" format="dita"/>
+            <topicref href="tables_fields_datatypes.dita" scope="local" type="concept" format="dita"/>
+            <topicref href="tables_fields_properties.dita" scope="local" type="concept"
+                format="dita"/>
+            <topicref href="tables_fields_size.dita" scope="local" type="reference" format="dita"/>
+        </topicref>
+        <topicref href="tables_validation.dita" scope="local" type="concept" format="dita"
+            audience="level2">
+            <topicref href="tables_fields_inputmasks.dita" scope="local" type="concept"
+                format="dita"/>
+            <topicref href="tables_fields_validationrules.dita" scope="local" type="concept"
+                format="dita"/>
+        </topicref>
+        <!-- <topicref href="acc_tabl_template.dita"  scope="local" type="task" audience="level1"/>-->
+        <topicref href="tables_new_manually.dita" scope="local" type="task" audience="level1"/>
+        <topicref href="tables_new_import_excel.dita" scope="local" type="task" audience="level1"/>
+        <topicref href="tables_lookup_wizard.dita" scope="local" type="task" audience="level1"/>
+        <topicref href="tables_relations.dita" scope="local" type="concept" audience="level2">
+            <topicref href="tables_relationtypes.dita" scope="local" type="concept" format="dita">
+                <topicref href="tables_relationtype_one2many.dita" scope="local" type="concept"
+                    format="dita"/>
+                <topicref href="tables_relationtype_one2one.dita" scope="local" type="concept"
+                    format="dita"/>
+                <topicref href="tables_relationtype_many2many.dita" scope="local" type="concept"
+                    format="dita"/>
+            </topicref>
+            <topicref href="tables_relationships_edit.dita" scope="local" type="concept"
+                format="dita"/>
+            <topicref href="tables_referential_integrity.dita" scope="local" type="concept"
+                format="dita"/>
+            <topicref href="tables_relationship_boxes_boxdetails.dita" scope="local" type="task"
+                format="dita"/>
+        </topicref>
+    </topicref>
+    <reltable>
+        <relheader>
+            <relcolspec type="concept"/>
+            <relcolspec type="concept"/>
+        </relheader>
+        <relrow>
+            <relcell>
+                <topicref href="tables_relationships_edit.dita"/>
+            </relcell>
+            <relcell>
+                <topicref href="tables_referential_integrity.dita"/>
+            </relcell>
+        </relrow>
+    </reltable>
+</map>

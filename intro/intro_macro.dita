@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="intro_macro" xml:lang="nl-NL">
+    <title>Wat is een macro?</title>
+    <shortdesc>Een korte introductie in wat <term>macro's</term> zijn.</shortdesc>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords>
+                <indexterm>Macro's</indexterm>
+            </keywords>
+        </metadata>
+    </prolog>
+    <conbody>
+        <p>Een macro is een verzameling van een of meer acties, zoals bijvoorbeeld het openen van
+            een formulier of het afdrukken van een rapport. Met macro’s kun je veel voorkomende
+            taken automatiseren. Je kunt macro's op verschillende plaatsen gebruiken. Je kunt een
+            macro bijvoorbeeld verbinden met een formulier, rapport, besturingselement,
+            toetsencombinatie of opdracht in een menu. Om een macro te maken hoef je geen
+            programmeerervaringen te hebben.</p>
+    </conbody>
+</concept>

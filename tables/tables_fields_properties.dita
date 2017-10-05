@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="tables_fields_properties" xml:lang="nl-NL">
+    <title>Eigenschappen van een veld</title>
+    <shortdesc>Aanvullende eigenschappen van een veld zoals veldlengte.</shortdesc>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords>
+                <indexterm>Veld<indexterm>eigenschappen</indexterm></indexterm>
+            </keywords>
+        </metadata>
+    </prolog>
+    <conbody>
+        <p>Bij een bepaald gegevenstype kun je extra veldeigenschappen instellen. Het gegevenstype
+            van het veld bepaalt welke eigenschappen ingesteld kunnen worden. De belangrijkste en
+            meest gebruikte eigenschappen zijn:<dl>
+                <dlentry>
+                    <dt>Veldlengte</dt>
+                    <dd>Van belang bij <varname>Tekst</varname>, <varname>Numeriek</varname> en soms
+                        ook bij <varname>AutoNummering</varname>. Voor een tekstveld kun je de
+                        maximale lengte van de tekst opgeven. Bij Numeriek kun je aangeven welk
+                        soort getallen ingevoerd kunnen worden, zoals: Byte, Integer, Lange Integer,
+                        Decimaal, Enkel en Dubbel.</dd>
+                </dlentry>
+                <dlentry>
+                    <dt>Notatie</dt>
+                    <dd>Kan bij de meeste gegevenstypes gebruikt worden. Hiermee kun je regelen hoe
+                        de inhoud van het veld eruitziet wanneer het wordt weergegeven in tabellen,
+                        query's, formulieren en rapporten. Je kunt alle geldige getalnotaties
+                        gebruiken en vaak is er ook een lijst met reeds gedefinieerde notaties
+                        beschikbaar.</dd>
+                </dlentry>
+                <dlentry>
+                    <dt>Aantal decimalen</dt>
+                    <dd>Van belang bij <varname>Numeriek</varname> en <varname>Valuta</varname>.
+                        Hiermee geef je het aantal te gebruiken decimalen op voor de weergave van de
+                        getallen.</dd>
+                </dlentry>
+                <dlentry>
+                    <dt>Standaardwaarde</dt>
+                    <dd>Kan bij de meeste gegevenstypes gebruikt worden. Hiermee ken je automatisch
+                        de opgegeven waarde toe aan dit veld wanneer er een nieuwe record wordt
+                        gemaakt. Erg handig wanneer de waarde vaak hetzelfde is. De waarde kan
+                        daarna weer gewijzigd worden.</dd>
+                </dlentry>
+                <dlentry>
+                    <dt>Vereist</dt>
+                    <dd>Kan bij de meeste gegevenstypes gebruikt worden. De mogelijke waarden zijn
+                            <option>Nee</option> (standaard) en <option>Ja</option>.</dd>
+                </dlentry>
+            </dl></p>
+        <p>Een speciale rol vervullen de gegevenstypes <varname>Invoermasker</varname>,
+                <varname>Validatieregel</varname> en <varname>Validatietekst</varname>. Deze kunnen
+            gebruikt worden bij de <term>validatie</term> van gegevens waarmee je kunt regelen dat
+            de invoer van gegevens aan bepaalde voorwaarden voldoet.</p>
+    </conbody>
+</concept>

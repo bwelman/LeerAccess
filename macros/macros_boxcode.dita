@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="macros_boxcode" xml:lang="nl-NL">
+    <title>Taak: Keuzelijst dooscode</title>
+    <shortdesc>Op een nieuw te maken formulier wordt een keuzelijst gemaakt en via een hieraan
+        toegekende macro wordt het bijbehorende record opgezocht.</shortdesc>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords>
+                <indexterm>Macro<indexterm>record zoeken</indexterm></indexterm>
+                <indexterm>Formulier<indexterm>keuzelijst</indexterm></indexterm>
+            </keywords>
+        </metadata>
+    </prolog>
+    <taskbody>
+        <context>
+            <p>Deze taak is een variant op de taak waarbij de klant op basis van de klantcode
+                gezocht wordt. Er moet nu een formulier gemaakt worden met daarop de gegevens van
+                een doos en op dat formulier een keuzelijst om de dooscode te zoeken.</p>
+            <p>ANALYSE </p>
+            <p>De basis van het formulier kan via een standaardformulier gemaakt worden. De
+                keuzelijst is het besturingselement <uicontrol>Keuzelijst met invoervak</uicontrol>.
+                Je moet een macro maken die twee taken uitvoert. Allereerst naar de keuzelijst gaan
+                en de dooscode ophalen. Daarna het bijbehorende record opzoeken.</p>
+        </context>
+        <steps>
+            <step>
+                <cmd>Open de database <keyword keyref="example_db_file"/>.</cmd>
+            </step>
+            <step>
+                <cmd>Maak een nieuw formulier met keuzelijst en noem deze <userinput>Zoek doos op
+                        code</userinput>.</cmd>
+            </step>
+            <step>
+                <cmd>Maak de macro en noem deze  <userinput>Zoek doos op code</userinput></cmd>
+            </step>
+            <step>
+                <cmd>Open formulier <wintitle>Zoek doos op code</wintitle> en test of de keuzelijst
+                    goed werkt.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

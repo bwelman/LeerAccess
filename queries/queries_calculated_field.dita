@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="queries_calculated_field" xml:lang="nl-NL">
+    <title>Taak: Berekend veld</title>
+    <shortdesc>Een query met daarin een kolom waarin een berekening is uitgevoerd.</shortdesc>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords>
+                <indexterm>Query<indexterm>berekeningen</indexterm></indexterm>
+            </keywords>
+        </metadata>
+    </prolog>
+    <taskbody>
+        <context>
+            <p>INFORMATIEBEHOEFTE</p>
+            <p>Maak een gesorteerd overzicht van alle orderregels met daarop per order: ordercode,
+                dooscode, aantal dozen, doosprijs en het regelbedrag.</p>
+            <p>ANALYSE</p>
+            <p>Voor elke order kun je de ordercode, dooscode en het aantal dozen vinden in de tabel
+                Orderdetails. De doosprijs zit in de tabel Dozen. Je hebt dus de tabellen
+                Orderdetails en Dozen nodig. Het bedrag van de orderregel zit in geen enkele tabel
+                omdat dit bedrag uit de andere gegevens berekend kan worden:
+                    <codeph>Orderregelbedrag = Hoeveelheid * Doosprijs</codeph>.</p>
+        </context>
+        <steps>
+            <step>
+                <cmd>Open de database <keyword keyref="example_db_file"/>.</cmd>
+            </step>
+            <step>
+                <cmd>Kies <menucascade>
+                        <uicontrol>tab Maken</uicontrol>
+                        <uicontrol>Queryontwerp (groep Query's)</uicontrol>
+                    </menucascade>.</cmd>
+                <stepresult>Access maakt een nieuw leeg queryvenster en toont het dialoogvenster
+                        <wintitle>Tabel weergeven</wintitle>.<fig>
+                        <title>Dialoogvenster <wintitle>Tabel weergeven</wintitle></title>
+                        <image keyref="q_show_table">
+                            <alt>Dialoogvenster tabellen weergeven</alt>
+                        </image>
+                    </fig></stepresult>
+            </step>
+            <step>
+                <cmd>Voeg achtereenvolgens de tabellen <varname>Orderdetails</varname> en
+                        <varname>Dozen</varname> toe en klik daarna op
+                        <uicontrol>Sluiten</uicontrol>.</cmd>
+                <stepresult>De tabellen Orderdetails en Dozen zijn nu aan het queryvenster
+                    toegevoegd.</stepresult>
+            </step>
+            <step>
+                <cmd>Voeg achtereenvolgens de velden <varname>Ordercode</varname>,
+                        <varname>Dooscode</varname>, <varname>Hoeveelheid</varname> (uit tabel
+                        <varname>Orderdetails</varname>) en <varname>Doosprijs</varname> (uit tabel
+                        <varname>Dozen</varname>) aan het queryraster toe door dubbel te klikken op
+                    het veld.</cmd>
+                <stepresult>
+                    <fig>
+                        <title>Ontwerp met tabellen en velden</title>
+                        <image keyref="q_orderrow_amount_design1">
+                            <alt>Ontwerp met tabellen en velden</alt>
+                        </image>
+                    </fig>
+                </stepresult>
+            </step>
+            <step>
+                <cmd>Zet de sorteervolgorde bij <varname>Ordercode</varname> en
+                        <varname>Dooscode</varname> op <uicontrol>Oplopend</uicontrol>. Klik in rij
+                    veld van de eerste lege kolom en typ in <userinput>Regelbedrag:
+                        Hoeveelheid*Doosprijs</userinput>.</cmd>
+                <stepresult>Access zet blokhaken om de veldnamen.<fig>
+                        <title>Ontwerp uitgebreid met berekend veld</title>
+                        <image keyref="q_orderrow_amount_design2">
+                            <alt>Ontwerp uitgebreid met berekend veld</alt>
+                        </image>
+                    </fig></stepresult>
+            </step>
+            <step>
+                <cmd>Schakel naar de <uicontrol>Gegevensbladweergave</uicontrol>.</cmd>
+                <stepresult>
+                    <fig>
+                        <title>Resultaat query zonder financiële opmaak</title>
+                        <image keyref="q_orderrow_amount_result_unformatted">
+                            <alt>Resultaat query zonder financiële opmaak van de bedragen</alt>
+                        </image>
+                    </fig>
+                    <p>De bedragen moeten nog in een financiële getalnotatie worden opgemaakt.</p>
+                </stepresult>
+            </step>
+            <step>
+                <cmd>Schakel over naar de <uicontrol>Ontwerpweergave</uicontrol>.</cmd>
+                <tutorialinfo><p>Alle objecten in Access hebben <term>eigenschappen</term>. Deze
+                            <term>eigenschappen</term> bepalen onder andere het uiterlijk van het
+                        object. De instellingen van de eigenschappen en het wijzigen ervan gaat via
+                        het <wintitle>Eigenschappenvenster</wintitle>. Het in- en uitschakelen van
+                        de zichtbaarheid van het eigenschappenvenster gaat via <menucascade>
+                            <uicontrol>tab Ontwerp</uicontrol>
+                            <uicontrol>Eigenschappenvenster (groep Weergeven/verbergen)</uicontrol>
+                        </menucascade>. Nog sneller is het gebruik van de sneltoets
+                            <uicontrol>F4</uicontrol>.</p><p>Om geldbedragen van een valutasymbool
+                        te voorzien moet de eigenschap <uicontrol>Notatie</uicontrol> van het veld
+                            <varname>Regelbedrag</varname> gewijzigd worden.</p></tutorialinfo>
+            </step>
+            <step>
+                <cmd>Zorg dat het <wintitle>Eigenschappenvenster</wintitle> zichtbaar is. Klik
+                    ergens in het veld <varname>Regelbedrag</varname>.</cmd>
+                <stepresult>
+                    <fig>
+                        <title>Eigenschappen veld Regelbedrag</title>
+                        <image keyref="field_format_currency">
+                            <alt>Eigenschappenvenster van het veld</alt>
+                        </image>
+                    </fig>
+                </stepresult>
+            </step>
+            <step>
+                <cmd>Klik in het vak <uicontrol>Notatie</uicontrol> en kies dan met de keuzelijst
+                    voor <uicontrol>Euro</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Schakel over naar de <uicontrol>Gegevensbladweergave</uicontrol>.</cmd>
+                <stepresult>
+                    <fig>
+                        <title>Resultaat query met financiële opmaak</title>
+                        <image keyref="q_orderrow_amount_result_formatted">
+                            <alt>Resultaat query met financiële opmaak van de bedragen</alt>
+                        </image>
+                    </fig>
+                </stepresult>
+            </step>
+            <step>
+                <cmd>Sluit de query en beantwoord de vraag of de wijzigingen bewaard moeten worden
+                    met <uicontrol>Ja</uicontrol>.</cmd>
+                <stepresult>Het venster <wintitle>Opslaan als</wintitle> verschijnt zodat de naam
+                    van de query kan worden opgegeven.</stepresult>
+            </step>
+            <step>
+                <cmd>Typ als naam in <userinput>Orderregelbedrag</userinput> en klik op
+                        <uicontrol>OK</uicontrol>.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

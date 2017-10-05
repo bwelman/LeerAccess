@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="queries_about" xml:lang="nl-NL">
+    <title>Over query's maken</title>
+    <shortdesc>Waarvoor kun je query's gebruiken en welke soorten query's zijn er.</shortdesc>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords>
+                <indexterm>Query<indexterm>selectiequery</indexterm><indexterm>parameterquery</indexterm><indexterm>bijwerkquery</indexterm></indexterm>
+                <indexterm>Selectiequery</indexterm>
+                <indexterm>Parameterquery</indexterm>
+                <indexterm>Bijwerkquery</indexterm>
+            </keywords>
+        </metadata>
+    </prolog>
+    <conbody>
+        <p>De meest bekende vorm van een query is de selectiequery, dat is een soort vraag aan de
+            database naar een bepaald verzameling gegevens. Een query kan echter meer dan een lijst
+            met records produceren. Zo kunnen er in een query functies voorkomen die berekeningen
+            (som, gemiddelde, ...) uitvoeren op de gegevens. En er zijn verschillende soorten
+            query's. De volgende types komen in deze cursus aan bod:</p>
+        <dl>
+            <dlentry>
+                <dt>Selectiequery</dt>
+                <dd>Haalt gegevens uit een of meerdere tabellen en toont het resultaat in een
+                    gegevensbladweergave. Je kunt deze query ook gebruiken om records te groepen en
+                    berekeningen uit te voeren zoals som, gemiddelde, aantal, ... Dit is de meest
+                    voorkomende soort query.</dd>
+            </dlentry>
+            <dlentry>
+                <dt>Parameterquery</dt>
+                <dd>Hierbij wordt eerst aan de gebruiker om een bepaalde waarde voor een of meerdere
+                    velden gevraagd. Daarna wordt het antwoord gebruikt om een selectiequerie uit te
+                    voeren. Een voorbeeld is een overzicht van orders vanaf een bepaalde datum.</dd>
+            </dlentry>
+            <dlentry>
+                <dt>Bijwerkquery</dt>
+                <dd>Hierbij is het mogelijk om via één actie een of meerdere wijzigingen in records
+                    aan te brengen die aan bepaalde voorwaarden voldoen. Een voorbeeld is een
+                    prijsverhoging van 10% voor een serie producten.</dd>
+            </dlentry>
+        </dl>
+        <p>Voor het maken van een query is het nodig dat eerst de informatiebehoefte goed
+            gespecificeerd wordt. Na de analyse van deze informatiebehoefte kan dan begonnen worden
+            met het maken van de query.</p>
+    </conbody>
+</concept>

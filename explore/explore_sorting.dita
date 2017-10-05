@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="explore_sorting" xml:lang="nl-NL">
+    <title>Taak: Sorteren</title>
+    <shortdesc>Records oplopend of aflopend sorteren op één of meerdere velden.</shortdesc>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords>
+                <indexterm>Sorteren<indexterm>tabel</indexterm></indexterm>
+                <indexterm>Tabel<indexterm>sorteren</indexterm></indexterm>
+            </keywords>
+        </metadata>
+    </prolog>
+    <taskbody>
+        <context>
+            <p>Je kunt de records in een tabel sorteren op basis van de waarden in een of meerdere
+                velden. Het sorteren kan zowel in oplopende als aflopende volgorde. </p>
+            <p>In de volgende oefening moet de tabel <varname>Klanten</varname> gewijzigd worden
+                zodat een overzicht ontstaat van eerst de plaats, dan de achternaam en dan de
+                voornaam. De records moeten ook in deze volgorde gesorteerd worden.<fig>
+                    <title>Tabel Klanten gesorteerd op plaats, achternaam en voornaam</title>
+                    <image keyref="table_customers_sorted">
+                        <alt>Tabel klanten gesorteerd eerst op plaats, dan op achternaam en
+                            vervolgens op voornaam.</alt>
+                    </image>
+                </fig></p>
+        </context>
+        <steps>
+            <step>
+                <cmd>Open de database <keyword keyref="example_db_file"/>.</cmd>
+            </step>
+            <step>
+                <cmd>Open de tabel <wintitle>Klanten</wintitle>.</cmd>
+                <stepresult>De tabel Klanten wordt in de Gegevensbladweergave geopend.</stepresult>
+            </step>
+            <step>
+                <cmd>Selecteer de kolom <varname>Plaats</varname> via een klik op de kop van de
+                    kolom.</cmd>
+            </step>
+            <step>
+                <cmd>Sleep de kolom <varname>Plaats</varname> naar links zodat dit de eerste kolom
+                    in de tabel wordt.</cmd>
+            </step>
+            <step>
+                <cmd>Verplaats op dezelfde manier de kolommen <varname>Achternaam</varname> en
+                        <varname>Voornaam</varname> naar respectievelijk de 2e en 3e positie in de
+                    tabel.</cmd>
+            </step>
+            <stepsection>Sortering op één veld.</stepsection>
+            <step>
+                <cmd>Klik in de kolom <varname>Plaats</varname> op het pijltje aan de rechterkant
+                    van de kolomkop en kies uit het snelmenu voor <uicontrol>Sorteren van A naar
+                        Z</uicontrol>.</cmd>
+                <stepresult>Access reorganiseert de records in alfabetische volgorde op plaatsnaam
+                    en toont een klein naar boven wijzend pijltje (<image
+                        keyref="button_arrow_down_sortedup"/>) aan de rechterkant van de kolomkop om
+                    de sorteervolgorde aan te geven.</stepresult>
+            </step>
+            <step>
+                <cmd>Hef de sortering op via <menucascade>
+                        <uicontrol>tab Start</uicontrol>
+                        <uicontrol>Sorteeracties verwijderen (groep Sorteren en
+                            filteren)</uicontrol>
+                    </menucascade>. </cmd>
+            </step>
+            <stepsection>Sortering op meerdere velden.</stepsection>
+            <step>
+                <cmd>Selecteer de kolommen <varname>Plaats</varname>, <varname>Achternaam</varname>
+                    en <varname>Voornaam</varname>.</cmd>
+            </step>
+            <step>
+                <cmd>Kies <menucascade>
+                        <uicontrol>tab Start</uicontrol>
+                        <uicontrol>Oplopend <image keyref="button_sort_ascending"/> (groep Sorteren
+                            en filteren)</uicontrol>
+                    </menucascade>.</cmd>
+                <stepresult>Access reorganiseert nu de records in oplopende alfabetische volgorde
+                    eerst op plaatsnaam, dan op achternaam en dan op voornaam. Aan de rechterkant
+                    van elk van deze drie kolomkoppen is nu het kleine naar boven wijzende pijltje
+                    te zien.</stepresult>
+            </step>
+            <step>
+                <cmd>Sluit de tabel <wintitle>Klanten</wintitle> en kies bij de vraag om de
+                    wijzigingen op te slaan voor <uicontrol>Nee</uicontrol>.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

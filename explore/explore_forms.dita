@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="explore_forms" xml:lang="nl-NL">
+    <title>Taak: Formulier verkennen</title>
+    <shortdesc>De twee belangrijkste weergaven (formulier en ontwerp) van formulieren.</shortdesc>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords>
+                <indexterm>Formulier<indexterm>formulierweergave</indexterm><indexterm>ontwerpweergave</indexterm></indexterm>
+                <indexterm>Formulierweergave<indexterm>formulier</indexterm></indexterm>
+                <indexterm>Ontwerpweergave<indexterm>formulier</indexterm></indexterm>
+            </keywords>
+        </metadata>
+    </prolog>
+    <taskbody>
+        <context>
+            <p>Formulieren zijn vooral van belang bij het tonen, toevoegen en bewerken van
+                gegevens.</p>
+            <p>De belangrijkste weergaven van een formulier zijn:<ul>
+                    <li><uicontrol>Formulierweergave</uicontrol>. In deze weergave worden de
+                        gegevens getoond en kun je deze bewerken en invoeren.</li>
+                    <li><uicontrol>Gegevensbladweergave</uicontrol>. Een weergave die op die van de
+                        tabel lijkt</li>
+                    <li><uicontrol>Ontwerpweergave</uicontrol>. In deze weergave kun je het ontwerp
+                        van het formulier zien en deze aanpassen.</li>
+                </ul></p>
+        </context>
+        <steps>
+            <step>
+                <cmd>Open de database <keyword keyref="example_db_file"/>.</cmd>
+            </step>
+            <step>
+                <cmd>Open het formulier <varname>Bonbons</varname>.</cmd>
+                <stepresult>
+                    <fig>
+                        <title>Formulier <wintitle>Bonbons</wintitle> in formulierweergave</title>
+                        <image keyref="form_pralines_form_view">
+                            <alt>Formulier bonbons in formulierweergave.</alt>
+                        </image>
+                    </fig>
+                </stepresult>
+            </step>
+            <step>
+                <cmd>Zet het formulier <varname>Bonbons</varname> in de
+                        <uicontrol>Ontwerpweergave</uicontrol> op een van de volgende
+                    manieren:</cmd>
+                <choices>
+                    <choice>Klik op de knop <uicontrol>Ontwerpweergave</uicontrol> rechtsonder in
+                        het programmavenster <image keyref="button_design_view"/></choice>
+                    <choice><menucascade>
+                            <uicontrol>tab Start</uicontrol>
+                            <uicontrol>Weergave (groep Weergaven)</uicontrol>
+                            <uicontrol>Ontwerpweergave</uicontrol>
+                        </menucascade>.</choice>
+                </choices>
+                <info>
+                    <note type="tip">Je kunt een formulier ook direct in de Ontwerpweergave openen
+                        via een rechter muisklik op de formuliernaam in het navigatiedeelvenster en
+                        dan uit het snelmenu te kiezen voor
+                        <uicontrol>Ontwerpweergave</uicontrol>.</note>
+                </info>
+                <stepresult>
+                    <fig>
+                        <title>Formulier <wintitle>Bonbons</wintitle> in Ontwerpweergave</title>
+                        <image keyref="form_pralines_design_view">
+                            <alt>Formulier bonbons in ontwerpweergave.</alt>
+                        </image>
+                    </fig>
+                    <p>In de ontwerpweergave kun je het formulier opmaken en besturingselementen
+                        toevoegen zoals tekstvakken, labelvakken, keuzelijsten, aankruisvakjes,
+                        enz.</p>
+                </stepresult>
+            </step>
+            <step>
+                <cmd>Zet het formulier <varname>Bonbons</varname> in de
+                        <uicontrol>Formulierweergave</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Blader door de records met de navigatieknoppen linksonder in het
+                    documentvenster.</cmd>
+                <tutorialinfo>Betekenis navigatieknoppen:<dl>
+                        <dlentry>
+                            <dt><image keyref="button_record_first"/></dt>
+                            <dd>Eerste record</dd>
+                        </dlentry>
+                        <dlentry>
+                            <dt><image keyref="button_record_previous"/></dt>
+                            <dd>Vorige record</dd>
+                        </dlentry>
+                        <dlentry>
+                            <dt><image keyref="button_record_next"/></dt>
+                            <dd>Volgende record</dd>
+                        </dlentry>
+                        <dlentry>
+                            <dt><image keyref="button_record_last"/></dt>
+                            <dd>Laatste record</dd>
+                        </dlentry>
+                        <dlentry>
+                            <dt><image keyref="button_record_new"/></dt>
+                            <dd>Nieuwe (lege) record</dd>
+                        </dlentry>
+                    </dl></tutorialinfo>
+            </step>
+            <step>
+                <cmd>Sluit het formulier.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

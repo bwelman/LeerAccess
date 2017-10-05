@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="intro" xml:lang="nl-NL">
+    <title>Beginnen met Access</title>
+    <shortdesc/>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords/>
+        </metadata>
+    </prolog>
+    <conbody>
+        <p>Access is een programma uit de Microsoft Office reeks waarmee je <term>databases</term>
+            kunt maken. En met databases kun je gegevens opslaan, beheren en analyseren.</p>
+        <p>De gegevens bevatten bijvoorbeeld detailinformatie over klanten, orders, artikelen,
+            leveranciers, enz. Deze gegevens worden geordend opgeslagen. Hierdoor kun je antwoorden
+            krijgen op vragen als</p>
+        <ul>
+            <li>Wat is de omzet per klant geweest in het afgelopen halfjaar?</li>
+            <li>Welke artikelen zorgen voor het grootste deel van de omzet?</li>
+        </ul>
+        <p>Access wordt als het lastigste programma uit de Microsoft Office reeks gezien. Dat komt
+            door de manier waarop databases in elkaar zitten en werken. Zo kun je Excel, Powerpoint
+            en Word opstarten en direct daarna beginnen met gegevens in te voeren. Dat kan in Access
+            niet. Voordat je gegevens in een database kunt invoeren moet je eerst een structuur voor
+            de database bedenken en aanmaken. Voor de wat grotere en complexere databases wordt dat
+            al snel werk voor specialisten.</p>
+    </conbody>
+</concept>

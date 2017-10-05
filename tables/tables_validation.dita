@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="tables_validation" xml:lang="nl-NL">
+    <title>Validatie</title>
+    <shortdesc>Validatie van de invoer van gegevens.</shortdesc>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords>
+                <indexterm>Veld<indexterm>validatie</indexterm></indexterm>
+            </keywords>
+        </metadata>
+    </prolog>
+    <conbody>
+        <p>Om er voor te zorgen dat een gebruiker gegevens op een bepaalde manier invoert kun je
+            gebruik maken van een <term>invoermasker</term>. Daarnaast kun je nog via een
+                <term>validatieregel</term> controleren of de ingevoerde waarde aan bepaalde eisen
+            voldoet en zo niet via een <term>validatietekst</term> de gebruiker hierop wijzen.</p>
+    </conbody>
+</concept>

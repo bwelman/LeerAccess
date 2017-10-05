@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map id="map_integration" xml:lang="nl-NL">
+    <title>Integratie met Office</title>
+    <topicmeta>
+        <author>Ben Welman</author>
+        <publisher>Softwijs</publisher>
+        <copyright>
+            <copyryear year="2017"/>
+            <copyrholder>Softwijs Neede</copyrholder>
+        </copyright>
+        <keywords/>
+        <prodinfo>
+            <prodname>Access</prodname>
+            <vrmlist>
+                <vrm version="" release=""/>
+            </vrmlist>
+        </prodinfo>
+    </topicmeta>
+    <!-- Keys -->
+    <mapref href="../common/keys_common.ditamap" processing-role="resource-only"/>
+    <mapref href="keys_integration.ditamap" processing-role="resource-only"/>
+    <!-- Content -->
+    <topicref href="integration.dita" scope="local" type="concept" audience="level2">
+        <topicref href="integration_about.dita" scope="local" type="concept"/>
+        <topicref href="mailmerge.dita" scope="local" type="task"/>
+        <topicref href="export_word.dita" scope="local" type="task"/>
+        <topicref href="export_excel.dita" scope="local" type="task"/>
+    </topicref>
+</map>

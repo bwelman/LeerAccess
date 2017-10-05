@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="macros_customercode" xml:lang="nl-NL">
+    <title>Taak: Klant zoeken op code</title>
+    <shortdesc>Op een formulier wordt een keuzelijst gemaakt en via een hieraan toegekende macro
+        wordt het bijbehorende record opgezocht.</shortdesc>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords>
+                <indexterm>Formulier<indexterm>keuzelijst</indexterm></indexterm>
+                <indexterm>macro<indexterm>zoek record</indexterm></indexterm>
+            </keywords>
+        </metadata>
+    </prolog>
+    <taskbody>
+        <context>
+            <p>Er moet een formulier gemaakt worden met daarop de gegevens van een klant. Om het de
+                gebruiker wat gemakkelijker te maken een bepaalde klant te zoeken waarvan de
+                klantcode bekend is, moet een keuzelijst op het formulier gemaakt worden waarop je
+                de klantcode kunt invoeren waarna de gegevens van de bijbehorende klant in het
+                formulier worden getoond.</p>
+            <p>ANALYSE</p>
+            <p>De basis van het formulier kan via een standaarsformulier gemaakt worden. De
+                keuzelijst is het besturingselement<uicontrol>Keuzelijst met invoervak</uicontrol>.
+                Verder dient er een macro gemaakt te worden die twee taken uitvoert. Allereerst naar
+                de keuzelijst gaan en daarna het record opzoeken dat hoort bij de ingevoerde
+                klantcode.</p>
+        </context>
+        <steps>
+            <step>
+                <cmd>Open de database <keyword keyref="example_db_file"/>.</cmd>
+            </step>
+            <step>
+                <cmd>Selecteer de tabel <uicontrol>Klanten</uicontrol>. Deze hoeft niet geopend te
+                    worden.</cmd>
+            </step>
+            <step>
+                <cmd>Klik <menucascade>
+                        <uicontrol>tab Maken</uicontrol>
+                        <uicontrol>Formulier (groep Formulieren)</uicontrol>
+                    </menucascade>.</cmd>
+                <stepresult>
+                    <p>Het formulier wordt aangemaakt en geopend in de
+                            <uicontrol>Indelingsweergave</uicontrol>.</p>
+                </stepresult>
+            </step>
+            <step>
+                <cmd>Sla het formulier op onder de naam <userinput>Zoek klant op code</userinput>.
+                    Het gemakkelijkste gaat dit via de knop <uicontrol>Opslaan <image
+                            keyref="button_save"/></uicontrol> in de <uicontrol>werkbalk Snelle
+                        toegang</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Schakel over naar de <uicontrol>Ontwerpweergave</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Selecteer <menucascade>
+                        <uicontrol>Ontwerp</uicontrol>
+                        <uicontrol>Keuzelijst met invoervak <image keyref="combobox"/> (groep
+                            Besturingselementen)</uicontrol>
+                    </menucascade> en teken daarna rechts in het deel van de formulierkoptekst een
+                    rechthoekig kader voor de keuzelijst.</cmd>
+                <stepresult>
+                    <fig>
+                        <title>Formulier met keuzelijst</title>
+                        <image keyref="customercode_combobox_framework">
+                            <alt>Formulier met keuzelijst</alt>
+                        </image>
+                    </fig>Na het tekenen van het kader wordt automatisch de <wintitle>Wizard
+                        keuzelijst met invoervak</wintitle> opgestart.</stepresult>
+            </step>
+            <step>
+                <cmd>Beantwoord de achtereenvolgende vragen van de Wizard als volgt:</cmd>
+                <info><ul>
+                        <li>De waarden voor de keuzelijst met invoervak moeten worden opgezocht in
+                            een tabel of query.</li>
+                        <li>Tabel: Klanten levert de waarden voor de keuzelijst met invoervak.</li>
+                        <li>Alleen het veld Klantcode moet worden toegevoegd aan de keuzelijst met
+                            invoervak.</li>
+                        <li>Records oplopend sorteren op klantcode.</li>
+                        <li>De voorgestelde breedte van de kolom in de keuzelijst accepteren.</li>
+                        <li>De waarde bewaren voor later gebruik.</li>
+                        <li>Tekst voor het label bij de keuzelijst: <userinput>Zoeken op
+                                klantcode:</userinput></li>
+                    </ul></info>
+                <stepresult><p>Na het Voltooien van de Wizard ben je weer terug in de
+                        Ontwerpweergave.</p></stepresult>
+            </step>
+            <step>
+                <cmd>Wanneer het label en de keuzelijst gedeeltelijk over elkaar heen liggen moet je
+                    een van beide of beide wat verplaatsen. Dit doe je door het vierkantje in de
+                    linkerbovenhoek van het object met een ingedrukte linkermuisknop te
+                    verslepen.</cmd>
+            </step>
+            <step>
+                <cmd>Sluit het formulier <uicontrol>Zoek klant op code</uicontrol> en bewaar de
+                    wijzigingen.</cmd>
+            </step>
+            <step id="macro_create">
+                <cmd>Kies <menucascade>
+                        <uicontrol>tab Maken</uicontrol>
+                        <uicontrol>Macro (groep Macro's en code)</uicontrol>
+                    </menucascade>.</cmd>
+                <stepresult>
+                    <fig>
+                        <title>Macro venster</title>
+                        <image keyref="macro_window">
+                            <alt>Macro venster</alt>
+                        </image>
+                    </fig>
+                </stepresult>
+            </step>
+            <step>
+                <cmd>Klik op de keuzepijl in het vak <uicontrol>Nieuwe actie toevoegen</uicontrol>
+                    en selecteer uit de lijst de actie <option>NaarBesturingselementGaan</option>.
+                </cmd>
+            </step>
+            <step>
+                <cmd>Typ <userinput>Klantcode</userinput> in het vak
+                        <varname>Besturingselementnaam</varname>.</cmd>
+                <stepresult>
+                    <fig>
+                        <title>Actie NaarBesturingselementGaan</title>
+                        <image keyref="macro_customercode_gotocontrol">
+                            <alt>Actie NaarBesturingselementGaan</alt>
+                        </image>
+                    </fig>
+                </stepresult>
+            </step>
+            <step>
+                <cmd>Klik op de keuzepijl in het vak <uicontrol>Nieuwe actie toevoegen</uicontrol>
+                    en selecteer actie <option>RecordZoeken</option>.</cmd>
+            </step>
+            <step>
+                <cmd>Typ de waarde <userinput>=[zoekcode]</userinput> in het vak <uicontrol>Zoeken
+                        naar</uicontrol>. De andere argumenten zijn al automatisch door Access van
+                    een standaardwaarde voorzien en kunnen blijven staan.</cmd>
+                <stepresult>
+                    <fig>
+                        <title>Macro Klant zoeken op klantcode</title>
+                        <image keyref="macro_customer_by_code">
+                            <alt>Macro Klant zoeken op klantcode</alt>
+                        </image>
+                    </fig>
+                </stepresult>
+            </step>
+            <step>
+                <cmd>Sluit het macrovenster en bewaar de macro onder de naam <userinput>Klant zoeken
+                        op klantcode</userinput>.</cmd>
+            </step>
+            <step>
+                <cmd>Open formulier <uicontrol>Zoek klant op code</uicontrol> in de
+                        <uicontrol>Ontwerpweergave</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Selecteer de <uicontrol>Keuzelijst met invoervak</uicontrol> en wijzig in
+                        <uicontrol>Eigenschappenvenster (tab Overige)</uicontrol> de naam van het
+                    besturingselement in <userinput>zoekcode</userinput>.</cmd>
+                <stepresult>
+                    <fig>
+                        <title>Naam keuzelijst gewijzigd in zoekcode</title>
+                        <image keyref="customercode_combobox_name">
+                            <alt>Naam keuzelijst gewijzigd in zoekcode</alt>
+                        </image>
+                    </fig>
+                </stepresult>
+            </step>
+            <step>
+                <cmd>Met nog steeds de keuzelijst geselecteerd klik in
+                        <uicontrol>Eigenschappenvenster (tab Gebeurtenis)</uicontrol> in het vak
+                        <varname>Na bijwerken</varname> en selecteer via de keuzepijl de macro
+                        <option>Klant zoeken op klantcode</option>.</cmd>
+                <stepresult>
+                    <fig>
+                        <title>Keuzelijst eigenschap Na bijwerken</title>
+                        <image keyref="customercode_combobox_afterupdate">
+                            <alt>Keuzelijst eigenschap Na bijwerken</alt>
+                        </image>
+                    </fig>
+                </stepresult>
+            </step>
+            <step>
+                <cmd>Sluit het formulier en bewaar de wijzigingen.</cmd>
+            </step>
+            <step>
+                <cmd>Open formulier <uicontrol>Zoek klant op code</uicontrol> en test of de
+                    keuzelijst goed werkt.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

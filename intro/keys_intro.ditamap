@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map id="keys_intro" xml:lang="nl-NL">
+    <title>Keys Introduction</title>
+    <keydef keys="example_form" href="images/example_form.png" format="png"/>
+    <keydef keys="example_query" href="images/example_query.png" format="png"/>
+    <keydef keys="example_rel_db" href="images/example_rel_db.png" format="png"/>
+    <keydef keys="example_report" href="images/example_report.png" format="png"/>
+    <keydef keys="example_table" href="images/example_table.png" format="png"/>
+</map>

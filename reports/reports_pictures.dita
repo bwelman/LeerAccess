@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="reports_pictures" xml:lang="nl-NL">
+    <title>Taak: Bonbon afbeeldingen</title>
+    <shortdesc>Een voorbeeld van een rapport met afbeeldingen van bonbons op etiketten.</shortdesc>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords>
+                <indexterm>Rapport<indexterm>etiketten</indexterm></indexterm>
+                <indexterm>Etiketten</indexterm>
+            </keywords>
+        </metadata>
+    </prolog>
+    <taskbody>
+        <context>In deze opdracht wordt een rapport gemaakt met de afbeeldingen van de bonbons en de
+            bijbehorende bonbonnaam en bonboncode. Daarvoor worden etiketten gebruikt met op elk
+            etiket de gegevens van de bonbon.</context>
+        <steps>
+            <step>
+                <cmd>Open de database <keyword keyref="example_db_file"/>.</cmd>
+            </step>
+            <step>
+                <cmd>Selecteer de tabel <uicontrol>Bonbons</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Kies <menucascade>
+                        <uicontrol>tab Maken</uicontrol>
+                        <uicontrol>Etiketten (groep Rapporten)</uicontrol>
+                    </menucascade>.</cmd>
+            </step>
+            <step>
+                <cmd>Selecteer maateenheid Metrisch, fabrikant Zweckform en dan product
+                        <option>Zweckform 3415</option>.</cmd>
+                <stepresult>
+                    <fig>
+                        <title>Keuze etikettype Zweckform 3415</title>
+                        <image keyref="label_wizard_zweckform3415">
+                            <alt>Keuze etikettype Zweckform 3415</alt>
+                        </image>
+                    </fig>
+                </stepresult>
+            </step>
+            <step>
+                <cmd>Klik op <uicontrol>Volgende</uicontrol>.</cmd>
+                <stepresult>
+                    <p>In het scherm dat nu getoond wordt kun je het lettertype en de kleur voor de
+                        tekst wijzigen.</p>
+                </stepresult>
+            </step>
+            <step>
+                <cmd>Accepteer de standaardinstellingen en klik op
+                    <uicontrol>Volgende</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Maak het volgende Modeletiket:</cmd>
+                <info>
+                    <codeblock>{Bonboncode} {Bonbonnaam}</codeblock>
+                    <p>Tussen de twee velden is 1 spatie.</p>
+                </info>
+            </step>
+            <step>
+                <cmd>Klik op <uicontrol>Volgende</uicontrol>. Specificeer oplopend sorteren op
+                        <varname>Bonboncode</varname>.</cmd>
+            </step>
+            <step>
+                <cmd>Klik op <uicontrol>Volgende</uicontrol>. Noem het rapport <userinput>Overzicht
+                        bonbons</userinput></cmd>
+            </step>
+            <step>
+                <cmd>Klik op <uicontrol>Voltooien</uicontrol>.</cmd>
+                <stepresult>Het rapport wordt gegenereerd en verschijnt in de weergave
+                        <uicontrol>Afdrukvoorbeeld</uicontrol>.</stepresult>
+            </step>
+            <step>
+                <cmd>Schakel over naar de <uicontrol>Ontwerpweergave</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Klik op <menucascade>
+                        <uicontrol>tab Ontwerp</uicontrol>
+                        <uicontrol>Kader voor afhankelijk object <image
+                                keyref="control_bound_object_frame"/> (groep
+                            Besturingselementen)</uicontrol>
+                    </menucascade> en teken hiermee op het etiket een kader van ca. 2,5 cm bij
+                    2,5cm.</cmd>
+                <stepresult>
+                    <fig>
+                        <title>Kader voor het object</title>
+                        <image keyref="label_praline_objectframe">
+                            <alt>Kader voor het object</alt>
+                        </image>
+                    </fig>
+                </stepresult>
+            </step>
+            <step>
+                <cmd>Zorg dat het kader geselecteerd blijft en breng dan via het
+                        <wintitle>Eigenschappenvenster</wintitle> de volgende wijzigingen aan:</cmd>
+                <stepresult>
+                    <ul>
+                        <li>In <wintitle>tab Opmaak</wintitle>: zet <varname>Breedte</varname> en
+                                <varname>Hoogte</varname> op <userinput>2,5 cm</userinput>: <fig>
+                                <title>Afmetingen van het objectkader instellen</title>
+                                <image keyref="label_praline_dimensions" placement="break">
+                                    <alt>Afmetingen van het objectkader instellen</alt>
+                                </image>
+                            </fig><note type="attention">Het is mogelijk dat Access de afmetingen
+                                iets aanpast.</note></li>
+                        <li>In <wintitle>tab Gegevens</wintitle>: kies voor de eigenschap
+                                <varname>Besturingselementbron</varname>
+                            <uicontrol>Plaatje</uicontrol>: <fig>
+                                <title>Besturingsbron voor het object instellen</title>
+                                <image keyref="label_praline_controlsource" placement="break">
+                                    <alt>Besturingsbron voor het object instellen</alt>
+                                </image>
+                            </fig>
+                        </li>
+                    </ul>
+                </stepresult>
+            </step>
+            <step>
+                <cmd>Selecteer op het etiket het bijschrift dat zich grotendeels achter het kader
+                    bevindt.</cmd>
+                <stepresult>
+                    <fig>
+                        <p>Bijschrift selecteren</p>
+                        <image keyref="label_praline_label">
+                            <alt>Bijschrift selecteren</alt>
+                        </image>
+                    </fig>
+                </stepresult>
+            </step>
+            <step>
+                <cmd>Verwijder het bijschrift via de <uicontrol>Delete</uicontrol> toets.</cmd>
+            </step>
+            <step>
+                <cmd>Schakel over naar <uicontrol>Afdrukvoorbeeld</uicontrol>.</cmd>
+                <stepresult>Het is nu bijna goed. Alleen de afbeeldingen beginnen niet allemaal op
+                    dezelfde hoogte waardoor het beeld er wat schots en scheef uitziet. Voor de
+                    tekst van de Bonboncode en Bonbonnaam moet nu nog een vaste hoogte ingesteld
+                    worden zodat alle plaatjes op dezelfde hoogte geplaatst worden.</stepresult>
+            </step>
+            <step>
+                <cmd>Schakel over naar de <uicontrol>Ontwerpweergave</uicontrol>, selecteer het
+                    tekstvak en zet de eigenschap <varname>Hoogte</varname> op
+                        <uicontrol>1cm</uicontrol>. Stel ook de eigenschappen <varname>Te
+                        vergroten</varname> en <varname>Te verkleinen</varname> in op
+                        <uicontrol>Nee</uicontrol>.</cmd>
+                <stepresult>
+                    <fig>
+                        <title>Eigenschappen van het tekstvak</title>
+                        <image keyref="label_praline_textbox">
+                            <alt>Eigenschappen van het tekstvak</alt>
+                        </image>
+                    </fig>
+                </stepresult>
+            </step>
+            <step>
+                <cmd>Lijn het plaatje en het tekstvak links uit.</cmd>
+                <stepresult>
+                    <fig>
+                        <title>Uitlijning van de objecten</title>
+                        <image keyref="label_praline_alignment">
+                            <alt>Uitlijning van de objecten</alt>
+                        </image>
+                    </fig>
+                </stepresult>
+            </step>
+            <step>
+                <cmd>Schakel over naar <uicontrol>Afdrukvoorbeeld</uicontrol>.</cmd>
+                <stepresult>
+                    <fig>
+                        <title>Afdrukvoorbeeld bonbonsoorten</title>
+                        <image keyref="report_pralines_result">
+                            <alt>Afdrukvoorbeeld bonbonsoorten</alt>
+                        </image>
+                    </fig>
+                </stepresult>
+            </step>
+            <step>
+                <cmd>Sluit het rapport en bewaar de wijzigingen.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

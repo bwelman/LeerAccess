@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="intro_form" xml:lang="nl-NL">
+    <title>Formulieren</title>
+    <shortdesc>Een korte introductie in wat <term>formulieren</term> zijn.</shortdesc>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords>
+                <indexterm>Formulieren</indexterm>
+            </keywords>
+        </metadata>
+    </prolog>
+    <conbody>
+        <p> Wanneer je meerdere records tegelijk wilt bekijken is een weergave in tabelvorm wel zo
+            gemakkelijk. Wanneer je afzonderlijke records wilt bekijken of gegevens wilt presenteren
+            met een aangepaste indeling, dan kun je beter een formulier gebruiken.</p>
+        <p>Een formulier biedt vaak de handigste indeling voor het invoeren, wijzigen en bekijken
+            van records in een database. Je geeft op hoe de gegevens moeten worden weergegeven
+            wanneer je het formulier ontwerpt. Als je een formulier opent, worden de gewenste
+            gegevens opgehaald uit tabellen en daarna volgens het gemaakte ontwerp. Je kunt ook met
+            gegevens uit meerdere tabellen tegelijk werken en je kunt taken automatiseren door
+            macro’s of modules in de formulieren te gebruiken.</p>
+        <fig>
+            <title>Voorbeeld van een formulier</title>
+            <image keyref="example_form">
+                <alt>Voorbeeld van een formulier</alt>
+            </image>
+            <!-- bron Snoep2010uitwerking, formulier Klantinvoer en wijziging -->
+        </fig>
+        <p>In Access-formulieren kun je keuzelijsten opnemen met waarden waaruit je kunt kiezen, kun
+            je belangrijke gegevens markeren met kleuren en kun je een bericht laten weergeven
+            wanneer een onjuiste waarde wordt ingevoerd. Bovendien kun je gegevens automatisch laten
+            invullen en kun je de resultaten van berekeningen automatisch laten weergeven. Met een
+            druk op de muisknop kun je overschakelen van de formulierweergave naar de
+            gegevensbladweergave, een weergave in tabelvorm van dezelfde set records.</p>
+    </conbody>
+</concept>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="explore_tables" xml:lang="nl-NL">
+    <title>Taak: Tabel verkennen</title>
+    <shortdesc>De twee belangrijkste weergaven (gegevensblad en ontwerp) van tabellen.</shortdesc>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords>
+                <indexterm>Tabel<indexterm>gegevensbladweergave</indexterm><indexterm>ontwerpweergave</indexterm></indexterm>
+                <indexterm>Gegevensbladweergave<indexterm>tabel</indexterm></indexterm>
+                <indexterm>Ontwerpweergave<indexterm>tabel</indexterm></indexterm>
+            </keywords>
+        </metadata>
+    </prolog>
+    <taskbody>
+        <context>
+            <p>Tabellen zijn de belangrijkste onderdelen van een database, want hierin zijn alle
+                gegevens opgeslagen.</p>
+            <p>De twee belangrijkste weergaven van een tabel zijn:<ul>
+                    <li><uicontrol>Gegevensbladweergave</uicontrol>. In deze weergave kun je de
+                        inhoud van de records zien, deze wijzigen en ook kun je nieuwe records
+                        toevoegen.</li>
+                    <li><uicontrol>Ontwerpweergave</uicontrol>. In deze weergave kun je het ontwerp
+                        van de tabel zien en deze aanpassen.</li>
+                </ul></p>
+        </context>
+        <steps>
+            <step>
+                <cmd>Open de database <keyword keyref="example_db_file"/>.</cmd>
+            </step>
+            <step>
+                <cmd>Open de tabel <wintitle>Klanten</wintitle>.</cmd>
+                <stepresult>De tabel Klanten wordt in de Gegevensbladweergave geopend.</stepresult>
+            </step>
+            <step>
+                <cmd>Zet de tabel <varname>Klanten</varname> in de
+                        <uicontrol>Ontwerpweergave</uicontrol> op een van de volgende
+                    manieren:</cmd>
+                <choices>
+                    <choice>Klik op de knop <uicontrol>Ontwerpweergave</uicontrol> rechtsonder in
+                        het programmavenster <image keyref="button_design_view"/></choice>
+                    <choice><menucascade>
+                            <uicontrol>tab Start</uicontrol>
+                            <uicontrol>Weergave (groep Weergaven)</uicontrol>
+                            <uicontrol>Ontwerpweergave</uicontrol>
+                        </menucascade>.</choice>
+                </choices>
+                <info>
+                    <note type="tip">Je kunt een tabel ook direct in de Ontwerpweergave openen via
+                        een rechter muisklik op de tabelnaam in het navigatiedeelvenster en dan uit
+                        het snelmenu te kiezen voor <uicontrol>Ontwerpweergave</uicontrol>.</note>
+                </info>
+            </step>
+            <step>
+                <cmd>Zet de tabel <varname>Klanten</varname> weer in de
+                        <uicontrol>Gegevensbladweergave</uicontrol> op een van de volgende
+                    manieren:</cmd>
+                <choices>
+                    <choice>Klik op de knop <uicontrol>Gegevensbladweergave</uicontrol> rechtsonder
+                        in het programmavenster <image keyref="button_datasheet_view"/></choice>
+                    <choice><menucascade>
+                            <uicontrol>tab Start</uicontrol>
+                            <uicontrol>Weergave (groep Weergaven)</uicontrol>
+                            <uicontrol>Gegevensbladweergave</uicontrol>
+                        </menucascade>.</choice>
+                </choices>
+            </step>
+            <step>
+                <cmd>Sluit de tabel <varname>Klanten</varname> via de sluitknop X rechtsboven in het
+                    documentvenster.</cmd>
+            </step>
+            <step>
+                <cmd>Open de tabel <varname>Orders</varname> (in de Gegevensbladweergave).</cmd>
+                <tutorialinfo>In de tabel Orders staat voor de records een uitklapknopje
+                        <uicontrol>+</uicontrol>. Door hierop de klikken worden de detailgegevens
+                    van de order zichtbaar. Deze detailgegevens komen uit de tabel
+                        <varname>Orderdetails</varname>. Dat bij een bepaalde order de bijbehorende
+                    orderdetails gevonden kunnen worden komt omdat in beide tabellen het veld
+                        <varname>Ordercode</varname> voorkomt.</tutorialinfo>
+            </step>
+            <step>
+                <cmd>Klik voor een paar records op het uitklapknopje om te zien welke dozen en
+                    hoeveel daarvan op deze order geleverd zijn.</cmd>
+                <stepresult>
+                    <fig>
+                        <title> Orderdetails van order 3</title>
+                        <image keyref="table_orders_details3">
+                            <alt>Orderdetails van order 3.</alt>
+                        </image>
+                    </fig>
+                </stepresult>
+            </step>
+            <step>
+                <cmd>Sluit de tabel <varname>Orders</varname>.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

@@ -1,0 +1,26 @@
+<?xml version="1.0"  encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map id="keys_reports">
+    <title>Keys Reports</title>
+    <keydef keys="group_report_result" href="images/group_report_result.png" format="png"/>
+    <keydef keys="group_wizard_fields" href="images/group_wizard_fields.png" format="png"/>
+    <keydef keys="group_wizard_layout" href="images/group_wizard_layout.png" format="png"/>
+    <keydef keys="group_wizard_levels" href="images/group_wizard_levels.png" format="png"/>
+    <keydef keys="group_wizard_sort" href="images/group_wizard_sort.png" format="png"/>
+    <keydef keys="group_wizard_summary" href="images/group_wizard_summary.png" format="png"/>
+    <keydef keys="label_praline_alignment" href="images/label_praline_alignment.png" format="png"/>
+    <keydef keys="label_praline_controlsource" href="images/label_praline_controlsource.png"
+        format="png"/>
+    <keydef keys="label_praline_dimensions" href="images/label_praline_dimensions.png" format="png"/>
+    <keydef keys="label_praline_label" href="images/label_praline_label.png" format="png"/>
+    <keydef keys="label_praline_objectframe" href="images/label_praline_objectframe.png"
+        format="png"/>
+    <keydef keys="label_praline_textbox" href="images/label_praline_textbox.png" format="png"/>
+    <keydef keys="label_wizard_avery7160" href="images/label_wizard_avery7160.png" format="png"/>
+    <keydef keys="label_wizard_fields" href="images/label_wizard_fields.png" format="png"/>
+    <keydef keys="label_wizard_zweckform3415" href="images/label_wizard_zweckform3415.png"
+        format="png"/>
+    <keydef keys="report_customers_printpreview" href="images/report_customers_printpreview.png"
+        format="png"/>
+    <keydef keys="report_pralines_result" href="images/report_pralines_result.png" format="png"/>
+</map>

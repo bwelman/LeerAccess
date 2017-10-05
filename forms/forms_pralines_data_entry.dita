@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="forms_pralines_data_entry" xml:lang="nl-NL">
+    <title>Taak: Invoerformulier Bonbons</title>
+    <shortdesc>Het maken van een formulier voor bonbons, gebaseerd op één tabel waarin een aantal
+        tekstvakken vervangen worden door keuzelijsten. Verder de nodige wijzigingen in de
+        opmaak.</shortdesc>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords>
+                <indexterm>Formulier</indexterm>
+                <indexterm>Besturingselement<indexterm>keuzelijst</indexterm><indexterm>lijn</indexterm></indexterm>
+            </keywords>
+        </metadata>
+    </prolog>
+    <taskbody>
+        <context>
+            <p>In deze taak wordt een formulier gemaakt waarmee de gegevens voor een nieuwe bonbon
+                kunnen worden ingevoerd en van een bestaande bonbon de gegevens gewijzigd kunnen
+                worden. Verder wordt bij een aantal velden het besturingselement Tekstvak vervangen
+                door een Keuzelijst, al dan niet met invoervak. De gewenste lay-out voor het
+                formulier is in de volgende afbeelding weergegeven.</p>
+            <fig>
+                <title>Invoerformulier bonbons</title>
+                <image keyref="f_praline_entry">
+                    <alt>Invoerformulier bonbons</alt>
+                </image>
+            </fig>
+        </context>
+        <steps>
+            <step>
+                <cmd>Open de database <keyword keyref="example_db_file"/>.</cmd>
+            </step>
+            <step>
+                <cmd>Selecteer de tabel <uicontrol>Bonbons</uicontrol>. Deze hoeft niet geopend te
+                    worden.</cmd>
+            </step>
+            <step>
+                <cmd>Klik <menucascade>
+                        <uicontrol>tab Maken</uicontrol>
+                        <uicontrol>Formulier (groep Formulieren)</uicontrol>
+                    </menucascade>.</cmd>
+                <stepresult>Het formulier wordt aangemaakt en geopend in de
+                        <uicontrol>Indelingsweergave</uicontrol>.</stepresult>
+            </step>
+            <step>
+                <cmd>Schakel over naar de <uicontrol>Ontwerpweergave</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Verwijder de tabel <uicontrol>Doosdetails</uicontrol> in het onderste deel van
+                    het formulier en het logo in de formulierkoptekst.</cmd>
+            </step>
+            <step>
+                <cmd>Verwijder het logo in de formulierkoptekst door deze eerst te selecteren en dan
+                    te verwijderen met de toets <uicontrol>Delete</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Bewaar het formulier onder de naam <userinput>Bonbon informatie</userinput> via
+                    de knop <uicontrol>Opslaan <image keyref="button_save"/></uicontrol> in de
+                        <uicontrol>Werkbalk Snelle toegang</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Wijzig de opmaak van de koptekst in: Calibri, 22 pt, vet, witte kleur op een
+                    groenachtige achtergrond.</cmd>
+            </step>
+            <step>
+                <cmd>Selecteer alle <term>besturingselementen</term> in de sectie
+                        <uicontrol>Detail</uicontrol> en verwijder de gestapelde indeling via <menucascade>
+                        <uicontrol>tab Schikken</uicontrol>
+                        <uicontrol>Indeling verwijderen (groep Tabel)</uicontrol>
+                    </menucascade>.</cmd>
+                <stepresult>Je kunt nu met alle besturingselementen afzonderlijk
+                    werken.</stepresult>
+            </step>
+            <step>
+                <cmd>Hef de selectie op.</cmd>
+            </step>
+            <step>
+                <cmd>Verwijder de velden Chocoladetype, Vullingtype en Noottype. Verplaats de
+                    overige velden zodat de lay-out op de gewenste lijkt.</cmd>
+            </step>
+            <step>
+                <cmd>Selecteer het besturingselement <uicontrol>Lijn</uicontrol> via <menucascade>
+                        <uicontrol>tab Ontwerp</uicontrol>
+                        <uicontrol>Keuzelijst (groep Besturingselementen)</uicontrol>
+                    </menucascade> en teken een horizontale lijn onder de velden
+                        <varname>Bonboncode</varname> en <varname>Bonbonnaam</varname>. Geef de lijn
+                    dikte van 2pt en dezelfde kleur als de achtergrond van de koptekst.</cmd>
+            </step>
+            <step>
+                <cmd>Selecteer het besturingselement <uicontrol>Keuzelijst</uicontrol> via <menucascade>
+                        <uicontrol>tab Ontwerp</uicontrol>
+                        <uicontrol>Keuzelijst (groep Besturingselementen)</uicontrol>
+                    </menucascade> en teken een kader voor het veld
+                    <varname>Chocoladetype</varname>.</cmd>
+                <stepresult>Na het tekenen van het kader wordt de <wintitle>Wizard
+                        Keuzelijst</wintitle> opgestart.</stepresult>
+            </step>
+            <step>
+                <cmd>Beantwoord de vragen die de Wizard achtereenvolgens stelt als volgt:</cmd>
+                <info>
+                    <ul>
+                        <li>De waarden zullen worden getypt.</li>
+                        <li>Aantal kolommen is 1. De in te typen waarden zijn: Butterscotch, Melk,
+                            Puur en Toffee.</li>
+                        <li>De geselecteerde waarde opslaan in het veld Chocoladetype.</li>
+                        <li>De geselecteerde waarde opslaan in het veld Chocoladetype.</li>
+                        <li>Tekst voor het label bij de keuzelijst:
+                                <userinput>Chocoladetype:</userinput></li>
+                    </ul>
+                </info>
+                <stepresult>Na het Voltooien van de Wizard kom je weer terug in de
+                    Ontwerpweergave.</stepresult>
+            </step>
+            <step>
+                <cmd>Maak op analoge wijze een <uicontrol>Keuzelijst met invoervak</uicontrol> voor
+                        <varname>Vullingtype</varname> met de waarden: Amaretto, Bosbes, Kersecrème,
+                    Kokos, Marsepein, Mokkacrème, Geen.</cmd>
+            </step>
+            <step>
+                <cmd>Maak op analoge wijze een Keuzelijst met invoervak voor Noottype met de
+                    waarden: Amandel, Cashew, Hazelnoot, Macadamia, Para, Pecan, Pistache, Walnoot,
+                    Geen</cmd>
+            </step>
+            <step>
+                <cmd>Schakel over naar de <uicontrol>Formulierweergave</uicontrol> en test de
+                    werking van het formulier.</cmd>
+            </step>
+            <step>
+                <cmd>Sluit het formulier en bewaar de wijzigingen.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

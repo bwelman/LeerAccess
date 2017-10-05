@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="queries_column_heading" xml:lang="nl-NL">
+    <title>Taak: Kolomtitel wijzigen</title>
+    <shortdesc>Het wijzigen van de titel van een kolom in een query.</shortdesc>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords>
+                <indexterm>Query<indexterm>kolomtitel</indexterm></indexterm>
+            </keywords>
+        </metadata>
+    </prolog>
+    <taskbody>
+        <prereq> Om deze taak te kunnen uitvoeren is het noodzakelijk dat eerst uitgevoerd is <xref
+                href="queries_customers_province.dita#queries_customers_province"/>.</prereq>
+        <context>Standaard gebruikt Access de veldnamen als kolomkop in de gegevensbladweergave. En
+            voor samenvattings gegevens wordt een titel gegenereerd. Het is aan te bevelen om
+            duidelijker namen te gebruiken.</context>
+        <steps>
+            <step>
+                <cmd>Open de database <keyword keyref="example_db_file"/>.</cmd>
+            </step>
+            <step>
+                <cmd>Open de query <varname>Aantal klanten per provincie</varname> in de
+                        <uicontrol>Ontwerpweergave</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Plaats de cursor in het vak met de veldnaam <varname>Klantcode</varname> voor
+                    het begin van de naam, dus voor de <q>K</q> en typ in <userinput>Aantal
+                        klanten:</userinput>.</cmd>
+                <stepresult>
+                    <fig>
+                        <title>Kolomtitel gewijzigd in ontwerp</title>
+                        <image keyref="q_customers_province_columnhead_design">
+                            <alt>Ontwerp gewijzigde kolomtitel</alt>
+                        </image>
+                    </fig>
+                </stepresult>
+            </step>
+            <step>
+                <cmd>Schakel over naar de <uicontrol>Gegevensbladweergave</uicontrol>.</cmd>
+                <stepresult>
+                    <fig>
+                        <title>Resultaat gewijzigde kolomtitel</title>
+                        <image keyref="q_customers_province_columnhead_result">
+                            <alt>Resultaat gewijzigde kolomtitel</alt>
+                        </image>
+                    </fig>
+                </stepresult>
+            </step>
+            <step>
+                <cmd>Sluit de query en beantwoord de vraag om de wijzigingen op te slaan met
+                        <uicontrol>Ja</uicontrol>.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

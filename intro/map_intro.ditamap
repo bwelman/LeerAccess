@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map id="map_intro" xml:lang="nl-NL">
+    <title>Beginnen met Access</title>
+    <topicmeta>
+        <author>Ben Welman</author>
+        <publisher>Softwijs</publisher>
+        <copyright>
+            <copyryear year="2017"/>
+            <copyrholder>Softwijs Neede</copyrholder>
+        </copyright>
+        <keywords/>
+        <prodinfo>
+            <prodname>Access</prodname>
+            <vrmlist>
+                <vrm version="0.1" release=""/>
+            </vrmlist>
+        </prodinfo>
+    </topicmeta>
+    <!-- Keys -->
+    <mapref href="../common/keys_common.ditamap" processing-role="resource-only"/>
+    <mapref href="keys_intro.ditamap" processing-role="resource-only"/>
+    <!-- Content -->
+    <topicref href="intro.dita" scope="local" type="concept" audience="level1">
+        <topicref href="intro_about.dita" scope="local" type="concept">
+            <topicref href="intro_table.dita" scope="local" type="concept"/>
+            <topicref href="intro_query.dita" scope="local" type="concept"/>
+            <topicref href="intro_form.dita" scope="local" type="concept"/>
+            <topicref href="intro_report.dita" scope="local" type="concept"/>
+            <topicref href="intro_macro.dita" scope="local" type="concept"/>
+            <topicref href="intro_module.dita" scope="local" type="concept"/>
+        </topicref>
+        <topicref href="intro_start.dita" scope="local" type="task"/>
+        <topicref href="intro_close.dita" scope="local" type="task"/>
+        <topicref href="intro_database_open.dita" scope="local" type="task"/>
+        <topicref href="intro_access_window.dita" scope="local" type="concept"/>
+        <topicref href="intro_database_new.dita" scope="local" type="concept"/>
+        <topicref href="intro_database_saveas.dita" scope="local" type="task"/>
+        <topicref href="intro_access_fileformats.dita" scope="local" type="reference"/>
+    </topicref>
+</map>

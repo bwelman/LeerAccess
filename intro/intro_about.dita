@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="intro_about" xml:lang="nl-NL">
+    <title>Wat zijn databases?</title>
+    <shortdesc>Een korte introductie in wat <term>databases</term> zijn en hoe deze zijn
+        opgebouwd.</shortdesc>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords>
+                <indexterm>Tabellen</indexterm>
+                <indexterm>Query's</indexterm>
+                <indexterm>Formulieren</indexterm>
+                <indexterm>Rapporten</indexterm>
+                <indexterm>Macro's</indexterm>
+                <indexterm>Modules</indexterm>
+                <indexterm>Database</indexterm>
+                <indexterm>Relatie</indexterm>
+            </keywords>
+        </metadata>
+    </prolog>
+    <conbody>
+        <p>Een database is een verzameling gegevens die betrekking heeft op een bepaald onderwerp of
+            een bepaald doel. Je kunt hierin informatie uit verschillende bronnen bijhouden,
+            zoals:</p>
+        <ul>
+            <li>Adressen van klanten in een adressenlijst</li>
+            <li>Telefoonnummers van leveranciers in een kaartenbak.</li>
+            <li>Artikelgegevens in een dossierkast.</li>
+            <li>Orders van klanten in een ordner.</li>
+        </ul>
+        <p>Al deze gegevens worden vaak in afzonderlijke tabellen opgeslagen die samen de database
+            vormen. In zijn eenvoudigste vorm kan een database uit slechts één tabel bestaan. Tussen
+            de tabellen kunnen relaties bestaan en wanneer dat zo is kun je gegevens uit meerdere
+            tabellen aan elkaar koppelen. Een dergelijke database wordt daarom ook wel een
+                <term>relationele database</term> genoemd.</p>
+        <fig>
+            <title>Database met drie tabellen met onderlinge relaties</title>
+            <image keyref="example_rel_db">
+                <alt>Voorbeeld van een relationele database met drie tabellen.</alt>
+            </image>
+        </fig>
+        <p>Naast het maken en onderhouden van tabellen kun je met Access ook formulieren, query's en
+            rapporten maken. Via de formulieren kun je informatie gemakkelijk en efficiënt
+            bijwerken. En met query's kun je antwoorden op vragen krijgen. De rapporten zorgen er
+            voor dat de uitvoer netjes op scherm of papier verschijnt.</p>
+        <p>Access kent de volgende onderdelen (objecten) in een database:<ul>
+                <li>Tabellen</li>
+                <li>Query's</li>
+                <li>Formulieren</li>
+                <li>Rapporten</li>
+                <li>Macro's</li>
+                <li>Modules</li>
+            </ul></p>
+        <p>In Access wordt een database als één bestand opgeslagen, waarin alle onderdelen van de
+            database zitten.</p>
+        <p>Er zijn twee verschillende soorten werkzaamheden die met databases worden uitgevoerd.<dl>
+                <dlentry>
+                    <dt>Ontwerpen van de database</dt>
+                    <dd>Dit houdt in het maken van de tabellen, query's, formulieren en rapporten.
+                        Wanneer de database eenmaal gemaakt is, zit dit karwei er eigenlijk op.</dd>
+                </dlentry>
+                <dlentry>
+                    <dt>Omgaan met gegevens</dt>
+                    <dd>De gegevens invoeren, bijwerken, rapportages maken, zoeken in de database,
+                        enz. Hier ben je voortdurend mee bezig.</dd>
+                </dlentry>
+            </dl></p>
+    </conbody>
+</concept>

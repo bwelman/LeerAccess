@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="reports_labels" xml:lang="nl-NL">
+    <title>Taak: Etiketten maken</title>
+    <shortdesc>Hoe je etiketten met de Wizard kunt maken.</shortdesc>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords>
+                <indexterm>Rapport<indexterm>etiketten</indexterm></indexterm>
+                <indexterm>Etiketten<indexterm>wizard</indexterm></indexterm>
+            </keywords>
+        </metadata>
+    </prolog>
+    <taskbody>
+        <context>In deze taak worden adresetiketten van de klanten gemaakt met de Wizard etiketten.
+            Eerst moet de tabel geselecteerd worden waarin de velden voorkomen die op het etiket
+            moeten verschijnen. Daarna kan de Wizard etiketten gestart worden.</context>
+        <steps>
+            <step>
+                <cmd>Open de database <keyword keyref="example_db_file"/>.</cmd>
+            </step>
+            <step>
+                <cmd>Selecteer de tabel <uicontrol>Klanten</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Kies <menucascade>
+                        <uicontrol>tab Maken</uicontrol>
+                        <uicontrol>Etiketten (groep rapporten)</uicontrol>
+                    </menucascade>.</cmd>
+            </step>
+            <step>
+                <cmd>Selecteer maateenheid Metrisch, fabrikant Avery en dan product <option>Avery
+                        L7160</option>.</cmd>
+                <stepresult>
+                    <fig>
+                        <title>Keuze etikettype Avery L7160</title>
+                        <image keyref="label_wizard_avery7160">
+                            <alt>Keuze etikettype Avery L7160</alt>
+                        </image>
+                    </fig>
+                </stepresult>
+            </step>
+            <step>
+                <cmd> Klik op <uicontrol>Volgende</uicontrol>.</cmd>
+                <stepresult>
+                    <p>In het scherm dat nu getoond wordt kun je het lettertype en de kleur voor de
+                        tekst wijzigen.</p>
+                </stepresult>
+            </step>
+            <step>
+                <cmd>Accepteer de standaardinstellingen en klik op
+                    <uicontrol>Volgende</uicontrol>.</cmd>
+                <stepresult>
+                    <fig>
+                        <title>Gegevens op het etiket</title>
+                        <image keyref="label_wizard_fields">
+                            <alt>Gegevens op het etiket</alt>
+                        </image>
+                    </fig>Door dubbel te klikken op een veldnaam wordt deze op de plaats van de
+                    cursor ingevoegd. De veldnaam verschijnt dan tussen accolades op het
+                    modeletiket. Ook tekst en spaties kunnen worden ingetypt. Door op de Enter toets
+                    te drukken wordt een nieuwe regel gemaakt.</stepresult>
+            </step>
+            <step>
+                <cmd>Maak het volgende Modeletiket:</cmd>
+                <info>
+                    <codeblock>{Voornaam} {Achternaam}
+{Straat}
+{Postcode}  {Plaats}</codeblock>
+                    <p>Tussen de voor- en achternaam staat 1 spatie en tussen postcode en plaats 2
+                        spaties.</p>
+                </info>
+            </step>
+            <step>
+                <cmd>Klik op <uicontrol>Volgende</uicontrol>.</cmd>
+                <stepresult>
+                    <p>In het scherm dat nu getoond wordt kun je aangeven of de etiketten gesorteerd
+                        moeten worden en zo ja, op welke velden.</p>
+                </stepresult>
+            </step>
+            <step>
+                <cmd>Er moet op <varname>Postcode</varname> gesorteerd worden. Voeg dit veld toe en
+                    klik op <uicontrol>Volgende</uicontrol>.</cmd>
+                <stepresult>
+                    <p>Het laatste scherm van de Wizard wordt nu getoond. Hier kun je de naam voor
+                        het rapport specificeren.</p>
+                </stepresult>
+            </step>
+            <step>
+                <cmd>Geef het rapport de naam <userinput>Adresetiketten klanten</userinput> en klik
+                    op <uicontrol>Voltooien</uicontrol>.</cmd>
+                <stepresult>
+                    <fig>
+                        <title>Afdrukvoorbeeld</title>
+                        <image keyref="report_customers_printpreview">
+                            <alt>Afdrukvoorbeeld</alt>
+                        </image>
+                    </fig>
+                </stepresult>
+            </step>
+            <step>
+                <cmd>Sluit het rapport.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

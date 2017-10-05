@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="tables_fields" xml:lang="nl-NL">
+    <title>Velden in tabellen</title>
+    <shortdesc>Uitleg over naam en gegevenstype van een veld.</shortdesc>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords>
+                <indexterm>Veld <indexterm>naam</indexterm>
+                    <indexterm>gegevenstype</indexterm>
+                </indexterm>
+            </keywords>
+        </metadata>
+    </prolog>
+    <conbody>
+        <p>Velden vormen de ontwerponderdelen van een tabel. Gegevens worden in de velden
+            opgeslagen. De eigenschappen van een veld bepalen de kenmerken en het gedrag van de
+            gegevens die in het veld worden opgeslagen. Voor het maken van een veld is nodig:<ul>
+                <li>Veldnaam (verplicht)</li>
+                <li>Gegevenstype (verplicht</li>
+                <li>Beschrijving (optioneel)</li>
+            </ul></p>
+    </conbody>
+</concept>

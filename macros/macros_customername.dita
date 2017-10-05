@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="macros_customername" xml:lang="nl-NL">
+    <title>Taak: Klant zoeken op naam</title>
+    <shortdesc>Maak twee keuzelijsten op een formulier met bijbehorende macro's.</shortdesc>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords>
+                <indexterm>Macro<indexterm>record zoeken</indexterm></indexterm>
+                <indexterm>Formulier<indexterm>keuzelijst</indexterm></indexterm>
+            </keywords>
+        </metadata>
+    </prolog>
+    <taskbody>
+        <prereq>Om deze taak uit te kunnen voeren is het noodzakelijk dat je eerst hebt uitgevoerd
+                <xref href="macros_customercode.dita#macros_customercode"/>. waar je het formulier
+                <uicontrol>Zoek klant op code</uicontrol> hebt gemaakt dat in deze taak gebruikt
+            wordt.</prereq>
+        <context>
+            <p>Er moet een formulier gemaakt worden met daarop de gegevens van een klant en met twee
+                keuzelijsten. Via de eerste keuzelijst moet een klant op basis van de klantcode
+                gezocht worden en via de tweede lijst via de naam. Bij dit laatste moet in de
+                gesorteerde lijst eerst de achternaam getoond worden, met daarachter de voornaam. Na
+                het maken van een keuze via een van beide lijsten moet de gegevens van de klant in
+                het formulier getoond worden.</p>
+            <p>ANALYSE</p>
+            <p>Als basis van het nieuwe formulier kan het eerder gemaakte formulier <wintitle>Zoek
+                    klant op code</wintitle> genomen worden. In Access kun je een kopie van een
+                formulier maken en dat onder een andere naam opslaan. Hierop moet dan de tweede
+                keuzelijst gemaakt worden. Verder dient er een macro gemaakt te worden die de taken
+                uitvoert. Allereerst naar de keuzelijst gaan en daarna het bijbehorende record
+                opzoeken.</p>
+        </context>
+        <steps>
+            <step>
+                <cmd>Open de database <keyword keyref="example_db_file"/>.</cmd>
+            </step>
+            <step>
+                <cmd>Geef een rechter muisklik op het formulier <uicontrol>Zoek klant op
+                        code</uicontrol> en kies dan uit het snelmenu voor
+                        <uicontrol>Kopiëren</uicontrol>. Geef dan een nieuwe rechter muisklik en
+                    kies dan uit snelmenu voor <uicontrol>Plakken</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Noem het nieuwe formulier <uicontrol>Zoek klant op naam</uicontrol> en open het
+                    formulier in de <uicontrol>Ontwerpweergave</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Maak het gedeelte voor de formulierkoptekst wat groter. Positioneer de muis
+                    boven de bovenrand van Details totdat deze wijzigt zoals in de volgende
+                    afbeelding is weergegeven. Druk dan de linker muisknop in en sleep de rand wat
+                    naar beneden zodat er voldoende ruimte is voor de tweede keuzelijst.</cmd>
+                <stepresult>
+                    <fig>
+                        <title>Vergroten ruimte formulierkoptekst</title>
+                        <image keyref="customername_formheader">
+                            <alt>Vergroten ruimte formulierkoptekst</alt>
+                        </image>
+                    </fig>
+                </stepresult>
+            </step>
+            <step>
+                <cmd>Maak een tweede <uicontrol>Keuzelijst met invoervak</uicontrol> onder de eerste
+                    keuzelijst.</cmd>
+            </step>
+            <step>
+                <cmd>Beantwoord de vragen van de Wizard achtereenvolgens als volgt:</cmd>
+                <info>
+                    <ul>
+                        <li>De waarden voor de keuzelijst met invoervak moeten worden opgezocht in
+                            een tabel of query.</li>
+                        <li>Tabel: Klanten levert de waarden voor de keuzelijst met invoervak.</li>
+                        <li>Voeg aan de keuzelijst met invoervak achtereenvolgens de volgende velden
+                            toe: Achternaam, Voornaam, Klantcode</li>
+                        <li>Records oplopend sorteren eerst op achternaam en dan op voornaam.</li>
+                        <li>De voorgestelde breedte van de kolom in de keuzelijst accepteren en
+                            aanvinken dat de sleutelkolom (dat is de Klantcode) verborgen moet
+                            worden.</li>
+                        <li>De waarde bewaren voor later gebruik.</li>
+                        <li>Tekst voor het label bij de keuzelijst: <userinput>Zoeken op
+                                klantnaam:</userinput></li>
+                    </ul>
+                </info>
+                <stepresult><p>Na het Voltooien van de Wizard ben je weer teug in de Ontwerpweergave.</p></stepresult>
+            </step>
+            <step>
+                <cmd>Zorg ervoor dat labels en keuzelijsten netjes onder elkaar zijn
+                    uitgelijnd.</cmd>
+                <stepresult>
+                    <fig>
+                        <title>Formulier met twee keuzelijsten</title>
+                        <image keyref="customername_comboboxes">
+                            <alt>Formulier met twee keuzelijsten</alt>
+                        </image>
+                    </fig>
+                </stepresult>
+            </step>
+            <step>
+                <cmd>Selecteer de tweede Keuzelijst met invoervak en wijzig in
+                        <uicontrol>Eigenschappenvenster (tab Overige)</uicontrol> de naam van het
+                    besturingselement in <userinput>zoeknaam</userinput>. Klik op de keuzepijl in
+                    het vak <uicontrol>Na bijwerken</uicontrol> en typ <userinput>Klant zoeken op
+                        naam</userinput>.</cmd>
+                <info>
+                    <note type="note">Deze macro bestaat nog niet en wordt in de volgende stap
+                        gemaakt.</note>
+                </info>
+            </step>
+            <step>
+                <cmd>Sluit het formulier en bewaar de wijzigingen.</cmd>
+            </step>
+            <step conref="macros_customercode.dita#macros_customercode/macro_create">
+                <cmd/>
+            </step>
+            <step>
+                <cmd>Klik op de keuzepijl in het vak <uicontrol>Nieuwe actie toevoegen</uicontrol>
+                    en selecteer uit de lijst de actie <option>NaarBesturingselementGaan</option> en
+                    voer als <uicontrol>Argument</uicontrol> in <userinput>Klantcode</userinput>.
+                </cmd>
+            </step>
+            <step>
+                <cmd>Typ <userinput>Klantcode</userinput> in het vak
+                        <uicontrol>Besturingselementnaam</uicontrol>.</cmd>
+                <stepresult>
+                    <fig>
+                        <title>Actie NaarBesturingselementGaan</title>
+                        <image keyref="macro_customercode_gotocontrol">
+                            <alt>Actie NaarBesturingselementGaan</alt>
+                        </image>
+                    </fig>
+                </stepresult>
+            </step>
+            <step>
+                <cmd>Klik op de keuzepijl in het vak <uicontrol>Nieuwe actie toevoegen</uicontrol>
+                    en selecteer actie <option>RecordZoeken</option>.</cmd>
+            </step>
+            <step>
+                <cmd>Typ de waarde <userinput>=[zoeknaam]</userinput> in het vak <uicontrol>Zoeken
+                        naar</uicontrol>. De andere argumenten zijn al automatisch door Access van
+                    een standaardwaarde voorzien en kunnen blijven staan.</cmd>
+            </step>
+            <stepsection> Om er voor te zorgen dat de waarde van de eerste keuzelijst mee verandert
+                bij het kiezen van een naam, moet hiervoor nog een actie ingesteld worden. De waarde
+                voor zoekcode moet gelijk worden aan de klantcode van het gevonden
+                record.</stepsection>
+            <step>
+                <cmd>Voeg een actie toe met de naam <option>WaardeInstellen</option>. Deze actie
+                    beschouwt Access als een gevaarlijke actie welke standaard niet getoond wordt.
+                    Deze moet eerst in de lijst zichtbaar gemaakt worden door de instelling <menucascade>
+                        <uicontrol>Alle acties weergeven (groep Weergeven/verbergen)</uicontrol>
+                    </menucascade>. Deze Actie heeft twee parameters, <varname>Item</varname> en
+                        <varname>Expressie</varname>, welke de volgende waarden dienen te
+                    krijgen.</cmd>
+                <itemgroup>
+                    <ul>
+                        <li>Item: <userinput>[Formulieren]![Zoek klant op
+                                naam]![zoekcode]</userinput></li>
+                        <li>Expressie: <userinput>[Formulieren]![Zoek klant op
+                                naam]![Klantcode]</userinput></li>
+                    </ul>
+                </itemgroup>
+                <stepresult>
+                    <fig>
+                        <title>Macro customer by name</title>
+                        <image keyref="macro_customer_by_name">
+                            <alt>Macro customer by name</alt>
+                        </image>
+                    </fig>
+                </stepresult>
+            </step>
+            <step>
+                <cmd>Sluit het macrovenster en bewaar de macro onder de naam <userinput>Klant zoeken
+                        op naam</userinput>.</cmd>
+            </step>
+            <step>
+                <cmd>Open formulier <uicontrol>Zoek klant op naam</uicontrol> en test de werking van
+                    beide keuzelijsten.</cmd>
+                <info>
+                    <note type="attention">Wanneer de eerste keuzelijst gebruikt wordt, verschijnt
+                        niet de bijbehorende naam in de tweede keuzelijst. Om dit voor elkaar te
+                        krijgen moet aan de bijbehorende macro ook een actie
+                            <varname>WaardeInstellen</varname> worden toegevoegd. Maar dat heeft
+                        consequenties voor de werking van de keuzelijst op formulier <uicontrol>Zoek
+                            klant op code</uicontrol></note>
+                </info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="intro_table" xml:lang="nl-NL">
+    <title>Tabellen</title>
+    <shortdesc>Uitleg over wat <term>tabellen</term> zijn en uit welke onderdelen deze
+        bestaan.</shortdesc>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords>
+                <indexterm>Tabellen</indexterm>
+                <indexterm>Record</indexterm>
+                <indexterm>Veld</indexterm>
+                <indexterm>Normaliseren</indexterm>
+            </keywords>
+        </metadata>
+    </prolog>
+    <conbody>
+        <p>In de tabellen worden de gegevens opgeslagen. Voor elk soort gegevens is er meestal een
+            tabel. Zo kun je een tabel Producten hebben die allerlei gegevens over de producten
+            bevat. En een tabel Leveranciers bevat gegevens over de bedrijven die producten leveren.
+            Om te weten welke tabellen je waarvoor nodig hebt moet er vooraf goed over de structuur
+            van de database worden nagedacht. Een goed ontworpen database moet aan bepaalde criteria
+            voldoen. Om een goed ontworpen database te krijgen wordt vaak gebruik gemaakt van een
+            proces dat <term>normaliseren</term> heet.</p>
+        <p>In een tabel zijn gegevens in kolommen (<term>velden</term>) en rijen
+                (<term>records</term>) ingedeeld.</p>
+        <fig>
+            <title>Voorbeeld van een tabel met 3 records en 5 velden</title>
+            <image keyref="example_table">
+                <alt>Voorbeeld van een tabel met 3 records en 5 velden.</alt>
+            </image>
+            <!-- bron: Snoep2010uitwerking, tabel Leveranciers-->
+        </fig>
+        <dl>
+            <dlentry>
+                <dt>Veld</dt>
+                <dd>Een veld is een categorie van gegevens, zoals bedrijfsnaam, contactpersoon,
+                    telefoonnummer, artikelprijs, ... In een tabel is elke kolom een veld.</dd>
+            </dlentry>
+            <dlentry>
+                <dt>Record</dt>
+                <dd>Een record is een verzameling van gegevens over een persoon, artikel, bedrijf,
+                    ... In een tabel is elke rij een record.</dd>
+            </dlentry>
+        </dl>
+    </conbody>
+</concept>

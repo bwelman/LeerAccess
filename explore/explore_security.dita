@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="explore_security" xml:lang="nl-NL">
+    <title>Beveiliging macro's</title>
+    <shortdesc>Hoe om te gaan met beveiligingswaarschuwingen bij het openen van een
+        database.</shortdesc>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords>
+                <indexterm>Macro's<indexterm>beveiliging</indexterm></indexterm>
+                <indexterm>Beveiliging<indexterm>waarschuwing</indexterm><indexterm>vertrouwenscentrum</indexterm></indexterm>
+                <indexterm>Vertrouwde locatie</indexterm>
+                <indexterm>Vertrouwenscentrum</indexterm>
+            </keywords>
+        </metadata>
+    </prolog>
+    <conbody>
+        <p>Sommige databases zoals <filepath><keyword keyref="example_db_title"/></filepath>
+            bevatten macro's. Deze zijn in de meeste gevallen gemaakt om bepaalde taken in de
+            database uit te voeren. Maar virusmakers kunnen deze mogelijkheden ook gebruiken om een
+            virus te verspreiden. Wanneer een dergelijke database niet op een vertrouwde locatie
+            staat of ondertekend is door een vertrouwde uitgever, dan toont Access bij het openen
+            van de database een beveiligingswaarschuwing. De macro's in de database zijn dan
+            uitgeschakeld.</p>
+        <fig>
+            <title>Beveiligingswaarschuwing bij het openen van een database met macro's</title>
+            <image keyref="security_warning">
+                <alt>Beveiligingswaarschuwing bij macro's.</alt>
+            </image>
+        </fig>
+        <p>Je kunt de macro's op een van de volgende manieren inschakelen.</p>
+        <table frame="none" rowsep="1" colsep="1">
+            <tgroup cols="1">
+                <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+                <thead>
+                    <row>
+                        <entry>Macro's eenmalig inschakelen</entry>
+                    </row>
+                </thead>
+                <tbody>
+                    <row>
+                        <entry><p>Klik in het gebied met de beveiligingswaarschuwing op de knop
+                                    <uicontrol>Inhoud inschakelen</uicontrol>.</p>
+                            <p>Deze methode wordt niet aanbevolen omdat je iedere keer wanneer je de
+                                database opent deze waarschuwing krijgt en steeds weer opnieuw moet
+                                aangeven dat de macro's ingeschakeld moeten worden.</p></entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+        <table frame="none" rowsep="1" colsep="1">
+            <tgroup cols="1">
+                <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+                <thead>
+                    <row>
+                        <entry>Uitgever toevoegen aan lijst met vertrouwde uitgevers</entry>
+                    </row>
+                </thead>
+                <tbody>
+                    <row>
+                        <entry>Wanneer de maker van de database deze van een digitaal certificaat
+                            heeft voorzien, dan kun je de maker toevoegen aan de lijst met
+                                <term>Vertrouwde uitgevers</term>. Access schakelt dan automatisch
+                            alle macro's in die door deze maker gemaakt zijn, in alle databases. Dit
+                            is een heel veilige methode, maar meestal gebruiken alleen de grotere
+                            bedrijven een digitaal certificaat. De database <keyword
+                                keyref="example_db_title"/> is niet van een certificaat
+                            voorzien.</entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+        <table frame="none" rowsep="1" colsep="1">
+            <tgroup cols="1">
+                <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+                <thead>
+                    <row>
+                        <entry>Database op een vertrouwde locatie plaatsen</entry>
+                    </row>
+                </thead>
+                <tbody>
+                    <row>
+                        <entry><p>Access kent vertrouwde locaties (mappen). Access schakelt
+                                automatisch alle macro's in van alle databases die op een vertrouwde
+                                locatie staan. Dit is de meest gemakkelijke manier om veilig te
+                                werken en niet voortdurend door beveiligingswaarschuwingen gestoord
+                                te worden en wordt ook aanbevolen voor de database <keyword
+                                    keyref="example_db_title"/>. Voer deze actie als volgt uit.</p>
+                            <p>Kies <menucascade>
+                                    <uicontrol>Bestand</uicontrol>
+                                    <uicontrol>Opties</uicontrol>
+                                    <uicontrol>Vertrouwenscentrum</uicontrol>
+                                    <uicontrol>Instellingen voor het Vertrouwenscentrum</uicontrol>
+                                    <uicontrol>Vertrouwde locaties</uicontrol>
+                                    <uicontrol>Nieuwe locatie toevoegen</uicontrol>
+                                </menucascade>.</p>
+                            <fig>
+                                <title>Dialoogvenster <wintitle>Vertrouwde locatie van Microsoft
+                                        Office</wintitle></title>
+                                <image keyref="security_trusted_location">
+                                    <alt>Dialoogvenster vertrouwde locatie</alt>
+                                </image>
+                            </fig>
+                            <p>In het voorbeeldscherm wordt de map <filepath>C:\Temp</filepath> als
+                                vertrouwde locatie toegevoegd..</p></entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+        <table frame="none" rowsep="1" colsep="1">
+            <tgroup cols="1">
+                <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+                <thead>
+                    <row>
+                        <entry>Beveiliging voor alle macro's instellen</entry>
+                    </row>
+                </thead>
+                <tbody>
+                    <row>
+                        <entry><p>Eventueel kun je de manier wijzigen waarop Access met alle macro's
+                                in alle databases omgaat. Voer deze actie als volgt uit.</p>
+                            <p>Kies <menucascade>
+                                    <uicontrol>Bestand</uicontrol>
+                                    <uicontrol>Opties</uicontrol>
+                                    <uicontrol>Vertrouwenscentrum</uicontrol>
+                                    <uicontrol>Instellingen voor het Vertrouwenscentrum</uicontrol>
+                                    <uicontrol>Macro-instellingen</uicontrol>
+                                </menucascade>.</p>
+                            <fig>
+                                <title>Dialoogvenster
+                                    <wintitle>Vertrouwenscentrum</wintitle></title>
+                                <image keyref="security_trust_center">
+                                    <alt>Dialoogvenster vertrouwenscentrum.</alt>
+                                </image>
+                            </fig>
+                            <p>Het wordt niet aanbevolen om alle macro's in te schakelen, je bent
+                                dan de controle over de beveiliging kwijt.</p></entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+    </conbody>
+</concept>

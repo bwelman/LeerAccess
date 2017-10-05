@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="forms_explanation_linked" xml:lang="nl-NL">
+    <title>Gekoppelde formulieren</title>
+    <shortdesc>Uitleg over wat gekoppelde formulieren zijn.</shortdesc>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords>
+                <indexterm>Formulier<indexterm>koppelen</indexterm></indexterm>
+                <indexterm>Gekoppeld formulier</indexterm>
+            </keywords>
+        </metadata>
+    </prolog>
+    <conbody>
+        <p>Gekoppelde formulieren zijn losse formulieren die aan elkaar gerelateerd zijn. Een van de
+            formulieren, ook hoofdformulier genoemd, heeft een opdrachtknop waarmee het andere
+            formulier wordt geopend en de records tussen de twee formulieren worden
+            gesynchroniseerd. Achter de knop zit programmacode (VBA) die er voor zorgt dat het
+            subformulier geopend wordt. Deze VBA code wordt automatisch door de Wizard gemaakt. Je
+            hoeft dus niet te kunnen programmeren om hiermee te werken.</p>
+        <p>Of je met gekoppelde formulieren of met opgenomen subformulieren werkt hangt meestal af
+            van de methode van werken van de gebruiker. Wanneer je alleen de primaire gegevens van
+            een klant nodig hebt, dan hoef je niet meteen alle orderinformatie van deze klant te
+            zien. Dan is het vaak handiger om een knop op het formulier te hebben waarmee je de
+            bijbehorende orderinformatie tevoorschijn kunt halen.</p>
+        <fig>
+            <title>Twee formulieren gekoppeld met gesynchroniseerde gegevens</title>
+            <image keyref="f_customerorders_linked">
+                <alt>Twee formulieren gekoppeld met gesynchroniseerde gegevens</alt>
+            </image>
+        </fig>
+    </conbody>
+</concept>

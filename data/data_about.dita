@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="data_about" xml:lang="nl-NL">
+    <title>Over gegevens invoeren</title>
+    <shortdesc>Waarom een formulier gebruiken voor gegevensinvoer.</shortdesc>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords>
+                <indexterm>Gegevens<indexterm>invoeren</indexterm></indexterm>
+            </keywords>
+        </metadata>
+    </prolog>
+    <conbody>
+        <p>Weliswaar kunnen records direct in de tabel bewerkt worden, maar dit is geen aan te raden
+            methode voor personen die niet met Access vertrouwd zijn. De kans op foute invoer is
+            groot, zeker bij tabellen die gerelateerd zijn aan andere tabellen. De gegevensinvoer
+            kan veel beter via een formulier lopen. Een formulier kun je gebruikersvriendelijk
+            maken, van toelichtende tekst voorzien en op de achtergrond ook nog eens allerlei
+            controles op de invoergegevens laten uitvoeren.</p>
+    </conbody>
+</concept>

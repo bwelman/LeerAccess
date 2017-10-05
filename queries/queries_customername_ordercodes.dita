@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="queries_customername_ordercodes" xml:lang="nl-NL">
+    <title>Taak: Klanten en orders</title>
+    <shortdesc>Het maken van een eenvoudige selectiequery met behulp van de wizard en daarna nog een
+        handmatige aanpassing.</shortdesc>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords>
+                <indexterm>Query<indexterm>selectiequery</indexterm></indexterm>
+            </keywords>
+        </metadata>
+    </prolog>
+    <taskbody>
+        <context>
+            <p>INFORMATIEBEHOEFTE</p>
+            <p>Maak een gesorteerd overzicht van alle klanten met hun achternaam, voornaam en
+                bijbehorende ordercodes.</p>
+            <p>ANALYSE</p>
+            <p>De achternaam en voornaam van de klant zitten in de tabel Klanten. De ordercodes van
+                de klant zitten in de tabel Orders. Omdat dit een eenvoudige rechttoe rechtaan
+                selectiequery is wordt gebruik gemaakt van de Wizard.</p>
+        </context>
+        <steps>
+            <step>
+                <cmd>Open de database <keyword keyref="example_db_file"/>.</cmd>
+            </step>
+            <step id="wizard_customers_start">
+                <cmd>Kies <menucascade>
+                        <uicontrol>tab Maken</uicontrol>
+                        <uicontrol>Wizard Query (groep Query's)</uicontrol>
+                    </menucascade>.</cmd>
+                <stepresult>Het dialoogvenster <wintitle>Nieuwe Query</wintitle> verschijnt. Hierin
+                    kan de soort query gekozen worden.</stepresult>
+            </step>
+            <step>
+                <cmd>Selecteer <uicontrol>Wizard Selectiequery</uicontrol> en klik op
+                        <uicontrol>OK</uicontrol>.</cmd>
+                <stepresult>
+                    <p>In het volgende scherm kun je de velden kiezen die je in de query wilt
+                        hebben.</p>
+                </stepresult>
+            </step>
+            <step id="wizard_customers_end">
+                <cmd>Selecteer bij <wintitle>Tabellen/query's</wintitle> via de keuzelijst
+                        <option>Tabel: Klanten</option>.</cmd>
+                <stepresult>De velden van de tabel <varname>Klanten</varname> worden getoond in het
+                    vak <wintitle>Beschikbare velden</wintitle>. <fig>
+                        <title>Wizard Selectiequery met tabel Klanten</title>
+                        <image keyref="q_wizard_t_customers">
+                            <alt>Query wizard  tabel klanten</alt>
+                        </image>
+                    </fig>
+                </stepresult>
+            </step>
+            <step>
+                <cmd>Selecteer het veld <varname>Achternaam</varname> en klik op de knop
+                            <uicontrol><image keyref="button_add_field"/></uicontrol>.</cmd>
+                <stepresult>Het veld <varname>Achternaam</varname> wordt verplaatst naar de
+                    geselecteerde velden.</stepresult>
+            </step>
+            <step>
+                <cmd>Voeg op dezelfde manier het veld <varname>Voornaam</varname> toe.</cmd>
+            </step>
+            <step>
+                <cmd>Selecteer <option>Tabel: Orders</option> in het vak
+                        <wintitle>Tabellen/query's</wintitle>.</cmd>
+                <stepresult>De velden van de tabel <varname>Orders</varname> worden getoond in het
+                    vak <wintitle>Beschikbare velden</wintitle>.</stepresult>
+            </step>
+            <step>
+                <cmd>Voeg het veld <varname>Ordercode</varname> toe.</cmd>
+                <stepresult>
+                    <fig>
+                        <title>Wizard Selectiequery met geselecteerde velden</title>
+                        <image keyref="q_customername_ordercodes_fields">
+                            <alt>Wizard selectiequery met geselecteerde velden</alt>
+                        </image>
+                    </fig>
+                </stepresult>
+            </step>
+            <step>
+                <cmd>Klik op <uicontrol>Volgende</uicontrol>.</cmd>
+                <stepresult>In het weergegeven scherm kun je aangeven of Details of Totalen getoond
+                    moeten worden.</stepresult>
+            </step>
+            <step>
+                <cmd>Selecteer <uicontrol>Details (alle velden van alle records
+                        weergeven)</uicontrol> en klik op <uicontrol>Volgende</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Geef de query als naam <userinput>Klantnaam+Ordercodes</userinput>, selecteer
+                        <uicontrol>Het queryontwerp wijzigen</uicontrol> en klik
+                        <uicontrol>Voltooien</uicontrol>.</cmd>
+                <stepresult>
+                    <p>Het ontwerp van de query wordt weergegeven.</p>
+                </stepresult>
+            </step>
+            <step>
+                <cmd>Klik in het vak <uicontrol>Sorteervolgorde</uicontrol> van de kolom
+                        <uicontrol>Achternaam</uicontrol> en kies <option>Oplopend</option>.</cmd>
+                <stepresult>
+                    <fig>
+                        <title>Ontwerpweergave query
+                            <wintitle>Klantnaam+Ordercodes</wintitle></title>
+                        <image keyref="q_customername_ordercodes_design">
+                            <alt>Ontwerp query klanten en ordercodes</alt>
+                        </image>
+                    </fig>
+                </stepresult>
+            </step>
+            <step>
+                <cmd>Schakel over naar de <uicontrol>Gegevensbladweergave</uicontrol>.</cmd>
+                <stepresult>
+                    <fig>
+                        <title>Resultaat query <wintitle>Klantnaam+Ordercodes</wintitle></title>
+                        <image keyref="q_customername_ordercodes_result">
+                            <alt>Resultaat query klantnaam+ordercodes</alt>
+                        </image>
+                    </fig>
+                </stepresult>
+            </step>
+            <step>
+                <cmd>Sluit de query en beantwoord de vraag om de wijzigingen op te slaan met
+                        <uicontrol>Ja</uicontrol>.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

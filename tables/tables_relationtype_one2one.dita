@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="tables_relationtype_one2one" xml:lang="nl-NL">
+    <title>Een-op-een relatie</title>
+    <shortdesc>Uitleg over de een-op-een relatie.</shortdesc>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords>
+                <indexterm>Relaties<indexterm>een-op-een</indexterm></indexterm>
+            </keywords>
+        </metadata>
+    </prolog>
+    <conbody>
+        <p>Bij één record uit de ene tabel kan één record uit een andere tabel horen. Deze situatie
+            komt zeer weinig voor. Dit wordt een enkele keer gedaan om een tabel met zeer veel
+            velden te splitsen in twee tabellen met elk minder velden. In het algemeen moet
+            geprobeerd worden om deze situatie te voorkomen om te streven naar zo min mogelijk
+            tabellen.</p>
+    </conbody>
+</concept>

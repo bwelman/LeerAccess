@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="data_tables" xml:lang="nl-NL">
+    <title>Tabel bewerkingen</title>
+    <shortdesc>Aanwijzingen hoe je records in een tabel bewerkt, nieuwe records toevoegt of records
+        verwijdert.</shortdesc>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords>
+                <indexterm>Records<indexterm>bewerken</indexterm><indexterm>toevoegen</indexterm><indexterm>verwijderen</indexterm></indexterm>
+            </keywords>
+        </metadata>
+    </prolog>
+    <conbody>
+        <p>Je kunt rechtstreeks in een tabel de belangrijkste gegevensbewerkingen uitvoeren, zoals
+            records bewerken, toevoegen en verwijderen. De gegevens worden in de velden ingetypt.
+            Ook de bekende manieren om te kopiëren en te plakken worden ondersteund.</p>
+        <dl>
+            <dlentry>
+                <dt>Record bewerken</dt>
+                <dd>Open de tabel en gebruik dan de muis of de pijltjestoeten om naar het veld te
+                    gaan dat gewijzigd moet worden. Klik in de cel en breng de wijzigingen aan.
+                    Zodra je een wijziging aanbrengt verschijnt aan de linkerkant van het record een
+                    icoon met een potlood: <image keyref="icon_edit"/>. Dit is het teken dat
+                    het record in de bewerkingsmodus (edit mode) zit. Zodra je het record verlaat
+                    verdwijnt het symbool en zijn de wijzigingen opgeslagen.</dd>
+            </dlentry>
+            <dlentry>
+                <dt>Record toevoegen</dt>
+                <dd>Ga naar de onderkant van de tabel, naar de rij met een asterisk: <image
+                        keyref="asterisk"/>. Deze rij bestaat in werkelijkheid niet, maar
+                    wordt aangemaakt wanneer je begint met gegevens in te typen. De asterisk gaat
+                    dan een rij naar beneden. Het nieuwe record wordt automatisch opgeslagen.</dd>
+            </dlentry>
+            <dlentry>
+                <dt>Record verwijderen</dt>
+                <dd>Er zijn meerdere manieren om records te verwijderen. De twee gemakkelijkste
+                    manieren zijn:<ul>
+                        <li>Selecteer het record en druk dan op de toets
+                                <uicontrol>Delete</uicontrol>.</li>
+                        <li>Rechtermuisklik in de marge aan het begin van het record. Kies daarna
+                            uit het snelmenu voor <uicontrol>Record verwijderen</uicontrol>.</li>
+                    </ul>Access vraagt daarna om een bevestiging van de verwijderactie.</dd>
+            </dlentry>
+        </dl>
+        <note type="attention">Access kent geen knop of functie om de verwijderacties ongedaan te
+            maken.</note>
+    </conbody>
+</concept>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="intro_database_open" xml:lang="nl-NL">
+    <title>Taak: Database openen</title>
+    <shortdesc>Aanwijzingen hoe je een bestaande database kunt openen.</shortdesc>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords>
+                <indexterm>Database<indexterm>openen</indexterm></indexterm>
+                <indexterm>Openen<indexterm>database</indexterm></indexterm>
+            </keywords>
+        </metadata>
+    </prolog>
+    <taskbody>
+        <prereq>Om deze taak uit te kunnen voeren moeten de hulpbestanden op je computer of een USB
+            stick staan.</prereq>
+        <context><p>Veel gebruikte methodes om een reeds bestaande Access database te openen zijn:<ul>
+                    <li>Dubbelklikken op een Accessbestand in de Windows verkenner.</li>
+                    <li>In het opstartscherm van Access op een recent bestand klikken of kiezen voor
+                            <uicontrol>Andere bestanden openen</uicontrol>.</li>
+                    <li>Wanneer Access reeds geopend is kiezen voor <menucascade>
+                            <uicontrol>Bestand</uicontrol>
+                            <uicontrol>Openen</uicontrol>
+                        </menucascade>.</li>
+                </ul>
+            </p>
+        </context>
+        <steps>
+            <step>
+                <cmd>Open via een van de hiervoor genoemde methodes het hulpbestand
+                            <filepath><keyword keyref="example_db_file"/></filepath>.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

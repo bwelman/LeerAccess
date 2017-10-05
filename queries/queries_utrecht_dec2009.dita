@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="queries_utrecht_dec2009" xml:lang="nl-NL">
+    <title>Taak: Orders Utrechtse klanten</title>
+    <shortdesc>Aan een bestaande query worden handmatig velden en criteria toegevoegd waarna de
+        query onder een andere naam wordt opgeslagen.</shortdesc>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords>
+                <indexterm>Query<indexterm>criteria</indexterm><indexterm>jokertekens</indexterm><indexterm>like</indexterm></indexterm>
+            </keywords>
+        </metadata>
+    </prolog>
+    <taskbody>
+        <prereq> Om deze taak te kunnen uitvoeren is het noodzakelijk dat eerst is uitgevoerd: <xref
+                href="queries_customername_ordercodes.dita#queries_customername_ordercodes"
+            /></prereq>
+        <context>
+            <p>INFORMATIEBEHOEFTE</p>
+            <p>Maak een gesorteerd overzicht met achternaam, voornaam en ordercodes van alle klanten
+                die in de provincie Utrecht wonen en waarvan de orderdatum in december 2009 lag.</p>
+            <p>ANALYSE</p>
+            <p>Alle gewenste informatie wordt al geleverd door de query die je gemaakt hebt in <xref
+                    href="queries_customername_ordercodes.dita#queries_customername_ordercodes"/>. Er
+                zijn echter twee aanvullende voorwaarden (criteria):<ul>
+                    <li>Het veld Provincie (in de tabel Klanten) moet de waarde UT hebben.</li>
+                    <li>Het veld Orderdatum (in de tabel Orders) moet een waarde hebben die kan
+                        lopen van 1-12-2009 t/m 31-12-2009.</li>
+                </ul></p>
+        </context>
+        <steps>
+            <step>
+                <cmd>Open de database <keyword keyref="example_db_file"/>.</cmd>
+            </step>
+            <step>
+                <cmd>Open de query <varname>Klantnaam+Ordercodes</varname> in de
+                        <uicontrol>Ontwerpweergave</uicontrol>.</cmd>
+                <stepresult>
+                    <fig>
+                        <title>Ontwerpweergave query
+                            <wintitle>Klantnaam+Ordercodes</wintitle></title>
+                        <image keyref="q_customername_ordercodes_design">
+                            <alt>Ontwerp query klanten en ordercodes</alt>
+                        </image>
+                    </fig>
+                </stepresult>
+            </step>
+            <step>
+                <cmd>Sleep het veld <varname>Provincie</varname> uit de tabel
+                        <varname>Klanten</varname> naar de kolom naast Ordercode). Sleep het veld
+                        <varname>Orderdatum</varname> uit de tabel <varname>Orders</varname> naar de
+                    volgende kolom.</cmd>
+                <stepresult>
+                    <fig>
+                        <title>Velden in het queryraster</title>
+                        <image keyref="q_utrecht_dec2009_fields">
+                            <alt>velden in het query raster</alt>
+                        </image>
+                    </fig>
+                </stepresult>
+            </step>
+            <step>
+                <cmd>Typ onder <varname>Provincie</varname> in het vak <varname>Criteria</varname>
+                    in <userinput>"UT"</userinput>.</cmd>
+            </step>
+            <step>
+                <cmd>Typ onder <varname>Orderdatum</varname> in het vak <varname>Criteria</varname>
+                    in <userinput>Like "*12-2009"</userinput>.</cmd>
+                <stepresult>
+                    <fig>
+                        <title>Orderdatum met Like operator</title>
+                        <image keyref="q_utrecht_dec2009_criteria">
+                            <alt>Orderdatum met Like operator</alt>
+                        </image>
+                    </fig>
+                    <note type="attention">
+                        <ul>
+                            <li>Het sterretje * heet een <term>joker</term> en betekent dat op deze
+                                plaatst willekeurige tekst mag staan. In dit geval heeft het
+                                daardoor de betekenis van <q>een willekeurige dag</q>.</li>
+                            <li>Op computers waar een Amerikaanse datumweergave (maand-dag-jaar) is
+                                ingesteld moet deze eerst op de Nederlandse datumweergave
+                                (dag-maand-jaar) worden ingesteld.</li>
+                        </ul>
+                    </note>
+                </stepresult>
+            </step>
+            <step>
+                <cmd>Schakel naar de <uicontrol>Gegevensbladweergave</uicontrol> en controleer dat
+                    alle klanten uit de provincie Utrecht komen en dat alle orderdata in december
+                    2009 liggen.</cmd>
+            </step>
+            <step>
+                <cmd>Schakel naar de <uicontrol>Ontwerpweergave</uicontrol> en vink de
+                    selectievakjes <uicontrol>Weergeven</uicontrol> onder
+                        <varname>Provincie</varname> en <varname>Orderdatum</varname> uit.</cmd>
+            </step>
+            <step>
+                <cmd>Schakel naar de <uicontrol>Gegevensbladweergave</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Sla de query onder een andere naam op via <menucascade>
+                        <uicontrol>Bestand</uicontrol>
+                        <uicontrol>Object opslaan als</uicontrol>
+                    </menucascade> en geef in het dialoogvenster als naam op <userinput>Utrecht en
+                        orderdatum dec 2009</userinput>.</cmd>
+            </step>
+            <step>
+                <cmd>Klik op <uicontrol>OK</uicontrol> en sluit daarna de query.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

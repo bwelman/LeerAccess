@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="explore_search_records" xml:lang="nl-NL">
+    <title>Taak: Record zoeken</title>
+    <shortdesc>Hoe je een record kunt zoeken via een gedeelte van een naam.</shortdesc>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords>
+                <indexterm>Record<indexterm>zoeken</indexterm></indexterm>
+                <indexterm>Zoeken<indexterm>record</indexterm></indexterm>
+            </keywords>
+        </metadata>
+    </prolog>
+    <taskbody>
+        <context>
+            <p>Een formulier kan ook gebruikt worden om een record te zoeken. In de volgende stappen
+                worden dozen met<q>herfst</q> in de naam opgezocht.</p>
+        </context>
+        <steps>
+            <step>
+                <cmd>Open de database <keyword keyref="example_db_file"/>.</cmd>
+            </step>
+            <step>
+                <cmd>Open het formulier <varname>Dozen</varname>.</cmd>
+            </step>
+            <step>
+                <cmd>Klik in het veld Doosnaam en kies in het lint <menucascade>
+                        <uicontrol>tab Start</uicontrol>
+                        <uicontrol><image keyref="button_find"/> Zoeken (groep Zoeken)</uicontrol>
+                    </menucascade></cmd>
+                <stepresult>Het dialoogvenster <wintitle>Zoeken en vervangen</wintitle>
+                    verschijnt.</stepresult>
+            </step>
+            <step>
+                <cmd>Typ in het vak <uicontrol>Zoeken naar</uicontrol>:
+                        <userinput>herfst</userinput> en selecteer achter Waar: <uicontrol>Gedeelte
+                        van veld</uicontrol>.</cmd>
+                <stepresult>
+                    <fig>
+                        <title>Dialoogvenster <wintitle>Zoeken en vervangen</wintitle></title>
+                        <image keyref="find_replace_dialogbox">
+                            <alt>Dialoogvenster zoeken en vervangen.</alt>
+                        </image>
+                    </fig>
+                </stepresult>
+            </step>
+            <step>
+                <cmd>Klik op <uicontrol>Volgende zoeken</uicontrol>.</cmd>
+                <stepresult>De inhoud van de doos <wintitle>Herfstverrassing</wintitle> wordt
+                    getoond.</stepresult>
+            </step>
+            <step>
+                <cmd>Klik op <uicontrol>Annuleren</uicontrol> om het zoekvenster te sluiten.</cmd>
+            </step>
+            <step>
+                <cmd>Sluit het formulier.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

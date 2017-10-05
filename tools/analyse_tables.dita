@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="analyse_tables" xml:lang="nl-NL">
+	<title>Taak: Analyse van een tabel</title>
+	<shortdesc>Onderzoek naar inconsistentie van tabellen.</shortdesc>
+	<prolog>
+		<critdates>
+		    <created date="2017-10-05"/>
+		    <revised modified="2017-10-05"/>
+		</critdates>
+		<metadata>
+			<keywords>
+				<indexterm>Hulpmiddelen<indexterm>analyse tabel</indexterm></indexterm>
+				<indexterm>Analyse tabel</indexterm>
+				<indexterm>Redundantie</indexterm>
+				<indexterm>Inconsistentie</indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<taskbody>
+		<context>
+			<p>Wanneer dezelfde informatie vaker dan één keer wordt opgeslagen dan wordt dit
+                    <term>redundantie</term> genoemd. Dat is onwenselijk, want wanneer de informatie
+                wijzigt, moet deze wijziging op al die plaatsen worden doorgevoerd. Als je dat niet
+                doet dan wordt de database <term>inconsistent</term>.</p>
+			<p>Access beschikt over het hulpmiddel <wintitle>Tabelanalyse</wintitle> om redundante
+				gegevens op te sporen en een tabel met <term>redundante</term> gegevens op te
+				splitsen in meerdere, gerelateerde tabellen zodat de informatie efficiënter wordt
+				opgeslagen. Dit proces wordt ook wel <term>normalisatie</term> genoemd. </p>
+			<p>Je kunt opgeven welke tabellen je de wizard wilt laten maken of je kunt jouw tabel
+				door de wizard laten normaliseren. Nadat je de voorgestelde nieuwe tabellen hebt
+				opgegeven, helpt de wizard de gegevens te saneren die in de oorspronkelijke tabel op
+				inconsistente wijze werden herhaald. In de laatste stap kun je een query maken
+				waarmee alle informatie in de gesplitste tabellen kan worden weergegeven in een
+				enkel gegevensblad dat overeenkomt met de oorspronkelijke tabel.</p>
+			<p>In de afbeelding hierna is een voorbeeld van een tabel <wintitle>Contacts</wintitle> te zien.
+                Hierin is te zien dat veel gegevens meervoudig worden opgeslagen. Deze tabel is niet
+                dus niet genormaliseerd. Access kan deze tabel splitsen in twee tabellen zo dat zo
+                min mogelijk gegevens meervoudig worden opgeslagen.</p>
+			<fig>
+                <title>Tabel Contacten</title>
+                <image keyref="table_contacts">
+                    <alt>Tabel contacten</alt>
+                </image>
+            </fig>
+		</context>
+		<steps>
+			<step>
+                <cmd>Open het hulpbestand <filepath>tools.accdb</filepath>.</cmd>
+            </step>
+			<step>
+                <cmd>Selecteer de tabel <wintitle>Contacts</wintitle>.</cmd>
+            </step>
+			<step>
+				<cmd>Kies <menucascade>
+						<uicontrol>tab Hulpmiddelen voor databases</uicontrol>
+						<uicontrol>Tabel analyseren (groep Analyseren)</uicontrol>
+					</menucascade>.</cmd>
+				<stepresult>
+                    <p>De wizard <wintitle>Tabelanalyse</wintitle> verschijnt met wat algemene
+                        uitleg over dubbele informatie.</p>
+                </stepresult>
+			</step>
+			<step>
+				<cmd>Klik op <uicontrol>Volgende</uicontrol>.</cmd>
+				<stepresult>
+                    <p>Een nieuw scherm van de wizard <wintitle>Tabelanalyse</wintitle> verschijnt
+                        met algemene uitleg over hoe dit probleem opgelost kan worden.</p>
+                </stepresult>
+			</step>
+			<step>
+				<cmd>Klik op <uicontrol>Volgende</uicontrol>.</cmd>
+				<stepresult>
+                    <p>De wizard vraagt nu welke tabel de redundante gegevens bevat.</p>
+                </stepresult>
+			</step>
+			<step>
+                <cmd>Selecteer tabel <wintitle>Contacts</wintitle> en klik op
+                        <uicontrol>Volgende</uicontrol>.</cmd>
+                <stepresult>
+                    <p>Nu kun je aangeven wie de keuze van de velden bepaalt, de wizard of jij.</p>
+                </stepresult>
+            </step>
+			<step>
+                <cmd>Selecteer <uicontrol>Zelf een keuze maken</uicontrol> en klik op
+                        <uicontrol>Volgende</uicontrol>.</cmd>
+                <stepresult>
+                    <fig>
+                        <title>Wizard Tabelanalyse</title>
+                        <image keyref="table_analyzer_wizard">
+                            <alt>Wizard tabelanalyse</alt>
+                        </image>
+                    </fig>
+                    <note type="notice">In deze stap kun je nieuwe tabellen maken en velden daaraan
+                        toevoegen.</note>
+                </stepresult>
+            </step>
+			<step>
+                <cmd>Selecteer veld <varname>ContactName</varname> en sleep deze uit de tabel.</cmd>
+                <stepresult>
+                    <p>Er wordt een nieuwe tabel gemaakt met daarin het veld
+                            <varname>ContactName</varname>. De wizard vraagt nu om de naam van de
+                        nieuwe tabel.</p>
+                </stepresult>
+            </step>
+			<step>
+                <cmd>Geef de nieuwe tabel de naam <userinput>Contactpersons</userinput> en klik
+                        <uicontrol>OK</uicontrol>.</cmd>
+                <stepresult>
+                    <fig>
+                        <title>Nieuw aangemaakte tabel Contactpersoon</title>
+                        <image keyref="table_generated">
+                            <alt>Nieuw aangemaakte tabel contactpersoon</alt>
+                        </image>
+                    </fig>
+                    <note type="notice">Er is tevens een relatie tussen de twee tabellen
+                        aangemaakt.</note>
+                    <note type="tip">De plaats en de afmetingen van de getoonde tabellen kunnen
+                        gewijzigd worden door de tabel zelf of de randen te verslepen.</note>
+                </stepresult>
+            </step>
+			<step>
+                <cmd>Sleep de velden <varname>CompanyName</varname> en <varname>Tel</varname> naar
+                    de nieuwe tabel <wintitle>Contactpersons</wintitle>.</cmd>
+                <stepresult>
+                    <fig>
+                        <title>Eindresultaat tabel Contactpersons</title>
+                        <image keyref="tables_splitted">
+                            <alt>Eindresultaat tabel Contactpersons</alt>
+                        </image>
+                    </fig>
+                </stepresult>
+            </step>
+			<step>
+				<cmd>Klik op <uicontrol>Volgende</uicontrol>.</cmd>
+				<stepresult>In het scherm dat nu verschijnt kan een bijbehorende query gemaakt
+					worden.</stepresult>
+			</step>
+			<step>
+				<cmd>Selecteer <uicontrol>Geen query maken</uicontrol> en klik op
+						<uicontrol>Voltooien</uicontrol>.</cmd>
+				<stepresult>Er zijn nu drie tabellen: <wintitle>Contacts</wintitle> (oorspronkelijke tabel),
+                        <wintitle>Contactpersons</wintitle> (nieuwe tabel),
+                        <wintitle>Tabel1</wintitle> (nieuwe tabel)<note type="attention">Er kan een
+                        waarschuwingsvenster verschijnen met de mededeling dat de opdracht of actie
+                            <uicontrol>OnderElkaar</uicontrol> niet beschikbaar is. Klik in dat
+                        geval op <uicontrol>OK</uicontrol>.</note></stepresult>
+			</step>
+			<step>
+				<cmd>Sluit de tabellen en wanneer daarom gevraagd wordt, laat dan de gewijzigde
+					indelingen opslaan.</cmd>
+			</step>
+			<step>
+                <cmd>Verwijder de tabel <wintitle>Contacts</wintitle>.</cmd>
+            </step>
+			<step>
+                <cmd>Wijzig de naam van <wintitle>Tabel1</wintitle> in
+                    <wintitle>Contacts</wintitle>.</cmd>
+            </step>
+		</steps>
+	</taskbody>
+</task>

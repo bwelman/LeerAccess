@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="forms_sales_boxes" xml:lang="nl-NL">
+    <title>Taak: Formulier met grafiek</title>
+    <shortdesc>Het maken van een formulier met daarop een grafiek.</shortdesc>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords>
+                <indexterm>Formulier<indexterm>grafiek</indexterm></indexterm>
+                <indexterm>Grafiek</indexterm>
+                <indexterm>Functies</indexterm>
+            </keywords>
+        </metadata>
+    </prolog>
+    <taskbody>
+        <context>
+            <p>De opdracht is om een grafiek te maken voor het jaar 2010 waarin de omzet per maand
+                per doos bekeken kan worden. Zie het volgende voorbeeld.</p>
+            <fig>
+                <title>Formulier met grafiek</title>
+                <image keyref="f_sales_boxes_chart">
+                    <alt>Formulier met grafiek</alt>
+                </image>
+            </fig>
+            <p>De verschillende onderdelen in de grafiek kunnen uit bepaalde tabellen gehaald of
+                berekend worden. De Doosnaam zit in de tabel Dozen. De Omzet moet berekend worden
+                via de expressie <codeph>[Hoeveelheid] * [Doosprijs]</codeph>. Het veld Doosprijs
+                zit ook in de tabel Dozen en het veld Hoeveelheid zit in de tabel Orderdetails. De
+                Maand en het Jaar kunnen berekend worden met de functies
+                    <codeph>Month([Orderdatum])</codeph> en <codeph>Year([Orderdatum])</codeph>. Het
+                veld Orderdatum zit in de tabel Orders. Verder moet er eerst gegroepeerd op Doosnaam
+                en daarna per Maand. En dan moet er nog gefilterd worden op het jaar 2010.</p>
+            <p>Er moet dus een query gemaakt worden die de benodigde gegevens (Doosnaam, Omzet,
+                Maand en Jaar) aanlevert. Groeperen en filteren kan via de rij
+                    <uicontrol>Totaal</uicontrol> in het queryraster. Voor groeperen kies je voor
+                    <option>Group By</option> en voor filteren maak je de keuze
+                    <option>Waar</option>. Voor het laatste moet dan ook nog bij
+                    <uicontrol>Criteria</uicontrol> de waarde <userinput>2010</userinput> worden
+                opgegeven.</p><p>De werkzaamheden bestaan uit twee delen. Eerst moet de query
+                gemaakt worden en daarna het formulier met de grafiek.</p>
+        </context>
+        <steps>
+            <stepsection>Query maken</stepsection>
+            <step>
+                <cmd>Open de database <keyword keyref="example_db_file"/>.</cmd>
+            </step>
+            <step>
+                <cmd>Kies <menucascade>
+                        <uicontrol>tab Maken</uicontrol>
+                        <uicontrol>Queryontwerp (groep Query's)</uicontrol>
+                    </menucascade> en voeg achtereenvolgens de tabellen Dozen, Orderdetails en
+                    Orders toe.</cmd>
+            </step>
+            <step>
+                <cmd>Voeg het veld Doosnaam (tabel Dozen) in de eerste kolom toe en daarna in de
+                    volgende kolommen de expressies
+                    <userinput>Maand:Month([Orderdatum])</userinput>,
+                        <userinput>Omzet:[Hoeveelheid]*[Doosprijs]</userinput> en
+                        <userinput>Jaar:Year([Orderdatum])</userinput>.</cmd>
+            </step>
+            <step>
+                <cmd>Kies <menucascade>
+                        <uicontrol>tab Ontwerp</uicontrol>
+                        <uicontrol>Totalen (groep Weergeven/verbergen)</uicontrol>
+                    </menucascade>.</cmd>
+            </step>
+            <step>
+                <cmd>Wijzig in de derde kolom de Group By in <userinput>Som</userinput> en in de
+                    vierde kolom in <userinput>Waar</userinput>. Voeg in de vierde kolom als
+                    criterium toe <userinput>2010</userinput>. Laat dit laatste veld niet
+                    weergeven.</cmd>
+                <stepresult>
+                    <fig>
+                        <title>Ontwerp query omzet</title>
+                        <image keyref="q_sales_box_month_design">
+                            <alt>Ontwerp query omzet</alt>
+                        </image>
+                    </fig>
+                </stepresult>
+            </step>
+            <step>
+                <cmd>Sluit de query en bewaar deze onder de naam <userinput>Omzet per doos per maand
+                        in 2010</userinput>.</cmd>
+                <tutorialinfo>
+                    <note type="attention">Wanneer je na het sluiten de query weer opent in de
+                        Ontwerpweergave, dan heeft Access een paar wijzigingen aangebracht in de
+                        kolom Omzet.<ul>
+                            <li>Waarde in rij Veld is nu: <systemoutput>Omzet:
+                                    Som([Hoeveelheid]*[Doosprijs])</systemoutput></li>
+                            <li>Waarde in veld Totaal is nu:
+                                <systemoutput>Expressie</systemoutput></li>
+                        </ul></note>
+                </tutorialinfo>
+            </step>
+            <stepsection>Formulier maken</stepsection>
+            <step>
+                <cmd>Kies <menucascade>
+                        <uicontrol>tab Maken</uicontrol>
+                        <uicontrol>Wizard Formulier</uicontrol>
+                    </menucascade>. Voeg tabel <uicontrol>Dozen</uicontrol> toe en van deze tabel
+                    alleen het veld <uicontrol>Doosnaam</uicontrol>. Klik op
+                        <uicontrol>Volgende</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Beantwoord de vragen van de Wizard als volgt:</cmd>
+                <info>
+                    <ul id="ul_tlg_1nx_ct">
+                        <li>Formulier opmaak <option>Als gegevensblad</option>.</li>
+                        <li>Titel <userinput>Omzet per doos per maand in 2010</userinput>.</li>
+                        <li>Bewaar het formulier onder dezelfde naam als de titel.</li>
+                    </ul>
+                </info>
+            </step>
+            <step>
+                <cmd>Open het formulier in de <uicontrol>Ontwerpweergave</uicontrol>. Maak wat
+                    ruimte voor de grafiek in de sectie Details door de onderkant naar beneden te
+                    slepen.</cmd>
+            </step>
+            <step>
+                <cmd>Kies <menucascade>
+                        <uicontrol>tab Ontwerp</uicontrol>
+                        <uicontrol>Grafiek <image keyref="control_chart"/> (groep
+                            Besturingselementen</uicontrol>
+                    </menucascade> en teken op het formulier een rechthoekig kader waar de grafiek
+                    moet komen.</cmd>
+                <stepresult>De <wintitle>Wizard Grafieken</wintitle> wordt opgestart.</stepresult>
+            </step>
+            <step>
+                <cmd>Beantwoord de eerste drie vragen van de Wizard achtereenvolgens als
+                    volgt:</cmd>
+                <info>
+                    <ul>
+                        <li>De gegevens voor de grafiek zijn afkomstig van de query <uicontrol>Omzet
+                                per doos per maand in 2010</uicontrol>.</li>
+                        <li>Voeg de velden <varname>Maand</varname> en <varname>Omzet</varname> aan
+                            de grafiek toe.</li>
+                        <li>Kies als grafiektype een <uicontrol>Kolomdiagram</uicontrol>.</li>
+                    </ul>
+                </info>
+                <stepresult>
+                    <p>De Wizard toont een voorbeeld van de grafiek. Deze zul je moeten
+                        aanpassen.</p>
+                    <fig>
+                        <title>Voorstel indeling grafiek</title>
+                        <image keyref="chartwizard_layout_default">
+                            <alt>Voorstel indeling grafiek</alt>
+                        </image>
+                    </fig>
+                </stepresult>
+            </step>
+            <step>
+                <cmd>Sleep het veld <uicontrol>SomVanMaand</uicontrol> uit het vak bij de verticale
+                    as naar het vak voor de horizontale as. De weergave langs de horizontale as
+                    wijzigt dan in <systemoutput>Maand</systemoutput>.</cmd>
+            </step>
+            <step>
+                <cmd>Sleep het veld <uicontrol>Omzet</uicontrol> naar het vak voor de verticale as.
+                    De weergave langs de verticale as wijzigt in
+                        <systemoutput>SomVanOmzet</systemoutput>.</cmd>
+                <stepresult>
+                    <fig>
+                        <title>Definitieve indeling grafiek</title>
+                        <image keyref="chartwizard_layout_data">
+                            <alt>Definitieve indeling grafiek</alt>
+                        </image>
+                    </fig>
+                </stepresult>
+            </step>
+            <step>
+                <cmd>Klik op <uicontrol>Volgende</uicontrol>.</cmd>
+                <stepresult>
+                    <fig>
+                        <title>Koppeling tussen velden formulier en grafiek</title>
+                        <image keyref="chartwizard_linking_fields">
+                            <alt>Koppeling tussen velden formulier en grafiek</alt>
+                        </image>
+                    </fig>
+                    <p>Hier selecteer je het veld in het formulier dat gekoppeld moet worden aan het
+                        veld in de grafiek. In beide gevallen is dat
+                        <varname>Doosnaam</varname>.</p>
+                </stepresult>
+            </step>
+            <step>
+                <cmd>Klik op <uicontrol>Volgende</uicontrol>. Geef de grafiek de naam
+                        <userinput>Omzet per doos per maand in 2010</userinput> en kies er voor om
+                    de legenda niet weer te geven en klik daarna op
+                    <uicontrol>Voltooien</uicontrol>.</cmd>
+                <stepresult>
+                    <note type="attention">In de Ontwerpweergave wordt een voorbeeldgrafiek getoond
+                        en niet een grafiek met de echte gegevens.</note>
+                </stepresult>
+            </step>
+            <step>
+                <cmd>Sluit het formulier en bewaar de wijzigingen.</cmd>
+            </step>
+            <step>
+                <cmd>Open het formulier in de <uicontrol>Formulierweergave</uicontrol> en blader
+                    door de dozen.</cmd>
+            </step>
+            <step>
+                <cmd>Sluit het formulier.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

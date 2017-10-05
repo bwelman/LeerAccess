@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="tables_new_import_excel" xml:lang="nl-NL">
+    <title>Taak: Nieuwe tabel via Excel import</title>
+    <shortdesc>Hoe je gegevens in een Excel werkblad in een nieuwe Access tabel kunt
+        importeren.</shortdesc>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords>
+                <indexterm>Tabel<indexterm>importeren</indexterm></indexterm>
+                <indexterm>Importeren<indexterm>Excel</indexterm></indexterm>
+                <indexterm>Excel<indexterm>import</indexterm></indexterm>
+            </keywords>
+        </metadata>
+    </prolog>
+    <taskbody>
+        <context>Access werkt goed samen met Excel. Zo kun je een heel werkblad importeren in een
+            nieuwe of in een bestaande tabel.</context>
+        <steps>
+            <step>
+                <cmd>Open database <keyword keyref="example_db_file"/>.</cmd>
+            </step>
+            <step>
+                <cmd>Kies <menucascade>
+                        <uicontrol>tab Externe gegevens</uicontrol>
+                        <uicontrol>Nieuwe gegevensbron (groep Importeren en koppelen)</uicontrol>
+                        <uicontrol>Uit bestand</uicontrol>
+                        <uicontrol>Excel</uicontrol>
+                    </menucascade>.</cmd>
+                <stepresult>
+                    <fig>
+                        <title>Dialoogvenster <wintitle>Externe gegevens ophalen</wintitle></title>
+                        <image keyref="import_excel_dialogbox">
+                            <alt>Dialoogvenster externe gegevens ophalen.</alt>
+                        </image>
+                    </fig>
+                </stepresult>
+            </step>
+            <step>
+                <cmd>Navigeer via de knop <uicontrol>Bladeren</uicontrol> naar het bestand
+                        <filepath>Vervoer.xlsx</filepath>.</cmd>
+            </step>
+            <step>
+                <cmd>Selecteer de eerste optie <uicontrol>De brongegevens importeren in een nieuwe
+                        tabel in de huidige database</uicontrol> en klik op
+                        <uicontrol>OK</uicontrol>.</cmd>
+                <stepresult>De Wizard werkblad importeren verschijnt.</stepresult>
+            </step>
+            <step>
+                <cmd>Selecteer de optie <uicontrol>Eerste rij bevat kolomkoppen</uicontrol> en klik
+                    op <uicontrol>Volgende</uicontrol>.</cmd>
+                <stepresult>In het scherm van de Wizard dat nu verschijnt kunnen een aantal
+                    eigenschappen van de velden gewijzigd worden.</stepresult>
+            </step>
+            <step>
+                <cmd>Klik op <uicontrol>Volgende</uicontrol>.</cmd>
+                <stepresult>De Wizard vraagt nu wat er als sleutel voor de nieuwe tabel gebruikt
+                    moet worden.</stepresult>
+            </step>
+            <step>
+                <cmd>Selecteer <uicontrol>Geen primaire sleutel</uicontrol> en klik op
+                        <uicontrol>Volgende</uicontrol>.</cmd>
+                <stepresult>De Wizard vraagt vervolgens naar de naam van de tabel.</stepresult>
+            </step>
+            <step>
+                <cmd>Gebruik als naam voor de tabel <userinput>Vervoer</userinput> en klik op
+                        <uicontrol>Voltooien</uicontrol>.</cmd>
+                <stepresult>De Wizard geeft nu aan dat de gegevens uit Excel geïmporteerd
+                    zijn.</stepresult>
+            </step>
+            <step>
+                <cmd>Klik op <uicontrol>Sluiten</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Open de tabel, bekijk het resultaat en sluit daarna de tabel.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

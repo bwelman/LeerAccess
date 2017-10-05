@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="forms_explanation_mainsub" xml:lang="nl-NL">
+    <title>Hoofd- en subformulieren</title>
+    <shortdesc>Achtergronden van een hoofdformulier en subformulier.</shortdesc>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords>
+                <indexterm>Formulier<indexterm>hoofdformulier</indexterm><indexterm>subformulier</indexterm></indexterm>
+                <indexterm>Hoofdformulier</indexterm>
+                <indexterm>Subformulier</indexterm>
+            </keywords>
+        </metadata>
+    </prolog>
+    <conbody>
+        <p>Een subformulier is een formulier dat in een ander formulier, het hoofdformulier genoemd,
+            is opgenomen. Subformulieren worden veel gebruikt wanneer je gegevens weer moet geven
+            uit tabellen en query's met een <term>een-op-veel</term> relatie. De gegevens van de
+                <term>een-kant</term> staan dan in het hoofdformulier en de gegevens uit de
+                <term>veel-kant</term> in het subformulier. Met een hoofd-subformulier kun je op
+            deze manier bijvoorbeeld de gegevens van een klant en de bijbehorende orders weergeven.
+            De gegevens in de tabel <varname>Klant</varname> vormen de <term>een-kant</term> en
+            staan in het hoofdformulier. De gegevens in de tabel <varname>Orders</varname> vormen de
+                <term>veel-kant</term> en staan in het subformulier.</p>
+        <p>Het hoofdformulier en subformulier zijn gekoppeld, zo dat in het subformulier alleen
+            records worden weergegeven die gerelateerd zijn aan de huidige record in het
+            hoofdformulier.</p>
+        <fig>
+            <title>Hoofdformulier Klanten met subformulier Orders</title>
+            <image keyref="f_customers_orders">
+                <alt>Hoofdformulier Klanten met subformulier Orders</alt>
+            </image>
+        </fig>
+    </conbody>
+</concept>

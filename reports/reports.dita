@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="reports" xml:lang="nl-NL">
+    <title>Rapporten maken</title>
+    <shortdesc/>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords/>
+        </metadata>
+    </prolog>
+    <conbody>
+        <p>Rapporten zijn overzichten die meestal bedoeld zijn om af te drukken. Ook etiketten zijn
+            een vorm van rapporten.</p>
+    </conbody>
+</concept>

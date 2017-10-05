@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="tables_new_manually" xml:lang="nl-NL">
+    <title>Taak: Nieuwe tabel handmatig maken</title>
+    <shortdesc>Vanaf het begin een nieuwe tabel maken en een sleutel toekennen.</shortdesc>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords>
+                <indexterm>Tabel<indexterm>sjabloon</indexterm><indexterm>template</indexterm></indexterm>
+                <indexterm>Sjabloon</indexterm>
+                <indexterm>Template</indexterm>
+            </keywords>
+        </metadata>
+    </prolog>
+    <taskbody>
+        <context>
+            <p>In een nieuw te maken tabel Vervoerbedrijven moeten de contactgegevens van de
+                vervoerder opgeslagen worden.</p>
+        </context>
+        <steps>
+            <step>
+                <cmd>Open database <keyword keyref="example_db_file"/>.</cmd>
+            </step>
+            <step>
+                <cmd>Kies <menucascade>
+                        <uicontrol>tab Maken</uicontrol>
+                        <uicontrol>Tabel (groep Tabellen)</uicontrol>
+                    </menucascade>.</cmd>
+                <stepresult>Een nieuwe tabel wordt aangemaakt. Er wordt automatisch één veld met de
+                    naam <varname>ID</varname> aangemaakt. Deze kan verwijderd worden wanneer je het
+                    veld niet nodig hebt.</stepresult>
+            </step>
+            <step>
+                <cmd>Zet de tabel in de Ontwerpweergave.</cmd>
+                <stepresult> Omdat de tabel nog geen naam heeft verschijnt het dialoogvenster
+                        <wintitle>Opslaan als</wintitle>. <fig>
+                        <title>Dialoogvenster <wintitle>Opslaan als</wintitle></title>
+                        <image keyref="t_saveas">
+                            <alt>Dialoogvenster tabel opslaan als.</alt>
+                        </image>
+                    </fig></stepresult>
+            </step>
+            <step>
+                <cmd>Voer als naam in <userinput>Vervoerbedrijven</userinput> en klik
+                        <uicontrol>OK</uicontrol>.</cmd>
+                <stepresult>De tabel Vervoerbedrijven verschijnt nu in de
+                    ontwerpweergave.</stepresult>
+            </step>
+            <step>
+                <cmd>Geef een rechter muisklik ergens in het veld <varname>ID</varname> en kies dan
+                        <uicontrol>Rijen verwijderen</uicontrol> en bevestig het verwijderen.</cmd>
+            </step>
+            <step>
+                <cmd>Voeg de volgende velden toe:</cmd>
+                <tutorialinfo>
+                    <fig>
+                        <title>Velden tabel vervoerbedrijven</title>
+                        <image keyref="t_transport_companies_design">
+                            <alt>Velden tabel vervoerbedrijven</alt>
+                        </image>
+                    </fig>
+                    <p>De (bedrijfs)naam van ieder vervoerbedrijf is hier uniek en kan daarom als
+                        sleutel gebruikt worden.</p>
+                </tutorialinfo>
+            </step>
+            <step>
+                <cmd>Selecteer de eerste rij en klik <menucascade>
+                        <uicontrol>tab Ontwerpen</uicontrol>
+                        <uicontrol>Primaire sleutel (groep Extra)</uicontrol>
+                    </menucascade>.</cmd>
+                <stepresult>Voor het begin van de eerste rij staat nu een sleutel <image
+                        keyref="icon_key"/></stepresult>
+            </step>
+            <step>
+                <cmd>Schakel over naar de Gegevensbladweergave. Beantwoord de vraag of de tabel moet
+                    worden opgeslagen met <uicontrol>Ja</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Voeg de volgende records toe:</cmd>
+                <stepresult>
+                    <fig>
+                        <title>Records tabel Vervoerbedrijven</title>
+                        <image keyref="t_transport_companies_records">
+                            <alt>Records tabelvervoerbedrijven.</alt>
+                        </image>
+                    </fig>
+                </stepresult>
+            </step>
+            <step>
+                <cmd>Sluit de tabel Vervoerbedrijven.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

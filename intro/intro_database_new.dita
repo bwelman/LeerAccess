@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="intro_database_new" xml:lang="nl-NL">
+    <title>Nieuwe database venster</title>
+    <shortdesc>Aanwijzingen hoe je een nieuwe database kunt maken.</shortdesc>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords>
+                <indexterm>Database<indexterm>nieuw</indexterm></indexterm>
+            </keywords>
+        </metadata>
+    </prolog>
+    <conbody>
+        <p>Aan het maken van een database hoort eigenlijk een proces van informatieanalyse vooraf te
+            gaan, gevolgd door een normalisatieproces. Dan is de structuur van de database bekend en
+            weet je welke tabellen met welke velden je moet maken. Daarom is het maken van een
+            nieuwe database geen taak in deze cursus. Wanneer je weet wat er gemaakt moet worden is
+            het maken van een database niet moeilijk meer. Hierna volgen een paar richtlijnen hoe je
+            te werk zou kunnen gaan.</p>
+        <p>Het startpunt is het opstartscherm van Access. In het linkerdeel staan de laatst geopende
+            bestanden en in het rechterdeel een overzicht van beschikbare sjablonen.</p>
+        <p>Allereerst kun je Access de opdracht geven om een lege nieuwe database aan te maken
+            door te klikken op het sjabloon <uicontrol>Lege database</uicontrol>. In het dan volgende
+            scherm moet je de naam en opslagplek van de nieuwe database opgeven. Vervolgens maakt
+            Access deze database en maakt tegelijk een nieuwe lege tabel. Het maken van tabellen
+            komt verderop in deze cursus aan bod.</p>
+        <p>Access voorziet in een aantal sjablonen voor veel voorkomende soorten databases, zie de
+            knoppen in het opstartscherm. Wanneer de nieuw te maken database in de buurt komt van
+            deze sjablonen dan kun je hier gebruik van maken. Door te klikken op een sjabloon wordt
+            een database inclusief tabellen met velden en vaak ook een aantal query's, formulieren
+            en rapporten aangemaakt. Daarna kun je de ontwerpen aanpassen. Dit is soms handiger en
+            sneller dan alles handmatig vanaf nul te beginnen.</p>
+    </conbody>
+</concept>

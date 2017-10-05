@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="data_new_box" xml:lang="nl-NL">
+    <title>Taak: Nieuwe doos toevoegen</title>
+    <shortdesc>Een nieuw record toevoegen via een hoofdformulier en een subformulier.</shortdesc>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords>
+                <indexterm>Record<indexterm>toevoegen</indexterm></indexterm>
+                <indexterm>Formulier<indexterm>hoofdformulier</indexterm><indexterm>subformulier</indexterm></indexterm>
+            </keywords>
+        </metadata>
+    </prolog>
+    <taskbody>
+        <context/>
+        <context>Het formulier <varname>Dozen</varname> bevat een subformulier. In het
+            hoofdformulier met de naam <varname>Dozen</varname> staat de volgende informatie:
+            doosnaam, dooscode, doosbeschrijving, gewicht, doosprijs en de magazijnvoorraad. Deze
+            gegevens worden opgeslagen in de tabel <varname>Dozen</varname>. Bovendien staat op dit
+            formulier een extra veld Dooskosten. Deze kosten zijn berekend via de som van
+            (Bonbonkosten * Hoeveelheid) van alle bonbons die in de doos zitten. In het subformulier
+            met de naam <varname>Dozen subformulier</varname> zijn de bewerkbare velden: Bonboncode
+            en Hoeveelheid. Deze gegevens, inclusief de dooscode,  wordt opgeslagen in de tabel
+                <varname>Doosdetails</varname>. In de volgende stappen wordt een nieuwe doos
+            toegevoegd via het formulier <varname>Dozen</varname>.</context>
+        <steps>
+            <step>
+                <cmd>Open database <keyword keyref="example_db_file"/>.</cmd>
+            </step>
+            <step>
+                <cmd>Open formulier <varname>Dozen</varname>.</cmd>
+            </step>
+            <step>
+                <cmd>Klik in de statusregel op de knop <uicontrol>Nieuwe (lege) record <image
+                            keyref="button_record_new"/></uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Voer de volgende doosgegevens in:</cmd>
+                <tutorialinfo>
+                    <simpletable frame="all">
+                        <strow>
+                            <stentry>Doosnaam</stentry>
+                            <stentry>Winterverrassing</stentry>
+                        </strow>
+                        <strow>
+                            <stentry>Dooscode</stentry>
+                            <stentry>WINT</stentry>
+                        </strow>
+                        <strow>
+                            <stentry>Doosbeschrijving</stentry>
+                            <stentry>Noten en bessen, bedekt met chocolade en toffee; geknipt voor
+                                de lange winteravonden bij het haardvuur.</stentry>
+                        </strow>
+                        <strow>
+                            <stentry>Gewicht</stentry>
+                            <stentry>300 gram</stentry>
+                        </strow>
+                    </simpletable>
+                </tutorialinfo>
+            </step>
+            <step>
+                <cmd>Klik onder Inhoud in het veld <varname>Code</varname> op de keuzepijl en
+                    selecteer bonboncode <userinput>B02 Butterscotch Bosbes</userinput>.</cmd>
+                <stepresult>De overige bonbongegevens als bonbonnaam, chocolade, noot, vulling en
+                    kosten worden automatisch ingevuld. Alleen het veld Aantal moet nog ingevuld
+                    worden.</stepresult>
+            </step>
+            <step>
+                <cmd>Voer in bij <varname>Aantal</varname>
+                    <userinput>3</userinput>.</cmd>
+            </step>
+            <step>
+                <cmd>Voeg de volgende bonbons aan de doos toe:</cmd>
+                <tutorialinfo>
+                    <simpletable frame="all">
+                        <sthead>
+                            <stentry>Code</stentry>
+                            <stentry>Bonbonnaam</stentry>
+                            <stentry>Aantal</stentry>
+                        </sthead>
+                        <strow>
+                            <stentry>B05</stentry>
+                            <stentry>Butterscotch Framboos</stentry>
+                            <stentry>3</stentry>
+                        </strow>
+                        <strow>
+                            <stentry>P03</stentry>
+                            <stentry>Cashew Perfect</stentry>
+                            <stentry>3</stentry>
+                        </strow>
+                        <strow>
+                            <stentry>F01</stentry>
+                            <stentry>Walnoot Mokka Toffee</stentry>
+                            <stentry>3</stentry>
+                        </strow>
+                        <strow>
+                            <stentry>F02</stentry>
+                            <stentry>Pistache Mokka Toffee</stentry>
+                            <stentry>3</stentry>
+                        </strow>
+                        <strow>
+                            <stentry>P07</stentry>
+                            <stentry>Klassieke Kers</stentry>
+                            <stentry>3</stentry>
+                        </strow>
+                    </simpletable>
+                </tutorialinfo>
+                <stepresult>De Dooskosten van €4,53 wordt automatisch berekend.</stepresult>
+            </step>
+            <step>
+                <cmd>Voer in bij <varname>Doosprijs</varname>
+                    <userinput>25,00</userinput> en bij <varname>Magazijnvoorraad</varname>
+                    <userinput>120</userinput>.</cmd>
+            </step>
+            <step>
+                <cmd>Sluit het formulier <varname>Dozen</varname>.</cmd>
+            </step>
+            <step>
+                <cmd>Controleer in de tabel <varname>Dozen</varname> dat de nieuwe doos is
+                    toegevoegd.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

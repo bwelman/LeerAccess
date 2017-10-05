@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="tables_fields_inputmasks" xml:lang="nl-NL">
+    <title>Invoermaskers</title>
+    <shortdesc>Over hoe je een gewenste invoer van gegevens kunt afdwingen via
+        invoermaskers.</shortdesc>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords>
+                <indexterm>Invoermasker</indexterm>
+            </keywords>
+        </metadata>
+    </prolog>
+    <conbody>
+        <p>Een invoermasker zorgt voor een vaste, verplichte indeling voor de invoer van gegevens in
+            een veld. Een invoermasker bestaat uit een serie tekens en symbolen. De in te voeren
+            gegevens moeten aan het patroon van het masker voldoen. Zo kun je er bijvoorbeeld voor
+            zorgen dat een telefoonnummer uit precies 10 cijfers bestaat. Invoermaskers zijn
+            mogelijk voor de gegevenstypen Tekst, Numeriek, Valuta en Datum/tijd. </p>
+        <p>Het invoermasker bepaalt ook het aantal tekens dat ingevoerd kan worden. Invoermaskers
+            bestaan uit een verplicht onderdeel en twee optionele onderdelen. De onderdelen worden
+            met een puntkomma gescheiden.<ul>
+                <li>Het eerste onderdeel is verplicht. Dit onderdeel bevat het patroon met de tekens
+                    en symbolen.</li>
+                <li>Het tweede onderdeel is optioneel en geeft aan of ook de maskertekens moeten
+                    worden opgeslagen in het veld. Bij de waarde <userinput>0</userinput> worden de
+                    maskertekens samen met de gegevens opgeslagen. Bij de waarde
+                        <userinput>1</userinput> worden de tekens wel weergegeven maar niet
+                        opgeslagen.<note type="tip">Je kunt opslagruimte in de database besparen
+                        door het tweede onderdeel in te stellen op
+                    <userinput>1</userinput>.</note></li>
+                <li>Het derde onderdeel van het invoermasker is ook optioneel en bevat één teken of
+                    spatie dat als tijdelijke plaatsaanduiding wordt gebruikt. Standaard gebruikt
+                    Access het onderstrepingsteken (_). Alleen wanneer je een ander teken wilt
+                    gebruiken moet je dit teken in het derde gedeelte van het masker opnemen.</li>
+            </ul></p>
+        <p>In de volgende tabel staan de symbolen die in het masker gebruikt mogen worden en hun
+            betekenis.</p>
+        <table>
+            <title>Symbolen invoermasker</title>
+            <tgroup cols="2">
+                <thead>
+                    <row>
+                        <entry>Symbool</entry>
+                        <entry>Betekenis</entry>
+                    </row>
+                </thead>
+                <tbody>
+                    <row>
+                        <entry>0</entry>
+                        <entry>Gebruiker moet een cijfer (0 t/m 9) invoeren.</entry>
+                    </row>
+                    <row>
+                        <entry>9</entry>
+                        <entry>Gebruiker mag een cijfer (0 t/m 9) invoeren.</entry>
+                    </row>
+                    <row>
+                        <entry>#</entry>
+                        <entry>Gebruiker kan een cijfer, een spatie of een plus- of minteken
+                            invoeren. Als dit wordt overgeslagen, wordt een spatie
+                            ingevoerd.</entry>
+                    </row>
+                    <row>
+                        <entry>L</entry>
+                        <entry>Gebruiker moet een letter invoeren.</entry>
+                    </row>
+                    <row>
+                        <entry>?</entry>
+                        <entry>Gebruiker mag een letter invoeren.</entry>
+                    </row>
+                    <row>
+                        <entry>A</entry>
+                        <entry>Gebruiker moet een letter of een cijfer invoeren.</entry>
+                    </row>
+                    <row>
+                        <entry>a</entry>
+                        <entry>Gebruiker mag een letter of een cijfer invoeren.</entry>
+                    </row>
+                    <row>
+                        <entry>&amp;</entry>
+                        <entry>Er moet een teken of een spatie ingevoerd worden.</entry>
+                    </row>
+                    <row>
+                        <entry>C</entry>
+                        <entry>Gebruiker mag tekens of spaties invoeren.</entry>
+                    </row>
+                    <row>
+                        <entry>. , : ; - /</entry>
+                        <entry>Tijdelijke plaatsaanduidingen voor decimalen, duizendtallen, en
+                            scheidingstekens voor datum en tijd. Het teken dat je kiest hangt af van
+                            de landinstellingen van Windows.</entry>
+                    </row>
+                    <row>
+                        <entry>></entry>
+                        <entry>Alle tekens die hierop volgen, worden omgezet naar
+                            hoofdletters.</entry>
+                    </row>
+                    <row>
+                        <entry>&lt;</entry>
+                        <entry>Alle tekens die hierop volgen, worden omgezet naar kleine
+                            letters.</entry>
+                    </row>
+                    <row>
+                        <entry>!</entry>
+                        <entry>Het invoermasker wordt van links naar rechts opgevuld in plaats van
+                            andersom.</entry>
+                    </row>
+                    <row>
+                        <entry>\</entry>
+                        <entry>De tekens die hier rechtstreeks op volgen worden letterlijk
+                            weergegeven.</entry>
+                    </row>
+                    <row>
+                        <entry>""</entry>
+                        <entry>De tekens die tussen dubbele aanhalingstekens staan worden letterlijk
+                            weergegeven.</entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+        <p>Je kunt of snel een invoermasker toevoegen via de <wintitle>Wizard
+                Invoermasker</wintitle>, of een masker handmatig specificeren door deze in te typen
+            bij de eigenschap invoermasker van het veld. helemaal naar wens een invoermasker
+            samenstellen en dat bij veldeigenschap invoeren.</p>
+        <example>
+            <title>Voorbeeld: US telefoonnummer</title>
+            <p>Invoermasker: <codeph>(999) 000-000;0;-</codeph></p>
+            <p>Toelichting<ul>
+                    <li><codeph>(999)</codeph> gebruiker kan drie cijfers invoeren voor het
+                        kengetal.</li>
+                    <li><codeph>000-000</codeph> gebruiker moet zes cijfers invoeren.</li>
+                    <li><codeph>;0</codeph> geeft aan dat de maskertekens samen met de gegevens
+                        worden opgeslagen.</li>
+                    <li><codeph>;-</codeph> geeft aan dat een minteken als tijdelijke
+                        plaatsaanduiding wordt gebruikt i.p.v. een onderstrepingsteken.</li>
+                </ul></p>
+        </example>
+        <example>
+            <title>Voorbeeld: Postcode</title>
+            <p>Invoermasker: <codeph>0000\ >LL</codeph></p>
+            <p>Toelichting<ul>
+                    <li><codeph>0000</codeph> gebruiker moet vier cijfers (0 t/m 9) achter elkaar
+                        invoeren.</li>
+                    <li><codeph>\ </codeph> geeft aan dat er een spatie wordt weergegeven. Deze
+                        hoeft niet te worden ingevoerd.</li>
+                    <li><codeph>>LL</codeph> gebruiker moet twee letters invoeren die worden omgezet
+                        naar hoofdletters.</li>
+                </ul></p>
+        </example>
+    </conbody>
+</concept>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="queries_criteria" xml:lang="nl-NL">
+    <title>Criteria in query's</title>
+    <shortdesc>Uitleg over voorwaarden in een query, Like operator en jokertekens.</shortdesc>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords>
+                <indexterm>Query<indexterm>criteria</indexterm><indexterm>operatoren</indexterm><indexterm>jokertekens</indexterm><indexterm>wildcard</indexterm><indexterm>like</indexterm></indexterm>
+            </keywords>
+        </metadata>
+    </prolog>
+    <conbody>
+        <p>In een query kunnen voorwaarden worden opgenomen zodat alleen records worden opgenomen
+            die aan deze voorwaarden voldoen. In het queryraster is daarvoor de rij
+                <varname>Criteria</varname> beschikbaar.</p>
+        <p>Een criterium lijkt op een formule en kan verwijzingen naar velden, operatoren en
+            constante waarden (waarden die altijd hetzelfde zijn) bevatten. Zo'n formule wordt in
+            Access ook wel een <term>expressie</term> genoemd. Wat in een criterium mag staan hangt
+            af van het gegevenstype van het veld (tekst, numeriek, datum/tijd, ja/nee).</p>
+        <table frame="all" rowsep="1" colsep="1" id="table_lbf_1bd_1t">
+            <tgroup cols="2">
+                <colspec colname="c1" colnum="1" colwidth="1.0*"/>
+                <colspec colname="c2" colnum="2" colwidth="1.0*"/>
+                <thead>
+                    <row>
+                        <entry>Categorie</entry>
+                        <entry>Operatoren</entry>
+                    </row>
+                </thead>
+                <tbody>
+                    <row>
+                        <entry>Rekenkundig</entry>
+                        <entry>+, -, *, /, \, ^, Mod</entry>
+                    </row>
+                    <row>
+                        <entry>Vergelijking</entry>
+                        <entry>=, >, >=, &lt;, &lt;=, &lt;></entry>
+                    </row>
+                    <row>
+                        <entry>Logisch</entry>
+                        <entry>And, Or, Not, Xor, Eqv</entry>
+                    </row>
+                    <row>
+                        <entry>Samenvoeging</entry>
+                        <entry>&amp;, +</entry>
+                    </row>
+                    <row>
+                        <entry>Speciaal</entry>
+                        <entry>Is Null, Is Not Null, Like, Between, In</entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+        <p>Je kunt hiermee eenvoudige criteria maken, maar ook zeer ingewikkelde.</p>
+        <p>Een speciale rol is er voor de <term>Like</term> operator. Deze vergelijkt een waarde met
+            een bepaald patroon. Dat patroon kan de letterlijke tekenreeks zijn waarmee vergeleken
+            moet worden, bijvoorbeeld <userinput>Like "Noord"</userinput>. Maar het patroon mag ook
+            jokertekens (eng: wildcards) bevatten, bijvoorbeeld <userinput>Like "He*"</userinput>.
+            Dit maakt het gebruik van de <term>Like</term> operator erg krachtig.</p>
+        <p>Datumwaarden moeten omringd worden met het symbool <userinput>#</userinput>. Enkele
+            voorbeelden van criteria met datums: #5-12-2010#, >#1-9-2010#, >#1-9-2010# And
+            &lt;#15-9-2010#</p>
+        <p>Jokertekens zijn tijdelijke aanduidingen voor andere tekens, die je gebruikt wanneer je
+            niet het hele zoekpatroon kent maar slechts een deel daarvan. De drie meest gebruikte
+            jokertekens zijn:</p>
+        <dl>
+            <dlentry>
+                <dt>*</dt>
+                <dd>Voor een willekeurig aantal tekens. Voorbeelden: "A*", "*dam"</dd>
+            </dlentry>
+            <dlentry>
+                <dt>?</dt>
+                <dd>Voor één willekeurig teken. Voorbeeld: "b?k"</dd>
+            </dlentry>
+            <dlentry>
+                <dt>#</dt>
+                <dd>Voor één willekeurig cijfer. Voorbeeld "1#5"</dd>
+            </dlentry>
+        </dl>
+    </conbody>
+</concept>

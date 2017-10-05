@@ -1,0 +1,50 @@
+<?xml version="1.0"  encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map id="keys_queries">
+    <title>Keys Queries</title>
+    <keydef keys="button_run" href="images/button_run.png" format="png"/>
+    <keydef keys="button_totals" href="images/button_totals.png" format="png"/>
+    <keydef keys="field_format_currency" href="images/field_format_currency.png" format="png"/>
+    <keydef keys="q_boxprice_200g_design" href="images/q_boxprice_200g_design.png" format="png"/>
+    <keydef keys="q_boxprice_200g_result" href="images/q_boxprice_200g_result.png" format="png"/>
+    <keydef keys="q_boxprice_statistics_design" href="images/q_boxprice_statistics_design.png" format="png"/>    
+    <keydef keys="q_boxprice_statistics_result" href="images/q_boxprice_statistics_result.png" format="png"/>
+    <keydef keys="q_crosstab_columnhead" href="images/q_crosstab_columnhead.png" format="png"/>
+    <keydef keys="q_crosstab_result" href="images/q_crosstab_result.png" format="png"/>
+    <keydef keys="q_crosstab_rowhead" href="images/q_crosstab_rowhead.png" format="png"/>
+    <keydef keys="q_crosstab_values" href="images/q_crosstab_values.png" format="png"/>
+    <keydef keys="q_customername_ordercodes_design" href="images/q_customername_ordercodes_design.png" format="png"/>
+    <keydef keys="q_customername_ordercodes_fields" href="images/q_customername_ordercodes_fields.png" format="png"/> 
+    <keydef keys="q_customername_ordercodes_result" href="images/q_customername_ordercodes_result.png" format="png"/>
+    <keydef keys="q_customers_cher_criteria" href="images/q_customers_cher_criteria.png" format="png"/>
+    <keydef keys="q_customers_cher_design" href="images/q_customers_cher_design.png" format="png"/>
+    <keydef keys="q_customers_cher_fields" href="images/q_customers_cher_fields.png" format="png"/>
+    <keydef keys="q_customers_friesland_design" href="images/q_customers_friesland_design.png" format="png"/>
+    <keydef keys="q_customers_province_columnhead_design" href="images/q_customers_province_columnhead_design.png" format="png"/>
+    <keydef keys="q_customers_province_columnhead_result" href="images/q_customers_province_columnhead_result.png" format="png"/>
+    <keydef keys="q_customers_province_design" href="images/q_customers_province_design.png" format="png"/>
+    <keydef keys="q_customers_province_design_count" href="images/q_customers_province_design_count.png" format="png"/>
+    <keydef keys="q_customers_province_design_total" href="images/q_customers_province_design_total.png" format="png"/>
+    <keydef keys="q_customers_province_result" href="images/q_customers_province_result.png" format="png"/>
+    <keydef keys="q_first_order_dates_design1" href="images/q_first_order_dates_design1.png" format="png"/>
+    <keydef keys="q_first_order_dates_design2" href="images/q_first_order_dates_design2.png" format="png"/>
+    <keydef keys="q_first_order_dates_result" href="images/q_first_order_dates_result.png" format="png"/>
+    <keydef keys="q_increase_costs_design1" href="images/q_increase_costs_design1.png" format="png"/>
+    <keydef keys="q_increase_costs_design2" href="images/q_increase_costs_design2.png" format="png"/>
+    <keydef keys="q_information_order_design1" href="images/q_information_order_design1.png" format="png"/>
+    <keydef keys="q_information_order_design2" href="images/q_information_order_design2.png" format="png"/>
+    <keydef keys="q_information_order_result" href="images/q_information_order_result.png" format="png"/>
+    <keydef keys="q_maketable_dialogbox" href="images/q_maketable_dialogbox.png" format="png"/>
+    <keydef keys="q_maketable_icon" href="images/q_maketable_icon.png" format="png"/>
+    <keydef keys="q_orderrow_amount_design1" href="images/q_orderrow_amount_design1.png" format="png"/>
+    <keydef keys="q_orderrow_amount_design2" href="images/q_orderrow_amount_design2.png" format="png"/>
+    <keydef keys="q_orderrow_amount_result_formatted" href="images/q_orderrow_amount_result_formatted.png" format="png"/>
+    <keydef keys="q_orderrow_amount_result_unformatted" href="images/q_orderrow_amount_result_unformatted.png" format="png"/>
+    <keydef keys="q_pralinecosts_chocolatetype_design" href="images/q_pralinecosts_chocolatetype_design.png" format="png"/>    
+    <keydef keys="q_pralinecosts_chocolatetype_result" href="images/q_pralinecosts_chocolatetype_result.png" format="png"/>
+    <keydef keys="q_pralines_box_design" href="images/q_pralines_box_design.png" format="png"/>
+    <keydef keys="q_show_table" href="images/q_show_table.png" format="png"/>
+    <keydef keys="q_utrecht_dec2009_criteria" href="images/q_utrecht_dec2009_criteria.png" format="png"/>
+    <keydef keys="q_utrecht_dec2009_fields" href="images/q_utrecht_dec2009_fields.png" format="png"/>
+    <keydef keys="q_wizard_t_customers" href="images/q_wizard_t_customers.png" format="png"/>
+</map>

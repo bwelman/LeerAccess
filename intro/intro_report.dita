@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="intro_report" xml:lang="nl-NL">
+    <title>Rapporten</title>
+    <shortdesc>Een korte introductie in wat <term>rapporten</term> zijn.</shortdesc>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords>
+                <indexterm>Rapporten</indexterm>
+            </keywords>
+        </metadata>
+    </prolog>
+    <conbody>
+        <p>Met een rapport kun je gegevens presenteren op papier of scherm en kun je totalen en
+            eindtotalen van een hele set records berekenen en weergeven.</p>
+        <p>De elementen van een formulier of rapport die ervoor zorgen dat gegevens worden
+            weergegeven of afgedrukt, heten <term>besturingselementen</term>. Met
+            besturingselementen kun je onder andere het volgende weergeven: gegevens in een veld, de
+            resultaten van een berekening, woorden voor een titel of bericht, een grafiek of een
+            figuur of een ander object, zelfs een ander formulier of rapport.</p>
+        <p>Met rapporten kun je gegevens met allerlei opmaken en stijlen afdrukken: gegevens uit
+            velden, tekst die je definieert, totalen en het resultaat van berekeningen. Je kunt
+            grafieken, figuren of andere objecten opnemen en je kunt adresetiketten maken.</p>
+        <fig>
+            <title>Voorbeeld van een rapport</title>
+            <image keyref="example_report">
+                <alt>Voorbeeld van een rapport</alt>
+            </image>
+            <!-- bron Snoep2010uitwerking, rapport Omzet per regio per doos	-->
+        </fig>
+    </conbody>
+</concept>

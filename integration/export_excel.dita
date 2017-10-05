@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="export_excel" xml:lang="nl-NL">
+    <title>Taak: Export naar Excel</title>
+    <shortdesc>Een tabel wordt geëxporteerd naar Excel.</shortdesc>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords>
+                <indexterm>Access<indexterm>export excel</indexterm></indexterm>
+                <indexterm>Excel<indexterm>integratie access</indexterm></indexterm>
+                <indexterm>Export<indexterm>tabel naar excel</indexterm></indexterm>
+            </keywords>
+        </metadata>
+    </prolog>
+    <taskbody>
+        <context>Je kunt eenvoudig een tabel vanuit Access naar Excel exporteren.</context>
+        <steps>
+            <step>
+                <cmd>Open de database <keyword keyref="example_db_file"/>.</cmd>
+            </step>
+            <step>
+                <cmd>Selecteer de tabel <wintitle>Dozen</wintitle>.</cmd>
+            </step>
+            <step>
+                <cmd>Geef een rechter muisklik op de tabelnaam en kies <menucascade>
+                        <uicontrol>Exporteren</uicontrol>
+                        <uicontrol>Excel</uicontrol>
+                    </menucascade>.</cmd>
+                <stepresult>Het dialoogvenster <wintitle>Exporteren - Excel-werkblad</wintitle>
+                    verschijnt.</stepresult>
+            </step>
+            <step>
+                <cmd>Geef de bestandsnaam met pad op, selecteer de optie <uicontrol>Gegevens
+                        exporteren met opmaak en indeling</uicontrol> en klik op
+                        <uicontrol>OK</uicontrol>.</cmd>
+                <stepresult>Het dialoogvenster <wintitle>Exportstappen opslaan</wintitle>
+                    verschijnt.</stepresult>
+            </step>
+            <step>
+                <cmd>De exportstappen hoeven niet opgeslagen te worden. Klik op
+                        <uicontrol>Sluiten</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Controleer het exporteren door het bestand in Excel te openen.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

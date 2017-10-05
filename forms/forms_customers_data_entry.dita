@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="forms_customers_data_entry" xml:lang="nl-NL">
+    <title>Taak: Invoerformulier Klanten</title>
+    <shortdesc>Het maken van een formulier gebaseerd op één tabel met diverse wijzigingen in de
+        opmaak.</shortdesc>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords>
+                <indexterm>Formulier<indexterm>indeling</indexterm></indexterm>
+            </keywords>
+        </metadata>
+    </prolog>
+    <taskbody>
+        <context>
+            <p>In deze taak wordt een formulier gemaakt waarmee voor een nieuwe klant de gegevens
+                kunnen worden ingevoerd en van een bestaande klant de gegevens kunnen worden
+                gewijzigd. Verder worden een aantal vaardigheden geoefend in het verplaatsen en
+                uitlijnen van besturingselementen om het formulier in de volgende opmaak te
+                brengen.</p>
+            <fig>
+                <title>Invoerformulier klanten</title>
+                <image keyref="f_customer_entry">
+                    <alt>Invoerformulier klanten</alt>
+                </image>
+            </fig>
+        </context>
+        <steps>
+            <step>
+                <cmd>Open de database <keyword keyref="example_db_file"/>.</cmd>
+            </step>
+            <step>
+                <cmd>Selecteer de tabel <uicontrol>Klanten</uicontrol>. Deze hoeft niet geopend te
+                    worden.</cmd>
+            </step>
+            <step>
+                <cmd>Klik <menucascade>
+                        <uicontrol>tab Maken</uicontrol>
+                        <uicontrol>Formulier (groep Formulieren)</uicontrol>
+                    </menucascade>.</cmd>
+                <stepresult>Het formulier wordt aangemaakt en geopend in de
+                        <uicontrol>Indelingsweergave</uicontrol>.</stepresult>
+            </step>
+            <stepsection>
+                <p>Omdat het formulier gebaseerd is op de tabel Klanten en deze tabel een
+                    een-op-veel relatie heeft met de tabel Orders, wordt automatisch een
+                    subgegevensblad gebaseerd op de tabel Orders, aan het formulier toegevoegd. Het
+                    subgegevensblad geeft alle records uit Orders weer die betrekking hebben op het
+                    huidige record van tabel Klanten.</p>
+            </stepsection>
+            <step>
+                <cmd>Selecteer het subgegevensblad en druk op <uicontrol>Delete</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Schakel over naar de <uicontrol>Ontwerpweergave</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Verwijder het logo in de formulierkoptekst door deze eerst te selecteren en dan
+                    te verwijderen met de toets <uicontrol>Delete</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Bewaar het formulier onder de naam <userinput>Klant invoer en
+                        wijziging</userinput> via de knop <uicontrol>Opslaan <image
+                            keyref="button_save"/></uicontrol> in de <uicontrol>Werkbalk Snelle
+                        toegang</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Maak de hoogte van de <uicontrol>Formulierkoptekst</uicontrol> wat groter door
+                    de scheidingslijn met <uicontrol>Details</uicontrol> wat naar beneden te
+                    slepen.</cmd>
+            </step>
+            <step>
+                <cmd>Selecteer de tekst <uicontrol>Klanten</uicontrol> in het label in de
+                    formulierkoptekst en wijzig deze in <userinput>De chocolade
+                        fijnproever</userinput>.</cmd>
+            </step>
+            <step>
+                <cmd>Wijzig de eigenschappen Lettertype, Tekengrootte, Cursief en Tekengewicht in:
+                    MS Sans Serif, 14 pt, ja, vet.</cmd>
+            </step>
+            <step>
+                <cmd>Selecteer het besturingselement <uicontrol>Label</uicontrol> via <menucascade>
+                        <uicontrol>tab Ontwerp</uicontrol>
+                        <uicontrol><image keyref="control_label"/> Label (groep
+                            Besturingselementen)</uicontrol>
+                    </menucascade> en teken onder de eerste formulierkoptekst een kader voor de
+                    tweede koptekst. Voer als tekst in <userinput>Klant invoer en
+                        wijziging</userinput> en geef de tekst de volgende opmaak: MS Sans Serif, 14
+                    pt, Vet, kleur Zwart.</cmd>
+            </step>
+            <step>
+                <cmd>Selecteer alle <term>besturingselementen</term> in de sectie
+                        <uicontrol>Detail</uicontrol> door vanuit de linkerbovenhoek met ingedrukte
+                    linkermuisknop een kader naar de rechteronderhoek te trekken. Laat daarna de
+                    muisknop los.</cmd>
+                <stepresult>Alle besturingselementen in de sectie Detail zijn nu
+                    geselecteerd.</stepresult>
+            </step>
+            <step>
+                <cmd>Kies <menucascade>
+                        <uicontrol>tab Schikken</uicontrol>
+                        <uicontrol>Indeling verwijderen (groep Tabel)</uicontrol>
+                    </menucascade>.</cmd>
+                <stepresult>De geselecteerde besturingselementen zijn nu uit de gestapelde indeling
+                    gehaald en daardoor vrij op het formulier te verplaatsen.</stepresult>
+            </step>
+            <step>
+                <cmd>Hef de selectie op.</cmd>
+            </step>
+            <step>
+                <cmd>Versleep de <term>besturingselementen</term> op het formulier zodanig dat de
+                    lay-out zo goed mogelijk lijkt op de gewenste indeling. Maak voor het inrichten
+                    gebruik van de hierna aangegeven mogelijkheden.</cmd>
+                <tutorialinfo>Een paar tips:<ul id="ul_xrn_1l5_ct">
+                        <li>Je kunt geselecteerde besturingselementen uitlijnen met <menucascade>
+                                <uicontrol>tab Schikken</uicontrol>
+                                <uicontrol>Uitlijnen (groep Formaat en volgorde</uicontrol>
+                            </menucascade>.</li>
+                        <li>Je hebt een nieuw Bijschrift nodig met de tekst
+                                <userinput>Naam:</userinput>.</li>
+                        <li>Je kunt de afmetingen van de besturingselementen wijzigen met de
+                            eigenschappen <varname>Breedte</varname> en
+                            <varname>Hoogte</varname>.</li>
+                        <li>Je kunt de plaats van linkerbovenhoek van een besturingselement wijzigen
+                            met de eigenschappen <varname>Boven</varname> en
+                                <varname>Links</varname>.</li>
+                        <li>Je kunt de achtergrondkleur instellen met de eigenschap
+                                <varname>Achtergrondkleur</varname>.</li>
+                    </ul></tutorialinfo>
+            </step>
+            <step>
+                <cmd>Schakel over naar de <uicontrol>Formulierweergave</uicontrol> en test de
+                    werking van het formulier.</cmd>
+            </step>
+            <step>
+                <cmd>Sluit het formulier en bewaar de wijzigingen.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

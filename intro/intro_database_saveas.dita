@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="intro_database_saveas" xml:lang="nl-NL">
+    <title>Taak: Database opslaan als</title>
+    <shortdesc>Hoe een geopend database onder een andere naam en in een ander bestandsformaat
+        opgeslagen kan worden.</shortdesc>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords>
+                <indexterm>Database<indexterm>opslaan
+                        als</indexterm><indexterm>bestandsformaat</indexterm></indexterm>
+                <indexterm>Bestandsformaat</indexterm>
+            </keywords>
+        </metadata>
+    </prolog>
+    <taskbody>
+        <context>
+            <p>Soms kan het wenselijk zijn om meerdere versies van een bestand te hebben. In dat
+                geval kun je via <uicontrol>Database opslaan als</uicontrol> het bestand onder een
+                andere naam bewaren. En wanneer je het bestand in een ouder Access formaat wilt
+                opslaan kun je ook <uicontrol>Opslaan als</uicontrol> gebruiken.</p>
+            <p>In deze cursus wordt een database met de bestandsnaam <filepath><keyword
+                        keyref="example_db_file"/></filepath> gebruikt. Omdat Access alle wijzigingen
+                die je aanbrengt onmiddellijk zonder te vragen opslaat, beschik je al vrij snel niet
+                meer over de originele database. Het is daarom aan te bevelen om te beginnen met
+                eerst een kopie van de originele database <filepath><keyword keyref="example_db_file"
+                    /></filepath> te maken, voordat je met deze database gaat werken. Je kunt dat op
+                bestandsniveau doen met de Windows verkennner, maar je kunt ook gebruik maken van de
+                    <uicontrol>Opslaan als</uicontrol> opdracht in Access.</p>
+        </context>
+        <steps>
+            <step>
+                <cmd>Open de database <filepath><keyword keyref="example_db_file"/></filepath>.</cmd>
+            </step>
+            <step>
+                <cmd>Kies <menucascade>
+                        <uicontrol>Bestand</uicontrol>
+                        <uicontrol>Opslaan als</uicontrol>
+                    </menucascade>.</cmd>
+                <stepresult><fig>
+                        <title>Venster Opslaan als</title>
+                        <image keyref="saveas">
+                            <alt>Venster Opslaan als</alt>
+                        </image>
+                    </fig></stepresult>
+            </step>
+            <step>
+                <cmd>Selecteer <option>Access-database (*.accdb)</option> en klik <uicontrol>Opslaan
+                        als</uicontrol></cmd>
+            </step>
+            <step>
+                <cmd>Blader in het dialoogvenster naar de opslagplaats, specificeer de naam van het
+                    nieuwe bestand en klik op <uicontrol>Opslaan</uicontrol>.</cmd>
+            </step>
+        </steps>
+        <example>
+            <title>Backup maken</title>
+            <p>Een backup is in feite niets anders dan een kopie van een database die je op een
+                bepaald moment gemaakt hebt. In feite is dit hetzelfde proces als met de
+                    <uicontrol>Opslaan als</uicontrol> opdracht. Toch biedt Access nog een backup
+                functie aan.</p>
+            <p>Kies <menucascade>
+                    <uicontrol>Bestand</uicontrol>
+                    <uicontrol>Opslaan als</uicontrol>
+                </menucascade>. Selecteer in het venster <option>Back-up van database</option> en
+                kilik <uicontrol>Opslaan als</uicontrol>. Je kunt daarna de opslagplaats en naam
+                specificeren. Standaard is de voorgestelde naam de naam van het originele bestand,
+                aangevuld met de actuele datum.<note type="tip">Wanneer je gegevens of objecten
+                    terugzet vanuit het backup bestand, wil je weten van welke database de backup
+                    gemaakt is alsmede wanneer deze gemaakt is. Het is daarom aan te bevelen om de
+                    voorgestelde naam te gebruiken.</note></p>
+        </example>
+    </taskbody>
+</task>

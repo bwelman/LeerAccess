@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="intro_query" xml:lang="nl-NL">
+    <title>Query's</title>
+    <shortdesc>Een korte introductie in wat <term>query's</term> zijn.</shortdesc>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords>
+                <indexterm>Query's</indexterm>
+            </keywords>
+        </metadata>
+    </prolog>
+    <conbody>
+        <p>Via een query kun je een opdracht geven om bepaalde gegevens te selecteren en deze weer
+            te geven. Je stelt als het ware een vraag aan de database, bijvoorbeeld <q>Welke
+                producten hebben een leverancier uit Australië</q>. De gegevens die nodig zijn voor
+            het antwoord op de query kunnen uit meerdere tabellen afkomstig zijn. De query brengt de
+            gewenste informatie bijeen. Het resultaat van een query is een verzameling records die
+            ook wel <term>dynaset</term> genoemd wordt.</p>
+        <p>Bij het ontwerp van een query geef je aan welke gegevens je wilt hebben. Hierbij heb je
+            veel mogelijkheden om alleen bepaalde gegevens te selecteren. Zo kun je bijvoorbeeld een
+            query definiëren om ordergegevens over een bepaalde periode weer te geven. De query
+            haalt dan de gegevens op uit de verschillende tabellen. Ook kun je met een query
+            berekeningen uitvoeren, bijvoorbeeld totalen berekenen.</p>
+        <fig>
+            <title>Voorbeeld van een query met ordergegevens</title>
+            <image keyref="example_query">
+                <alt>Voorbeeld van een query met ordergegevens.</alt>
+            </image>
+            <!-- bron Snoep2010uitwerking, query Orders met subtotalen -->
+        </fig>
+        <p>Een ander soort query is de <term>actie query</term> die een bepaalde bewerking op de
+            geselecteerde records uitvoert.</p>
+    </conbody>
+</concept>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="queries_action_maketable" xml:lang="nl-NL">
+    <title>Taak: Tabelmaakquery</title>
+    <shortdesc>Een voorbeeld van een eenvoudige tabelmaakquery waarmee</shortdesc>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords>
+                <indexterm>Query<indexterm>tabelmaakquery</indexterm></indexterm>
+                <indexterm>Tabelmaakquery</indexterm>
+            </keywords>
+        </metadata>
+    </prolog>
+    <taskbody>
+        <context>
+            <p>INFORMATIEBEHOEFTE</p>
+            <p>De afdeling marketing wil alle klanten uit Friesland een speciaal aanbod doen. Ze
+                hebben daarvoor een Access tabel nodig met daarin de klantgegevens van alleen de
+                klanten uit de provincie Friesland.</p>
+            <p>ANALYSE</p>
+            <p>Alle benodigde gegevens staan in de tabel Klanten. Het selecteren op Friesland kan
+                via een criterium in de query. Allereerst moet deze selectiequery gemaakt worden.
+                Daarna kan de selectiequery omgezet worden in een tabelmaakquery.</p>
+        </context>
+        <steps>
+            <step>
+                <cmd>Open de database <keyword keyref="example_db_file"/>.</cmd>
+            </step>
+            <stepsection>Selectiequery maken</stepsection>
+            <step>
+                <cmd>Kies <menucascade>
+                        <uicontrol>tab Maken</uicontrol>
+                        <uicontrol>Queryontwerp (groep Query's)</uicontrol>
+                    </menucascade>.</cmd>
+                <stepresult>Access maakt een nieuw leeg queryvenster en toont het dialoogvenster
+                        <wintitle>Tabel weergeven</wintitle>. <fig>
+                        <title>Dialoogvenster <wintitle>Tabel weergeven</wintitle></title>
+                        <image keyref="q_show_table">
+                            <alt>Dialoogvenster tabellen</alt>
+                        </image>
+                    </fig>
+                </stepresult>
+            </step>
+            <step>
+                <cmd>Voeg de tabel <varname>Klanten</varname> toe en klik daarna op
+                        <uicontrol>Sluiten</uicontrol>.</cmd>
+                <stepresult>De tabel is nu aan het queryvenster toegevoegd.</stepresult>
+            </step>
+            <step>
+                <cmd>Voeg alle velden toe door een dubbelklik op het sterretje (*) en voeg daarna
+                    nog een keer afzonderlijk het veld Provincie toe.</cmd>
+            </step>
+            <step>
+                <cmd>Voer als criterium "FR" in onder het veld provincie. Laat verder het veld
+                    provincie niet weergeven, omdat deze immers al wordt weergegeven door
+                    Klanten.</cmd>
+                <stepresult>
+                    <fig>
+                        <title>Ontwerp tabelmaakquery</title>
+                        <image keyref="q_customers_friesland_design">
+                            <alt>Ontwerp tabelmaakquery</alt>
+                        </image>
+                    </fig>
+                </stepresult>
+            </step>
+            <step>
+                <cmd>Controleer de uitvoer van de query via de
+                        <uicontrol>Gegevensbladweergave</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Bewaar de query onder de naam <userinput>Klanten Friesland</userinput>.</cmd>
+            </step>
+            <stepsection>Selectiequery omzetten naar Tabelmaakquery</stepsection>
+            <step>
+                <cmd>Open de query in de Ontwerpweergave en klik op <menucascade>
+                        <uicontrol>Ontwerp</uicontrol>
+                        <uicontrol>Tabel maken (groep Querytype)</uicontrol>
+                    </menucascade>.</cmd>
+                <stepresult>Het dialoogvenster <wintitle>Tabel maken</wintitle> wordt
+                    geopend.</stepresult>
+            </step>
+            <step>
+                <cmd>Geef de nieuwe tabel als naam <userinput>Friese klanten</userinput> en geef aan
+                    dat deze in de huidige database geplaatst moet worden..</cmd>
+                <stepresult>
+                    <fig>
+                        <title>Naam specificeren van de nieuwe tabel en de database waarin deze
+                            terecht moet komen.</title>
+                        <image keyref="q_maketable_dialogbox">
+                            <alt>Naam specificeren van de nieuwe tabel en de database waarin deze
+                                terecht moet komen.</alt>
+                        </image>
+                    </fig>
+                </stepresult>
+            </step>
+            <step>
+                <cmd>Klik op <uicontrol>OK</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Klik op <uicontrol>Uitvoeren<image keyref="button_run"/></uicontrol></cmd>
+                <stepresult>Er verschijnt een waarschuwingsscherm met de vraag of de nieuwe tabel
+                    gemaakt moet worden.</stepresult>
+            </step>
+            <step>
+                <cmd>Klik op <uicontrol>Ja</uicontrol>.</cmd>
+                <stepresult>De nieuwe tabel wordt gemaakt.</stepresult>
+            </step>
+            <step>
+                <cmd>Sluit de query</cmd>
+                <stepresult>Er verschijnt een dialoogvenster met de vraag of de wijzigingen in het
+                    ontwerp moeten worden opgeslagen.</stepresult>
+            </step>
+            <step>
+                <cmd>Klik op <uicontrol>Ja</uicontrol>.</cmd>
+                <info>
+                    <note type="notice">De wijzigingen bestaan er uit dat het type query van een
+                        selectiequery in een tabelmaakquery veranderd is. Dit is ook te zien in het
+                        navigatievenster onder Query's. Het icoon voor de querynaam geeft aan dat
+                        het hier om een actiequery gaat: <image keyref="q_maketable_icon"/></note>
+                </info>
+            </step>
+        </steps>
+    </taskbody>
+</task>

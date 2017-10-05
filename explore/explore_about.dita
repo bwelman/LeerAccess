@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="explore_about" xml:lang="nl-NL">
+    <title>Voorbeelddatabase SNOEP</title>
+    <shortdesc>Een beschrijving van de voorbeelddatabase <keyword keyref="example_db_title"
+        />.</shortdesc>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords>
+                <indexterm>Database<indexterm>snoep</indexterm></indexterm>
+            </keywords>
+        </metadata>
+    </prolog>
+    <conbody>
+        <p>De voorbeelddatabase <keyword keyref="example_db_title"/> bevat de gegevens over het
+            bedrijf SNOOPY, een bedrijf dat bonbondozen verkoopt aan klanten. In de dozen zitten
+            verschillende soorten bonbons. De informatie wordt in 6 tabellen bijgehouden:<ul>
+                <li>Klanten</li>
+                <li>Orders</li>
+                <li>Orderdetails</li>
+                <li>Dozen</li>
+                <li>Doosdetails</li>
+                <li>Bonbons</li>
+            </ul></p>
+        <fig>
+            <title>Ontwerp database SNOEP</title>
+            <image keyref="example_db_design">
+                <alt>Ontwerp database snoep.</alt>
+            </image>
+        </fig>
+        <p>De klantgegevens staan in de tabel <wintitle>Klanten</wintitle>. De orders van de klanten
+            worden opgeslagen in de tabellen <wintitle>Orders</wintitle> en
+                <wintitle>Orderdetails</wintitle>. De gegevens van een doos bonbons, bijvoorbeeld
+            naam en prijs, staan in de tabel <wintitle>Dozen</wintitle>. In de tabel
+                <wintitle>Doosdetails</wintitle> staat welke bonbons en hoeveel daarvan in elke doos
+            zitten. De tabel <wintitle>Bonbons</wintitle> bevat gegevens over de naam van de
+            bonbons, het chocoladetype, de vulling en bevat zelfs een plaatje.</p>
+        <note type="notice">Iedere tabel in de database moet een veld of een combinatie van velden
+            hebben waarmee je elke regel in de tabel uniek kunt identificeren. Dit is vaak een
+            nummer, zoals artikelnummer, personeelsnummer. In de database terminologie wordt deze
+            informatie de <term>primaire sleutel</term> van de tabel genoemd. De waarde van de
+            primaire sleutel kan maar één keer voorkomen in de tabel. Dubbele waarden voor de
+            primaire sleutel zijn dus verboden. De meeste tabellen hebben een <term>primaire
+                sleutel</term> die uit één veld bestaat, maar soms is een combinatie van velden
+            nodig om tot een unieke combinatie te komen. In de tabellen Klanten, Orders, Dozen en
+            Bonbons bestaat de sleutel uit 1 veld. En in de tabellen Orderdetails en Doosdetails
+            vormen twee velden samen de sleutel. Zie figuur.</note>
+        <p>De zes tabellen worden hierna kort besproken.</p>
+        <fig>
+            <title>Tabel Klanten</title>
+            <image keyref="table_customers">
+                <alt>Tabel Klanten.</alt>
+            </image>
+        </fig>
+        <p>In de tabel <wintitle>Klanten</wintitle> worden verschillende gegevens van een klant
+            bijgehouden. Iedere klant heeft een unieke <varname>Klantcode</varname>. Het veld
+                <varname>Klantcode</varname> is de <term>primaire sleutel</term> van de tabel.
+            Iedere regel uit een tabel heet ook wel een <term>record</term>. De klanten zijn
+            gesorteerd op de waarden in het <term>sleutelveld</term> (= Klantcode). In de statusbalk
+            kun je zien dat de tabel Klanten 325 records (klanten).</p>
+        <fig>
+            <title>Tabel Orders</title>
+            <image keyref="table_orders">
+                <alt>Tabel Orders.</alt>
+            </image>
+        </fig>
+        <p>In de tabel <wintitle>Orders</wintitle> is <varname>Ordercode</varname> de primaire
+            sleutel, de waarde van Ordercode is uniek. Een bepaalde klantcode kan in deze tabel wel
+            vaker voorkomen omdat een klant meerdere orders kan plaatsen. Een order hoort altijd bij
+            één klant. De tabel Orders bevat 784 records (orders).</p>
+        <fig>
+            <title>Tabel Orderdetails</title>
+            <image keyref="table_orderdetails">
+                <alt>Tabel Orderdetails.</alt>
+            </image>
+        </fig>
+        <p>Een order kan meerdere dozen bevatten, maar in een order kan elke dooscode slechts één
+             keer voorkomen. Wel kan een bepaalde doos in meerdere orders besteld zijn, zodat een
+            dooscode bij meerdere ordercodes kan horen. In de tabel kun je lezen dat op de order met
+            ordercode 3 twee verschillende dozen besteld zijn, want de tabel bevat twee regels met
+            ordercode 3. In totaal zijn drie dozen besteld op deze order, twee dozen met de dooscode
+            KERS en 1 doos met de dooscode NORT. Je kunt ook zien dat twee dozen NORT besteld zijn
+            in de order met ordercode 6. Deze tabel bevat 1537 records (orderregels).</p>
+        <p>De combinatie van Ordercode en Dooscode is steeds uniek. Daarom bestaat de sleutel in de
+            tabel <wintitle>Orderdetails</wintitle> uit de combinatie van de velden
+                <varname>Ordercode</varname> en <varname>Dooscode</varname>.</p>
+        <note>Het totale aantal bestelde dozen op alle orders is de som van alle getallen uit de
+            kolom Hoeveelheid. Dit aantal is in de tabel niet af te lezen. In een ander onderdeel in
+            deze cursus wordt uitgelegd hoe je dit kunt laten berekenen.</note>
+        <fig>
+            <title>Tabel Dozen</title>
+            <image keyref="table_boxes">
+                <alt>Tabel Dozen.</alt>
+            </image>
+        </fig>
+        <p>In de tabel <wintitle>Dozen</wintitle> is <varname>Dooscode</varname> de sleutel. Er zijn
+            in totaal 18 soorten dozen die ieder een unieke Dooscode hebben. De tabel Dozen vormt
+            het artikelbestand van dit bedrijf.</p>
+        <fig>
+            <title>Tabel Doosdetails</title>
+            <image keyref="table_boxdetails">
+                <alt>Tabel Doosdetails.</alt>
+            </image>
+        </fig>
+        <p>In de tabel <wintitle>Doosdetails</wintitle> wordt bijgehouden welke soorten bonbons en
+            hoeveel daarvan in een bepaalde doos zitten. Zo kun je aflezen dat in de doos ALLS zes
+            soorten bonbons zitten, elk twee stuks, totaal dus twaalf bonbons. In deze tabel bestaat
+            de sleutel uit de combinatie van de velden <varname>Dooscode</varname> en
+                <varname>Bonboncode</varname>. De tabel bevat 84 records.</p>
+        <fig>
+            <title>Tabel Bonbons</title>
+            <image keyref="table_pralines">
+                <alt>Tabel Bonbons.</alt>
+            </image>
+        </fig>
+        <p>In de tabel <wintitle>Bonbons</wintitle> wordt van elke bonbonsoort een aantal
+            eigenschappen bijgehouden. De sleutel is het veld <varname>Bonboncode</varname>. De
+            tabel bevat 41 records (bonbonsoorten).</p>
+        <example>
+            <p>Aan de hand van de gegevens die in de tekst staan kun je gemakkelijk een aantal
+                berekeningen maken.</p>
+            <ol>
+                <li>Het gemiddelde aantal bonbonsoorten per doos. Dit kun je berekenen uit het
+                    totaal aantal records in de tabel Doosdetails te delen door het totaal aantal
+                    doossoorten: 84 / 18 = 4,7.</li>
+                <li>Het gemiddelde aantal doossoorten per order. Dit kun je berekenen uit het totaal
+                    aantal orderregels gedeeld door het totaal aantal orders: 1537 / 784 = 2,0</li>
+            </ol>
+            <p>Het gemiddeld aantal bonbons in een doos kun je niet zomaar uitrekenen. Hiervoor zou
+                je het totaal aantal bonbons in alle dozen moeten weten. Dit is de som van alle
+                getallen in de kolom Hoeveelheid in de tabel Doosdetails.</p>
+        </example>
+    </conbody>
+</concept>

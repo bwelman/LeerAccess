@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="tables_relationtype_one2many" xml:lang="nl-NL">
+    <title>Een-op-veel relatie</title>
+    <shortdesc>Uitleg over de een-op-veel relatie.</shortdesc>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords>
+                <indexterm>Tabel<indexterm>primaire tabel</indexterm><indexterm>gerelateerde
+                        tabel</indexterm><indexterm>primaire sleutel</indexterm><indexterm>vreemde
+                        sleutel</indexterm></indexterm>
+                <indexterm>Relaties<indexterm>een-op-veel</indexterm></indexterm>
+            </keywords>
+        </metadata>
+    </prolog>
+    <conbody>
+        <p>Bij één record uit de ene tabel kunnen meerdere gerelateerde records uit de andere tabel
+            horen. Dit wordt soms ook wel een ouder-kind relatie genoemd en is het meest voorkomende
+            relatietype. </p>
+        <p>Een voorbeeld is de relatie tussen de tabellen <varname>Klanten</varname> en
+                <varname>Orders</varname>. Tussen deze twee tabellen is een koppeling op basis van
+            het veld <varname>Klantcode</varname>. Een klant uit de tabel Klanten kan meerdere
+            orders hebben in de tabel Orders. Maar bij iedere order hoort maar één klant. De tabel
+            Klanten staat aan de één-kant van de relatie en de tabel Orders aan de veel-kant. In de
+            relatie heet de tabel <varname>Klanten</varname> de <term>primaire tabel</term> en de
+            tabel <varname>Orders</varname> de <term>gerelateerde tabel</term>. Door deze koppeling
+            kunnen voor elke klant alle bijbehorende orders worden verzameld.</p>
+        <fig>
+            <title>Relatie tussen de tabellen Klanten en Orders</title>
+            <image keyref="relationship_customers_orders">
+                <alt>Relatie tussen de tabellen klanten en orders.</alt>
+            </image>
+        </fig>
+        <p>Voor dit relatietype moet het veld waarmee de koppeling gerealiseerd wordt uniek zijn aan
+            de één-kant van de relatie. In bijna alle gevallen wordt hiervoor de <term>primaire
+                sleutel</term> (<term xml:lang="en-US">primary key</term>) van de tabel gebruikt.
+            Het veld aan de veel-kant van de relatie wordt ook wel de <term>vreemde sleutel</term>
+                (<term xml:lang="en-US">foreign key</term>) genoemd.</p>
+        <fig>
+            <title>Voorbeeld van een een-op-veel relatie</title>
+            <image keyref="relationship_one2many">
+                <alt>Voorbeeld van een een-op-veel relatie.</alt>
+            </image>
+        </fig>
+        <p>In Access wordt een een-op-veel relatie afgebeeld door een lijn tussen de primaire
+            sleutel en de vreemde sleutel, met het cijfer 1 aan de een-kant en het symbool voor
+            oneindig &#8734; aan de veel-kant.</p>
+    </conbody>
+</concept>

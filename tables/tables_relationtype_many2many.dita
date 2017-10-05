@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="tables_relationtype_many2many" xml:lang="nl-NL">
+	<title>Veel-op-veel relatie</title>
+	<shortdesc>Uitleg over de veel-op-veel relatie.</shortdesc>
+	<prolog>
+		<critdates>
+		    <created date="2017-10-05"/>
+		    <revised modified="2017-10-05"/>
+		</critdates>
+		<metadata>
+			<keywords>
+				<indexterm>Tabel<indexterm>tussentabel</indexterm><indexterm>verbindingstabel</indexterm><indexterm>koppelingstabel</indexterm><indexterm xml:lang="en-US">junction
+						table</indexterm></indexterm>
+				<indexterm>Relaties<indexterm>veel-op-veel</indexterm></indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>Bij dit relatietype hebben records in beide tabellen gekoppelde records in de andere
+			tabel. Een veel-op-veel relatie kan niet rechtstreeks in Access gedefinieerd worden.
+			Hiervoor is een derde tabel nodig die ook wel <term>tussentabel</term>,
+				<term>verbindingstabel</term> of <term>koppelingstabel</term> (<term
+				xml:lang="en-US">junction table</term>) genoemd wordt. Deze tussentabel is aan elk
+			van beide tabellen gerelateerd via een een-op-veel relatie.</p>
+		<p>Een voorbeeld is de tabel <varname>Orders</varname> en de tabel <varname>Dozen</varname>.
+			Elke order bevat waarschijnlijk meerdere dozen en elke doos komt waarschijnlijk op
+			meerdere orders voor. De tabel <varname>Orderdetails</varname> vormt hier de tussentabel
+			Deze tabel <varname>Orderdetails</varname> is gerelateerd aan de tabel
+				<varname>Orders</varname> in een een-op-veel relatie via het veld
+				<varname>ordercode</varname>. En de tabel <varname>Orderdetails</varname> is ook
+			gerelateerd aan de tabel <varname>Dozen</varname> in een een-op-veel relatie via het
+			veld <varname>Dooscode</varname>.</p>
+		<fig>
+            <title>Voorbeeld van een veel-op-veel relatie</title>
+            <image keyref="relationship_many2many">
+                <alt>Voorbeeld van een veel-op-veel relatie.</alt>
+            </image>
+        </fig>
+
+	</conbody>
+</concept>

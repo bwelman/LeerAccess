@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="forms_orders_total" xml:lang="nl-NL">
+    <title>Taak: Ordertotaal</title>
+    <shortdesc>Berekening van het totale orderbedrag op een formulier.</shortdesc>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords>
+                <indexterm>Formulier<indexterm>hoofdformulier</indexterm><indexterm>subformulier</indexterm></indexterm>
+            </keywords>
+        </metadata>
+    </prolog>
+    <taskbody>
+        <context>
+            <p>Wijzig het formulier dat gemaakt is in <xref
+                    href="forms_orders_data_entry.dita#forms_orders_data_entry"/> zo dat ook het
+                totale orderbedrag berekend en getoond wordt.</p>
+            <fig>
+                <title>Orders met totaalbedrag</title>
+                <image keyref="f_orderdata_entry_totals">
+                    <alt>Orders met totaalbedrag</alt>
+                </image>
+            </fig>
+        </context>
+        <steps>
+            <step>
+                <cmd>Open de database <keyword keyref="example_db_file"/>.</cmd>
+            </step>
+            <step>
+                <cmd>Open formulier <uicontrol>Ordergegevens subformulier</uicontrol> in
+                    Ontwerpweergave.</cmd>
+            </step>
+            <step>
+                <cmd>Selecteer in het <uicontrol>eigenschappenvenster</uicontrol> het type
+                        <option>Formulier</option> en stel dan
+                        <uicontrol>Standaardweergave</uicontrol> in op <option>Doorlopend
+                        formulier</option>.</cmd>
+                <info>Deze instelling is nodig omdat anders het totaal niet kan worden
+                    berekend.</info>
+                <stepresult>
+                    <fig>
+                        <title>Standaardweergave subformulier</title>
+                        <image keyref="f_orderdatasub_properties">
+                            <alt>Standaardweergave subformulier</alt>
+                        </image>
+                    </fig>
+                </stepresult>
+            </step>
+            <step>
+                <cmd>Maak de verticale ruimte voor de formuliervoettekst wat groter door de
+                    onderkant naar beneden te slepen.</cmd>
+            </step>
+            <step>
+                <cmd>Selecteer <menucascade>
+                        <uicontrol>tab Ontwerp</uicontrol>
+                        <uicontrol>Tekstvak (groep Besturingselementen)</uicontrol>
+                    </menucascade> en teken een rechthoekig kader in de formuliervoettekst waar het
+                    totaalbedrag moet komen.</cmd>
+            </step>
+            <step>
+                <cmd>Stel de waarde voor de eigenschap <uicontrol>Besturingselementbron</uicontrol>
+                    van het tekstvak in op <codeph>=Som([Totaal])</codeph> en de waarde van
+                    eigenschap <uicontrol>Notatie</uicontrol> op <option>Valuta</option>.</cmd>
+            </step>
+            <step>
+                <cmd>Sluit het subformulier en bewaar de wijzigingen.</cmd>
+            </step>
+            <step>
+                <cmd>Open formulier <wintitle>Ordergegevens hoofdformulier</wintitle> en controleer
+                    of alles in orde en naar wens is.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

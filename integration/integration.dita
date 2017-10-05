@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="integration" xml:lang="nl-NL">
+    <title>Integratie met Office</title>
+    <shortdesc/>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords/>
+        </metadata>
+    </prolog>
+    <conbody>
+        <p>Access, Excel, Powerpoint en Word zijn voor veel gebruikers op zich zelf staande
+            programma's. Voor veel zakelijke toepassingen is een samenwerking tussen de programma's
+            van belang. En daar zijn voldoende mogelijkheden voor.</p>
+    </conbody>
+</concept>

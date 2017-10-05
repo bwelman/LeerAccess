@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="export_word" xml:lang="nl-NL">
+    <title>Taak: Export naar Word</title>
+    <shortdesc>Een tabel wordt geëxporteerd naar een nieuw RTF document.</shortdesc>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords>
+                <indexterm>Access<indexterm>export word</indexterm></indexterm>
+                <indexterm>Word<indexterm>integratie access</indexterm></indexterm>
+                <indexterm>Export<indexterm>tabel naar word</indexterm></indexterm>
+            </keywords>
+        </metadata>
+    </prolog>
+    <taskbody>
+        <context>
+            <p>Wanneer je de inhoud van een tabel of het resultaat van een query in een bestaand
+                Word document wilt plaatsen, dan is kopiëren en plakken de meest simpele methode.
+                Maar je kunt de gegevens ook exporteren naar een nieuw Word document. Er wordt dan
+                een document in het RTF formaat (<term xml:lang="en-US">Rich Text Format</term>)
+                gemaakt dat door Word geopend kan worden. </p>
+        </context>
+        <steps>
+            <step>
+                <cmd>Open de database <keyword keyref="example_db_file"/>.</cmd>
+            </step>
+            <step>
+                <cmd>Selecteer de tabel <wintitle>Dozen</wintitle>.</cmd>
+            </step>
+            <step>
+                <cmd>Geef een rechter muisklik op de tabelnaam en kies <menucascade>
+                        <uicontrol>Exporteren</uicontrol>
+                        <uicontrol>Word RTF-bestand</uicontrol>
+                    </menucascade>.</cmd>
+                <stepresult>Het dialoogvenster <wintitle>Exporteren - RTF-bestand</wintitle>
+                    verschijnt.</stepresult>
+            </step>
+            <step>
+                <cmd>Geef de bestandsnaam met pad op en klik op <uicontrol>OK</uicontrol>.</cmd>
+                <stepresult>Het dialoogvenster <wintitle>Exportstappen opslaan</wintitle>
+                    verschijnt.</stepresult>
+            </step>
+            <step>
+                <cmd>De exportstappen hoeven niet opgeslagen te worden. Klik op
+                        <uicontrol>Sluiten</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Controleer het exporteren door het bestand in Word te openen.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

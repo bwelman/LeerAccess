@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="reports_autoreport" xml:lang="nl-NL">
+    <title>Taak: Automatisch rapport</title>
+    <shortdesc>Een automatisch gegenereerd rapport met een handmatige aanpassing.</shortdesc>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords>
+                <indexterm>Rapport<indexterm>autorapport</indexterm></indexterm>
+                <indexterm>Autorapport</indexterm>
+            </keywords>
+        </metadata>
+    </prolog>
+    <taskbody>
+        <context>Access kan automatisch een rapport genereren op basis van een tabel of een query.
+            Soms is het gegenereerde rapport voldoende, maar vaak zullen toch wat handmatige
+            aanpassingen gedaan moeten worden.</context>
+        <steps>
+            <step>
+                <cmd>Open de database <keyword keyref="example_db_file"/>.</cmd>
+            </step>
+            <step>
+                <cmd>Selecteer de query <uicontrol>Verkoop per regio per doos</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Klik <menucascade>
+                        <uicontrol>tab Maken</uicontrol>
+                        <uicontrol>Rapport (groep Rapporten)</uicontrol>
+                    </menucascade>.</cmd>
+                <stepresult>Het rapport wordt aangemaakt en geopend in de
+                        <uicontrol>Indelingsweergave</uicontrol>. Niet fraai is dat de waarde van
+                    Regio voor elk record herhaald wordt en dat de geldbedragen niet juist opgemaakt
+                    zijn. In de volgende stappen worden hiervoor wijzigingen
+                    aangebracht.</stepresult>
+            </step>
+            <step>
+                <cmd>Sluit het rapport en beantwoord de vraag of de wijzigingen bewaard moeten
+                    worden met <uicontrol>Ja</uicontrol>.</cmd>
+                <stepresult>Het venster <wintitle>Opslaan als</wintitle> verschijnt.</stepresult>
+            </step>
+            <step>
+                <cmd>Typ als naam in <userinput>Verkoop per regio per doos</userinput> en klik op
+                        <uicontrol>OK</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Open het rapport <uicontrol>Verkoop per regio per doos</uicontrol> in de
+                        <uicontrol>Ontwerpweergave</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Selecteer in de sectie Details het vak <uicontrol>Regio</uicontrol>.Wijzig in
+                    het <uicontrol>Eigenschappenvenster</uicontrol> de waarde van eigenschap
+                        <varname>Duplicaten verbergen</varname> in <option>Ja</option>.</cmd>
+                <stepresult>
+                    <note type="tip">Het <wintitle>Eigenschappenvenster</wintitle> staat aan de
+                        rechterkant van het scherm en kan zichtbaar en onzichtbaar gemaakt worden
+                        via sneltoets <uicontrol>F4</uicontrol>.</note>
+                </stepresult>
+            </step>
+            <step>
+                <cmd>Selecteer in de sectie Details het veld <uicontrol>omzet</uicontrol>. Wijzig in
+                    het <uicontrol>Eigenschappenvenster</uicontrol> de waarde van eigenschap
+                        <varname>Notatie</varname> in <option>Valuta</option>.</cmd>
+            </step>
+            <step>
+                <cmd>Schakel naar de <uicontrol>Rapportweergave</uicontrol>.</cmd>
+                <stepresult>De waarde van het veld Regio wordt nu maar één keer getoond en de omzet
+                    is als geldbedragen opgemaakt.</stepresult>
+            </step>
+            <step>
+                <cmd>Sluit het rapport en bewaar de wijzigingen.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

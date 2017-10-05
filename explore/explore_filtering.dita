@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="explore_filtering" xml:lang="nl-NL">
+    <title>Taak: Filteren</title>
+    <shortdesc>Records filteren om een selectie van overeenkomstige records te vinden.</shortdesc>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords>
+                <indexterm>Filteren<indexterm>tekst</indexterm><indexterm>getallen</indexterm></indexterm>
+                <indexterm>Tekstfilter</indexterm>
+                <indexterm>Getalfilter</indexterm>
+            </keywords>
+        </metadata>
+    </prolog>
+    <taskbody>
+        <context>
+            <p>Filteren is een actie waarbij records in een tabel getoond worden die aan bepaalde
+                voorwaarden voldoen. Zo kun je bijvoorbeeld eenvoudig een filter maken om alle
+                bonbons te tonen met het chocoladetype Melk en vullingtype Marsepein. Er zijn
+                meerdere manieren om een filter in een tabel toe te passen. Een paar methodes komen
+                in de volgende oefening aan de orde.</p>
+        </context>
+        <steps>
+            <step>
+                <cmd>Open de database <keyword keyref="example_db_file"/>.</cmd>
+            </step>
+            <step>
+                <cmd>Open de tabel <wintitle>Bonbons</wintitle>.</cmd>
+                <stepresult>De tabel Bonbons wordt in de Gegevensbladweergave geopend.</stepresult>
+            </step>
+            <step>
+                <cmd>Klik in de kolom <varname>Chocoladetype</varname> op een waarde
+                        <varname>Wit</varname>.</cmd>
+            </step>
+            <step>
+                <cmd>Kies <menucascade>
+                        <uicontrol>tab Start</uicontrol>
+                        <uicontrol>knop Selectie (groep Sorteren en filteren)</uicontrol>
+                        <uicontrol>Is gelijk aan Wit</uicontrol>
+                    </menucascade>.</cmd>
+                <stepresult>
+                    <p>Access toont nu de records (4 stuks) waarvan het chocoladetype Wit is.</p>
+                    <p>Verder wordt aan de rechterkant van de kolomkop Chocoladetype een klein
+                        symbool van een filter (<image keyref="button_arrow_down_filter"/>) getoond
+                        om aan te geven dat er een filtering op de tabel is toegepast. Ook is op de
+                        statusbalk te zien dat de tabel gefilterd is <image
+                            keyref="statusbar_filtered"/></p>
+                </stepresult>
+            </step>
+            <stepsection>In de volgende stappen wordt de selectie van chocoladetype gewijzigd van
+                    <wintitle>Wit</wintitle> in <varname>Melk</varname>.</stepsection>
+            <step>
+                <cmd>Klik op het filtersymbool aan de rechterkant in de kolomkop
+                        <varname>Chocoladetype</varname>.</cmd>
+                <stepresult>
+                    <fig>
+                        <title>Dialoogvenster filter</title>
+                        <image keyref="filter_chocolatetype">
+                            <alt>Dialoogvenster filter.</alt>
+                        </image>
+                    </fig>
+                    <note type="important">De opties die hier getoond worden hangen af van het type
+                        veld. Bij een tekstveld is er een submenu
+                            <uicontrol>Tekstfilters</uicontrol> en bij een numeriek veld is er een
+                        submenu <uicontrol>Getalfilters</uicontrol>.</note>
+                </stepresult>
+            </step>
+            <step>
+                <cmd>Selecteer in het dialoogvenster type Melk en deselecteer type Wit. Klik dan op
+                        <uicontrol>OK</uicontrol>.</cmd>
+                <stepresult>Er worden nu 18 records getoond met chocoladetype Melk.</stepresult>
+            </step>
+            <stepsection>Voeg tweede selectiecriterium toe met <varname>Vullingtype</varname> is
+                    <varname>Marsepein</varname>.</stepsection>
+            <step>
+                <cmd>Klik in de kolom <varname>Vullingtype</varname> op een waarde
+                        <varname>Marsepein</varname>.</cmd>
+            </step>
+            <step>
+                <cmd>Kies <menucascade>
+                        <uicontrol>tab Start</uicontrol>
+                        <uicontrol>knop Selectie (groep Sorteren en filteren)</uicontrol>
+                        <uicontrol>Is gelijk aan Marsepein</uicontrol>
+                    </menucascade>.</cmd>
+                <stepresult>Access toont nu 3 records met chocoladetype Melk en met vullingtype
+                    Marsepein.</stepresult>
+            </step>
+            <stepsection>Filtering ongedaan maken</stepsection>
+            <step>
+                <cmd>Klik op <menucascade>
+                        <uicontrol>tab Start</uicontrol>
+                        <uicontrol>knop <image keyref="button_filter_toggle"/> (groep Sorteren en
+                            filteren)</uicontrol>
+                    </menucascade>.</cmd>
+                <stepresult>De filtering is opgeheven en alle records worden weer getoond.<note
+                        type="tip">De filtering wordt ook opgeheven door klikken op de knop
+                            <uicontrol>Gefilterd</uicontrol> in de statusbalk. De tekst op de knop
+                        verandert dan in <uicontrol>Niet gefilterd</uicontrol>. Door hier weer op te
+                        klikken wordt het laatst gebruikte filter toegepast.</note></stepresult>
+            </step>
+            <stepsection>Gebruik van een Getalfilter</stepsection>
+            <step>
+                <cmd>Klik op het pijlpuntje aan de rechterkant in de kolomkop
+                        <varname>Bonbonkosten</varname>, kies <menucascade>
+                        <uicontrol>Getalfilters</uicontrol>
+                        <uicontrol>Tussen...</uicontrol>
+                    </menucascade>.</cmd>
+                <stepresult>
+                    <fig>
+                        <title>Dialoogvenster <wintitle>Tussen getallen</wintitle></title>
+                        <image keyref="filter_number_between">
+                            <alt>Dialoogvenster getalfilter.</alt>
+                        </image>
+                    </fig>
+                </stepresult>
+            </step>
+            <step>
+                <cmd>Voer in bij <varname>Kleinste</varname>
+                    <userinput>0,25</userinput> en bij <varname>Grootste</varname>
+                    <userinput>0,35</userinput> en klik dan op <uicontrol>OK</uicontrol>. </cmd>
+                <stepresult>Er worden nu 22 records getoond met bonbonkosten die lopen van € 0,25
+                    t/m € 0,35.</stepresult>
+            </step>
+            <step>
+                <cmd>Sluit de tabel <wintitle>Bonbons</wintitle> en kies bij de vraag om de
+                    wijzigingen op te slaan voor <uicontrol>Nee</uicontrol>.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

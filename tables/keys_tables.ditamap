@@ -1,0 +1,20 @@
+<?xml version="1.0"  encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map id="keys_tables">
+    <title>Keys Tables</title>
+    <keydef keys="icon_key" href="images/icon_key.png" format="png"/>
+    <keydef keys="import_excel_dialogbox" href="images/import_excel_dialogbox.png" format="png"/>
+    <keydef keys="listbox_region" href="images/listbox_region.png" format="png"/>
+    <keydef keys="lookup_wizard_region" href="images/lookup_wizard_region.png" format="png"/>
+    <keydef keys="relationship_customers_orders" href="images/relationship_customers_orders.png" format="png"/>
+    <keydef keys="relationship_edit_boxes_boxdetails" href="images/relationship_edit_boxes_boxdetails.png" format="png"/>
+    <keydef keys="relationship_many2many" href="images/relationship_many2many.png" format="png"/>
+    <keydef keys="relationship_one2many" href="images/relationship_one2many.png" format="png"/>
+    <keydef keys="relationships_ribbon_design" href="images/relationships_ribbon_design.png" format="png"/> 
+    <keydef keys="relationships_window" href="images/relationships_window.png" format="png"/>
+    <keydef keys="relationships_window_boxes_boxdetails" href="images/relationships_window_boxes_boxdetails.png" format="png"/>
+    <keydef keys="t_saveas" href="images/t_saveas.png" format="png"/>
+    <keydef keys="t_transport_companies_design" href="images/t_transport_companies_design.png" format="png"/>
+    <keydef keys="t_transport_companies_records" href="images/t_transport_companies_records.png" format="png"/>
+    <keydef keys="warning_referential_integrity" href="images/warning_referential_integrity.png" format="png"/>    
+</map>

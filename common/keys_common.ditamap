@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map id="keys_common" xml:lang="nl-NL">
+    <title>Keys Common</title>
+    <keydef keys="officeversion">
+        <topicmeta>
+            <keywords>
+                <keyword>2016</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    <keydef keys="menu">
+        <topicmeta>
+            <keywords>
+                <keyword>knop Bestand</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    <keydef keys="example_db_title">
+        <topicmeta>
+            <keywords>
+                <keyword>Snoep2016</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    <keydef keys="example_db_file">
+        <topicmeta>
+            <keywords>
+                <keyword>snoep2016.accdb</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    <keydef keys="versionnr">
+        <topicmeta>
+            <keywords>
+                <keyword>1.0</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    <keydef keys="versiondate">
+        <topicmeta>
+            <keywords>
+                <keyword>5 oktober 2017</keyword>
+            </keywords>
+        </topicmeta>
+    </keydef>
+    <keydef keys="access_window" href="images/access_window.png" format="png"/>
+    <keydef keys="asterisk" href="images/asterisk.png" format="png"/>
+	<keydef keys="button_add_field" href="images/button_add_field.png" format="png"/>
+    <keydef keys="button_arrow_down" href="images/button_arrow_down.png" format="png"/>
+    <keydef keys="button_arrow_down_filter" href="images/button_arrow_down_filter.png" format="png"/>
+    <keydef keys="button_arrow_down_sortedup" href="images/button_arrow_down_sortedup.png"
+        format="png"/>
+    <keydef keys="button_datasheet_view" href="images/button_datasheet_view.png" format="png"/>
+    <keydef keys="button_design_view" href="images/button_design_view.png" format="png"/>
+    <keydef keys="button_dialogwindow" href="images/button_dialogwindow.png" format="png"/>
+    <keydef keys="button_filter_toggle" href="images/button_filter_toggle.png" format="png"/>
+    <keydef keys="button_find" href="images/button_find.png" format="png"/>
+    <keydef keys="button_form_view" href="images/button_form_view.png" format="png"/>
+    <keydef keys="button_group_close" href="images/button_group_close.png" format="png"/>
+    <keydef keys="button_group_open" href="images/button_group_open.png" format="png"/>
+    <keydef keys="button_navigation_close" href="images/button_navigation_close.png" format="png"/>
+    <keydef keys="button_navigation_open" href="images/button_navigation_open.png" format="png"/>
+    <keydef keys="button_object_selection" href="images/button_object_selection.png" format="png"/>
+    <keydef keys="button_print_preview" href="images/button_print_preview.png" format="png"/>
+    <keydef keys="button_record_first" href="images/button_record_first.png" format="png"/>
+    <keydef keys="button_record_last" href="images/button_record_last.png" format="png"/>
+    <keydef keys="button_record_new" href="images/button_record_new.png" format="png"/>
+    <keydef keys="button_record_next" href="images/button_record_next.png" format="png"/>
+    <keydef keys="button_record_previous" href="images/button_record_previous.png" format="png"/>
+    <keydef keys="button_redo" href="images/button_redo.png" format="png"/>
+    <keydef keys="button_report_view" href="images/button_report_view.png" format="png"/>
+    <keydef keys="button_save" href="images/button_save.png" format="png"/>
+    <keydef keys="button_sort_ascending" href="images/button_sort_ascending.png" format="png"/>
+    <keydef keys="button_sql_view" href="images/button_sql_view.png" format="png"/>
+    <keydef keys="button_undo" href="images/button_undo.png" format="png"/>
+    <keydef keys="control_bound_object_frame" href="images/control_bound_object_frame.png" format="png"/>
+    <keydef keys="control_chart" href="images/control_chart.png" format="png"/>
+    <keydef keys="control_label" href="images/control_label.png" format="png"/>
+    <keydef keys="combobox" href="images/combobox.png" format="png"/>
+    <keydef keys="document_window_options" href="images/document_window_options.png" format="png"/>
+    <keydef keys="icon_edit" href="images/icon_edit.png" format="png"/>
+    <keydef keys="macro_window" href="images/macro_window.png" format="png"/>
+    <keydef keys="print_options" href="images/print_options.png" format="png"/>
+    <keydef keys="saveas" href="images/saveas.png" format="png"/>
+    <keydef keys="security_trust_center" href="images/security_trust_center.png" format="png"/>
+    <keydef keys="security_trusted_location" href="images/security_trusted_location.png"
+        format="png"/>
+    <keydef keys="security_warning" href="images/security_warning.png" format="png"/>
+</map>

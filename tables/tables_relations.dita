@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="tables_relations" xml:lang="nl-NL">
+    <title>Relaties tussen tabellen</title>
+    <shortdesc>Waarom relaties tussen tabellen van belang zijn.</shortdesc>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords>
+                <indexterm>Tabel<indexterm>relaties</indexterm></indexterm>
+                <indexterm>Relaties</indexterm>
+            </keywords>
+        </metadata>
+    </prolog>
+    <conbody>
+        <p>Tussen twee tabellen bestaat een relatie wanneer een sleutelveld uit de ene tabel
+            gekoppeld is aan een sleutelveld in de andere tabel. De gekoppelde velden hebben in
+            beide tabellen meestal dezelfde naam en zijn van hetzelfde gegevenstype. Welke relaties
+            er gelegd moeten worden volgt uit het normalisatieproces waarbij de redundante
+            informatie verwijderd wordt door de informatie in meerdere tabellen onder te
+            brengen.</p>
+        <p>Nadat de relaties tussen tabellen gelegd zijn kun je query's, formulieren en rapporten
+            maken waarbij de informatie uit meerdere tabellen gecombineerd wordt en als één geheel
+            aan de gebruiker getoond wordt.</p>
+    </conbody>
+</concept>

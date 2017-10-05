@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="queries_parameters" xml:lang="nl-NL">
+    <title>Taak: Parameterquery</title>
+    <shortdesc>Een query waarbij voor de uitvoering om input gevraagd wordt.</shortdesc>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords>
+                <indexterm>Query<indexterm>parameterquery</indexterm></indexterm>
+                <indexterm>Parameterquery</indexterm>
+            </keywords>
+        </metadata>
+    </prolog>
+    <taskbody>
+        <context>
+            <p>Een parameterquery is een query die tijdens de uitvoering een dialoogvenster toont
+                waarin aan de gebruiker om aanvullende informatie wordt gevraagd, zoals criteria
+                voor het ophalen van records of een waarde die je wilt invoegen in een veld. Je kunt
+                de query zo ontwerpen dat er meerdere gegevens worden gevraagd, bijvoorbeeld een
+                begin- en een einddatum. Vervolgens kunnen alle records worden opgehaald die tussen
+                deze twee datums vallen.</p>
+            <p>Parameterquery’s zijn ook gemakkelijk als basis voor formulieren en rapporten. Op
+                basis van een parameterquery kun je bijvoorbeeld een maandelijks inkomstenrapport
+                maken. Bij het afdrukken van het rapport wordt via een dialoogvenster gevraagd voor
+                welke maand je het rapport wilt afdrukken. Je geeft de maand op en vervolgens wordt
+                het juiste rapport afgedrukt.</p>
+            <p>INFORMATIEBEHOEFTE</p>
+            <p>In het bedrijf Snoopy krijgt men regelmatig vragen van klanten over een bepaalde
+                order via de telefoon. Je wilt dan snel een antwoord kunnen geven op zo’n vraag. Het
+                doel is nu om de gegevens van een bepaalde order snel op het scherm te krijgen. Via
+                een parameterquery die tijdens de uitvoering naar het ordernummer vraagt, is dat
+                mogelijk.</p>
+            <p>ANALYSE</p>
+            <p>De benodigde gegevens over een bepaalde order staan in de tabellen Orders en
+                Orderdetails. Vragen naar de ordercode kan geregeld worden via een criterium.</p>
+        </context>
+        <steps>
+            <step>
+                <cmd>Open de database <keyword keyref="example_db_file"/>.</cmd>
+            </step>
+            <step>
+                <cmd>Kies <menucascade>
+                        <uicontrol>tab Maken</uicontrol>
+                        <uicontrol>Queryontwerp (groep Query's)</uicontrol>
+                    </menucascade>.</cmd>
+                <stepresult>Access maakt een nieuw leeg queryvenster en toont het dialoogvenster
+                        <wintitle>Tabel weergeven</wintitle>. <fig>
+                        <title>Dialoogvenster <wintitle>Tabel weergeven</wintitle></title>
+                        <image keyref="q_show_table">
+                            <alt>Dialoogvenster tabellen</alt>
+                        </image>
+                    </fig>
+                </stepresult>
+            </step>
+            <step>
+                <cmd>Voeg de tabellen <varname>Orders</varname> en <varname>Orderdetails</varname>
+                    en klik daarna op <uicontrol>Sluiten</uicontrol>.</cmd>
+                <stepresult>De tabellen Orders en Orderdetails zijn nu aan het queryvenster
+                    toegevoegd.</stepresult>
+            </step>
+            <step>
+                <cmd>Voeg achtereenvolgens de velden <varname>Ordercode</varname>,
+                        <varname>Klantcode</varname>, <varname>Orderdatum</varname> (uit Orders),
+                        <varname>Dooscode</varname> en <varname>Hoeveelheid</varname> (uit
+                    Orderdetails) aan het queryraster toe door dubbel te klikken op de velden.</cmd>
+                <stepresult>
+                    <fig>
+                        <title>Tabellen en velden voor de query</title>
+                        <image keyref="q_information_order_design1">
+                            <alt>Tabellen en velden voor de query</alt>
+                        </image>
+                    </fig>
+                </stepresult>
+            </step>
+            <step>
+                <cmd>Klik in de kolom <varname>Ordercode</varname> in het vak
+                        <varname>Criteria</varname> en typ in <userinput>[Voer ordercode
+                        in]</userinput>.</cmd>
+                <stepresult>
+                    <fig>
+                        <title>Tabellen en velden voor de query</title>
+                        <image keyref="q_information_order_design2">
+                            <alt>Ontwerp query</alt>
+                        </image>
+                    </fig>
+                </stepresult>
+            </step>
+            <step>
+                <cmd>Schakel naar de <uicontrol>Gegevensbladweergave</uicontrol>.</cmd>
+                <stepresult>Het dialoogvenster <wintitle>Parameterwaarde opgeven</wintitle>
+                    verschijnt.</stepresult>
+            </step>
+            <step>
+                <cmd>Voer een waarde in, bijvoorbeeld <userinput>30</userinput> en klik op
+                        <uicontrol>OK</uicontrol>.</cmd>
+                <stepresult>
+                    <fig>
+                        <title>Tabellen en velden voor de query</title>
+                        <image keyref="q_information_order_result">
+                            <alt>Resultaat van de query</alt>
+                        </image>
+                    </fig>
+                </stepresult>
+            </step>
+            <step>
+                <cmd>Sluit de query en beantwoord de vraag of de wijzigingen bewaard moeten worden
+                    met <uicontrol>Ja</uicontrol>.</cmd>
+                <stepresult>Het venster <wintitle>Opslaan als</wintitle> verschijnt zodat de naam
+                    van de query kan worden opgegeven.</stepresult>
+            </step>
+            <step>
+                <cmd>Typ als naam in <userinput>Informatie bepaalde order</userinput> en klik op
+                        <uicontrol>OK</uicontrol>.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

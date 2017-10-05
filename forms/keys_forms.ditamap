@@ -1,0 +1,32 @@
+<?xml version="1.0"  encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map id="keys_forms">
+    <title>Keys Forms</title>
+    <keydef keys="chartwizard_layout_default" href="images/chartwizard_layout_default.png" format="png"/>
+    <keydef keys="chartwizard_layout_data" href="images/chartwizard_layout_data.png" format="png"/>
+    <keydef keys="chartwizard_linking_fields" href="images/chartwizard_linking_fields.png" format="png"/>
+    <keydef keys="f_boxes_subform" href="images/f_boxes_subform.png" format="png"/>
+    <keydef keys="f_customer_entry" href="images/f_customer_entry.png" format="png"/>
+    <keydef keys="f_customerorders_linked" href="images/f_customerorders_linked.png" format="png"/>
+    <keydef keys="f_customers_orders" href="images/f_customers_orders.png" format="png"/>
+    <keydef keys="f_orderdata_entry" href="images/f_orderdata_entry.png" format="png"/>
+    <keydef keys="f_orderdata_entry_totals" href="images/f_orderdata_entry_totals.png" format="png"/>
+    <keydef keys="f_orderdatasub_properties" href="images/f_orderdatasub_properties.png" format="png"/>
+    <keydef keys="f_praline_entry" href="images/f_praline_entry.png" format="png"/>
+    <keydef keys="f_sales_boxes_chart" href="images/f_sales_boxes_chart.png" format="png"/>
+    <keydef keys="f_stock-in-trade_design" href="images/f_stock-in-trade_design.png" format="png"/>    
+    <keydef keys="f_stock-in-trade_result" href="images/f_stock-in-trade_result.png" format="png"/>
+    <keydef keys="f_wizard_customerorders_dataview" href="images/f_wizard_customerorders_dataview.png" format="png"/>
+    <keydef keys="f_customerorders_titles" href="images/f_customerorders_titles.png" format="png"/>
+    <keydef keys="f_wizard_customers_orders_dataview" href="images/f_wizard_customers_orders_dataview.png" format="png"/>
+    <keydef keys="f_wizard_t_customers" href="images/f_wizard_t_customers.png" format="png"/>
+    <keydef keys="layout_controls_stacked" href="images/layout_controls_stacked.png" format="png"/>
+    <keydef keys="layout_controls_tabular" href="images/layout_controls_tabular.png" format="png"/>
+    <keydef keys="property_textboxes_locked" href="images/property_textboxes_locked.png" format="png"/>
+    <keydef keys="property_textboxes_width" href="images/property_textboxes_width.png" format="png"/>
+    <keydef keys="q_choose_praline_design" href="images/q_choose_praline_design.png" format="png"/>
+    <keydef keys="q_orderdetails_boxes_design" href="images/q_orderdetails_boxes_design.png" format="png"/>
+    <keydef keys="q_orders-customers_design" href="images/q_orders-customers_design.png" format="png"/>
+    <keydef keys="q_sales_box_month_design" href="images/q_sales_box_month_design.png" format="png"/>
+    <keydef keys="textbox_label" href="images/textbox_label.png" format="png"/>
+</map>

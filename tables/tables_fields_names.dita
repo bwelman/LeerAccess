@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="tables_fields_names" xml:lang="nl-NL">
+    <title>Veldnamen</title>
+    <shortdesc>De vereisten voor veldnamen. </shortdesc>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords>
+                <indexterm>Veld<indexterm>naam</indexterm></indexterm>
+            </keywords>
+        </metadata>
+    </prolog>
+    <conbody>
+        <p>Het ontwerp van de database bepaalt welk soort gegevens in een veld wordt opgeslagen.
+            Meestal hebben de velden daarin al een naam gekregen en neem je die naam over. Zorg
+            altijd voor zinvolle namen. Weliswaar kun je ook een beschrijving bij een veld zetten,
+            maar een duidelijke naam werkt nog altijd het beste.</p>
+        <p>Voor een veldnaam gelden de volgende eisen:<ul>
+                <li>naam moet uniek zijn binnen de tabel</li>
+                <li>naam mag niet met een spatie beginnen</li>
+                <li>naam mag niet de volgende tekens bevatten: punt, uitroepteken en blokhaken [ en
+                    ]</li>
+            </ul></p>
+    </conbody>
+</concept>

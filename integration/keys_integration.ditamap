@@ -1,0 +1,10 @@
+<?xml version="1.0"  encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map id="keys_integration">
+    <title>Keys Integration</title>
+    <keydef keys="mailmerge_wizard_finishing" href="images/mailmerge_wizard_finishing.png"
+        format="png"/>
+    <keydef keys="mailmerge_wizard_records" href="images/mailmerge_wizard_records.png" format="png"/>
+    <keydef keys="mailmerge_wizard_step3" href="images/mailmerge_wizard_step3.png" format="png"/>
+    <keydef keys="word_mailmerge_wizard" href="images/word_mailmerge_wizard.png" format="png"/>
+</map>

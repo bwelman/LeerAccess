@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="explore_database" xml:lang="nl-NL">
+    <title>Database verkennen</title>
+    <shortdesc>Vensters en navigatiemogelijkheden binnen Access.</shortdesc>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords>
+                <indexterm>Navigatievenster</indexterm>
+                <indexterm>Documentvenster</indexterm>
+                <indexterm>Tabblad</indexterm>
+            </keywords>
+        </metadata>
+    </prolog>
+    <conbody>
+        <p>Start Access en open daarna het bestand <filepath><keyword keyref="example_db_file"
+                /></filepath>.</p>
+        <note>Wanneer er een beveiligingswaarschuwing getoond wordt moet je actie ondernemen. Zie
+            hiervoor het onderdeel Beveiliging macro's.</note>
+        <fig>
+            <title>Access venster met database <keyword keyref="example_db_title"/></title>
+            <image keyref="access_window">
+                <alt>Venster Access met een geopende database.</alt>
+            </image>
+        </fig>
+        <p>Het <term>navigatievenster</term> staat links en hierin zijn alle <term>objecten</term>
+            van de database te vinden. De objecten worden onderverdeeld in groepen: Tabellen,
+            Query's, Formulieren, Rapporten, Macro's. In het afgebeelde voorbeeld is het venster van
+            de groep Tabellen opengevouwen. Het navigatievenster zelf en de vensters voor de groepen
+            kunnen open- en dichtgevouwen worden.</p>
+        <dl>
+            <dlentry>
+                <dt><image keyref="button_object_selection"/></dt>
+                <dd>selectie getoonde objecten</dd>
+            </dlentry>
+            <dlentry>
+                <dt><image keyref="button_group_open"/></dt>
+                <dd>groep openvouwen</dd>
+            </dlentry>
+            <dlentry>
+                <dt><image keyref="button_group_close"/></dt>
+                <dd>groep dichtvouwen</dd>
+            </dlentry>
+            <dlentry>
+                <dt><image keyref="button_navigation_close"/></dt>
+                <dd>navigatievenster dichtvouwen</dd>
+            </dlentry>
+            <dlentry>
+                <dt><image keyref="button_navigation_open"/></dt>
+                <dd>navigatievenster openvouwen</dd>
+            </dlentry>
+        </dl>
+        <p>Door dubbelklikken op een object in het <term>navigatievenster</term> wordt het object
+            geopend en in het documentvenster getoond. Wanneer je nog meer objecten opent, dan toont
+            Access deze als tabbladen.<fig>
+                <title>Documentvensters als tabbladen</title>
+                <image keyref="document_tabs">
+                    <alt>Tabbladen voor documenten</alt>
+                </image>
+            </fig></p>
+        <p>Je kunt deze instelling wijzigen via: <menucascade>
+                <uicontrol>Bestand</uicontrol>
+                <uicontrol>Opties</uicontrol>
+                <uicontrol>Huidige database</uicontrol>
+            </menucascade>
+            <fig>
+                <title>Opties voor documentvensters</title>
+                <image keyref="document_window_options">
+                    <alt>Opties voor documentvensters.</alt>
+                </image>
+            </fig></p>
+        <p>Wanneer je voor <uicontrol>Overlappende vensters</uicontrol> kiest, dan worden de
+            objecten in een eigen venster getoond, waarbij de vensters boven elkaar liggen.</p>
+        <note type="tip">Wanneer je meer ruimte in de breedte nodig hebt dan kun je het
+            navigatievenster dichtvouwen. Heb je meer ruimte in de lengte nodig, dan kun je het lint
+            verbergen door dubbel te klikken op een tab. Opnieuw dubbelklikken zorgt er voor dat het
+            lint weer zichtbaar wordt.</note>
+    </conbody>
+</concept>

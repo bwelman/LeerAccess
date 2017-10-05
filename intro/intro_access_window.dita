@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="intro_access_window" xml:lang="nl-NL">
+    <title>Access venster</title>
+    <shortdesc/>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords>
+                <indexterm>Access<indexterm>venster</indexterm></indexterm>
+            </keywords>
+        </metadata>
+    </prolog>
+    <conbody>
+        <p>Het programmavenster van Access bestaat van boven naar beneden uit een gedeelte voor de
+            besturing van het programma, het werkblad voor de documentvensters en de statusbalk.</p>
+        <fig>
+            <title>Programmavenster Access</title>
+            <image keyref="access_window">
+                <alt>Programmavenster Access</alt>
+            </image>
+        </fig>
+        <dl>
+            <dlentry>
+                <dt>Bestand</dt>
+                <dd>Deze knop bevindt zich in de linkerbovenhoek van het programmavenster. Onder
+                    deze knop zitten een aantal <term>basisopdrachten</term> die je bij alle Office
+                    programma's terugvindt zoals het openen, opslaan en afdrukken van bestanden. Ook
+                    zit hieronder de belangrijke opdracht <uicontrol>Opties</uicontrol>, waarmee je
+                    een aantal instellingen voor Access kunt regelen.</dd>
+            </dlentry>
+            <dlentry>
+                <dt>Werkbalk Snelle Toegang</dt>
+                <dd>In de Werkbalk Snelle Toegang staan een aantal knoppen voor opdrachten die je
+                    vaak gebruikt en anders minder snel kunt vinden. Bij de standaard installatie
+                    van Access staan hierop drie knoppen:<ul>
+                        <li><image keyref="button_save"/> Opslaan</li>
+                        <li><image keyref="button_undo"/> Ongedaan maken </li>
+                        <li><image keyref="button_redo"/> Opnieuw</li>
+                    </ul> Je kunt zelf knoppen aan deze werkbalk toevoegen</dd>
+            </dlentry>
+            <dlentry>
+                <dt>Lint</dt>
+                <dd>Het lint is een paneel, een soort brede werkbalk aan de bovenkant van het
+                    programmavenster. Op het lint staan opdrachten die georganiseerd zijn in
+                    logische groepen die weer verzameld worden in <term>tabbladen</term> zoals
+                        <wintitle>Start</wintitle>, <wintitle>Maken</wintitle>, .... Elk tabblad
+                    heeft met een bepaald soort activiteit te maken. Sommige tabbladen worden alleen
+                    maar getoond wanneer je ze nodig hebt, de zogenaamde <term>contextuele
+                        tabbladen</term>. Een voorbeeld hiervan is het tabblad
+                        <wintitle>Tabel</wintitle>, welke alleen verschijnt wanneer een tabel
+                    geopend is. Verder staan de opdrachten die je waarschijnlijk het meest nodig
+                    hebt zoveel mogelijk aan de linkerkant en staan de meest gespecialiseerde
+                    opdrachten uiterst rechts. <note type="tip">Je kunt het lint niet verwijderen,
+                        maar je kunt het lint wel minimaliseren met de toetscombinatie
+                                <uicontrol><shortcut>Ctrl + F1</shortcut></uicontrol>. Je ziet dan
+                        alleen de tabs. Opnieuw indrukken van deze toetscombinatie brengt het
+                        volledige lint weer terug.</note></dd>
+            </dlentry>
+            <dlentry>
+                <dt>Tabbladen</dt>
+                <dd>Aan de bovenkant van het lint zijn tabs zichtbaar. Op elke tab staan groepen
+                    commando's. Sommige tabs worden alleen maar getoond wanneer je ze nodig
+                    hebt.</dd>
+            </dlentry>
+            <dlentry>
+                <dt>Groepen</dt>
+                <dd>Op elk tabblad staan <term>groepen</term> van bij elkaar behorende opdrachten.
+                    De groepen bevatten alle opdrachten die je nodig kunt hebben voor een bepaald
+                    soort taak. Bij de meeste groepen zijn niet alle opdrachten zichtbaar. Wanneer
+                    je meer opties wilt zien die voor de groep beschikbaar zijn moet je op de pijl
+                    <image keyref="button_dialogwindow"/> in de rechterbenedenhoek van de
+                    groep klikken.</dd>
+            </dlentry>
+            <dlentry>
+                <dt>Opdrachtknop</dt>
+                <dd>Wanneer je op een opdrachtknop klikt dan wordt de wijziging onmiddellijk
+                    aangebracht. Het kan ook zijn dat er eerst een <option>keuzelijst</option> of
+                    een <option>dialoogvenster</option> verschijnt.</dd>
+            </dlentry>
+            <dlentry>
+                <dt>Navigatievenster</dt>
+                <dd>Het navigatiedeelvenster staat aan de linkerkant en hierin zijn alle objecten
+                    van de database te vinden.</dd>
+            </dlentry>
+            <dlentry>
+                <dt>Documentvensters</dt>
+                <dd>Wanneer een object wordt geopend dan verschijnt deze in een eigen
+                    documentvenster.</dd>
+            </dlentry>
+        </dl>
+    </conbody>
+</concept>

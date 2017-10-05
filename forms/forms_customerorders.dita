@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="forms_customerorders" xml:lang="nl-NL">
+    <title>Taak: Gekoppelde formulieren</title>
+    <shortdesc>Met de Wizard Formulier gekoppelde formulieren maken met gesynchroniseerde
+        gegevens.</shortdesc>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords>
+                <indexterm>Formulier<indexterm>hoofdformulier</indexterm><indexterm>subformulier</indexterm><indexterm>gekoppelde
+                        formulieren</indexterm></indexterm>
+                <indexterm>Gekoppelde formulieren</indexterm>
+            </keywords>
+        </metadata>
+    </prolog>
+    <taskbody>
+        <context>
+            <p>De gemakkelijkste manier om gekoppelde formulieren te maken is met behulp van de
+                Wizard Formulier. Deze Wizard maakt de benodigde formulieren, zorgt voor de
+                onderlinge koppeling en brengt op het hoofdformulier een opdrachtknop aan waarmee
+                het subformulier geopend kan worden.</p>
+            <p>De opdracht is om een formulier te maken waarbij de gegevens van een klant getoond
+                worden en dat via klik op een opdrachtknop de ordergegevens van de klant in een
+                nieuw formulier getoond worden. Zie de volgende afbeelding.</p>
+            <fig>
+                <title>Twee formulieren gekoppeld met gesynchroniseerde gegevens</title>
+                <image keyref="f_customerorders_linked">
+                    <alt>Twee formulieren gekoppeld met gesynchroniseerde gegevens</alt>
+                </image>
+            </fig>
+            <p>Op het hoofdformulier komen de klantgegevens, alle benodigde velden hiervoor zijn
+                beschikbaar in de tabel Klanten. In het subformulier staan de gegevens over de order
+                zelf: ordercode, orderdatum. Op dit subformulier is een ander subformulier opgenomen
+                met daarin de details van de order. De gegevens hiervoor komen uit de tabel
+                Orderdetails.</p>
+        </context>
+        <steps>
+            <step>
+                <cmd>Open de database <keyword keyref="example_db_file"/>.</cmd>
+            </step>
+            <step>
+                <cmd>Kies <menucascade>
+                        <uicontrol>tab Maken</uicontrol>
+                        <uicontrol>Wizard Formulier (groep Formulieren)</uicontrol>
+                    </menucascade>.</cmd>
+            </step>
+            <step>
+                <cmd>Selecteer <option>Tabel: Klanten</option> in vak
+                        <uicontrol>Tabellen/query's</uicontrol>.</cmd>
+                <stepresult>
+                    <fig>
+                        <title>Dialoogvenster <wintitle>Wizard Formulier</wintitle></title>
+                        <image keyref="f_wizard_t_customers">
+                            <alt>Wizard Formulier keuze velden</alt>
+                        </image>
+                    </fig>
+                </stepresult>
+            </step>
+            <step>
+                <cmd>Voeg de volgende velden toe:</cmd>
+                <substeps>
+                    <substep>
+                        <cmd>Uit de tabel Klanten: Klantcode, Achternaam, Voornaam, Straat,
+                            Postcode, Plaats.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Uit de tabel Orders: Ordercode, Orderdatum.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Uit de tabel Orderdetails: Dooscode, Hoeveelheid</cmd>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Klik op <uicontrol>Volgende</uicontrol>. Kies voor weergave <option>volgens
+                        Klanten</option> en voor <option>Gekoppelde formulieren</option>.</cmd>
+                <stepresult>
+                    <fig>
+                        <title>Wizard gekoppelde formulieren</title>
+                        <image keyref="f_wizard_customerorders_dataview">
+                            <alt>Wizard gekoppelde formulieren</alt>
+                        </image>
+                    </fig>
+                </stepresult>
+            </step>
+            <step>
+                <cmd>Klik op <uicontrol>Volgende</uicontrol>.</cmd>
+                <stepresult>
+                    <p>Nu kun je de formulieren een naam geven.</p>
+                </stepresult>
+            </step>
+            <step>
+                <cmd>Geef de formulieren de volgende namen: 1e formulier =
+                        <userinput>OrdersKlanten</userinput>, 2e formulier =
+                        <userinput>OrdersKlantenSub1</userinput> en Subformulier =
+                        <userinput>OrdersKlantenSub2</userinput>.</cmd>
+            </step>
+            <step>
+                <cmd>Klik op <uicontrol>Voltooien</uicontrol>.</cmd>
+                <stepresult>
+                    <p>Het hoofdformulier OrdersKlanten wordt nu geopend. Het ontwerp moet nog wat
+                        aangepast worden omdat de opdrachtknop
+                            <uicontrol>OrdersKlantenSub1</uicontrol> onder het label
+                            <uicontrol>OrdersKlanten</uicontrol> zit en daardoor niet gebruikt kan
+                        worden.</p>
+                    <fig>
+                        <title>Titel hoofdformulier</title>
+                        <image keyref="f_customerorders_titles">
+                            <alt>Titel hoofdformulier</alt>
+                        </image>
+                    </fig>
+                </stepresult>
+            </step>
+            <step>
+                <cmd>Open het formulier <uicontrol>OrdersKlanten</uicontrol> in de
+                        <uicontrol>Ontwerpweergave</uicontrol>.</cmd>
+                <substeps>
+                    <substep>
+                        <cmd>Selecteer het label <uicontrol>OrdersKlanten</uicontrol> en druk op de
+                                <uicontrol>Delete</uicontrol> toets om het label te
+                            verwijderen.</cmd>
+                    </substep>
+                    <substep>
+                        <cmd>Selecteer de opdrachtknop en wijzig via het
+                                <wintitle>Eigenschappenvenster</wintitle> de tekst van het
+                            bijschrift van <userinput>OrdersKlantenSub1</userinput> in
+                                <userinput>Ordergegevens</userinput>.</cmd>
+                    </substep>
+                </substeps>
+            </step>
+            <step>
+                <cmd>Pas desgewenst de opmaak van de drie formulieren verder aan.</cmd>
+            </step>
+            <step>
+                <cmd>Schakel over naar de <uicontrol>Formulierweergave</uicontrol> en test de
+                    werking van de opdrachtknop.</cmd>
+                <info>
+                    <note type="notice">
+                        <p>Bij een standaardinstallatie van Access wordt elk document (tabel, query,
+                            formulier,rapport) in een afzonderlijk tabblad geopend. Bij gekoppelde
+                            formulieren is dat niet altijd handig. Bij het klikken op de
+                            opdrachtknop wordt het gekoppelde subformulier in een nieuw tabblad
+                            geopend. Je ziet dan de informatie in het hoofdformulier en het
+                            subformulier nooit tegelijk. Wanneer je dat wel wilt moet je de
+                            instellingen voor de database zo wijzigen dat documenten in overlappende
+                            vensters verschijnen in plaats van in tabbladen.</p>
+                        <p>Kies dan <menucascade>
+                                <uicontrol>Bestand</uicontrol>
+                                <uicontrol>Opties</uicontrol>
+                                <uicontrol>Huidige database</uicontrol>
+                            </menucascade>. Onder <uicontrol>Opties voor
+                                documentvensters</uicontrol> selecteren <uicontrol>Overlappende
+                                vensters</uicontrol>. </p>
+                    </note>
+                </info>
+            </step>
+            <step>
+                <cmd>Sluit het formulier en bewaar de wijzigingen.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

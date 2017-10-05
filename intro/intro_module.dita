@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="intro_module" xml:lang="nl-NL">
+    <title>Wat is een module?</title>
+    <shortdesc>Een korte introductie in wat <term>modules</term> zijn.</shortdesc>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords>
+                <indexterm>Modules</indexterm>
+                <indexterm>VBA</indexterm>
+            </keywords>
+        </metadata>
+    </prolog>
+    <conbody>
+        <p>Met Access beschik je over een ingebouwde programmeertaal, Visual Basic for Applications
+            (VBA). Een module is een verzameling VBA procedures waarmee je complexere databasetaken
+            kunt automatiseren. Voor het maken van een VBA module heb je wel wat programmeerervaring
+            nodig.</p>
+    </conbody>
+</concept>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="tables_relationships_edit" xml:lang="nl-NL">
+    <title>Relaties maken, bewerken of verwijderen</title>
+    <shortdesc>Hoe je een nieuwe relatie maakt en een bestaande relatie wijzigt of
+        verwijdert.</shortdesc>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords>
+                <indexterm>Tabel<indexterm>relaties</indexterm></indexterm>
+                <indexterm>Relaties</indexterm>
+            </keywords>
+        </metadata>
+    </prolog>
+    <conbody>
+        <p>In Access kunnen relaties aangebracht worden in het venster
+            <wintitle>Relaties</wintitle>. In dit venster kun je ook een bestaande relatie bewerken
+            of verwijderen. Het venster kun je zichtbaar maken door klikken op <menucascade>
+                <uicontrol>tab Hulpmiddelen voor databases</uicontrol>
+                <uicontrol>Relaties (groep Weergeven/verbergen)</uicontrol>
+            </menucascade></p>
+        <fig>
+            <title>Venster <wintitle>Relaties</wintitle></title>
+            <image keyref="relationships_window">
+                <alt>Venster Relaties</alt>
+            </image>
+        </fig>
+        <p>Het lint bevat de opdrachten voor het bewerken van de relaties.</p>
+        <fig>
+            <title>Lint ontwerp relaties</title>
+            <image keyref="relationships_ribbon_design">
+                <alt>Lint ontwerp relaties</alt>
+            </image>
+        </fig>
+        <p>Wanneer er nog geen relaties zijn aangebracht dan is het venster Relaties leeg. Via de
+            knop <uicontrol>Tabel weergeven</uicontrol> wordt een venster met tabellen (en query's)
+            getoond waarmee tabellen aan het venster Relaties kunnen worden toegevoegd.</p>
+        <p>Een relatie tussen twee tabellen kun je aanbrengen door in het venster de primaire
+            sleutel uit de ene tabel te slepen naar de vreemde sleutel in de andere tabel. Het
+            dialoogvenster <wintitle>Relaties bewerken</wintitle> verschijnt dan.</p>
+        <fig>
+            <title>Dialoogvenster <wintitle>Relaties bewerken</wintitle></title>
+            <image keyref="relationship_edit_boxes_boxdetails">
+                <alt>Dialoogvenster Relaties bewerken</alt>
+            </image>
+        </fig>
+        <p>Wanneer je de referentiële integriteit voor deze relatie wilt afdwingen dan schakel je
+            het vakje <uicontrol>Referentiële integriteit afdwingen</uicontrol> in.</p>
+        <p>Een relatie kun je wijzigen door eerst de relatielijn te selecteren. Deze lijn wordt dan
+            dikker weergegeven. Vervolgens geef je een dubbelklik waardoor het venster
+                <wintitle>Relaties bewerken</wintitle> verschijnt.</p>
+        <p>Een relatie kun je verwijderen door de relatielijn te selecteren en dan op de toets
+                <uicontrol>DELETE</uicontrol> te drukken.</p>
+    </conbody>
+</concept>

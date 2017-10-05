@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="compact_repair" xml:lang="nl-NL">
+	<title>Database comprimeren</title>
+	<shortdesc>Defragmenteren en repareren van databases.</shortdesc>
+	<prolog>
+		<critdates>
+		    <created date="2017-10-05"/>
+		    <revised modified="2017-10-05"/>
+		</critdates>
+		<metadata>
+			<keywords>
+				<indexterm>Hulpmiddelen<indexterm>comprimeren database</indexterm></indexterm>
+				<indexterm>Comprimeren database</indexterm>
+				<indexterm>Defragmentatie database</indexterm>
+				<indexterm>Repareren database</indexterm>
+				<indexterm>Database<indexterm>comprimeren</indexterm><indexterm>defragmentatie</indexterm><indexterm>repareren</indexterm></indexterm>
+			</keywords>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>Bij het veelvuldig gebruik van een database waarbij je records toevoegt, wijzigt of verwijderd
+            kunnen op den duur meerdere problemen optreden. Bij het openen van een database
+            onderzoekt Access de conditie ervan en bij eventuele problemen wordt geprobeerd deze te
+            repareren. Niet altijd worden de problemen ontdekt en in dat geval moet de gebruiker een
+            actie tot comprimeren en herstellen starten.</p>
+		<p>Comprimeren heeft ook invloed op automatische nummeringen in een Access-database. Als je
+            records hebt verwijderd aan het einde van een tabel met een AutoNummering veld, wordt de
+            waarde voor AutoNummering opnieuw ingesteld. Deze start dan bij het eerstvolgende hogere
+            nummer bij het toevoegen van records.</p>
+		<p>Om een database te comprimeren kies je</p>
+		<p>
+			<menucascade>
+				<uicontrol>tab Hulpmiddelen voor databases</uicontrol>
+				<uicontrol>Database comprimeren en herstellen (groep Extra)</uicontrol>
+			</menucascade>
+		</p>
+	</conbody>
+</concept>

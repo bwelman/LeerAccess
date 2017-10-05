@@ -1,0 +1,25 @@
+<?xml version="1.0"  encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map id="keys_explore">
+    <title>Keys Explore</title>
+    <keydef keys="document_tabs" href="images/document_tabs.png" format="png"/>   
+    <keydef keys="example_db_design" href="images/example_db_design.png" format="png"/>
+    <keydef keys="filter_chocolatetype" href="images/filter_chocolatetype.png" format="png"/>
+    <keydef keys="filter_number_between" href="images/filter_number_between.png" format="png"/>
+    <keydef keys="find_replace_dialogbox" href="images/find_replace_dialogbox.png" format="png"/>
+    <keydef keys="form_pralines_design_view" href="images/form_pralines_design_view.png" format="png"/>
+    <keydef keys="form_pralines_form_view" href="images/form_pralines_form_view.png" format="png"/>
+    <keydef keys="query_pralines_box_datasheet" href="images/query_pralines_box_datasheet.png" format="png"/>
+    <keydef keys="query_pralines_box_design" href="images/query_pralines_box_design.png" format="png"/>
+    <keydef keys="report_pralines_box_design" href="images/report_pralines_box_design.png" format="png"/>
+    <keydef keys="report_pralines_box_report" href="images/report_pralines_box_report.png" format="png"/>
+    <keydef keys="statusbar_filtered" href="images/statusbar_filtered.png" format="png"/>
+    <keydef keys="table_boxdetails" href="images/table_boxdetails.png" format="png"/>
+    <keydef keys="table_boxes" href="images/table_boxes.png" format="png"/>
+    <keydef keys="table_customers" href="images/table_customers.png" format="png"/>
+    <keydef keys="table_customers_sorted" href="images/table_customers_sorted.png" format="png"/>
+    <keydef keys="table_orderdetails" href="images/table_orderdetails.png" format="png"/>
+    <keydef keys="table_orders" href="images/table_orders.png" format="png"/>
+    <keydef keys="table_orders_details3" href="images/table_orders_details3.png" format="png"/>
+    <keydef keys="table_pralines" href="images/table_pralines.png" format="png"/>
+</map>

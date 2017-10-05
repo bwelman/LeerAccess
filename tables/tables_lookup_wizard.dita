@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="tables_lookup_wizard" xml:lang="nl-NL">
+    <title>Taak: Keuzelijst maken</title>
+    <shortdesc>Het maken van een keuzelijst bij een veld zodat de in te voeren waarden uit een lijst
+        kunnen worden geselecteerd.</shortdesc>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords>
+                <indexterm>Keuzelijst</indexterm>
+            </keywords>
+        </metadata>
+    </prolog>
+    <taskbody>
+        <context>Wanneer in een veld alleen maar een beperkt aantal vooraf gedefinieerde waarden
+            kunnen worden ingevoerd, dan kan het gebruik van een keuzelijst erg handig zijn. Zo
+            heeft de tabel Klanten een veld Regio waarin alleen de waarden Noord en Zuid zijn
+            toegestaan. In de volgende stappen wordt het gegevenstype voor dit veld gewijzigd in een
+                keuzelijst.<note type="attention"> De keuzelijst werkt helaas niet automatisch bij
+                de formulieren die gebaseerd zijn op deze tabel zoals het formulier Inschrijving. Om
+                de keuzelijst wel te laten werken moet in het ontwerp van het formulier Inschrijving
+                het veld Regio eerst verwijderd en daarna weer toegevoegd worden. Dat wordt in deze
+                taak niet uitgevoerd.</note>
+        </context>
+        <steps>
+            <step>
+                <cmd>Open database <keyword keyref="example_db_file"/>.</cmd>
+            </step>
+            <step>
+                <cmd>Open tabel <wintitle>Klanten</wintitle> in de
+                        <uicontrol>Ontwerpweergave</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Klik in het vak Gegevenstype bij het veld <varname>Regio</varname>.</cmd>
+            </step>
+            <step>
+                <cmd>Klik op de keuzepijl en selecteer <uicontrol>Wizard
+                    opzoeken...</uicontrol>.</cmd>
+                <stepresult>Het eerste dialoogvenster van de <wintitle>Wizard opzoeken</wintitle>
+                    verschijnt.</stepresult>
+            </step>
+            <step>
+                <cmd>Selecteer de optie <uicontrol>Ik typ de gewenste waarden</uicontrol> en klik op
+                        <uicontrol>Volgende</uicontrol>.</cmd>
+                <stepresult>Het tweede dialoogvenster van de Wizard verschijnt. Hierin kunnen de
+                    waarden voor de lijst worden ingetypt.</stepresult>
+            </step>
+            <step>
+                <cmd>Typ in de eerste cel <userinput>Noord</userinput> en in de tweede cel
+                        <userinput>Zuid</userinput>.</cmd>
+                <stepresult>
+                    <fig>
+                        <title>Dialoogvenster <wintitle>Wizard Opzoeken</wintitle></title>
+                        <image keyref="lookup_wizard_region">
+                            <alt>Wizard opzoeken.</alt>
+                        </image>
+                    </fig>
+                </stepresult>
+            </step>
+            <step>
+                <cmd>Klik op <uicontrol>Voltooien</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Schakel over naar de <uicontrol>Gegevensbladweergave</uicontrol> en beantwoord
+                    de vraag of de tabel moet worden opgeslagen met <uicontrol>Ja</uicontrol>.</cmd>
+            </step>
+            <stepsection>Controle van de werking van de keuzelijst.</stepsection>
+            <step>
+                <cmd>Klik bij een willekeurige klant in het veld <uicontrol>Regio</uicontrol> en
+                    controleer of de keuzelijst aanwezig is en werkt.</cmd>
+                <stepresult>
+                    <fig>
+                        <title>Keuzelijst Regio</title>
+                        <image keyref="listbox_region">
+                            <alt>Keuzelijst regio.</alt>
+                        </image>
+                    </fig>
+                </stepresult>
+            </step>
+        </steps>
+    </taskbody>
+</task>

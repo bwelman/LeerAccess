@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="forms_customers_orders" xml:lang="nl-NL">
+    <title>Taak: Hoofd- en subformulier</title>
+    <shortdesc>Met de Wizard een hoofdformulier met subformulier maken.</shortdesc>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords>
+                <indexterm>Formulier<indexterm>hoofdformulier</indexterm><indexterm>subformulier</indexterm><indexterm>wizard</indexterm></indexterm>
+                <indexterm>Hoofdformulier</indexterm>
+                <indexterm>Subformulier</indexterm>
+                <indexterm>Wizard Formulier</indexterm>
+            </keywords>
+        </metadata>
+    </prolog>
+    <taskbody>
+        <context>
+            <p>De gemakkelijkste manier om een hoofdformulier met een subformulier te maken is met
+                behulp van de <uicontrol>Wizard Formulier</uicontrol>. Deze Wizard maakt beide
+                formulieren en zorgt voor de onderlinge koppeling.</p>
+            <p>De opdracht is om een formulier te maken dat van een klant de klantcode, naam en
+                adres toont en verder de bijbehorende orders met ordercode, orderdatum en
+                subtotaal.</p>
+            <p>Op het hoofdformulier komen de klantgegevens, alle benodigde velden hiervoor zijn
+                beschikbaar in de tabel Klanten. In het subformulier staan de gegevens over de order
+                zelf: ordercode, orderdatum en een berekend subtotaal. Het subtotaal kan berekend
+                worden uit het veld Hoeveelheid (tabel Orderdetails) en het veld Doosprijs (tabel
+                Dozen).</p>
+            <p>Om het subtotaal te berekenen heb je een query nodig die al deze gegevens als bron
+                kan aanbieden aan het te maken subformulier. Een dergelijke query is reeds
+                beschikbaar en heet <varname>Orders met subtotalen</varname>. Deze query bevat ook
+                het veld Klantcode, zodat de koppeling tussen hoofd- en subformulier gemaakt kan
+                worden.</p>
+        </context>
+        <steps>
+            <step>
+                <cmd>Open de database <keyword keyref="example_db_file"/>.</cmd>
+            </step>
+            <step>
+                <cmd>Kies <menucascade>
+                        <uicontrol>tab Maken</uicontrol>
+                        <uicontrol>Wizard Formulier (groep Formulieren)</uicontrol>
+                    </menucascade>.</cmd>
+            </step>
+            <step>
+                <cmd>Selecteer onder <varname>Tabellen/query's</varname>
+                    <uicontrol>Tabel: Klanten</uicontrol>.</cmd>
+                <stepresult>
+                    <fig>
+                        <title>Dialoogvenster <wintitle>Wizard Formulier</wintitle></title>
+                        <image keyref="f_wizard_t_customers">
+                            <alt>Wizard Formulier keuze velden</alt>
+                        </image>
+                    </fig>
+                </stepresult>
+            </step>
+            <step>
+                <cmd>Voeg achtereenvolgens de volgende velden toe: Klantcode, Voornaam, Achternaam,
+                    Straat, Postcode, Plaats, Telefoon.</cmd>
+            </step>
+            <step>
+                <cmd>Selecteer onder <varname>Tabellen/query's</varname>
+                    <uicontrol>Query: Orders met subtotalen</uicontrol>.</cmd>
+                <stepresult>De velden van de query worden getoond in het vak Beschikbare
+                    velden.</stepresult>
+            </step>
+            <step>
+                <cmd>Voeg achtereenvolgens de volgende velden toe: Ordercode, Orderdatum en
+                    Subtotaal. Klik dan op <uicontrol>Volgende</uicontrol>.</cmd>
+                <stepresult>
+                    <fig>
+                        <title>Wizard Formulier keuze weergave</title>
+                        <image keyref="f_wizard_customers_orders_dataview">
+                            <alt>Wizard Formulier keuze weergave</alt>
+                        </image>
+                    </fig>
+                </stepresult>
+            </step>
+            <step>
+                <cmd>Controleer de instellingen en klik dan op
+                    <uicontrol>Volgende</uicontrol>.</cmd>
+                <stepresult>
+                    <p>De wizard vraagt nu naar de layout voor het subformulier: tabelvorm of
+                        gegevensblad.</p>
+                </stepresult>
+            </step>
+            <step>
+                <cmd>Selecteer layout <option>Als gegevensblad</option> en klik op
+                        <uicontrol>Volgende</uicontrol>.</cmd>
+                <stepresult>
+                    <p>Je kunt nu namen (titels) aan de formulieren geven. Er zijn al default titels
+                        beschikbaar, maar je kunt deze wijzigen.</p>
+                </stepresult>
+            </step>
+            <step>
+                <cmd>Wijzig de standaardtitels van de formulieren. Titel formulier =
+                        <userinput>Klanten en orders</userinput> en tititel subformulier =
+                        <userinput>Klanten en orders subformulier</userinput>.</cmd>
+            </step>
+            <step>
+                <cmd>Klik op <uicontrol>Voltooien</uicontrol>.</cmd>
+                <stepresult>
+                    <fig>
+                        <title>Formulier klanten en orders</title>
+                        <image keyref="f_customers_orders">
+                            <alt>Formulier klanten en orders</alt>
+                        </image>
+                    </fig>
+                    <note>Desgewenst kan zowel het ontwerp van het hoofdformulier als van het
+                        subformulier gewijzigd worden.</note>
+                </stepresult>
+            </step>
+        </steps>
+    </taskbody>
+</task>

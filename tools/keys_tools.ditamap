@@ -1,0 +1,9 @@
+<?xml version="1.0"  encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map id="keys_tools">
+    <title>Keys Tools</title>
+    <keydef keys="table_contacts" href="images/table_contacts.png" format="png"/>
+    <keydef keys="table_analyzer_wizard" href="images/table_analyzer_wizard.png" format="png"/>
+    <keydef keys="table_generated" href="images/table_generated.png" format="png"/>
+    <keydef keys="tables_splitted" href="images/tables_splitted.png" format="png"/>
+</map>

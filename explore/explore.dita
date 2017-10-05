@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="explore" xml:lang="nl-NL">
+    <title>Database SNOEP verkennen</title>
+    <shortdesc/>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords/>
+        </metadata>
+    </prolog>
+    <conbody>
+        <p>De cursus is opgebouwd rond het voorbeeldbestand <filepath><keyword
+                    keyref="example_db_file"/></filepath>. In dit hoofdstuk komt aan bod uit welke
+            tabellen deze database is opgebouwd en waarvoor deze tabellen dienen. Met deze
+            voorbeelddatabase ga je wat experimenteren om verschillende aspecten over het werken met
+            Access te ontdekken. Een aantal van de functies worden in andere hoofdstukken verder
+            uitgediept.</p>
+    </conbody>
+</concept>

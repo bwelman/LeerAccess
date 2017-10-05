@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="macros_about" xml:lang="nl-NL">
+    <title>Over macro's maken</title>
+    <shortdesc>Waarom macro's maken en hoe doe je dat.</shortdesc>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords>
+                <indexterm>Macro<indexterm>macrovenster</indexterm></indexterm>
+            </keywords>
+        </metadata>
+    </prolog>
+    <conbody>
+        <p>Een macro is een klein programmaatje dat bepaalde acties kan uitvoeren. Zo kun je een
+            macro de opdracht geven om een formulier te openen of om een record op te zoeken. De
+            uitvoering van een macro wordt vaak aan een besturingselement zoals een opdrachtknop
+            toegekend. Bij het klikken op de knop worden dan de opdrachten die in de macro zitten
+            uitgevoerd. Zo kun je extra functies aan formulieren en rapporten toekennen.</p>
+        <p>In feite bestaat een macro in Access uit een lijst van achter elkaar uit te voeren
+            acties. Voor de meeste acties zijn een of meer argumenten nodig. <fig>
+                <title>Macrovenster met actiecatalogus</title>
+                <image keyref="macro_window">
+                    <alt>Macrovenster met actiecatalogus</alt>
+                </image>
+            </fig>
+        </p>
+        <p>Voor het maken van macro's heb je geen programmeerkennis nodig. Een macro wordt als een
+            object in de database zelf opgeslagen.</p>
+        <p>Een aandachtspunt bij macro's is het aspect van veiligheid. Access verdeelt de mogelijke
+            macro acties in twee soorten:<ul>
+                <li>onschadelijke acties, ongeacht hoe ze worden gebruikt</li>
+                <li>gevaarlijke acties</li>
+            </ul></p>
+        <p>Zelfs een actie als <option>Afdrukken</option> wordt als gevaarlijk beschouwd, omdat deze
+            ongewenste opdrachten naar de printer kan sturen.</p>
+        <p>Bij het toevoegen van acties in het macrovenster toont Access standaard alleen de acties
+            die volkomen veilig zijn. Om een volledige lijst met acties te krijgen, inclusief de
+            gevaarlijke acties, moet je een instelling wijzigen. Kies dan in het macro venster <menucascade>
+                <uicontrol>tab Design</uicontrol>
+                <uicontrol>Alle acties weergeven (groep Weergeven/verbergen</uicontrol>
+            </menucascade>.</p>
+    </conbody>
+</concept>

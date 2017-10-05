@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference id="tables_fields_size" xml:lang="nl-NL">
+    <title>Veldlengte gegevenstype Getal</title>
+    <shortdesc>Mogelijke waarden voor de veldlengte van het gegevenstype getal.</shortdesc>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords/>
+        </metadata>
+    </prolog>
+    <refbody>
+        <simpletable frame="all" relcolwidth="1.0* 5.45*">
+            <strow>
+                <stentry>Byte</stentry>
+                <stentry>Voor gehele getallen tussen 0 en 255</stentry>
+            </strow>
+            <strow>
+                <stentry>Integer</stentry>
+                <stentry>Voor gehele getallen lopend van -32.768 t/m 32.767</stentry>
+            </strow>
+            <strow>
+                <stentry>Lange integer</stentry>
+                <stentry>Voor gehele getallen lopend van -2.147.483.648 t/m 2.147.483.647</stentry>
+            </strow>
+            <strow>
+                <stentry>Enkel</stentry>
+                <stentry>Voor decimale getallen lopend van -3,4 x 10<sup>38</sup> t/m 3,4 x
+                        10<sup>38</sup> met maximaal 7 significante cijfers.</stentry>
+            </strow>
+            <strow>
+                <stentry>Dubbel</stentry>
+                <stentry>Voor decimale getallen lopend van -1,797 x 10<sup>308</sup> en 1,797 x
+                        10<sup>308</sup> met maximaal 15 significante cijfers.</stentry>
+            </strow>
+            <strow>
+                <stentry>Decimaal</stentry>
+                <stentry>Voor decimale getallen lopend van tussen -9,999... x 10<sup>27</sup> en
+                    9,999... x 10<sup>27</sup></stentry>
+            </strow>
+        </simpletable>
+    </refbody>
+</reference>

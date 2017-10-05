@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="forms" xml:lang="nl-NL" >
+	<title>Formulieren maken</title>
+	<shortdesc/>
+	<prolog>
+	    <critdates>
+	        <created date="2017-10-05"/>
+	        <revised modified="2017-10-05"/>
+	    </critdates>
+		<metadata>
+			<keywords/>
+		</metadata>
+	</prolog>
+	<conbody>
+		<p>Formulieren tonen een georganiseerd en opgemaakt overzicht van velden in tabellen en query's.
+			Ze zijn erg belangrijk voor de gegevensinvoer.</p>
+	</conbody>
+</concept>

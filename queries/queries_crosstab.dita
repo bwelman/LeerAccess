@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="queries_crosstab" xml:lang="nl-NL">
+    <title>Taak: Kruistabelquery</title>
+    <shortdesc>Een query waarbij voor de uitvoering om input gevraagd wordt.</shortdesc>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords>
+                <indexterm>Query<indexterm>kruistabelquery</indexterm></indexterm>
+                <indexterm>Kruistabelquery</indexterm>
+            </keywords>
+        </metadata>
+    </prolog>
+    <taskbody>
+        <context>
+            <p>Een kruistabelquery berekent de som, gemiddelde of een andere samenvattingswaarde en
+                groepeert de resultaten in rijen en kolommen. Een kruistabel is vergelijkbaar met
+                een draaitabelrapport in Excel. Een kruistabelquery is vaak eenvoudiger leesbaar dan
+                een gewone selectiequery met dezelfde gegevens. Door de horizontale en verticale
+                groepering is het overzicht compacter.</p>
+            <p>Wanneer je een kruistabelquery maakt, moet je opgeven welke velden de rijkoppen
+                bevatten, welk veld de kolomkoppen bevat en welk veld de waarden bevat die moeten
+                worden samengevat. Voor de rijkoppen kun je meerdere velden gebruiken (maximaal 3),
+                maar voor de kolomkoppen en de samen te vatten gegevens kun je maar één veld
+                gebruiken. Verder kun je ook expressies gebruiken voor de rijkoppen, kolomkoppen en
+                samen te vatten gegevens.</p>
+            <p>De gemakkelijkste en snelste manier om een kruistabelquery te maken is met behulp van
+                de Wizard Kruistabelquery. Voor complexere query's kun je vaak wel met deze Wizard
+                beginnen, maar moet je daarna voor het fijnere werk overstappen naar de
+                ontwerpweergave.</p>
+            <p>INFORMATIEBEHOEFTE</p>
+            <p>Bepaal het aantal klanten per provincie en per regio en toon het resultaat in een
+                kruistabel.</p>
+            <p>ANALYSE</p>
+            <p>Alle benodigde gegevens staan in de tabel <varname>Klanten</varname>.</p>
+        </context>
+        <steps>
+            <step>
+                <cmd>Open de database <keyword keyref="example_db_file"/>.</cmd>
+            </step>
+            <step>
+                <cmd>Kies <menucascade>
+                        <uicontrol>tab Maken</uicontrol>
+                        <uicontrol>Wizard Query (groep Query's)</uicontrol>
+                        <uicontrol>Wizard Kruistabelquery</uicontrol>
+                        <uicontrol>OK</uicontrol>
+                    </menucascade>.</cmd>
+                <stepresult>
+                    <p>In het scherm dat getoond wordt kun je de tabel of query selecteren welke de
+                        velden voor de kruistabel bevat.</p>
+                </stepresult>
+            </step>
+            <step>
+                <cmd>Selecteer de tabel <option>Klanten</option> en klik op
+                        <uicontrol>Volgende</uicontrol>.</cmd>
+                <stepresult>
+                    <p>Nu kun je de velden kiezen die de waarden voor de rijkoppen bevatten.</p>
+                </stepresult>
+            </step>
+            <step>
+                <cmd>Voeg <varname>Provincie</varname> toe.</cmd>
+                <stepresult>
+                    <fig>
+                        <title>Selectie velden voor rijkoppen</title>
+                        <image keyref="q_crosstab_rowhead">
+                            <alt>Selectie velden voor rijkoppen </alt>
+                        </image>
+                    </fig>
+                </stepresult>
+            </step>
+            <step>
+                <cmd>Klik op <uicontrol>Volgende</uicontrol>.</cmd>
+                <stepresult>
+                    <p>Nu moet je het veld opgeven dat de waarden voor de kolomkoppen bevat.</p>
+                </stepresult>
+            </step>
+            <step>
+                <cmd>Selecteer veld <varname>Regio</varname>.</cmd>
+                <stepresult>
+                    <fig>
+                        <title>Selectie veld voor kolomkop</title>
+                        <image keyref="q_crosstab_columnhead">
+                            <alt>Selectie veld voor kolomkop </alt>
+                        </image>
+                    </fig>
+                </stepresult>
+            </step>
+            <step>
+                <cmd>Klik op <uicontrol>Volgende</uicontrol>.</cmd>
+                <stepresult>
+                    <p>Nu kun je het veld kiezen dat de waarden voor de samen te vatten gegevens
+                        bevat alsmede de functie voor het samenvatten.</p>
+                </stepresult>
+            </step>
+            <step>
+                <cmd>Selecteer veld <varname>Klantcode</varname> en functie
+                        <varname>Aantal</varname>. Deselecteer tevens de optie om een totaal te
+                    berekenen voor elke rij.</cmd>
+                <stepresult>
+                    <fig>
+                        <title>Selectie veld en functie voor samenvatting</title>
+                        <image keyref="q_crosstab_values">
+                            <alt>Selectie veld en functie voor samenvatting </alt>
+                        </image>
+                    </fig>
+                </stepresult>
+            </step>
+            <step>
+                <cmd>Klik op <uicontrol>Volgende</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd> Noem de query <userinput>Aantal klanten per provincie per regio</userinput>,
+                    selecteer <option>Bekijk de query</option> en klik op
+                        <uicontrol>Voltooien</uicontrol>.</cmd>
+                <stepresult>
+                    <fig>
+                        <title>Resultaat kruistabel</title>
+                        <image keyref="q_crosstab_result">
+                            <alt>Resultaat kruistabel</alt>
+                        </image>
+                    </fig>
+                </stepresult>
+            </step>
+        </steps>
+    </taskbody>
+</task>

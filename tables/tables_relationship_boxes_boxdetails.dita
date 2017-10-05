@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="tables_relationship_boxes_boxdetails" xml:lang="nl-NL">
+    <title>Taak: Relatie Dozen-Doosdetails maken</title>
+    <shortdesc>Het maken van een een-op-veel relatie tussen de tabellen Dozen en
+        Doosdetails.</shortdesc>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords>
+                <indexterm>Relaties<indexterm>maken</indexterm><indexterm>primaire
+                        tabel</indexterm><indexterm>gerelateerde tabel</indexterm></indexterm>
+                <indexterm>Tabel<indexterm>primaire tabel</indexterm><indexterm>gerelateerde
+                        tabel</indexterm></indexterm>
+            </keywords>
+        </metadata>
+    </prolog>
+    <taskbody>
+        <context>
+            <p>Een relatie koppelt twee velden in verschillende tabellen aan elkaar. Voordat je
+                begint het maken van de relatie moet je eerst vaststellen welke tabel de primaire
+                tabel wordt, welke de gerelateerde tabel en via welke velden de relatie gelegd gaat
+                worden. In een goed ontworpen database is dat in de primaire tabel meestal het
+                primaire sleutel veld.</p>
+            <p>In de database bestaat nog geen relatie tussen de tabellen <wintitle>Dozen</wintitle>
+                en <wintitle>Doosdetails</wintitle>. Dat is wel nodig, want anders kan immers niet
+                bepaald worden welke bonbons en de hoeveelheid daarvan in een bepaalde doos
+                zitten.</p>
+            <dl>
+                <dlentry>
+                    <dt>Primaire tabel</dt>
+                    <dd>Dozen (veld: Dooscode)</dd>
+                </dlentry>
+                <dlentry>
+                    <dt>Gerelateerde tabel</dt>
+                    <dd>Doosdetails (veld: Dooscode)</dd>
+                </dlentry>
+            </dl>
+        </context>
+        <steps>
+            <step>
+                <cmd>Open de database <keyword keyref="example_db_file"/>.</cmd>
+            </step>
+            <step>
+                <cmd>Klik <menucascade>
+                        <uicontrol>tab Hulpmiddelen voor databases</uicontrol>
+                        <uicontrol>Relaties (groep Weergeven/verbergen)</uicontrol>
+                    </menucascade>.</cmd>
+                <stepresult>Access opent een nieuwe tab <wintitle>Relaties</wintitle>. Hierin zijn
+                    de bestaande relaties te zien. Ook is zichtbaar dat tussen de tabellen Dozen en
+                    Doosdetails nog geen relatie bestaat.<fig>
+                        <title>Venster relaties</title>
+                        <image keyref="relationships_window_boxes_boxdetails">
+                            <alt>Venster relaties.</alt>
+                        </image>
+                    </fig></stepresult>
+            </step>
+            <step>
+                <cmd>Selecteer in de tabel <wintitle>Dozen</wintitle> het veld
+                        <varname>Dooscode</varname>, druk de linker muisknop in en sleep deze naar
+                    het veld <varname>Dooscode</varname> in de tabel
+                        <wintitle>Doosdetails</wintitle>.</cmd>
+                <stepresult>
+                    <fig>
+                        <title>Dialoogvenster <wintitle>Relaties bewerken</wintitle></title>
+                        <image keyref="relationship_edit_boxes_boxdetails">
+                            <alt>Dialoogvenster relatie bewerken.</alt>
+                        </image>
+                    </fig>
+                </stepresult>
+            </step>
+            <step>
+                <cmd>Schakel het vakje <uicontrol>Referentiële integriteit afdwingen</uicontrol> in
+                    en klik dan op <uicontrol>Maken</uicontrol>.</cmd>
+                <stepresult>De relatie is nu zichtbaar in het venster.</stepresult>
+            </step>
+            <step>
+                <cmd>Sluit het venster <wintitle>Relaties</wintitle> en beantwoord de vraag of de
+                    wijzigingen moeten worden opgeslagen met <uicontrol>Ja</uicontrol>.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

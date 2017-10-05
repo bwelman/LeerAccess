@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="queries_customers_province" xml:lang="nl-NL">
+    <title>Taak: Aantal klanten per provincie</title>
+    <shortdesc>Oefening van een selectiequery met groeperen en berekening met de functie
+        Aantal.</shortdesc>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords>
+                <indexterm>Query<indexterm>groeperen</indexterm><indexterm>aantal</indexterm></indexterm>
+            </keywords>
+        </metadata>
+    </prolog>
+    <taskbody>
+        <context>
+            <p>INFORMATIEBEHOEFTE</p>
+            <p>Maak een overzicht van het aantal klanten per provincie.</p>
+            <p>ANALYSE</p>
+            <p>Alle benodigde gegevens staan in de tabel Klanten. Uiteraard is het veld Provincie
+                nodig. Een klant wordt uniek geïdentificeerd door de Klantcode, zodat het aantal
+                klantcodes per provincie geteld moet worden. Hiervoor moet er gegroepeerd worden per
+                Provincie.</p>
+        </context>
+        <steps>
+            <step>
+                <cmd>Open de database <keyword keyref="example_db_file"/>.</cmd>
+            </step>
+            <step>
+                <cmd>Kies <menucascade>
+                        <uicontrol>tab Maken</uicontrol>
+                        <uicontrol>Queryontwerp (groep Query's)</uicontrol>
+                    </menucascade>.</cmd>
+                <stepresult>Access maakt een nieuw leeg queryvenster en toont het dialoogvenster
+                        <wintitle>Tabel weergeven</wintitle>.<fig>
+                        <title>Dialoogvenster <wintitle>Tabel weergeven</wintitle></title>
+                        <image keyref="q_show_table">
+                            <alt>Dialoogvenster tabellen weergeven</alt>
+                        </image>
+                    </fig></stepresult>
+            </step>
+            <step>
+                <cmd>Selecteer de tabel <varname>Klanten</varname> en klik op
+                        <uicontrol>Toevoegen</uicontrol> en daarna op
+                    <uicontrol>Sluiten</uicontrol>.</cmd>
+                <stepresult>De tabel Klanten is nu aan het queryvenster toegevoegd.</stepresult>
+            </step>
+            <step>
+                <cmd>Voeg achtereenvolgens de velden Provincie en Klantcode aan het queryraster toe
+                    door dubbel te klikken op het veld.</cmd>
+                <stepresult>
+                    <fig>
+                        <title>Ontwerp query klanten per provincie</title>
+                        <image keyref="q_customers_province_design">
+                            <alt>Ontwerp query klanten per provincie</alt>
+                        </image>
+                    </fig>
+                </stepresult>
+            </step>
+            <step>
+                <cmd>Klik op <menucascade>
+                        <uicontrol>tab Ontwerp</uicontrol>
+                        <uicontrol>knop Totalen (groep Weergeven/verbergen)</uicontrol>
+                    </menucascade>.</cmd>
+                <stepresult>Er wordt een rij <varname>Totaal</varname> aan het queryraster
+                    toegevoegd: <fig>
+                        <title>Ontwerp uitgebreid met rij voor totaal</title>
+                        <image keyref="q_customers_province_design_total">
+                            <alt>Totaalrij aan ontwerp query toegevoegd</alt>
+                        </image>
+                    </fig>
+                </stepresult>
+            </step>
+            <step>
+                <cmd>Klik in het vak onder de kolom Klantcode in de rij Totaal. Er verschijnt dan
+                    een keuzepijl. Selecteer hiermee <uicontrol>Aantal</uicontrol>.</cmd>
+                <stepresult>
+                    <fig>
+                        <title>Groepering met aantal</title>
+                        <image keyref="q_customers_province_design_count">
+                            <alt>Groepering met aantal</alt>
+                        </image>
+                    </fig>
+                </stepresult>
+            </step>
+            <step>
+                <cmd>Schakel over naar de <uicontrol>Gegevensbladweergave</uicontrol>.</cmd>
+                <stepresult>
+                    <fig>
+                        <title>Resultaat query aantal klanten per provincie</title>
+                        <image keyref="q_customers_province_result">
+                            <alt>Resultaat query aantal klanten per provincie</alt>
+                        </image>
+                    </fig>
+                </stepresult>
+            </step>
+            <step>
+                <cmd>Sluit de query en beantwoord de vraag of de wijzigingen bewaard moeten worden
+                    met <uicontrol>Ja</uicontrol>.</cmd>
+                <stepresult>Het venster <wintitle>Opslaan als</wintitle> verschijnt zodat de naam
+                    van de query kan worden opgegeven.</stepresult>
+            </step>
+            <step>
+                <cmd>Typ als naam in <userinput>Aantal klanten per provincie</userinput> en klik op
+                        <uicontrol>OK</uicontrol>.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

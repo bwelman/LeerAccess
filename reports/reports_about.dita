@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="reports_about" xml:lang="nl-NL">
+    <title>Over rapporten maken</title>
+    <shortdesc>Waarvoor je rapporten kunt gebruiken.</shortdesc>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords>
+                <indexterm>Rapport</indexterm>
+            </keywords>
+        </metadata>
+    </prolog>
+    <conbody>
+        <p>Rapporten zijn meestal overzichten en samenvattingen van grote hoeveelheden
+            informatie.</p>
+        <p>Als je een verkoopoverzicht op een overzichtelijke manier op papier willen afdrukken dan
+            gebruik je een rapport. In een rapport kun je ook subtotalen en eindtotalen berekenen en
+            afdrukken. Rapporten kun je vanaf nul met de hand maken, maar het is gemakkelijker om de
+            Wizard te gebruiken.</p>
+        <p>Een rapport kan ook dynamisch worden door gebruik te maken van parameters. Bij het
+            genereren van het rapport wordt dan eerst om aanvullende informatie gevraagd. Als
+            voorbeeld hiervan zie het rapport <uicontrol>Verkoop per doos</uicontrol>. Wanneer je
+            dit rapport opent dan word je achtereenvolgens eerst gevraagd om de begin- en einddatum
+            in te voeren.</p>
+    </conbody>
+</concept>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="tables_about" xml:lang="nl-NL">
+    <title>Over tabellen</title>
+    <shortdesc>Tabellen, velden en relaties tussen tabellen. </shortdesc>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords>
+                <indexterm>Tabellen</indexterm>
+                <indexterm>Informatieanalyse</indexterm>
+                <indexterm>Normaliseren</indexterm>
+            </keywords>
+        </metadata>
+    </prolog>
+    <conbody>
+        <p>In een database worden gegevens opgeslagen in tabellen. De tabellen zelf bestaan uit
+            velden voor de verschillende gegevens. Zo kan er een veld zijn voor de achternaam van
+            een persoon en een ander veld voor de voornaam. De gegevens kunnen op verschillende
+            manieren worden weergegeven maar zijn altijd opgeslagen in tabellen. In de praktijk maak
+            je eerst een <term>informatieanalyse</term> om te bepalen welke tabellen en welke velden
+            je nodig hebt. Dit wordt bij de wat grotere databases vastgesteld via een proces dat
+                <term>normaliseren</term> heet. Naast de tabellen zelf moeten er meestal ook
+            relaties tussen de tabellen gelegd worden, zodat gegevens uit de ene tabel gekoppeld
+            kunnen worden aan gegevens in een andere tabel.</p>
+        <p>Met lege tabellen kun je niets. Dus zullen gegevens in tabellen ingevoerd moeten worden.
+            Wanneer deze gegevens al beschikbaar zijn in andere bestanden, zoals een Excel werkblad,
+            dan is het importeren vanuit Excel ook een mogelijkheid.</p>
+    </conbody>
+</concept>

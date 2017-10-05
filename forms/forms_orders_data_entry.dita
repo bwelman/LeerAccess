@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="forms_orders_data_entry" xml:lang="nl-NL">
+    <title>Taak: Invoerformulier Orders</title>
+    <shortdesc>Het maken van een hoofdformulier met subformulier, gebaseerd op een
+        query.</shortdesc>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords>
+                <indexterm>Formulier<indexterm>hoofdformulier</indexterm><indexterm>subformulier</indexterm></indexterm>
+            </keywords>
+        </metadata>
+    </prolog>
+    <taskbody>
+        <context>
+            <p>Voor het bekijken van een bestaande order en het invoeren van een nieuwe order moet
+                er een orderformulier gemaakt worden, zie de volgend afbeelding.</p>
+            <fig>
+                <title>Invoerformulier orders</title>
+                <image keyref="f_orderdata_entry">
+                    <alt>Invoerformulier orders</alt>
+                </image>
+            </fig>
+            <p>De gegevens op het hoofdformulier zijn afkomstig uit de tabel
+                    <uicontrol>Klanten</uicontrol> en uit de tabel <uicontrol>Orders</uicontrol>. Er
+                moet dus een query (Orders-Klanten) gemaakt worden, gebaseerd op deze twee tabellen,
+                welke de gewenste gegevens aanlevert.</p>
+            <p>De gegevens op het subformulier zijn afkomstig uit de tabel
+                    <uicontrol>Orderdetails</uicontrol> en uit de tabel
+                <uicontrol>Dozen</uicontrol>. Er moet dus een query (Orderdetails-Dozen) gemaakt
+                worden, gebaseerd op deze twee tabellen, welke de gewenste gegevens aanlevert.</p>
+            <p>Maak daarna een formulier met subformulier en baseer het hoofdformulier op de query
+                Orders-Klanten en het subformulier op de query Orderdetails-Dozen. Voeg de gewenste
+                velden voor zowel het hoofdformulier als het subformulier toe.</p>
+        </context>
+        <steps>
+            <step>
+                <cmd>Open de database <keyword keyref="example_db_file"/>.</cmd>
+            </step>
+            <stepsection>Maak query Orders-Klanten.</stepsection>
+            <step>
+                <cmd>Kies <menucascade>
+                        <uicontrol>tab Maken</uicontrol>
+                        <uicontrol>Queryontwerp (groep Query's)</uicontrol>
+                    </menucascade> en voeg de tabellen <uicontrol>Orders</uicontrol> en
+                        <uicontrol>Klanten</uicontrol> toe. Voeg van beide tabellen alle velden
+                    toe.</cmd>
+                <info><note type="tip">Met de keuze <option>*</option> kun je alle velden van een
+                        tabel toevoegen.</note></info>
+                <stepresult>
+                    <fig>
+                        <title>Ontwerp query Orders-Klanten</title>
+                        <image keyref="q_orders-customers_design">
+                            <alt>Ontwerp query orders klanten</alt>
+                        </image>
+                    </fig>
+                </stepresult>
+            </step>
+            <step>
+                <cmd>Sluit de query en bewaar deze onder de naam
+                        <userinput>Orders-Klanten</userinput>.</cmd>
+            </step>
+            <stepsection>Maak query Orderdetails-Dozen.</stepsection>
+            <step>
+                <cmd>Kies <menucascade>
+                        <uicontrol>tab Maken</uicontrol>
+                        <uicontrol>Queryontwerp (groep Query's)</uicontrol>
+                    </menucascade> en voeg de tabellen <uicontrol>Orderdetails</uicontrol> en
+                        <uicontrol>Dozen</uicontrol> toe. Voeg van beide tabellen alle velden toe.
+                    Maak daarnaast een kolom met de naam <varname>Totaal</varname> die de berekening
+                        <codeph>Hoeveelheid*Doosprijs</codeph> uitvoert.</cmd>
+                <stepresult>
+                    <fig>
+                        <title>Ontwerp query Orderdetails-Dozen</title>
+                        <image keyref="q_orderdetails_boxes_design">
+                            <alt>Ontwerp query orderdetails dozen</alt>
+                        </image>
+                    </fig>
+                </stepresult>
+            </step>
+            <step>
+                <cmd>Sluit de query en bewaar deze onder de naam
+                        <userinput>Orderdetails-Dozen</userinput>.</cmd>
+            </step>
+            <stepsection>Maak het formulier.</stepsection>
+            <step>
+                <cmd>Kies <menucascade>
+                        <uicontrol>tab Maken</uicontrol>
+                        <uicontrol>Wizard Formulier</uicontrol>
+                    </menucascade>.</cmd>
+            </step>
+            <step>
+                <cmd>Selecteer query <uicontrol>Orders-Klanten</uicontrol> en voeg alle velden
+                    behalve <varname>Orders.Klantcode</varname> toe.</cmd>
+            </step>
+            <step>
+                <cmd>Selecteer query <uicontrol>Orderdetails-Dozen</uicontrol> en voeg
+                    achtereenvolgens de volgende velden toe: <varname>Dozen.Dooscode</varname>,
+                        <varname>Doosnaam</varname>, <varname>Hoeveelheid</varname>,
+                        <varname>Doosprijs</varname> en <varname>Totaal</varname>.</cmd>
+            </step>
+            <step>
+                <cmd>Klik op <uicontrol>Volgende</uicontrol> en laat dan de gegevens weergeven
+                    volgens <uicontrol>Orders-Klanten</uicontrol>.</cmd>
+                <stepresult>Hiermee wordt het hoofdformulier gebaseerd op de query Orders-Klanten en
+                    het subformulier op de query Orderdetails-Dozen.</stepresult>
+            </step>
+            <step>
+                <cmd>Klik op <uicontrol>Volgende</uicontrol> en selecteer dan de opmaak voor het
+                    subformulier <uicontrol>In tabelvorm</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Kies een stijl en klik dan op <uicontrol>Volgende</uicontrol>.</cmd>
+            </step>
+            <step>
+                <cmd>Ken de volgende titels toe: <userinput>Ordergegevens hoofdformulier</userinput>
+                    en <userinput>Ordergegevens subformulier</userinput> en klik op Voltooien,</cmd>
+                <stepresult>Het formulier wordt geopend.</stepresult>
+            </step>
+            <step>
+                <cmd>Pas desgewenst de lay-out van beide formulieren aan zodat het lijkt op het
+                    gewenste formulier voor ordergegevens.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="tables_referential_integrity" xml:lang="nl-NL">
+    <title>Referentiële integriteit</title>
+    <shortdesc>Uitleg over het belang van referentiële integriteit en de regels
+        hiervoor.</shortdesc>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords>
+                <indexterm>Relaties</indexterm>
+                <indexterm>Referentiële integriteit</indexterm>
+            </keywords>
+        </metadata>
+    </prolog>
+    <conbody>
+        <p>Referentiële integriteit is een systeem van regels waarmee er voor gezorgd wordt dat de
+            interne consistentie tussen de tabellen wordt gewaarborgd. Access zorgt er dan voor dat
+            relaties tussen records in gerelateerde tabellen geldig zijn en dat gerelateerde
+            gegevens niet onbedoeld kunnen worden verwijderd of gewijzigd.</p>
+        <p>De referentiële integriteit kun je instellen door in het dialoogvenster
+                <wintitle>Relaties bewerken</wintitle> het vakje <uicontrol>Referentiële integriteit
+                afdwingen</uicontrol> in te schakelen.</p>
+        <p>Wanneer referentiële integriteit wordt ingesteld dan gelden de volgende regels:</p>
+        <ul>
+            <li>Je kunt geen waarde opgeven voor de vreemde sleutel in de gerelateerde tabel wanneer
+                die waarde niet voorkomt in de primaire sleutel van de primaire tabel. Zo kun je
+                bijvoorbeeld geen order invoeren voor een niet-bestaande klant. Bij een order voor
+                een nieuwe klant moet je dus eerst de klant aanmaken en daarna pas de order.</li>
+            <li>Een record uit een primaire tabel kan niet worden verwijderd als er overeenkomstige
+                records bestaan in een gerelateerde tabel. Zo kun je geen record uit de tabel
+                Klanten verwijderen als er in de tabel Orders nog records voor deze klant
+                bestaan.</li>
+            <li>Een waarde van de primaire-sleutel in de primaire tabel kan niet worden gewijzigd
+                wanneer dit record gerelateerde records in de gerelateerde tabel heeft. Zo kun je de
+                klantcode in de tabel Klanten niet wijzigen als er records in de tabel Orders aan
+                deze klant zijn toegewezen.</li>
+        </ul>
+        <p>Wanneer de referentiële integriteit is afgedwongen en een van de voorgaande regels wordt
+            bij een actie geschonden, dan wordt een passende foutmelding weergegeven. In de volgende
+            afbeelding zie je een voorbeeld hiervan.<fig>
+                <title>Foutmelding bij invoeren order voor een niet bestaande klant</title>
+                <image keyref="warning_referential_integrity">
+                    <alt>Foutmelding bij het invoeren van een order voor een niet bestaande
+                        klant</alt>
+                </image>
+            </fig></p>
+        <p>Je kunt referentiële integriteit bij een relatie tussen twee tabellen instellen onder de
+            volgende voorwaarden:</p>
+        <ul>
+            <li>Beide tabellen zitten in dezelfde Access database.</li>
+            <li>Het gekoppelde veld in de primaire tabel is een primaire sleutel of heeft een unieke
+                index.</li>
+            <li>De gekoppelde velden zijn van hetzelfde gegevenstype en numerieke velden moeten
+                dezelfde veldlengte hebben.<note type="attention">AutoNummering velden kunnen
+                    gekoppeld worden aan velden van het type Numeriek mits hiervan de eigenschap
+                    Veldlengte de waarde Lange integer heeft.</note></li>
+            <li>Bestaande gegevens in beide tabellen overtreden niet de regels voor referentiële
+                integriteit.</li>
+        </ul>
+        <p>Wanneer bestaande gegevens in de tabellen de regels voor referentiële integriteit
+            overtreden, dan moeten deze overtredingen eerst opgelost worden. Meestal ontstaan de
+            problemen door een van de volgende oorzaken.</p>
+        <ol>
+            <li>De velden die via de relatie aan elkaar gekoppeld worden zijn niet van hetzelfde
+                gegevenstype of hebben niet dezelfde lengte. Dit is relatief gemakkelijk op te
+                lossen door wijzigingen in het ontwerp van een of beide tabellen.</li>
+            <li>In de tabel aan de <term>veel-kant</term> komen records voor waarvan de waarde van
+                het koppelveld niet voorkomt in de tabel aan de <term>een-kant</term>. Dit ontstaat
+                wanneer je in de tabel aan de een-kant een record verwijdert en daarna niet de
+                bijbehorende records in de tabel aan de veel-kant verwijdert. In feite ontstaan er
+                dan een soort wezen in de tabel aan de veel-kant. Gelukkig kent Access een querytype
+                waarmee je deze wezen kunt vinden en waarna je ze alsnog kunt verwijderen. Kies in
+                dat geval <menucascade>
+                    <uicontrol>tab Maken</uicontrol>
+                    <uicontrol>Wizard Query (groep Query's)</uicontrol>
+                    <uicontrol>Wizard niet-gerelateerde records</uicontrol>
+                </menucascade>. </li>
+        </ol>
+    </conbody>
+</concept>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map id="map_explore" xml:lang="nl-NL" title="Database SNOEP verkennen">
+    <topicmeta>
+        <author>Ben Welman</author>
+        <publisher>Softwijs</publisher>
+        <copyright>
+            <copyryear year="2017"/>
+            <copyrholder>Softwijs Neede</copyrholder>
+        </copyright>
+        <keywords/>        
+        <prodinfo>
+            <prodname>Access</prodname>
+            <vrmlist>
+                <vrm version="" release=""/>
+            </vrmlist>
+        </prodinfo>
+    </topicmeta>
+    <!-- Keys -->
+    <mapref href="../common/keys_common.ditamap" processing-role="resource-only"/>
+    <mapref href="keys_explore.ditamap" processing-role="resource-only"/>
+    <!-- Content -->
+    <topicref href="explore.dita" scope="local" type="concept">
+        <topicref href="explore_about.dita" scope="local" type="concept" audience="level1"/>
+        <topicref href="explore_security.dita" scope="local" type="concept" audience="level1"/>
+        <topicref href="explore_database.dita" scope="local" type="concept" audience="level1"/>
+        <topicref href="explore_tables.dita" scope="local" type="task" audience="level1"/>
+        <topicref href="explore_forms.dita" scope="local" type="task" audience="level1"/>
+        <topicref href="explore_commandbutton.dita" scope="local" type="task" audience="level1"/>
+        <topicref href="explore_search_records.dita" scope="local" type="task" audience="level1"/>
+        <topicref href="explore_queries.dita" scope="local" type="task" audience="level1"/>
+        <topicref href="explore_reports.dita" scope="local" type="task" audience="level1"/>
+        <topicref href="explore_sorting.dita" scope="local" type="task" audience="level1"/>
+        <topicref href="explore_filtering.dita" scope="local" type="task" audience="level1"/>
+        <topicref href="explore_printing.dita" scope="local" type="concept" audience="level1"/>
+    </topicref>
+    <reltable>
+        <relheader>
+            <relcolspec type="concept"/>
+            <relcolspec type="topic"/>
+        </relheader>
+        <relrow>
+            <relcell>
+                <topicref href="explore_database.dita"/>
+            </relcell>
+            <relcell>
+                <topicref href="explore_security.dita" linking="targetonly"/>
+            </relcell>
+        </relrow>
+    </reltable>
+</map>
