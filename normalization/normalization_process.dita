@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="normalization_process" xml:lang="nl-NL">
+    <title>Normalisatieproces</title>
+    <shortdesc>Het normalisatieproces, van de nulde normaalvorm tot en met de derde
+        normaalvorm.</shortdesc>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords>
+                <indexterm>Normaliseren<indexterm>normaalvormen</indexterm></indexterm>
+                <indexterm>Normaalvormen</indexterm>
+            </keywords>
+        </metadata>
+    </prolog>
+    <conbody>
+        <p>Bij het normalisatieproces worden de verzamelde gegevens verdeeld in afzonderlijke
+            gegevensgroepen en wordt er voor verbindingen tussen deze groepen gezorgd. Het
+            uiteenrafelen en groeperen van gegevens wordt <term>normaliseren</term> genoemd. <note
+                type="notice">In plaats van de term gegevensgroep wordt ook de term objecttype,
+                entiteit of tabel gebruikt.</note></p>
+        <p>Het normalisatieproces bestaat uit een aantal stappen waarin de structuur van de database
+            vastgesteld. Het resultaat van zo'n stap wordt een <term>normaalvorm</term> genoemd.
+            Gestart wordt met de <term>nulde normaalvorm (0 NV)</term>. Daarna ontstaan
+            achtereenvolgens de <term>eerste normaalvorm (1 NV)</term>, de <term>tweede normaalvorm
+                (2 NV)</term> en tot slot de <term>derde normaalvorm (3 NV)</term>.</p>
+        <p>Aan de hand van een voorbeeld wordt het normaliseren besproken.</p>
+        <p>INFORMATIEBEHOEFTE</p>
+        <p>De informatiebehoefte van groothandel Verschoor bestaat uit het genereren van facturen.
+            Een voorbeeld van zo'n factuur is in de volgende afbeelding te zien.</p>
+        <fig>
+            <title>Voorbeeld factuur</title>
+            <image keyref="example_invoice">
+                <alt>Voorbeeld factuur</alt>
+            </image>
+        </fig>
+    </conbody>
+</concept>

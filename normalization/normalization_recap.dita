@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="normalization_recap" xml:lang="nl-NL">
+    <title>Samenvatting normalisatieproces</title>
+    <shortdesc>Overzicht van de benodigde stappen in het normalisatieproces.</shortdesc>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords>
+                <indexterm>Normaalvormen</indexterm>
+            </keywords>
+        </metadata>
+    </prolog>
+    <conbody>
+        <simpletable frame="all" relcolwidth="1.0* 12.33*">
+            <strow>
+                <stentry>0 NV</stentry>
+                <stentry>Inventarisatie van attributen maken, repeterende groep (RG) aangeven,
+                    sleutel onderstrepen.</stentry>
+            </strow>
+            <strow>
+                <stentry>1 NV</stentry>
+                <stentry>Repeterende groepen afsplitsen als aparte tabellen en de sleutel van de
+                        <q>oude</q> tabel meenemen. De sleutel van de nieuwe tabel is een
+                    samengestelde sleutel.</stentry>
+            </strow>
+            <strow>
+                <stentry>2 NV</stentry>
+                <stentry>Alleen voor tabellen met samengestelde sleutels: attributen afsplitsen die
+                    afhankelijk zijn van een deel van de sleutel. Dit wordt de sleutel van een
+                    nieuwe tabel.</stentry>
+            </strow>
+            <strow>
+                <stentry>3NV</stentry>
+                <stentry>Voor alle tabellen: als een attribuut afhankelijk is van een
+                    niet-sleutelveld, dan deze afhankelijkheid afsplitsen naar een nieuwe
+                    tabel.</stentry>
+            </strow>
+        </simpletable>
+    </conbody>
+</concept>

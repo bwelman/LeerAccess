@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="normalization_dsd" xml:lang="nl-NL">
+    <title>Gegevens Structuur Diagram (GSD)</title>
+    <shortdesc>Een grafische weergave van de relaties tussen tabellen.</shortdesc>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords>
+                <indexterm>Gegevensstructuurdiagram</indexterm>
+                <indexterm>GSD</indexterm>
+                <indexterm>Relaties</indexterm>
+            </keywords>
+        </metadata>
+    </prolog>
+    <conbody>
+        <p>Een gegevensstructuurdiagram (GSD) is een tekening waarmee de relaties tussen tabellen op
+            een overzichtelijke manier kunnen worden weergegeven.</p>
+        <fig>
+            <title>Voorbeeld Gegevensstructuurdiagram</title>
+            <image keyref="example_dsd">
+                <alt>Voorbeeld GSD</alt>
+            </image>
+        </fig>
+        <p>Vaak wordt bij de pijl ook het attribuut vermeld waarmee de koppeling tot stand wordt
+            gebracht.</p>
+        <p>De betekenis van de enkele en de dubbele pijl is als volgt:</p>
+        <dl>
+            <dlentry>
+                <dt>Klant ->> Factuur</dt>
+                <dd>Bij één klant kunnen meerdere facturen horen.</dd>
+            </dlentry>
+            <dlentry>
+                <dt>Factuur -> Klant</dt>
+                <dd>Een factuur hoort altijd bij één klant.</dd>
+            </dlentry>
+            <dlentry>
+                <dt>Factuur ->>Factuurregel</dt>
+                <dd>Bij één factuur kunnen meerdere factuurregels horen.</dd>
+            </dlentry>
+            <dlentry>
+                <dt>Factuurregel -> Factuur</dt>
+                <dd>Een factuurregel hoort altijd bij één factuur.</dd>
+            </dlentry>
+            <dlentry>
+                <dt>Artikel ->> Factuurregel</dt>
+                <dd>Een artikel kan op meerdere factuurregels voorkomen.</dd>
+            </dlentry>
+            <dlentry>
+                <dt>Factuurregel -> Artikel</dt>
+                <dd>Een factuurregel heeft altijd betrekking op één artikel.</dd>
+            </dlentry>
+        </dl>
+        <p>Een relatiediagram in Access ziet er als volgt uit<fig id="fig_vpg_zlm_qbb">
+                <title>Relaties in Access</title>
+                <image keyref="example_relations" id="image_wpg_zlm_qbb">
+                    <alt>Relaties in Access</alt>
+                </image>
+            </fig></p>
+    </conbody>
+</concept>

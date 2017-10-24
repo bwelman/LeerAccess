@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="normalization_3nf" xml:lang="nl-NL">
+    <title>3 NV</title>
+    <shortdesc>Het normalisatieproces, van de tweede normaalvorm naar de derde
+        normaalvorm.</shortdesc>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords>
+                <indexterm>Normaliseren<indexterm>normaalvormen</indexterm></indexterm>
+                <indexterm>Normaalvormen</indexterm>
+            </keywords>
+        </metadata>
+    </prolog>
+    <conbody>
+        <p>Om van de tweede naar de derde normaalvorm te komen moeten alle tabellen onderzocht
+            worden. Wanneer hierin niet-sleutel attributen zitten die functioneel afhankelijk zijn
+            van andere niet-sleutel attributen, dan moeten deze afhankelijke attributen in een
+            nieuwe tabel worden ondergebracht en moet het attribuut waarvan ze afhankelijk zijn aan
+            deze tabel worden toegevoegd.</p>
+        <p>Veronderstel dat in dit voorbeeld de <varname>Klantnaam</varname> uniek is. In dat geval
+            zijn in de tabel <varname>FACTUUR</varname> de attributen <varname>Adres</varname>,
+                <varname>Postcode</varname>, <varname>Plaats</varname> en
+                <varname>Telefoon</varname> functioneel afhankelijk van het attribuut
+                <varname>Klantnaam</varname> want bij iedere Klantnaam hoort precies één waarde voor
+            Adres, Postcode, Plaats en Telefoon.<note type="notice">Ook wanneer de Klantnaam niet
+                uniek is, worden dit soort bij elkaar behorende gegevens toch in een nieuwe tabel
+                ondergebracht waarbij dan een uniek klantnummer wordt bedacht.</note></p>
+        <p>De klantgegevens worden in een nieuwe tabel <varname>KLANT</varname> ondergebracht en het
+            veld <varname>Klantnaam</varname> wordt hiervan de sleutel.</p>
+        <p>De <term>3 NV</term> wordt dan:</p>
+        <codeblock>FACTUUR (<u>Factuurnr</u>, Verkoper, Datum, Klantnaam, Korting)
+KLANT (<u>Klantnaam</u>, Adres, Postcode, Plaats, Telefoon)
+FACTUURREGEL (<u>Factuurnr</u>, <u>Artikelnr</u>, Aantal, Verkoopprijs)
+ARTIKEL (<u>Artikelnr</u>, Artikelomschrijving, Adviesprijs)</codeblock>
+    </conbody>
+</concept>

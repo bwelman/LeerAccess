@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="normalization_key" xml:lang="nl-NL">
+    <title>Sleutel</title>
+    <shortdesc>Uitleg wat een sleutel van een tabel is en waarom een sleutel noodzakelijk
+        is.</shortdesc>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords>
+                <indexterm>Normaliseren</indexterm>
+                <indexterm>Kandidaatsleutel</indexterm>
+                <indexterm>Sleutel<indexterm>primair</indexterm><indexterm>kandidaat</indexterm></indexterm>
+            </keywords>
+        </metadata>
+    </prolog>
+    <conbody>
+        <p>In de tabellen van een relationele database zijn gelijksoortige gegevens opgeslagen in de
+            velden van records (rijen). Records moeten gevonden kunnen worden via een unieke waarde
+            van deze gegevens. Zo'n unieke waarde wordt een <term>kandidaatsleutel</term> genoemd.
+            Vaak is er in een tabel maar één kandidaatsleutel, maar het is mogelijk dat er meerdere
+            kandidaatsleutels zijn. Uit de beschikbare kandidaatsleutels wordt er eentje gekozen tot
+            de <term>(primaire) sleutel</term>. Een tabel moet daarom zo ontworpen worden dat er een
+            sleutel gedefinieerd kan worden. Wanneer zo'n sleutel niet uit de gegevens samengesteld
+            kan worden moet er een kunstmatig sleutelveld gemaakt worden. Vaak is dat een nummer,
+            een id. Enkele voorbeelden van mogelijke sleutelvelden:<ul>
+                <li>Artikelnummer</li>
+                <li>Klantnummer</li>
+                <li>Ordernummer</li>
+                <li>Factuurnummer</li>
+                <li>Burgerservicenummer (BSN)</li>
+                <li>IBAN</li>
+            </ul></p>
+        <p>Een sleutel bestaat uit 1 of meerdere veldnamen uit een tabel. Iedere sleutelwaarde is
+            uniek; d.w.z. dat iedere sleutelwaarde slechts één keer in de tabel mag voorkomen.
+            Verder moet de sleutel minimaal zijn, uit zo min mogelijk veldnamen bestaan.</p>
+        <p>Enkele voorbeelden.</p>
+        <example>
+            <title>Voorbeeld 1</title>
+            <p>Mogelijke unieke kenmerken voor een auto zijn het chassisnummer en het kenteken.
+                Hierdoor kan bijvoorbeeld het kenteken een sleutel zijn in een tabel met gegevens
+                van auto's:</p>
+            <codeblock>AUTO (<u>kenteken</u>, merk, type, gewicht, brandstof, kleur)</codeblock>
+        </example>
+        <example>
+            <title>Voorbeeld 2</title>
+            <p>Een tabel PRODUCTEN heeft de volgende inhoud:<simpletable>
+                    <sthead>
+                        <stentry>afmeting</stentry>
+                        <stentry>kleur</stentry>
+                        <stentry>lengte</stentry>
+                    </sthead>
+                    <strow>
+                        <stentry>8</stentry>
+                        <stentry>rood</stentry>
+                        <stentry>50</stentry>
+                    </strow>
+                    <strow>
+                        <stentry>10</stentry>
+                        <stentry>groen</stentry>
+                        <stentry>50</stentry>
+                    </strow>
+                    <strow>
+                        <stentry>12</stentry>
+                        <stentry>blauw</stentry>
+                        <stentry>50</stentry>
+                    </strow>
+                    <strow>
+                        <stentry>14</stentry>
+                        <stentry>geel</stentry>
+                        <stentry>50</stentry>
+                    </strow>
+                    <strow>
+                        <stentry>8</stentry>
+                        <stentry>rood</stentry>
+                        <stentry>100</stentry>
+                    </strow>
+                    <strow>
+                        <stentry>10</stentry>
+                        <stentry>groen</stentry>
+                        <stentry>100</stentry>
+                    </strow>
+                    <strow>
+                        <stentry>12</stentry>
+                        <stentry>blauw</stentry>
+                        <stentry>100</stentry>
+                    </strow>
+                    <strow>
+                        <stentry>14</stentry>
+                        <stentry>geel</stentry>
+                        <stentry>100</stentry>
+                    </strow>
+                </simpletable></p>
+            <p>Zowel afmeting, kleur als lengte kan niet als sleutel voor de tabel dienen, omdat in
+                elk veld (kolom) geen unieke waarde voorkomt. Via een combinatie van velden is wel
+                een unieke waarde te vinden. Ga na dat de volgende combinaties geschikte
+                kandidaatsleutels voor deze tabel zijn:<ul>
+                    <li><codeph><u>afmeting</u>, <u>lengte</u></codeph></li>
+                    <li><codeph><u>kleur</u>, <u>lengte</u></codeph></li>
+                </ul></p>
+        </example>
+        <example>
+            <title>Voorbeeld 3</title>
+            <p>Een deel van de inhoud van een tabel met adresgegevens ziet er als volgt uit: <simpletable>
+                    <sthead>
+                        <stentry>straat</stentry>
+                        <stentry>huisnr</stentry>
+                        <stentry>postcode</stentry>
+                        <stentry>huisnr</stentry>
+                    </sthead>
+                    <strow>
+                        <stentry>Dorpstraat</stentry>
+                        <stentry>12</stentry>
+                        <stentry>1234 AB</stentry>
+                        <stentry>Janstad</stentry>
+                    </strow>
+                    <strow>
+                        <stentry>Dorpstraat</stentry>
+                        <stentry>14</stentry>
+                        <stentry>1234 AB</stentry>
+                        <stentry>Janstad</stentry>
+                    </strow>
+                    <strow>
+                        <stentry>Dorpstraat</stentry>
+                        <stentry>12</stentry>
+                        <stentry>4321 BA</stentry>
+                        <stentry>Karelsdijk</stentry>
+                    </strow>
+                </simpletable></p>
+            <p>Ga na dat de sleutel niet uit één veld kan bestaan en dat een geschikte
+                kandidaatsleutel is:<codeblock><u>postcode</u>, <u>huisnr</u></codeblock></p>
+        </example>
+        <example>
+            <title>Voorbeeld 4</title>
+            <p>Een bedrijf heeft de volgende gegevensverzameling voor klanten:
+                <codeblock>KLANTEN (naam, adres, postcode, plaats, telnr)</codeblock></p>
+            <p>Het kan voorkomen dat twee klanten op hetzelfde adres wonen. Indien dit het geval is
+                hebben ze echter verschillende namen: bijvoorbeeld H. Linde sr. en H. Linde jr. Het
+                kan ook voorkomen dat exact dezelfde klantnaam tweemaal in de tabel voorkomt. In dat
+                geval betreft het twee klanten die op verschillende adressen wonen.</p>
+            <p>Ga na dat de sleutel hier niet uit één veld kan bestaande te vinden en dat de
+                volgende combinaties geschikte kandidaatsleutels voor deze tabel zijn:<ul>
+                    <li><codeph><u>naam</u>, <u>telnr</u></codeph></li>
+                    <li><codeph><u>naam</u>, <u>adres</u>, <u>postcode</u></codeph></li>
+                </ul></p>
+            <p>In de praktijk wordt vaak een uniek klantnummer voor elke klant ingevoerd.</p>
+        </example>
+        <example>
+            <title>Voorbeeld 5</title>
+            <p>Een kleine bibliotheek heeft ongeveer 9000 boeken (dubbele exemplaren mogelijk) en
+                400 leden. Men heeft de volgende informatiebehoeften:</p>
+            <ul>
+                <li>Eens per jaar moeten etiketten geprint kunnen worden voor alle leden.</li>
+                <li>Eens per half jaar moet een lijst uitgedraaid kunnen worden met alle boeken die
+                    de bibliotheek bezit en die er als volgt uitziet (het aantal wordt berekend bij
+                    het maken van deze lijst):<simpletable>
+                        <sthead>
+                            <stentry>ISBN</stentry>
+                            <stentry>Titel</stentry>
+                            <stentry>Auteur</stentry>
+                            <stentry>Aantal</stentry>
+                        </sthead>
+                        <strow>
+                            <stentry>9080022217</stentry>
+                            <stentry>Praktijk van het zweefvliegen</stentry>
+                            <stentry>W. Adriaansen</stentry>
+                            <stentry>1</stentry>
+                        </strow>
+                        <strow>
+                            <stentry>9062552277</stentry>
+                            <stentry>De wolken en het weer</stentry>
+                            <stentry>G. de Bont</stentry>
+                            <stentry>2</stentry>
+                        </strow>
+                    </simpletable>
+                </li>
+                <li>Van ieder boek dat uitgeleend wordt moet bijgehouden worden: het nummer van het
+                    boek, het nummer van het lid en de datum waarop het boek uiterlijk terug bezorgd
+                    dient te worden. Eens per week worden er etiketten en brieven uitgeprint
+                    betreffende de boeken die minstens 1 maand te laat zijn.</li>
+                <li>Op het etiket staan de gegevens van het lid waarvan 1 of meerdere boeken
+                    minstens 1 maand te laat zijn. In de brief staan de gegevens van het lid en de
+                    gegevens van de boeken die minstens 1 maand te laat zijn.</li>
+                <li>De database met leden-, boeken- en uitleenadministratie heeft drie tabellen:
+                    <codeblock>LID (<u>Lidnr</u>, Naam, Adres, Postcode, Plaats)
+BOEK (<u>Boeknr</u>, ISBN, Titel, Auteur)
+UITLEEN (<u>Boeknr</u>, Lidnr, Terugdatum)</codeblock>Een
+                    gedeeltelijke invulling van deze tabellen is hierna te zien.<table>
+                        <title>Tabel LID</title>
+                        <tgroup cols="5">
+                            <thead>
+                                <row>
+                                    <entry>Lidnr</entry>
+                                    <entry>Naam</entry>
+                                    <entry>Adres</entry>
+                                    <entry>Postcode</entry>
+                                    <entry>Plaats</entry>
+                                </row>
+                            </thead>
+                            <tbody>
+                                <row>
+                                    <entry>1</entry>
+                                    <entry>G. Hannes</entry>
+                                    <entry>Orion 2</entry>
+                                    <entry>3434 TT</entry>
+                                    <entry>Tiel</entry>
+                                </row>
+                                <row>
+                                    <entry>2</entry>
+                                    <entry>G. Rotzooi</entry>
+                                    <entry>Venus 23</entry>
+                                    <entry>3434 RR</entry>
+                                    <entry>Tiel</entry>
+                                </row>
+                                <row>
+                                    <entry>3</entry>
+                                    <entry>R. Wagner</entry>
+                                    <entry>Jupiter 2</entry>
+                                    <entry>3434 SP</entry>
+                                    <entry>Tiel</entry>
+                                </row>
+                            </tbody>
+                        </tgroup>
+                    </table><table>
+                        <title>Tabel BOEK</title>
+                        <tgroup cols="4">
+                            <thead>
+                                <row>
+                                    <entry>Boeknr</entry>
+                                    <entry>ISBN</entry>
+                                    <entry>Titel</entry>
+                                    <entry>Auteur</entry>
+                                </row>
+                            </thead>
+                            <tbody>
+                                <row>
+                                    <entry>1</entry>
+                                    <entry>9080022217</entry>
+                                    <entry>Praktijk van het zweefvliegen</entry>
+                                    <entry>W. Adriaansen</entry>
+                                </row>
+                                <row>
+                                    <entry>2</entry>
+                                    <entry>9062552277</entry>
+                                    <entry>De wolken en het weer</entry>
+                                    <entry>G. de Bont</entry>
+                                </row>
+                                <row>
+                                    <entry>3</entry>
+                                    <entry>9062552277</entry>
+                                    <entry>De wolken en het weer</entry>
+                                    <entry>G. de Bont</entry>
+                                </row>
+                            </tbody>
+                        </tgroup>
+                    </table><table>
+                        <title>Tabel UITLEEN</title>
+                        <tgroup cols="3">
+                            <thead>
+                                <row>
+                                    <entry>Lidnr</entry>
+                                    <entry>Boeknr</entry>
+                                    <entry>Terugdatum</entry>
+                                </row>
+                            </thead>
+                            <tbody>
+                                <row>
+                                    <entry>2</entry>
+                                    <entry>1</entry>
+                                    <entry>12-10-2011</entry>
+                                </row>
+                                <row>
+                                    <entry>2</entry>
+                                    <entry>2</entry>
+                                    <entry>12-10-2011</entry>
+                                </row>
+                                <row>
+                                    <entry>3</entry>
+                                    <entry>3</entry>
+                                    <entry>11-10-2011 </entry>
+                                </row>
+                            </tbody>
+                        </tgroup>
+                    </table></li>
+            </ul>
+            <p>In de tabel <wintitle>UITLEEN</wintitle> is <varname>Terugdatum</varname> de datum
+                waarop de uitleentermijn afloopt. Als een boek terug wordt gebracht, wordt het
+                betreffende record (= rij uit de tabel) uit de tabel <wintitle>UITLEEN</wintitle>
+                verwijderd. In de tabel <wintitle>UITLEEN</wintitle> staan dus alleen gegevens over
+                boeken die op dit moment uitgeleend zijn. Wanneer het boek opnieuw uitgeleend wordt
+                dan wordt er een nieuw record met een nieuwe <varname>Terugdatum</varname>
+                aangemaakt. Er is een plan voor een nieuwe opzet waarbij alle uitleenrecords
+                gedurende een jaar bewaard worden. De opzet van de tabel moet hierdoor gewijzigd
+                worden.</p>
+            <p>Ga na dat in de huidige opzet van de tabel <wintitle>UITLEEN</wintitle> het veld
+                    <varname>Boeknr</varname> inderdaad als sleutel kan dienen, dat dit in de nieuwe
+                opzet niet meer kan en dat de combinatie <codeph><u>Boeknr</u>,
+                    <u>Terugdatum</u></codeph> een kandidaatsleutel is.</p>
+        </example>
+    </conbody>
+</concept>

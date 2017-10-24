@@ -1,0 +1,11 @@
+<?xml version="1.0"  encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map id="keys_normalization">
+    <title>Keys Normalization</title>
+    <keydef keys="animal_clinic_dsd" href="images/animal_clinic_dsd.png" format="png"/>
+    <keydef keys="animal_clinic_table" href="images/animal_clinic_table.png" format="png"/>
+    <keydef keys="example_dsd" href="images/example_dsd.png" format="png"/>
+    <keydef keys="example_invoice" href="images/example_invoice.png" format="png"/>
+    <keydef keys="example_relations" href="images/example_relations.png" format="png"/>
+</map>
+
