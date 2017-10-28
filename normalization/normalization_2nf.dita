@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="normalization_2nf" xml:lang="nl-NL">
+    <title>Tweede normaalvorm (2 NV)</title>
+    <shortdesc>Het normalisatieproces, van de eerste normaalvorm naar de tweede
+        normaalvorm.</shortdesc>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords>
+                <indexterm>Normaliseren<indexterm>normaalvormen</indexterm></indexterm>
+                <indexterm>Normaalvormen</indexterm>
+            </keywords>
+        </metadata>
+    </prolog>
+    <conbody>
+        <p>Om van de eerste naar de tweede normaalvorm te komen moeten alle gegevensgroepen
+            (tabellen) met een samengestelde sleutel (2 of meer attributen) onderzocht worden. Van
+            alle attributen die geen onderdeel van de sleutel vormen, moet bekeken worden of deze
+            functioneel afhankelijk zijn van een deel van de sleutel. Zo ja dan moeten deze
+            attributen in een nieuwe tabel ondergebracht worden en moet het sleuteldeel waarvan ze
+            afhankelijk zijn aan deze tabel worden toegevoegd.</p>
+        <note type="notice">Een attribuut A is functioneel afhankelijk van attribuut B als bij
+            iedere waarde van B precies één waarde van A hoort. Zo is de titel van een boek
+            functioneel afhankelijk van het ISBN nummer omdat bij ieder ISBN nummer precies één
+            titel hoort.</note>
+        <p>Alleen tabel <varname>FACTUURREGEL</varname> heeft een samengestelde sleutel en hiervan
+            moeten de niet-sleutelvelden onderzocht worden op eventuele functionele afhankelijkheid
+            van een deel van de sleutel (<varname>Factuurnr</varname> of
+                <varname>Artikelnr</varname>).<ul>
+                <li><varname>Artikelomschrijving</varname>, is functioneel afhankelijk van
+                        <varname>Artikelnr</varname>. Immers bij ieder artikelnummer hoort precies
+                    één omschrijving van het artikel.</li>
+                <li><varname>Aantal</varname>, is niet functioneel afhankelijk van
+                        <varname>Artikelnr</varname> en ook niet van <varname>Factuurnr</varname>.
+                    Het is een waarde die door de klant wordt bepaald en kan per factuur een andere
+                    waarde hebben.</li>
+                <li><varname>Prijs</varname>, is meestal niet functioneel afhankelijk van Artikelnr.
+                    Dit komt omdat de prijs meestal van de verkoopdatum afhangt en er in de loop van
+                    de tijd prijswijzigingen kunnen optreden. Ook kan de prijs door onderhandelingen
+                    bepaald worden. Het attribuut <varname>Prijs</varname> bevat dus de waarde van
+                    de verkoopprijs. In dit voorbeeld wordt gekozen om het oorspronkelijke attribuut
+                        <varname>Prijs</varname> te vervangen door twee nieuwe attributen:<ul
+                        id="ul_flt_1kw_z4">
+                        <li><varname>Verkoopprijs</varname>, deze is niet functioneel afhankelijk
+                            van <varname>Artikelnr</varname></li>
+                        <li><varname>Adviesprijs</varname>, deze is wel functioneel afhankelijk van
+                                <varname>Artikelnr</varname></li>
+                    </ul></li>
+            </ul></p>
+        <p>Het onderzoek heeft opgeleverd dat nu twee attributen functioneel afhankelijk zijn van
+                <varname>Artikelnr</varname>, namelijk <varname>Artikelomschrijving</varname> en
+                <varname>AdviesPrijs</varname>. Deze twee gegevens worden ondergebracht in een
+            nieuwe tabel <varname>ARTIKEL</varname> en tevens wordt het veld
+                <varname>Artikelnr</varname> hieraan toegevoegd, daar zijn de twee gegevens immers
+            van afhankelijk. Dit veld is tevens de sleutel van de nieuwe tabel.</p>
+        <p>De <term>2 NV</term> wordt dan:</p>
+        <codeblock>FACTUUR (<u>Factuurnr</u>, Verkoper, Datum, Klantnaam, Adres, Postcode, Plaats, Telefoon, Korting)
+FACTUURREGEL (<u>Factuurnr</u>, <u>Artikelnr</u>, Aantal, Verkoopprijs)
+ARTIKEL (<u>Artikelnr</u>, Artikelomschrijving, Adviesprijs)</codeblock>
+    </conbody>
+</concept>

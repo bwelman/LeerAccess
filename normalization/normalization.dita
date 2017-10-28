@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="normalization" xml:lang="nl-NL">
+    <title>Normaliseren</title>
+    <shortdesc/>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords>
+                <indexterm>Normaliseren</indexterm>
+            </keywords>
+        </metadata>
+    </prolog>
+    <conbody>
+        <p>Normaliseren is een stapsgewijs proces om een relationele database te ontwerpen. Dit doe
+            je vooral om te voorkomen dat hetzelfde gegeven op meerdere plekken wordt vastgelegd.
+            Het eindresultaat bestaat uit een overzicht van de tabellen met hun velden en de
+            relaties tussen de tabellen. Dit ontwerpproces doe je met pen en papier, hier komt geen
+            computer aan te pas. In dit hoofdstuk wordt het normalisatieproces tot en met de derde
+            normaalvorm behandeld.</p>
+    </conbody>
+</concept>

@@ -61,6 +61,7 @@
     <chapter href="integration/map_integration.ditamap" format="ditamap"/>
     <chapter href="tools/map_tools.ditamap" format="ditamap"/>
     <chapter href="macros/map_macros.ditamap" format="ditamap"/>
+    <chapter href="normalization/map_normalization.ditamap" format="ditamap"/>
     <backmatter>
         <booklists/>
         <colophon href="common/colofon.dita"/>

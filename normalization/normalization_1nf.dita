@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="normalization_1nf" xml:lang="nl-NL">
+    <title>Eerste normaalvorm (1 NV)</title>
+    <shortdesc>Het normalisatieproces, van de nulde normaalvorm naar de eerste
+        normaalvorm.</shortdesc>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords>
+                <indexterm>Normaliseren<indexterm>normaalvormen</indexterm></indexterm>
+                <indexterm>Normaalvormen</indexterm>
+                <indexterm>Vreemde sleutel</indexterm>
+                <indexterm>Samengestelde sleutel</indexterm>
+                <indexterm>Sleutel<indexterm>samengesteld</indexterm><indexterm>vreemde</indexterm></indexterm>
+                <indexterm>Foreign key</indexterm>
+            </keywords>
+        </metadata>
+    </prolog>
+    <conbody>
+        <p>Om van de nulde naar de eerste normaalvorm te komen worden alle RG's afgesplitst en in
+            een nieuwe gegevensgroep (tabel) ondergebracht. Om een koppeling tussen de tabellen
+            mogelijk te maken wordt aan de nieuwe tabel toegevoegd de sleutel van de tabel waaruit
+            de RG vandaan komt. Van de nieuwe tabel wordt dan de sleutel vastgesteld. Meestal is dit
+            een combinatie van de sleutel van de oorspronkelijke tabel, de <term>vreemde
+                sleutel</term> (<term xml:lang="en-US">foreign key</term>), met het gegeven dat
+            binnen de RG een sleutelrol vervult.</p>
+        <p>In de 0NV komt maar 1 RG voor met Artikelnr als kandidaatsleutel: <codeph>RG
+                    [<u>Artikelnr</u>, Artikelomschrijving, Aantal, Prijs)</codeph></p>
+        <p>Deze gegevensgroep wordt ondergebracht in een nieuwe tabel
+                <varname>FACTUURREGEL</varname> waaraan de sleutel van de oorspronkelijke tabel,
+                <varname>Factuurnr</varname>, wordt toegevoegd. Samen vormen deze de
+                <term>samengestelde sleutel</term> van de nieuwe tabel
+                <varname>FACTUURREGEL</varname>.</p>
+        <p>De <term>1 NV</term> wordt dan:</p>
+        <codeblock>FACTUUR (<u>Factuurnr</u>, Verkoper, Datum, Klantnaam, Adres, Postcode, Plaats, Telefoon, Korting)
+FACTUURREGEL (<u>Factuurnr</u>, <u>Artikelnr</u>, Artikelomschrijving, Aantal, Prijs)</codeblock>
+    </conbody>
+</concept>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="normalization_animal_clinic" xml:lang="nl-NL">
+    <title>Taak: Normalisatie dierenkliniek</title>
+    <shortdesc/>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords/>
+        </metadata>
+    </prolog>
+    <conbody>
+        <p>Een dierenkliniek houdt op dit moment de behandeling van dieren bij in een Excel tabel.
+            Deze heeft de volgende vorm.</p>
+        <fig>
+            <title>Behandelingen dieren</title>
+            <image keyref="animal_clinic_table">
+                <alt>Behandelingen dieren</alt>
+            </image>
+        </fig>
+        <p>Het plan is om deze gegevens in een database bij te gaan houden waarvoor een
+            genormaliseerde structuur van tabellen moet worden opgesteld.</p>
+        <section>
+            <title>0 NV</title>
+            <p>Alle gegevens zijn elementaire gegevens, behalve het attribuut
+                    <varname>behandeling</varname>. Dit is een samengesteld gegeven dat opgesplitst
+                kan worden in een <varname>behandelnr</varname> en een
+                    <varname>behandelnaam</varname>.</p>
+            <p>Per dier worden meerdere behandelingen bijgehouden, bezoekdatum en behandeling vormen
+                dus een Repeterende Groep (RG).</p>
+            <codeblock>DIER (<u>diernr</u>, diernaam, diertype, leeftijd, eigenaar, RG [bezoekdatum, behandelnr, behandelnaam])</codeblock>
+        </section>
+        <section>
+            <title>1 NV</title>
+            <p>De repeterende groep wordt afgesplitst van tabel <varname>DIER</varname> en in een
+                nieuwe tabel <varname>BEZOEK</varname> geplaatst. Aan deze tabel wordt de sleutel
+                van tabel <varname>DIER</varname> toegevoegd. De sleutel van de nieuwe tabel is
+                samengesteld uit drie velden. Ga dit na.</p>
+            <codeblock>DIER (<u>diernr</u>, diernaam, diertype, leeftijd, eigenaar)
+BEZOEK (<u>diernr</u>, <u>bezoekdatum</u>, <u>behandelnr</u>, behandelnaam)</codeblock>
+        </section>
+        <section>
+            <title>2 NV</title>
+            <p>In tabel <varname>BEZOEK</varname> hangt het veld <varname>behandelnaam</varname>
+                alleen af van het veld <varname>behandelnr</varname>, wordt daarom uit deze tabel
+                gehaald en in een nieuwe tabel <varname>BEHANDELING</varname> ondergebracht waaraan
+                tevens het sleutelveld <varname>behandelnr</varname> wordt toegevoegd.</p>
+            <codeblock>DIER (<u>diernr</u>, diernaam, diertype, leeftijd, eigenaar)
+BEZOEK (<u>diernr</u>, <u>bezoekdatum</u>, <u>behandelnr</u>)
+BEHANDELING (<u>behandelnr</u>, behandelnaam)</codeblock>
+        </section>
+        <section>
+            <title>3 NV</title>
+            <p>Er zijn geen niet-sleutel velden te vinden die afhankelijk zijn van een sleutelveld.
+                Daarom is de 3NV gelijk aan 2NV.</p>
+        </section>
+        <section id="section_ypx_mzn_qbb">
+            <title>Gegevens Structuur Diagram</title>
+            <fig id="fig_gbs_4zn_qbb">
+                <title>GSD</title>
+                <image keyref="animal_clinic_dsd" id="image_hbs_4zn_qbb">
+                    <alt>GSD</alt>
+                </image>
+            </fig>
+        </section>
+    </conbody>
+</concept>
