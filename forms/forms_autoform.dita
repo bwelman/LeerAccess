@@ -2,8 +2,8 @@
 <!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
 <task id="forms_autoform" xml:lang="nl-NL">
     <title>Taak: Automatisch formulier</title>
-    <shortdesc>Een oefening waarbij een formulier gegenereerd wordt en dan wat handmatige
-        aanpassingen worden verricht.</shortdesc>
+    <shortdesc>Een oefening waarbij een formulier gegenereerd wordt wat vervolgens handmatig wordt
+        aangepast.</shortdesc>
     <prolog>
         <critdates>
             <created date="2017-10-05"/>
@@ -71,7 +71,8 @@
                     gemaakt.</p>
             </stepsection>
             <step>
-                <cmd>Selecteer het subgegevensblad en druk op <uicontrol>Delete</uicontrol>.</cmd>
+                <cmd>Wanneer het subgegevensblad aanwezig is, selecteer het dan en druk vervolgens
+                    op <uicontrol>Delete</uicontrol> om het te verwijderen.</cmd>
             </step>
             <step>
                 <cmd>Schakel over naar de <uicontrol>Ontwerpweergave</uicontrol>.</cmd>

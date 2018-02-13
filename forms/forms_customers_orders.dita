@@ -98,7 +98,7 @@
             </step>
             <step>
                 <cmd>Wijzig de standaardtitels van de formulieren. Titel formulier =
-                        <userinput>Klanten en orders</userinput> en tititel subformulier =
+                        <userinput>Klanten en orders</userinput> en titel subformulier =
                         <userinput>Klanten en orders subformulier</userinput>.</cmd>
             </step>
             <step>
