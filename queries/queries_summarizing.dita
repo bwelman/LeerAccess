@@ -170,7 +170,7 @@
             </fig>
             <p>Omdat voor de kolom met de gemiddelde kosten geen nieuwe naam is opgegeven, genereert
                 Access een naam hiervoor: <systemoutput>GemVanBonbonkosten</systemoutput>.</p>
-            <note conref="../common/reusable_topic_parts.dita#reusable_topic_parts/reservation"/>
+            <note conkeyref="note/reservation"/>
         </example>
         <example>
             <title>Voorbeeld 2: Doosprijs statistieken</title>
@@ -189,7 +189,7 @@
                     <alt>Resultaat query doosprijs statistieken</alt>
                 </image>
             </fig>
-            <note conref="../common/reusable_topic_parts.dita#reusable_topic_parts/reservation"/>
+            <note conkeyref="note/reservation"/>
         </example>
         <example>
             <title>Voorbeeld 3: Gemiddelde doosprijs voor dozen van meer dan 200 gram</title>
@@ -207,7 +207,7 @@
                     <alt>Resultaat query gemiddelde doosprijs dozen zwaarder dan 200 gram</alt>
                 </image>
             </fig>
-            <note conref="../common/reusable_topic_parts.dita#reusable_topic_parts/reservation"/>
+            <note conkeyref="note/reservation"/>
         </example>
     </conbody>
 </concept>

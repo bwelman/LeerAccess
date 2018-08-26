@@ -31,9 +31,6 @@
         </keywords>
         <prodinfo>
             <prodname>Access 2016</prodname>
-            <vrmlist>
-                <vrm version=""/>
-            </vrmlist>
         </prodinfo>
         <bookrights>
             <bookowner>
@@ -48,20 +45,26 @@
             <toc/>
         </booklists>
         <mapref href="common/keys_common.ditamap" processing-role="resource-only"/>
-        <topicref href="common/reusable_topic_parts.dita" type="topic" processing-role="resource-only"/>
+        <keydef keys="note" href="common/conref_source_access.dita"/>
         <topicref href="common/preface.dita" type="topic" format="dita" scope="local"/>
     </frontmatter>
-    <chapter href="intro/map_intro.ditamap" format="ditamap"/>
-    <chapter href="explore/map_explore.ditamap" format="ditamap"/>
-    <chapter href="data/map_data.ditamap" format="ditamap"/>
-    <chapter href="tables/map_tables.ditamap" format="ditamap"/>
-    <chapter href="queries/map_queries.ditamap" format="ditamap"/>
-    <chapter href="forms/map_forms.ditamap" format="ditamap"/>
-    <chapter href="reports/map_reports.ditamap" format="ditamap"/>
-    <chapter href="integration/map_integration.ditamap" format="ditamap"/>
-    <chapter href="tools/map_tools.ditamap" format="ditamap"/>
-    <chapter href="macros/map_macros.ditamap" format="ditamap"/>
-    <chapter href="normalization/map_normalization.ditamap" format="ditamap"/>
+    <part href="part_basic.dita">
+        <chapter href="intro/map_intro.ditamap" format="ditamap"/>
+        <chapter href="explore/map_explore.ditamap" format="ditamap"/>
+        <chapter href="data/map_data.ditamap" format="ditamap"/>
+        <chapter href="tables/map_tables.ditamap" format="ditamap"/>
+        <chapter href="queries/map_queries.ditamap" format="ditamap"/>
+        <chapter href="forms/map_forms.ditamap" format="ditamap"/>
+        <chapter href="reports/map_reports.ditamap" format="ditamap"/>
+    </part>
+    <part href="part_advanced.dita">
+        <chapter href="integration/map_integration.ditamap" format="ditamap"/>
+        <chapter href="tools/map_tools.ditamap" format="ditamap"/>
+        <chapter href="macros/map_macros.ditamap" format="ditamap"/>
+    </part>
+    <part href="part_normalization.dita">
+        <chapter href="normalization/map_normalization.ditamap" format="ditamap"/>
+    </part>
     <backmatter>
         <booklists/>
         <colophon href="common/colofon.dita"/>

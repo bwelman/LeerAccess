@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
-<topic id="reusable_topic_parts" xml:lang="nl-NL">
+<topic id="conref_source_access" xml:lang="nl-NL">
     <title>Reusable objects</title>
     <body>
         <note type="attention" id="reservation">Het verkregen antwoord kan afwijken door afhankelijkheid van eerder gemaakte opdrachten.</note>
