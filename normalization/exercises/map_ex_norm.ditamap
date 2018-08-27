@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map id="map_ex_norm" xml:lang="nl-NL">
+    <title>Opgaven normaliseren</title>
+    <keydef keys="ex_norm001_data" href="images/ex_norm001_data.png" format="png"/>
+    <keydef keys="ex_norm003_data" href="images/ex_norm003_data.png" format="png"/>
+    <keydef keys="ex_norm004_data" href="images/ex_norm004_data.png" format="png"/>
+    <keydef keys="ex_norm004_dsd" href="images/ex_norm004_dsd.png" format="png"/>
+    <keydef keys="ex_norm006_data" href="images/ex_norm006_data.png" format="png"/>
+    <keydef keys="ex_norm010_data" href="images/ex_norm010_data.png" format="png"/>
+    <keydef keys="ex_norm011_data" href="images/ex_norm011_data.png" format="png"/>
+    <keydef keys="ex_norm011_dsd" href="images/ex_norm011_dsd.png" format="png"/>
+    <keydef keys="ex_norm012_data" href="images/ex_norm012_data.png" format="png"/>
+    <keydef keys="ex_norm012_dsd" href="images/ex_norm012_dsd.png" format="png"/>
+    <keydef keys="ex_norm013_data" href="images/ex_norm013_data.png" format="png"/>
+    <keydef keys="ex_norm013_dsd" href="images/ex_norm013_dsd.png" format="png"/>
+    <keydef keys="ex_norm014_data" href="images/ex_norm014_data.png" format="png"/>
+    <keydef keys="ex_norm014_dsd" href="images/ex_norm014_dsd.png" format="png"/>
+    <keydef keys="ex_norm015_supervisors_country" href="images/ex_norm015_supervisors_country.png" format="png"/>
+    <keydef keys="ex_norm015_clubs_players_country" href="images/ex_norm015_clubs_players_country.png" format="png"/>
+    <keydef keys="ex_norm015_relations" href="images/ex_norm015_relations.png" format="png"/>
+    <keydef keys="ex_norm015_topscorers" href="images/ex_norm015_topscorers.png" format="png"/>
+    <keydef keys="ex_norm015_players_country" href="images/ex_norm015_players_country.png" format="png"/>
+    <keydef keys="ex_norm016_data" href="images/ex_norm016_data.png" format="png"/>
+    <topichead navtitle="Opgaven">
+        <topicref href="ex_norm001.dita" scope="local" type="topic" audience="level2"/>
+        <!--        <topicref href="ex_norm002.dita" scope="local" type="topic" audience="level2"/>-->
+        <topicref href="ex_norm003.dita" scope="local" type="topic" audience="level2"/>
+        <topicref href="ex_norm004.dita" scope="local" type="topic" audience="level2"/>
+        <topicref href="ex_norm005.dita" scope="local" type="topic" audience="level2"/>
+        <topicref href="ex_norm006.dita" scope="local" type="topic" audience="level2"/>
+        <topicref href="ex_norm007.dita" scope="local" type="topic" audience="level2"/>
+        <topicref href="ex_norm008.dita" scope="local" type="topic" audience="level2"/>
+        <topicref href="ex_norm009.dita" scope="local" type="topic" audience="level2"/>
+        <topicref href="ex_norm010.dita" scope="local" type="topic" audience="level2"/>
+        <topicref href="ex_norm011.dita" scope="local" type="topic" audience="level2"/>
+        <topicref href="ex_norm012.dita" scope="local" type="topic" audience="level2"/>
+        <topicref href="ex_norm013.dita" scope="local" type="topic" audience="level2"/>
+        <topicref href="ex_norm014.dita" scope="local" type="topic" audience="level2"/>
+        <topicref href="ex_norm015.dita" scope="local" type="topic" audience="level2"/>
+        <topicref href="ex_norm016.dita" scope="local" type="topic" audience="level2"/>
+    </topichead>
+</map>

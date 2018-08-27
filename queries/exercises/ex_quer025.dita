@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ex_quer025" xml:lang="nl-NL">
+    <title>Opgave: quer025 - Parameterquery bonbons</title>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords/>
+        </metadata>
+    </prolog>
+    <body>
+        <section>
+            <p>Er zijn diverse chocoladetypes voor bonbons: Butterscotch, Melk, Puur, Toffee en Wit.
+                Maak een parameterquery om bonbons te tonen waarvan het chocoladetype tijdens het
+                uitvoeren van de query gevraagd wordt. Toon daarbij de kolommen Chocoladetype,
+                Bonbonnaam, Bonbonkosten en Bonbonbeschrijving. Sla de query op onder de naam
+                    <userinput>quer025</userinput>.</p>
+        </section>
+        <section otherprops="solution">
+            <title>Uitwerking</title> Maak via Queryontwerp een nieuwe lege query. Voeg de tabel
+            Bonbons aan het queryvenster toe. Voeg de velden Chocoladetype, Bonbonnaam, Bonbonkosten
+            en Bonbonbeschrijving aan het queryraster toe. Voeg in de kolom Chocoladetype bij
+            Criteria in: <userinput>[Voer chocoladetype in]</userinput>. Zie de afbeelding hierna.
+                <image keyref="ex_quer025_design"/>
+        </section>
+    </body>
+</topic>

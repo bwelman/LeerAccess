@@ -26,5 +26,6 @@
         <topicref href="mailmerge.dita" scope="local" type="task"/>
         <topicref href="export_word.dita" scope="local" type="task"/>
         <topicref href="export_excel.dita" scope="local" type="task"/>
+        <mapref href="exercises/map_ex_intg.ditamap" format="ditamap"/>
     </topicref>
 </map>

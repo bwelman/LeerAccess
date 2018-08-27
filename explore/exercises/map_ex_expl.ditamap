@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map id="map_ex_expl" xml:lang="nl-NL">
+    <title>Opgaven Verkennen database</title>
+    <keydef keys="ex_expl001_filter_numbers" href="images/ex_expl001_filter_numbers.png" format="png"/>
+    <keydef keys="ex_expl003_filter_text" href="images/ex_expl003_filter_text.png" format="png"/>
+    <topichead navtitle="Opgaven">
+        <topicref href="ex_expl001.dita" scope="local" type="topic" audience="level1"/>
+        <topicref href="ex_expl002.dita" scope="local" type="topic" audience="level1"/>
+        <topicref href="ex_expl003.dita" scope="local" type="topic" audience="level1"/>
+    </topichead>
+</map>

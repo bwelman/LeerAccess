@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ex_tabl010" xml:lang="nl-NL">
+    <title>Opgave: tabl010 - Klachtenregistratie</title>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords/>
+        </metadata>
+    </prolog>
+    <body>
+        <section>
+            <p>Er komen de laatste tijd nogal wat klachten binnen van klanten. De klachten kunnen
+                ingedeeld worden in onder andere de volgende categorieën: Verpakking beschadigd,
+                Doos is niet op de afgesproken datum geleverd, Houdbaarheidsdatum is verlopen,
+                Bonbons smaken niet.</p>
+            <p>Een klacht heeft altijd betrekking op een order. Maak een nieuwe tabel
+                    <userinput>Klachten</userinput> en koppel deze aan de tabel
+                    <wintitle>Orders</wintitle> en dwing tevens de referentiële integriteit af.</p>
+        </section>
+        <section otherprops="solution">
+            <title>Uitwerking</title>
+            <p>Er moet eigenlijk eerst een informatie-analyse gemaakt worden. Het resultaat hiervan
+                moet opleveren welke velden in de tabel Klachten moeten komen, wat de sleutel wordt
+                en of er relaties met de andere tabellen moeten komen en zo ja via welke velden. Er
+                kan dan ook niet één goed antwoord gegeven worden. Een minimaal ontwerp wordt in de
+                afbeelding hierna weergegeven:<fig>
+                    <image keyref="ex_tabl010_complaints"/>
+                </fig></p>
+            <p>Voor het veld <varname>SoortKlacht</varname> kan het beste een opzoektabel gemaakt
+                worden waarin de waarden zijn vastgelegd.</p>
+            <p>Er moet een relatie gelegd worden tussen deze tabel en de tabel
+                    <wintitle>Orders</wintitle> via het veld <varname>Ordercode</varname>. Het vakje
+                    <uicontrol>Referentiële integriteit afdwingen</uicontrol>
+            inschakelen.</p></section>
+        <section otherprops="solution">Mogelijke nuttige uitbreidingen bij dit ontwerp zijn:<ul>
+                <li>datum klacht.</li>
+                <li>een uitvoeriger omschrijving van de klacht.</li>
+                <li>een ja/nee veld of de klacht al is afgehandeld.</li>
+            </ul>
+        </section>
+    </body>
+</topic>

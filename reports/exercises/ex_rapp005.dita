@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ex_rapp005" xml:lang="nl-NL">
+    <title>Opgave: rapp005 - Omzet per doos per order per periode</title>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords/>
+        </metadata>
+    </prolog>
+    <body>
+        <section>
+            <p>Maak een kopie van het rapport <wintitle>Omzet per doos per order per
+                    periode</wintitle> en noem de kopie <userinput>rapp005</userinput>. Wijzig het
+                ontwerp zodanig dat het totale bedrag per doos naast de doosnaam wordt
+                afgedrukt.</p>
+            <fig>
+                <image keyref="ex_rapp005_report"/>
+            </fig>
+        </section>
+        <section otherprops="solution">
+            <title>Uitwerking</title>
+            <ol>
+                <li>Kopieer en plak <wintitle>Omzet per doos per order per periode</wintitle> en
+                    noem de kopie <userinput>rapp005</userinput>.</li>
+                <li>Open rapport <wintitle>rapp005</wintitle> in Ontwerpweergave.</li>
+                <li>Verplaats het vak <varname>Som([Bedrag])</varname> naar de sectie
+                        <wintitle>Koptekst</wintitle>, rechts van de
+                    <varname>Doosnaam</varname>.</li>
+            </ol>
+        </section>
+    </body>
+</topic>

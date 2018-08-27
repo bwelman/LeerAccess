@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ex_expl003" xml:lang="nl-NL">
+  <title>Opgave: expl003 - Selectie Klanten op postcode</title>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords/>
+        </metadata>
+    </prolog>
+  <body>
+<section>
+  <p>Maak een selectie van de klanten waarvan de postcode met 20 begint en die in Amsterdam
+  wonen.</p>
+  <note type="tip">Postcode is een tekstveld zodat je van Tekstfilters gebruik kunt maken:<fig>
+                    <image keyref="ex_expl003_filter_text">
+                        <alt>Tekstfilter</alt>
+                    </image>
+                </fig></note></section>
+    <section otherprops="answer">
+      <title>Antwoord</title>
+      <p>Het resultaat bestaat uit 3 records.</p>
+    </section>
+    <section otherprops="solution">
+      <title>Uitwerking</title>
+      <p>Open de tabel <wintitle>Klanten</wintitle>. Klik in de kolom <varname>Plaats</varname> in
+        een vak met de waarde Amsterdam. Kies dan <menucascade>
+          <uicontrol>tab Start</uicontrol>
+          <uicontrol>Selectie (groep Sorteren en filteren)</uicontrol>
+          <uicontrol>is gelijk aan Amsterdam</uicontrol>
+        </menucascade>. Klik op de filterpijl aan het eind van de kolomkop
+          <varname>Postcode</varname> en kies <menucascade>
+          <uicontrol>Tekstfilters</uicontrol>
+          <uicontrol>Begint met ...</uicontrol>
+        </menucascade>. Typ daarna in 20 en klik op OK.</p>
+    </section>
+  </body>
+</topic>

@@ -28,5 +28,6 @@
         <topicref href="data_new_praline.dita" scope="local" type="task"/>
         <topicref href="data_new_box.dita" scope="local" type="task"/>
         <topicref href="data_restriction_validation.dita" scope="local" type="concept"/>
+        <mapref href="exercises/map_ex_data.ditamap" format="ditamap"/>
     </topicref>
 </map>

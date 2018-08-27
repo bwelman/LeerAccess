@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ex_quer012" xml:lang="nl-NL">
+    <title>Opgave: quer012 - Totale omzet per klant</title>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords/>
+        </metadata>
+    </prolog>
+    <body>
+        <section>
+            <p>Geef een overzicht van het totale omzet per klant. Toon hierbij de klantcode,
+                klantnaam en het omzettotaal. De kolom met omzet moet een passende naam en opmaak
+                hebben.Sorteer daarbij zodanig dat de klanten met de grootste omzet bovenaan komen
+                te staan. Sla de query op onder de naam <userinput>quer012</userinput>.</p>
+        </section>
+        <section otherprops="answer">
+            <title>Antwoord</title>
+            <image keyref="ex_quer012_result"/>
+            <note conkeyref="note/reservation"/>
+        </section>
+        <section otherprops="solution">
+            <title>Uitwerking</title>
+            <image keyref="ex_quer012_design"/>
+        </section>
+    </body>
+</topic>

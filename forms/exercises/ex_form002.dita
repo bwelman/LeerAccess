@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ex_form002" xml:lang="nl-NL">
+    <title>Opgave: form002 - Bonbons in dozen</title>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords/>
+        </metadata>
+    </prolog>
+    <body>
+        <section><p>Maak een hoofdformulier met subformulier dat laat zien in welke dozen een
+                bepaalde bonbon zit is en ook hoeveel daarvan. Noem de formulieren
+                    <userinput>form002 hoofd</userinput> en <userinput>form002 sub</userinput>.</p>
+            <image keyref="ex_form002"/>
+        </section>
+        <section otherprops="solution">
+            <title>Uitwerking</title>
+            <ol>
+                <li>Kies <menucascade>
+                        <uicontrol>tab Maken</uicontrol>
+                        <uicontrol>Wizard formulier</uicontrol>
+                    </menucascade>.</li>
+                <li>Selecteer tabel Bonbons en voeg alle velden toe.</li>
+                <li>Selecteer tabel Doosdetails en voeg toe de velden Dooscode en Hoeveelheid.</li>
+                <li>Formulier met subformulier, weergeven volgens Bonbons.</li>
+                <li>Zet hoofdformulier in de ontwerpweergave, verwijder de schikking en pas de
+                    lay-out aan.</li>
+            </ol>
+        </section>
+    </body>
+</topic>

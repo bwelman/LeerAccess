@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ex_rapp004" xml:lang="nl-NL">
+    <title>Opgave: rapp004 - Dooskosten met Bonbonkosten gegroepeerd</title>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords/>
+        </metadata>
+    </prolog>
+    <body>
+        <section>
+            <p>Maak een kopie van rapport <wintitle>rapp003</wintitle> en noem de kopie
+                    <userinput>rapp004</userinput>. Maak het rapport beter leesbaar door alle
+                gegevens die bij een doos horen op één pagina af te drukken. Je kunt dit doen door
+                een pagina-einde in te voegen voor de koptekst van elke groep (hier Doos). Daarvoor
+                moet je de eigenschap <varname>Nieuwe pagina</varname> voor de <varname>Koptekst
+                    (Doos)</varname> instellen op de waarde <option>Voor sectie</option>.</p>
+            <p>Make verder nog wat kleine wijzigingen in de opmaak. Het tekstvak
+                    <varname>Som</varname> moet naar rechts verplaatst worden met een kleine
+                horizontale lijn boven de tekst en het bedrag.</p>
+            <fig>
+                <image keyref="ex_rapp004_report"/>
+            </fig>
+        </section>
+        <section otherprops="answer">
+            <title>Antwoord</title>
+            <note conkeyref="note/reservation"/>
+        </section>
+        <section otherprops="solution">
+            <title>Uitwerking</title>
+            <ol>
+                <li>Kopieer en plak <wintitle>rapp003</wintitle> en noem de kopie
+                        <userinput>rapp004</userinput>.</li>
+                <li>Open rapport <wintitle>rapp004</wintitle> in Ontwerpweergave.</li>
+                <li>Klik op een lege plek in de sectie <uicontrol>Koptekst</uicontrol> en wijzig in
+                        <wintitle>Eigenschappenvenster (tab Opmaak)</wintitle> de eigenschap
+                        <varname>Nieuwe pagina</varname> in <userinput>Voor sectie</userinput>.</li>
+                <li>Verplaatst de tekst Som naar rechts en plaats een horizontaal lijntje boven de
+                    tekst en de waarde.</li>
+            </ol>
+        </section>
+    </body>
+</topic>

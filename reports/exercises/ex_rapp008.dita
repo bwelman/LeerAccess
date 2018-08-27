@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ex_rapp008" xml:lang="nl-NL">
+    <title>Opgave: rapp008 - Jaarafzet dozen per regio</title>
+    <shortdesc>Een rapport gebaseerd op een parameterquery en met groeperen.</shortdesc>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords/>
+        </metadata>
+    </prolog>
+    <body>
+        <section>
+            <p>Maak een rapport met daarop per regio het aantal verkochte dozen in een bepaald jaar.
+                Bij het openen van het rapport moet eerst gevraagd worden naar het jaar van verkoop
+                waarop het rapport gebaseerd moet zijn. Bewaar het rapport onder de naam
+                    <userinput>rapp008</userinput>.</p>
+            <!-- Oude naam: Jaarafzet dozen per regio -->
+            <p>In de afbeelding hierna zie je het begin van de uitvoer voor het jaar 2009.</p>
+            <note type="tip">Maak eerst een parameterquery <userinput>Jaarafzet dozen per
+                    regio</userinput> die de benodigde gegevens voor het rapport levert en naar het
+                verkoopjaar vraagt.</note>
+            <fig>
+                <image keyref="ex_rapp008_report"/>
+            </fig>
+        </section>
+        <section otherprops="answer">
+            <title>Antwoord</title>
+            <note conkeyref="note/reservation"/>
+        </section>
+        <section otherprops="solution">
+            <title>Uitwerking</title>
+            <p>Maak een query volgens het ontwerp zoals hierna afgebeeld.</p>
+            <fig>
+                <image keyref="ex_rapp008_query"/>
+            </fig>
+            <p>Maak een rapport via <menucascade>
+                    <uicontrol>tab Maken</uicontrol>
+                    <uicontrol>Wizard Rapport (groep Rapporten)</uicontrol>
+                </menucascade>. Baseer het rapport op de query <varname>Jaarafzet dozen per
+                    regio</varname>. Voel alle velden toe en groepeer op Regio. Pas de lay-out
+                verder naar wens aan.</p>
+        </section>
+    </body>
+</topic>

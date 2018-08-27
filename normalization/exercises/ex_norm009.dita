@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ex_norm009" xml:lang="nl-NL">
+    <title>Opgave: norm009 - Optimaliseren database</title>
+    <prolog>
+        <critdates>
+            <created date="2017-10-16"/>
+            <revised modified="2017-10-16"/>
+        </critdates>
+        <metadata>
+            <keywords/>
+        </metadata>
+    </prolog>
+    <body>
+        <section>
+            <p>Bekijk de volgende tabel:</p>
+            <codeblock>ROOSTER (<u>dag</u>, <u>uur</u>, <u>lokaal</u>, doccode, klas)</codeblock>
+            <p>De tabel moet voldoende mogelijkheden hebben om in de praktijk te kunnen voldoen. Om
+                dit te testen zijn een aantal vragen geformuleerd.</p>
+            <p>Kun je met deze tabel de vragen niet beantwoorden, kijk dan of de vragen wel kunt
+                beantwoorden door nieuwe velden aan de tabel toe te voegen.</p>
+            <ol>
+                <li>Het veld <varname>dag</varname> heeft als waarden ma, di,... Biedt de tabel de
+                    mogelijkheid dat een docent twee keer in de week dezelfde klas lesgeeft?</li>
+                <li>Is deze tabel ook te gebruiken om collegezalen in te roosteren die geschikt zijn
+                    voor meerdere klassen?</li>
+                <li>Is het in dit roosterbestand mogelijk werkcolleges op te nemen? Aan een
+                    werkcollege neemt de helft van het aantal studenten van een klas deel.</li>
+                <li>Is het mogelijk met deze tabel groepen studenten te clusteren uit diverse
+                    groepen klassen en studiejaren?</li>
+            </ol>
+        </section>
+        <section otherprops="solution">
+            <title>Uitwerking</title>
+            <ol>
+                <li>Dat is mogelijk.</li>
+                <li>Dat is mogelijk.</li>
+                <li>Uitgaande van de veronderstelling dat de waarde van het veld klas de gehele klas
+                    betreft, dan kan dit niet. Een mogelijke oplossing is het opnemen van een veld
+                    waarmee je kunt aangeven welke helft van een klas geroosterd wordt.</li>
+                <li>Dat kan niet. Wanneer je twee klassen op hetzelfde moment, in hetzelfde lokaal,
+                    met dezelfde docent roostert, dan zou je twee verschillende records met dezelfde
+                    sleutelwaarde krijgen. Een mogelijke oplossing zou zijn om de sleutel uit te
+                    breiden met het veld klas.</li>
+            </ol>
+        </section>
+    </body>
+</topic>

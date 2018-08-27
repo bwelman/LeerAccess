@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ex_quer002" xml:lang="nl-NL">
+    <title>Opgave: quer002 - Direct mail campagne doos MARS</title>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords/>
+        </metadata>
+    </prolog>
+    <body>
+        <section>
+            <p>Stel het is eind december 2010. De houdbaarheidsdatum van de doos MARS komt in zicht
+                en er is nog veel in voorraad. Daarom wil je een direct mail campagne gaan uitvoeren
+                naar de klanten die in de periode augustus t/m november 2010 minimaal 1 doos MARS
+                hebben besteld. Toon de naam  en het adres van de klanten. Sla de query op onder de
+                naam <userinput>quer002</userinput>.</p>
+        </section>
+        <section otherprops="answer">
+            <title>Antwoord</title>
+            <p>Resultaat query: 4 klanten</p>
+            <note conkeyref="note/reservation"/>
+        </section>
+        <section otherprops="solution">
+            <title>Uitwerking</title>
+            <image keyref="ex_quer002_design"/><p>Als conditie voor Orderdatum kun je ook gebruiken
+                    <userinput>>=#1-8-2010# And &lt;=#30-11-2010#</userinput></p>
+        </section>
+    </body>
+</topic>

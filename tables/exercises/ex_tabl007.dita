@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ex_tabl007" xml:lang="nl-NL">
+    <title>Opgave: tabl007 - Relatie maken</title>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords/>
+        </metadata>
+    </prolog>
+    <body>
+        <section>
+            <p>Breng een relatie aan tussen de tabellen <wintitle>Doosdetails</wintitle> en
+                    <wintitle>Bonbons</wintitle> en dwing tevens de referentiële integriteit af.</p>
+        </section>
+        <section otherprops="solution">
+            <title>Uitwerking</title>
+            <p>De tabellen <wintitle>Doosdetails</wintitle> en <wintitle>Bonbons</wintitle> hebben
+                het veld <varname>Bonboncode</varname> als gemeenschappelijk veld.
+                    <varname>Bonboncode</varname> is in de tabel Bonbons de sleutel; dus is Bonbons
+                de primaire tabel (de één kant). Een bepaalde Bonboncode kan in de tabel Doosdetails
+                vaker voorkomen, dus is Doosdetails de veel kant. Kies <menucascade>
+                    <uicontrol>tab Hulpmiddelen voor databases</uicontrol>
+                    <uicontrol>Relaties (groep Relaties)</uicontrol>
+                </menucascade>. Selecteer het veld <varname>Bonboncode</varname> in de tabel
+                    <wintitle>Bonbons</wintitle> en sleep deze naar het veld
+                    <varname>Bonboncode</varname> in de tabel <wintitle>Doosdetails</wintitle>. Het
+                vakje <uicontrol>Referentiële integriteit afdwingen</uicontrol> inschakelen.</p>
+        </section>
+    </body>
+</topic>

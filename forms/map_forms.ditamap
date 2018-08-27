@@ -38,5 +38,6 @@
         <topicref href="forms_orders_total.dita" scope="local" type="task" format="dita" audience="level2"/>
         <topicref href="forms_sales_boxes.dita" scope="local" type="task" format="dita" audience="level2"/>
         <topicref href="forms_customerorders.dita" scope="local" type="task" format="dita" audience="level2"/>
+        <mapref href="exercises/map_ex_form.ditamap" format="ditamap"/>
     </topicref>
 </map>

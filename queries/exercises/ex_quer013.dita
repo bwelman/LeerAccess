@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ex_quer013" xml:lang="nl-NL">
+    <title>Opgave: quer013 - Klanten die order geplaatst hebben</title>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords/>
+        </metadata>
+    </prolog>
+    <body>
+        <section>
+            <p>Geef een overzicht van de klanten (klantcode en klantnaam) die ooit iets gekocht
+                hebben. Sla de query op onder de naam <userinput>quer013</userinput>.</p>
+        </section>
+        <section otherprops="answer">
+            <title>Antwoord</title>
+            <p>Resultaat query: 264 klanten</p>
+            <note conkeyref="note/reservation"/>
+        </section>
+        <section otherprops="solution">
+            <title>Uitwerking</title>
+            <image keyref="ex_quer013_design"/>
+        </section>
+    </body>
+</topic>

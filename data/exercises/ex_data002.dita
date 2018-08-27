@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ex_data002" xml:lang="nl-NL">
+    <title>Opgave: data002 - Order toevoegen</title>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords/>
+        </metadata>
+    </prolog>
+    <body>
+        <section>
+            <p>Een klant plaatst een nieuwe order volgens de gegevens hierna. Bedenk zelf hoe je het
+                beste deze order in kunt voeren. Voer daarna deze order in. De ordercode moet de
+                eerstvolgende beschikbare ordercode zijn.</p>
+            <codeblock>Bestelling op 23 april 2010, 10 uur. Klant Rebecca Smit bestelt telefonisch drie dozen Kers en twee dozen Mars.</codeblock>
+            <p>Een aantal uren later komt er telefonisch onderstaande wijziging op deze order.
+                Bedenk zelf hoe je het beste deze wijziging kunt doorvoeren. Breng daarna de
+                wijziging aan.</p>
+            <codeblock>Orderwijziging 23 april 2010, 16 uur. De twee dozen Mars moeten geschrapt worden.</codeblock>
+        </section>
+        <section otherprops="solution">
+            <title>Uitwerking</title>
+            <p>Zoek eerst in de tabel <wintitle>Klanten</wintitle> de klantcode op van Rebecca Smit.
+                Dit is 11. Open daarna het formulier <wintitle>Orders</wintitle>. Ga naar de laatste
+                order. Deze heeft ordercode 967. De nieuwe order krijgt daarom ordercode 968. Klik
+                op de knop Nieuw Record. Voeg in ordercode 968, de orderdatum en klantcode 11 in.
+                Voeg onderaan in het subformulier de te bestellen dozen (KERS en MARS) in.</p>
+            <p>Om de dozen MARS te verwijderen open je de tabel Orderdetails, ga naar de laatste
+                order met ordercode 968. Selecteer de orderregel met Mars, rechter muisknop en dan
+                Record verwijderen.</p>
+        </section>
+    </body>
+</topic>

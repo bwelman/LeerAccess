@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ex_quer001" xml:lang="nl-NL">
+    <title>Opgave: quer001 - Klanten uit Friesland en Groningen</title>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords/>
+        </metadata>
+    </prolog>
+    <body>
+        <section>
+            <p>Maak een query om de klanten uit de provincies Friesland en Groningen te selecteren.
+                Toon de velden Achternaam, Voornaam en Plaats. Sla de query op onder de naam
+                    <userinput>quer001</userinput>.</p>
+            <note type="tip">Het veld <varname>Provincie</varname> mag hier twee waarden hebben
+                    <q>FR</q> of <q>GR</q>. Dat kun je voor elkaar krijgen door in de regel voor
+                    <uicontrol>Criteria</uicontrol> de ene waarde te vermelden en bij de regel met
+                    <uicontrol>Of</uicontrol> de andere waarde. Een andere mogelijkheid is het
+                gebruik van een expressie met de Of operator als criterium.</note>
+        </section>
+        <section otherprops="answer">
+            <title>Antwoord</title>
+            <p>Resultaat query: 40 klanten</p>
+            <note conkeyref="note/reservation"/>
+        </section>
+        <section otherprops="solution">
+            <title>Uitwerking</title> Voeg de tabel <wintitle>Klanten</wintitle> aan het queryraster
+            toe. Voor het verdere ontwerp zie afbeelding. <simpletable frame="none"
+                relcolwidth="1.0* 1.0*">
+                <strow>
+                    <stentry><image keyref="ex_quer001_design1"/></stentry>
+                    <stentry><image keyref="ex_quer001_design2"/></stentry>
+                </strow>
+            </simpletable>
+        </section>
+    </body>
+</topic>

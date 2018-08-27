@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ex_quer019" xml:lang="nl-NL">
+    <title>Opgave: quer019 - Klanten die week voor de kerst besteld hebben</title>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords/>
+        </metadata>
+    </prolog>
+    <body>
+        <section>
+            <p>Geef een overzicht van de klanten die de laatste week voor kerst 2010 (20-12-2010 t/m
+                24-12 2010) dozen bonbons hebben besteld. Toon de klantcode, de klantnaam en het
+                klantadres. Elke klant mag maar 1 keer in het overzicht voorkomen. Sla de query op
+                onder de naam <userinput>quer019</userinput>.</p>
+            <note type="tip">Dezelfde klant kan vaker dan 1 keer in het overzicht voorkomen. Om dit
+                te vermijden moet bij de eigenschappen van de query de waarde van de eigenschap
+                    <varname>Unieke records</varname> op <userinput>Ja</userinput> ingesteld worden.
+                De eigenschappen van de query kunnen zichtbaar gemaakt worden in de Ontwerpweergave
+                van de query het venster <wintitle>Eigenschappen</wintitle> zichtbaar te maken en
+                daarna in het rechterbovengebied van het ontwerpvenster op een lege plek te
+                klikken.</note>
+        </section>
+        <section otherprops="answer">
+            <title>Antwoord</title>
+            <image keyref="ex_quer019_result"/>
+            <note conkeyref="note/reservation"/>
+        </section>
+        <section otherprops="solution">
+            <title>Uitwerking</title>
+            <image keyref="ex_quer019_design"/>
+        </section>
+    </body>
+</topic>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ex_quer026" xml:lang="nl-NL">
+    <title>Opgave: quer026 - Bijwerkquery prijsverlaging</title>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords/>
+        </metadata>
+    </prolog>
+    <body>
+        <section>
+            <p>Door een daling van de chocoladeprijs op de wereldmarkt kunnen de prijzen van alle
+                dozen met 15% verlaagd worden. </p>
+            <ol>
+                <li>Start met het maken van een backup van de database.</li>
+                <li>Ontwerp een bijwerkquery om de prijsverlaging door te voeren. Sla de query op
+                    onder de naam <userinput>quer026</userinput> en voer deze uit..<note
+                        type="attention">Ben je er van bewust dat iedere keer wanneer je de query
+                        uitvoert de prijzen verder met 15% verlaagd worden.</note></li>
+                <li>Herstel de originele situatie door de backup van de database terug te
+                    plaatsen.</li>
+            </ol>
+        </section>
+        <section otherprops="solution">
+            <title>Uitwerking</title>
+            <p>Maak via Queryontwerp een nieuwe lege query. Voeg de tabel Dozen aan het queryvenster
+                toe. Voeg het veld Doosprijs aan het queryraster toe. Wijzig het type query in
+                Bijwerken. Geef daarna het veld Wijzigen in de waarde
+                    <userinput>[Doosprijs*0,85]</userinput>. Zie de afbeelding hierna.</p>
+            <image keyref="ex_quer026_design"/>
+        </section>
+    </body>
+</topic>

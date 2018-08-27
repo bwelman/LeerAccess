@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ex_rapp002" xml:lang="nl-NL">
+    <title>Opgave: rapp002 - Omzet per doos per regio</title>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords/>
+        </metadata>
+    </prolog>
+    <body>
+        <section>
+            <p>Maak een rapport met daarop per doos de omzet per regio. Bewaar het rapport onder de
+                naam <userinput>rapp002</userinput>.</p>
+            <!--Oude naam:  Omzet per doos per regio  -->
+            <fig>
+                <image keyref="ex_rapp002_report"/>
+            </fig>
+        </section>
+        <section otherprops="answer">
+            <title>Antwoord</title>
+            <note conkeyref="note/reservation"/>
+        </section>
+        <section otherprops="solution">
+            <title>Uitwerking</title>
+            <ol>
+                <li>Kies <menucascade>
+                        <uicontrol>tab Maken</uicontrol>
+                        <uicontrol>Wizard Rapport (groep Rapporten)</uicontrol>
+                    </menucascade>.</li>
+                <li>Kies als gegevensbron de query <wintitle>Verkoop per regio per doos</wintitle>
+                    en voeg alle velden toe. Neem als groepeerniveau het veld
+                        <varname>Doosnaam</varname>. Sorteer oplopend op het veld
+                        <varname>Regio</varname>. Kies bij <uicontrol>Opties voor
+                        totalen</uicontrol> voor <uicontrol>Som</uicontrol>, laat weergeven
+                        <uicontrol>Details en totalen</uicontrol> en <uicontrol>Percentage van
+                        totaal</uicontrol>. Kies de indeling <uicontrol>Met interval</uicontrol> en
+                    pas de titel aan.</li>
+                <li>Pas indien nodig in de ontwerpweergave de lay-out van de vakken zodat alles goed
+                    wordt weergegeven. </li>
+            </ol>
+        </section>
+    </body>
+</topic>

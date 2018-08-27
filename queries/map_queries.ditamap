@@ -40,6 +40,7 @@
         <topicref href="queries_action_update.dita" scope="local" type="task" audience="level2"/>
         <topicref href="queries_action_maketable.dita" scope="local" type="task" audience="level2"/>
         <topicref href="queries_crosstab.dita" scope="local" type="task" audience="level2"/>
+        <mapref href="exercises/map_ex_quer.ditamap" format="ditamap"/>
     </topicref>
     <reltable>
         <relheader>

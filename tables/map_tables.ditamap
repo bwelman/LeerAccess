@@ -58,6 +58,7 @@
             <topicref href="tables_relationship_boxes_boxdetails.dita" scope="local" type="task"
                 format="dita"/>
         </topicref>
+        <mapref href="exercises/map_ex_tabl.ditamap" format="ditamap"/>
     </topicref>
     <reltable>
         <relheader>

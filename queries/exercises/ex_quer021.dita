@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ex_quer021" xml:lang="nl-NL">
+    <title>Opgave: quer021 - Klanten met omzet hoogstens 50 en postcode beginnend met 22</title>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords/>
+        </metadata>
+    </prolog>
+    <body>
+        <section>
+            <p>Geef een overzicht van de klanten waarvan de postcode begint met 22 en met een totale
+                omzet van hoogstens € 50,-. Sla de query op onder de naam
+                    <userinput>quer021</userinput>.</p>
+        </section>
+        <section otherprops="answer">
+            <title>Antwoord</title>
+            <image keyref="ex_quer021_result"/>
+            <note conkeyref="note/reservation"/>
+        </section>
+        <section otherprops="solution">
+            <title>Uitwerking</title>
+            <image keyref="ex_quer021_design"/>
+        </section>
+    </body>
+</topic>

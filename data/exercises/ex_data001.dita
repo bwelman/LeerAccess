@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ex_data001" xml:lang="nl-NL">
+    <title>Opgave: data001 - Bonbons toevoegen</title>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords/>
+        </metadata>
+    </prolog>
+    <body>
+        <section>
+            <title>Opgave</title>
+            <p>Voeg de volgende twee bonbons toe:</p>
+            <simpletable frame="all" relcolwidth="1.0* 1.0* 1.0*">
+                <sthead>
+                    <stentry>Veld</stentry>
+                    <stentry>Bonbon 1</stentry>
+                    <stentry>Bonbon 2</stentry>
+                </sthead>
+                <strow>
+                    <stentry>Bonbonnaam</stentry>
+                    <stentry>Cashew Mokka Toffee</stentry>
+                    <stentry>Amandel Mokka Toffee</stentry>
+                </strow>
+                <strow>
+                    <stentry>Bonboncode</stentry>
+                    <stentry>F04</stentry>
+                    <stentry>F05</stentry>
+                </strow>
+                <strow>
+                    <stentry>Beschrijving</stentry>
+                    <stentry>Zoete, crèmige mokka en cashew omgeven met toffee.</stentry>
+                    <stentry>Zoete, crèmige mokka en amandel omgeven met toffee.</stentry>
+                </strow>
+                <strow>
+                    <stentry>Chocoladetype</stentry>
+                    <stentry>Toffee</stentry>
+                    <stentry>Toffee</stentry>
+                </strow>
+                <strow>
+                    <stentry>Vullingtype</stentry>
+                    <stentry>Mokkacrème</stentry>
+                    <stentry>Mokkacrème</stentry>
+                </strow>
+                <strow>
+                    <stentry>Noottype</stentry>
+                    <stentry>Cashew</stentry>
+                    <stentry>Amandel</stentry>
+                </strow>
+                <strow>
+                    <stentry>Kosten</stentry>
+                    <stentry>€ 0,24</stentry>
+                    <stentry>€ 0,19</stentry>
+                </strow>
+            </simpletable></section>
+        <section otherprops="solution">
+            <title>Uitwerking</title>
+            <p>Open het formulier <wintitle>Bonbons</wintitle>. Klik op de knop voor een nieuw
+                record en voeg de bonbons toe.</p>
+        </section>
+    </body>
+</topic>

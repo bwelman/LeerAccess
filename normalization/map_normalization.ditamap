@@ -32,5 +32,6 @@
         </topicref>
         <topicref href="normalization_dsd.dita" scope="local" type="concept" format="dita"/>
         <topicref href="normalization_animal_clinic.dita" scope="local" type="concept" format="dita"/>
+        <mapref href="exercises/map_ex_norm.ditamap" format="ditamap"/>
     </topicref>
 </map>

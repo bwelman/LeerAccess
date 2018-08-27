@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ex_tabl003" xml:lang="nl-NL">
+    <title>Opgave: tabl003 - Titelveld met keuzelijst</title>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords/>
+        </metadata>
+    </prolog>
+    <body>
+        <section>
+            <p>Uit een klanten-tevredenheids-onderzoek blijkt dat enkele belangrijke klanten het op
+                prijs stellen dat hun titel bij een mailing vermeld wordt. Voeg een veld Titel toe
+                aan de tabel Klanten, gebruik het gegevenstype Wizard Opzoeken met als waarden: ing.
+                , ir., drs., mr., dr.</p>
+        </section>
+        <section otherprops="solution">
+            <title>Uitwerking</title>
+            <p>Open de tabel <wintitle>Klanten</wintitle> in de ontwerpweergave. Voeg een veld
+                    <varname>Titel</varname> toe. Kies bij Gegevenstype" voor Wizard opzoeken…. Geef
+                bij het dan volgende dialoogscherm aan dat de waarden worden ingetypt. Er is maar 1
+                kolom nodig. Typ in deze kolom onder elkaar in: ing., ir., drs., mr., dr. Gebruik
+                voor het bijschrift de tekst <q>Titel</q>.</p>
+        </section>
+    </body>
+</topic>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ex_norm016" xml:lang="nl-NL">
+    <title>Opgave: norm016 - Postcodes</title>
+    <prolog>
+        <critdates>
+            <created date="2017-10-16"/>
+            <revised modified="2017-10-16"/>
+        </critdates>
+        <metadata>
+            <keywords/>
+        </metadata>
+    </prolog>
+    <body>
+        <section>
+            <p>In een bestand zijn alle plaatsen, straatnamen, huisnummers en postcodes van
+                Nederland opgeslagen. In de volgende afbeelding zie je een deel van de tabel.</p>
+            <image keyref="ex_norm016_data"/>
+            <p>Bij een gegeven straat, huisnummer en plaats hoort een postcode. De cijfers geven de
+                stad, het dorp, de buurt of wijk aan. Het komt niet voor dat twee plaatsnamen
+                dezelfde cijfers hebben. De letters zijn specifieker en geven de straat of een deel
+                daarvan aan.</p><ol>
+                <li>Welk attribuut is functioneel afhankelijk van welk ander attribuut?</li>
+                <li>Bepaal een sleutel voor deze tabel.</li>
+            </ol></section>
+        <section otherprops="solution">
+            <title>Uitwerking</title>
+            <ol>
+                <li>Plaats is functioneel afhankelijk van Postcode.</li>
+                <li><codeph><u>Postcode</u>, <u>Huisnummer</u></codeph></li>
+            </ol>
+        </section>
+    </body>
+</topic>

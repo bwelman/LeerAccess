@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ex_norm004" xml:lang="nl-NL">
+    <title>Opgave: norm004 - Garage</title>
+    <prolog>
+        <critdates>
+            <created date="2017-10-16"/>
+            <revised modified="2017-10-16"/>
+        </critdates>
+        <metadata>
+            <keywords/>
+        </metadata>
+    </prolog>
+    <body>
+        <section>
+            <p>Een garage heeft een kaartenbak met alle klanten. Op de kaarten worden ook gegevens
+                van de auto('s) van de klant bijgehouden en gegevens van de beurten van die auto's.
+                Hieronder staan een paar voorbeelden van de layout van zo'n kaart:</p>
+            <fig>
+                <image keyref="ex_norm004_data"/>
+            </fig>
+            <p>Voor het beschreven kaartsysteem moet een database ontworpen worden. Ontwerp voor
+                deze gegevens een genormaliseerd systeem zonder extra attributen toe te voegen en
+                teken een GSD.</p>
+        </section>
+        <section otherprops="solution">
+            <title>Uitwerking</title>
+            <codeblock>KLANT (<u>klantnaam</u>, <u>telnr</u>, adres, postcode, woonplaats)
+AUTO (<u>kenteken</u>, klantnaam, telnr, merk, type, bouwjaar)
+BEURT (<u>kenteken</u>, <u>datum</u>, <u>omschrijving</u>, arbeid, materialen)</codeblock>
+            <fig>
+                <image keyref="ex_norm004_dsd"/>
+            </fig>
+        </section>
+    </body>
+</topic>

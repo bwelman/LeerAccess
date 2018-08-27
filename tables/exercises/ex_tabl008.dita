@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ex_tabl008" xml:lang="nl-NL">
+    <title>Opgave: tabl008 - Tabel Werknemers</title>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords/>
+        </metadata>
+    </prolog>
+    <body>
+        <section>
+            <p>Eind 2010 wordt besloten om in het kader van het kwaliteitsbeleid vanaf 1 jan 2011
+                bij te gaan houden welke werknemer een order heeft ingevoerd. Er bestaat al een
+                Excel bestand met daarin de gegevens van alle werknemers. Voer de volgende
+                opdrachten uit:</p>
+            <ul>
+                <li>Importeer het Excelbestand <filepath>Werknemers.xlsx</filepath> en geef de tabel
+                    de naam <userinput>Werknemers</userinput>. Zorg voor een geschikte primaire
+                    sleutel voor deze tabel.</li>
+                <li>Breid de tabel <wintitle>Orders</wintitle> uit met het veld
+                        <varname>Werknemercode</varname></li>
+                <li>Breng een relatie aan tussen de tabellen <wintitle>Orders</wintitle> en
+                        <wintitle>Werknemers</wintitle> en dwing tevens de referentiële integriteit
+                    af.</li>
+            </ul>
+        </section>
+        <section otherprops="solution">
+            <title>Uitwerking</title>
+            <p>Import van het Excelbestand.<ol>
+                    <li>Kies <menucascade>
+                            <uicontrol>tab Externe gegevens</uicontrol>
+                            <uicontrol>Nieuwe gegevensbron (groep importeren en
+                                koppelen)</uicontrol>
+                            <uicontrol>Uit bestand</uicontrol>
+                            <uicontrol>Excel</uicontrol>
+                        </menucascade>.</li>
+                    <li>Selecteer het bestand <filepath>Werknemers.xlsx</filepath> en kies voor
+                            <uicontrol>De brongegevens importeren in een nieuwe tabel in de huidige
+                            database</uicontrol>.</li>
+                    <li>Selecteer de optie <uicontrol>Eerste rij bevat kolomkoppen</uicontrol>.</li>
+                    <li>Wijzig het <uicontrol>Gegevenstype</uicontrol> van het veld
+                            <varname>Werknemercode</varname> van Dubbele precisie in
+                            <userinput>Lange integer</userinput>.</li>
+                    <li>Maak het veld <varname>Werknemercode</varname> de primaire sleutel.</li>
+                    <li>Geef de nieuwe tabel de naam <userinput>Werknemers</userinput>.</li>
+                </ol></p>
+            <p>Uitbreiding van de tabel Orders.<ol>
+                    <li>Open de tabel <wintitle>Orders</wintitle> in de
+                            <uicontrol>Ontwerpweergave</uicontrol>.</li>
+                    <li>Voeg een veld toe met de naam <varname>Werknemercode</varname> met als
+                            <varname>Gegevenstype</varname>
+                        <userinput>Numeriek</userinput> en als <varname>Veldlengte</varname>
+                        <userinput>Lange integer</userinput>.</li>
+                </ol></p>
+            <p>Relatie tot stand brengen.<ol>
+                    <li>Kies <menucascade>
+                            <uicontrol>tab Hulpmiddelen voor databases</uicontrol>
+                            <uicontrol>Relaties (groep Relaties)</uicontrol>
+                        </menucascade>.</li>
+                    <li>Kies <menucascade>
+                            <uicontrol>tab Ontwerp</uicontrol>
+                            <uicontrol>tabel weergeven (groep Relaties</uicontrol>
+                        </menucascade> en voeg de tabel <wintitle>Werknemers</wintitle> aan het
+                        raster toe.</li>
+                    <li>Selecteer het veld <varname>Werknemercode</varname> in de tabel
+                            <wintitle>Werknemers</wintitle> en sleep deze naar het veld
+                            <varname>Werknemercode</varname> in de tabel
+                        <wintitle>Orders</wintitle>. Het vakje <uicontrol>Referentiële integriteit
+                            afdwingen</uicontrol> inschakelen.</li>
+                </ol></p>
+        </section>
+    </body>
+</topic>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ex_tabl004" xml:lang="nl-NL">
+    <title>Opgave: tabl004 - Valutanotatie</title>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords/>
+        </metadata>
+    </prolog>
+    <body>
+        <section>
+            <p>Bij deze opdracht moet je beschikken over de tabel <wintitle>Vervoer</wintitle> die
+                eerder in de cursus gemaakt moest worden. Wanneer in jouw database deze tabel niet
+                aanwezig is, dan heb je twee mogelijkheden:<ul>
+                    <li>Je voert alsnog de opdracht uit waarbij je de tabel vervoer maakt.</li>
+                    <li>Je gebruikt de database <filepath>Vervoer.accdb</filepath> waarin de tabel
+                        Vervoer al voor je gemaakt is.</li>
+                </ul></p>
+            <p>Open de tabel <wintitle>Vervoer</wintitle> en merk op dat de vervoerskosten niet in
+                een valutanotatie met eurosymbool worden weergegeven. Verander de waarde van de
+                eigenschap <varname>Notatie</varname> van het veld <varname>Vervoerskosten</varname>
+                in <userinput>Euro</userinput>. Schakel daarna over naar de gegevensbladweergave en
+                bekijk het resultaat van deze verandering.</p>
+        </section>
+        <section otherprops="solution">
+            <title>Uitwerking</title>
+            <p>Open de tabel <wintitle>Vervoer</wintitle> in de Ontwerpweergave, selecteer het veld
+                    <varname>Vervoerskosten</varname> en wijzig de waarde van de eigenschap
+                    <varname>Notatie</varname> in <userinput>Euro</userinput>.</p>
+        </section>
+    </body>
+</topic>

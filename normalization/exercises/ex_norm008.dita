@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ex_norm008" xml:lang="nl-NL">
+    <title>Opgave: norm008 - Relaties</title>
+    <prolog>
+        <critdates>
+            <created date="2017-10-16"/>
+            <revised modified="2017-10-16"/>
+        </critdates>
+        <metadata>
+            <keywords/>
+        </metadata>
+    </prolog>
+    <body>
+        <section>
+            <p>Bekijk de volgende tabellen:</p>
+            <p>STUDENT (studentnr, studentnaam, adres, woonplaats, klas, ...)</p>
+            <p>STAGEBEDRIJF (bedrijfsnr, bedrijfsnaam, ...)</p>
+            <ol>
+                <li>Welk proces zal van deze twee tabellen gebruik maken?</li>
+                <li>De gegevens die het proces genereert worden opgeslagen in een aparte tabel
+                    STAGEPLAATS. Geef aan hoe deze tabel eruit zal zien.</li>
+            </ol>
+        </section>
+        <section otherprops="solution">
+            <title>Uitwerking</title>
+            <ol>
+                <li>Het stagebureau van een school gebruikt deze twee tabellen voor de registratie
+                    van een stageplaats van studenten.</li>
+                <li>Een minimale uitvoering is <codeph>STAGEPLAATS (<u>studentnr</u>,
+                            <u>bedrijfsnr</u>, <u>begindatum</u>, einddatum)</codeph>.</li>
+            </ol>
+        </section>
+    </body>
+</topic>

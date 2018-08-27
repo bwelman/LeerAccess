@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ex_norm006" xml:lang="nl-NL">
+    <title>Opgave: norm006 - Hoveniersbedrijf</title>
+    <prolog>
+        <critdates>
+            <created date="2017-10-16"/>
+            <revised modified="2017-10-16"/>
+        </critdates>
+        <metadata>
+            <keywords/>
+        </metadata>
+    </prolog>
+    <body>
+        <section>
+            <p>Het hoveniersbedrijf <q>Fruithobby</q> drijft op kleine schaal handel in uitsluitend
+                fruitbomen. De fruitbomen worden aangekocht, opgeslagen in voorraad en doorverkocht
+                aan de hobbyist. Het bedrijf voert een viertal soorten fruitbomen: appel, peer,
+                pruim en noot en heeft een drietal leveranciers van fruitbomen die de volgende
+                aanbiedingen hebben gedaan:</p>
+            <fig>
+                <image keyref="ex_norm006_data"/>
+            </fig>
+            <p>Ontwerp hiervoor een genormaliseerde database. Geef van iedere tabel de structuur
+                (velden + sleutel).</p>
+        </section>
+        <section otherprops="solution">
+            <title>Uitwerking</title>
+            <codeblock>LEVERANCIER (<u>Levnaam</u>, adres, postcode, plaats)
+ARTIKEL (<u>Artikelnaam</u>, Soort, Hand_Stoof)
+AANBIEDING (<u>Levnaam</u>, <u>Artikelnaam</u>, Inkoopprijs)</codeblock>
+        </section>
+    </body>
+</topic>

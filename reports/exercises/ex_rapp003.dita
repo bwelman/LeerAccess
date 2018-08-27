@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ex_rapp003" xml:lang="nl-NL">
+    <title>Opgave: rapp003 - Dooskosten met Bonbonkosten</title>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords/>
+        </metadata>
+    </prolog>
+    <body>
+        <section>
+            <p>Maak een rapport dat de bonbons in elke doos geeft samen met de kosten van elke
+                bonbon. Toon ook de totale kosten van de bonbons per doos. Bewaar dit rapport op
+                onder de naam <userinput>rapp003</userinput>.</p>
+            <!-- Oude naam: Dooskosten met Bonbonkosten -->
+            <fig>
+                <image keyref="ex_rapp003_report"/>
+            </fig>
+        </section>
+        <section otherprops="answer">
+            <title>Antwoord</title>
+            <note conkeyref="note/reservation"/>
+        </section>
+        <section otherprops="solution">
+            <title>Uitwerking</title>
+            <ol>
+                <li>Kies <menucascade>
+                        <uicontrol>tab Maken</uicontrol>
+                        <uicontrol>Wizard Rapport (groep Rapporten)</uicontrol>
+                    </menucascade>.</li>
+                <li>Kies als gegevensbron de query <wintitle>Bonbons per doos</wintitle> en voeg
+                    alle velden toe. Neem als groepeerniveau het veld <varname>Doos</varname>.
+                    Sorteer oplopend op het veld <varname>Bonbon</varname>. Kies bij
+                        <uicontrol>Opties voor totalen</uicontrol> voor <uicontrol>Som</uicontrol>,
+                    laat weergeven <uicontrol>Details en totalen</uicontrol>.</li>
+                <li>Wijzig indien nodig in de Ontwerpweergave via het
+                        <wintitle>Eigenschappenvenster</wintitle> de notatie van de vakken voor de
+                        <varname>som</varname> in <userinput>Euro</userinput>. </li>
+            </ol>
+        </section>
+    </body>
+</topic>

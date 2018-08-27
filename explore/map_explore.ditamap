@@ -33,6 +33,7 @@
         <topicref href="explore_sorting.dita" scope="local" type="task" audience="level1"/>
         <topicref href="explore_filtering.dita" scope="local" type="task" audience="level1"/>
         <topicref href="explore_printing.dita" scope="local" type="concept" audience="level1"/>
+        <mapref href="exercises/map_ex_expl.ditamap" format="ditamap"/>
     </topicref>
     <reltable>
         <relheader>

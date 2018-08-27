@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ex_norm007" xml:lang="nl-NL">
+    <title>Opgave: norm007 - Onderdelen</title>
+    <prolog>
+        <critdates>
+            <created date="2017-10-16"/>
+            <revised modified="2017-10-16"/>
+        </critdates>
+        <metadata>
+            <keywords/>
+        </metadata>
+    </prolog>
+    <body>
+        <section>
+            <p>Een autobedrijf gebruikt een gegevensbank voor het beheer van (typen) onderdelen
+                zoals uitlaten, remvoeringen en schokdempers ten behoeve van montage in
+                verschillende autotypen. Elk onderdeel heeft een uniek <term>onderdeelnummer</term>
+                en een <term>onderdeelomschrijving</term>. In verband met technische wijzigingen van
+                autotypen is per onderdeel het <term>beginbouwjaar</term> en het
+                    <term>eindbouwjaar</term> van het <term>autotype</term>, of van de autotypen,
+                aangegeven waarvoor dit onderdeel geschikt is.</p>
+            <p>Zo willen we kunnen opslaan dat onderdeel 1 geschikt is voor een Audi 100 met
+                bouwjaren '83 t/m '88. Dit onderdeel 1 is ook geschikt voor montage in een Audi 80
+                van de bouwjaren '80 t/m '87.</p>
+            <p>Om het onderdelenverbruik te voorspellen wordt van elk autotype het
+                    <term>verkoopaantal</term> (= aantal verkochte auto's) per <term>bouwjaar</term>
+                geregistreerd. Tevens is per autotype een <term>type-omschrijving</term> opgenomen.
+                Per onderdeel is de <term>verkoopprijs</term> aangegeven. Tevens zijn de
+                    <term>montagekosten</term> en de <term>normtijd</term>, die per autotype kunnen
+                verschillen, in de gegevensbank opgenomen.</p>
+            <p>Ontwerp voor deze informatiebehoefte een genormaliseerde database met behulp van de
+                gemarkeerde veldnamen.</p>
+        </section>
+        <section otherprops="solution">
+            <title>Uitwerking</title>
+            <codeblock>ONDERDEEL (<u>onderdeelnr</u>, onderdeelomschrijving, verkoopprijs)
+GESCHIKTHEID (<u>onderdeelnr</u>, <u>autotype</u>, <u>beginbouwjaar</u>, eindbouwjaar)
+VERKOOP (<u>autotype</u>, <u>bouwjaar</u>, verkoopaantal)
+AUTO (<u>autotype</u>, type-omschrijving)
+NORMGEG (<u>onderdeelnr</u>, <u>autotype</u>, normtijd, montagekosten)</codeblock>
+        </section>
+    </body>
+</topic>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ex_form003" xml:lang="nl-NL">
+    <title>Opgave: form003 - Dozen per klant</title>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords/>
+        </metadata>
+    </prolog>
+    <body>
+        <section>
+            <p>Maak een hoofd- + subformulier waarbij in het hoofdformulier de gegevens van een doos
+                staan en in het subformulier de totale afzet per klant van deze doos. Maak daartoe
+                eerst een query die het totale aantal bestelde dozen per doos per klant uitrekent.
+                Noem de query <userinput>Dozen per klant</userinput> en de formulieren
+                    <userinput>form003 hoofd</userinput> en <userinput>form003 sub</userinput>.</p>
+            <fig>
+                <image keyref="ex_form003"/>
+            </fig>
+        </section>
+        <section otherprops="solution">
+            <title>Uitwerking</title>
+            <ol>
+                <li>Maak eerst als volgt de query Dozen per klant. Kies <menucascade>
+                        <uicontrol>tab Maken</uicontrol>
+                        <uicontrol>Queryontwerp</uicontrol>
+                    </menucascade>. Voeg toe de tabellen Klanten, Orders en Orderdetails. Voeg uit
+                    de tabel Klanten de velden Klantcode en Achternaam toe. Voeg uit de tabel
+                    Orderdetails de velden Dooscode en Hoeveelheid toe.</li>
+                <li>Kies <menucascade>
+                        <uicontrol>tab Maken</uicontrol>
+                        <uicontrol>Wizard formulier</uicontrol>
+                    </menucascade>.</li>
+                <li>Selecteer tabel <wintitle>Dozen</wintitle> en voeg alle velden toe.</li>
+                <li>Selecteer query <wintitle>Dozen per klant</wintitle> en voeg de velden
+                    Klantcode, Achternaam en Hoeveelheid toe.</li>
+                <li>Geef de gegevens weer volgens Dozen in een hoofdformulier met subformulier.</li>
+            </ol>
+        </section>
+    </body>
+</topic>

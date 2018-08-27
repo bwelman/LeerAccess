@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ex_intg001" xml:lang="nl-NL">
+    <title>Opgave: intg001 - Standaardbrief</title>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords/>
+        </metadata>
+    </prolog>
+    <body>
+        <section><p>De afdeling marketing wil de nieuwe doos alleen promoten onder de klanten die ooit een doos met
+                bonbons met witte chocolade gekocht hebben. Maak de hiervoor benodigde query  en
+                maak m.b.v. deze query een standaardbrief.</p>
+            <p>Als een doos minstens 1 bonbon met witte chocolade bevat en deze doos is gekocht door
+                een bepaalde klant dan willen we deze klant dus een standaardbrief sturen. Zorg
+                ervoor dat een klant hoogstens één brief krijgt.</p>
+        </section>
+        <section otherprops="solution">
+            <title>Uitwerking</title>
+            <p>Maak allereerst de query. Kies <menucascade>
+                    <uicontrol>tab Maken</uicontrol>
+                    <uicontrol>Queryontwerp (groep Query's)</uicontrol>
+                </menucascade>. Voeg toe de tabellen <wintitle>Klanten</wintitle>,
+                    <wintitle>Orders</wintitle>, <wintitle>Orderdetails</wintitle>,
+                    <wintitle>Dozen</wintitle>, <wintitle>Doosdetails</wintitle> en
+                    <wintitle>Bonbons</wintitle>. Voeg uit de tabel <wintitle>Klanten</wintitle> toe
+                de velden <varname>Achternaam</varname>, <varname>Voornaam</varname>,
+                    <varname>Straat</varname>, <varname>Postcode</varname> en
+                    <varname>Plaats</varname>. Voeg uit de tabel <wintitle>Bonbons</wintitle> toe
+                het veld <varname>Chocoladetype</varname>. Geef bij dit laatste veld als criterium
+                op <userinput>Wit</userinput>. Stel via het
+                    <wintitle>Eigenschappenvenster</wintitle> voor de
+                    <uicontrol>Queryeigenschappen</uicontrol> de waarde van de eigenschap
+                    <varname>Unieke waarden</varname> in op <userinput>Ja</userinput>. Bewaar de
+                query onder de naam intg001en sluit deze.</p>
+            <p>Geef een rechtermuisklik op de naam van de zojuist gemaakte query en kies <menucascade>
+                    <uicontrol>Exporteren</uicontrol>
+                    <uicontrol>Word Merge</uicontrol>
+                </menucascade>. Kies een nieuw document maken waaraan de gegevens gekoppeld moeten
+                worden.</p>
+            <p>Voeg de gewenste samenvoegvelden in en typ de overige tekst in, bijvoorbeeld zoals
+                hierna is aangegeven:</p>
+            <codeblock>&lt;&lt;Voornaam>> &lt;&lt;Achternaam>>
+&lt;&lt;Straat>>
+&lt;&lt;Postcode>>  &lt;&lt;Plaats>>
+
+Beste &lt;&lt;Voornaam>>,
+Graag willen we je een aanbieding doen voor onze nieuwste doos ...</codeblock>
+            <p>Handel hierna het samenvoegen verder op de bekende wijze af.</p>
+        </section>
+    </body>
+</topic>

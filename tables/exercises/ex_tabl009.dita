@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ex_tabl009" xml:lang="nl-NL">
+    <title>Opgave: tabl009 - Contactregistratie</title>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords/>
+        </metadata>
+    </prolog>
+    <body>
+        <section>
+            <p>De afdeling marketing wil alle contacten (telefonisch, schriftelijk , email,
+                bezoeken) registreren om de kosten die voor een klant gemaakt worden, te kunnen
+                berekenen. Van ieder contact wordt het soort contact, de datum, de begintijd en de
+                eindtijd, het onderwerp en eventuele kosten (om bijvoorbeeld een relatiegeschenk te
+                sturen) bijgehouden. Als bijvoorbeeld een werknemer een half uur met een brief bezig
+                is geweest dan moet later berekend kunnen worden dat dit 0,5 * € 60,- heeft
+                gekost.</p>
+            <p>Maak hiervoor een nieuwe tabel met de naam <userinput>Contacten</userinput> en koppel
+                deze aan de tabel <wintitle>Klanten</wintitle> en dwing tevens de referentiële
+                integriteit af.</p>
+        </section>
+        <section otherprops="solution">
+            <title>Uitwerking</title>
+            <p>Er moet eigenlijk eerst een informatie-analyse gemaakt worden. Het resultaat hiervan
+                moet opleveren welke velden in de tabel Contacten moeten komen, wat de sleutel wordt
+                en of er relaties met de andere tabellen moeten komen en zo ja via welke velden. Er
+                kan dan ook niet één goed antwoord gegeven worden. Een mogelijk antwoord wordt in de
+                afbeelding hierna weergegeven:<fig>
+                    <image keyref="ex_tabl009_contacts"/>
+                </fig></p>Aandachtspunten bij dit ontwerp en ook bij een ander ontwerp:<ul>
+                <li>Van een klant zullen meerdere contacten vastgelegd moeten kunnen worden. Vandaar
+                    een sleutelveld <varname>ContactID</varname> en de opname van het veld
+                        <varname>Klantcode</varname> (gegevenstype: Numeriek - Lange integer)
+                    waarmee een koppeling met de tabel <wintitle>Klanten</wintitle> gemaakt kan
+                    worden.</li>
+                <li>Wanneer de tabel <wintitle>Werknemers</wintitle> beschikbaar is, dan is het wel
+                    zo handig om bij de registratie van een contactmoment ook op te kunnen nemen
+                    door welke werknemer het contact is afgehandeld. In dat geval kan het veld
+                        <varname>Werknemercode</varname> (gegevenstype: Numeriek - Lange integer)
+                    opgenomen worden waarmee een koppeling met de tabel
+                        <varname>Werknemers</varname> gelegd kan worden.</li>
+                <li>Uit de informatie-analyse moet blijken welke waarden het veld
+                        <varname>SoortContact</varname> moet hebben. Voor dit veld kan dan het beste
+                    een opzoektabel gemaakt worden waarin de waarden zijn vastgelegd.</li>
+                <li>Voor de drie Datum/tijd velden moet een geschikte notatie gekozen worden,
+                    eventueel met een invoermasker.</li>
+                <li>Uit de informatie-analyse moet blijken hoe er met de berekening van de kosten
+                    wordt omgegaan. De afhandelingstijd kan berekend worden uit de begin- en
+                    eindtijd, is dus een procesgegeven en moet dus niet worden opgenomen in de
+                    tabel. Als het uurtarief een constante is, dan kan deze ook worden weggelaten
+                    uit de tabel. In dat geval wordt er dan niets over de kosten in de tabel
+                    opgenomen en wordt de berekening ervan uitgevoerd op het moment dat je dat wilt
+                    weten, bij een query of rapport. Varieert het uurtarief wel in de tijd, dan moet
+                    het uurtarief in de tabel worden opgenomen.</li>
+            </ul>
+        </section>
+    </body>
+</topic>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ex_tabl002" xml:lang="nl-NL">
+    <title>Opgave: tabl002 - Tussenvoegsel in namen</title>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords/>
+        </metadata>
+    </prolog>
+    <body>
+        <section>
+            <p>De klant met Klantcode 15 heeft als Achternaam: "Molen, van de" en als Voornaam:
+                Robert. Als je nu etiketten zou gaan maken komt daar op te staan:
+                    <systemoutput>Robert Molen, van de</systemoutput>. Dit staat niet professioneel
+                en je wilt dat de naam die op het etiket vermeld wordt <systemoutput>Robert van de
+                    Molen</systemoutput> is. Een mogelijke oplossing zou kunnen zijn door de
+                achternaam te wijzigen in <userinput>van de Molen</userinput>. Echter deze oplossing
+                heeft als nadeel dat het sorteren op achternaam dan een ongewenste volgorde
+                oplevert. Bedenk een betere oplossing, hierbij mag het ontwerp van de tabel
+                gewijzigd worden. Het is niet de bedoeling dat je deze wijziging in de database
+                aanbrengt.</p>
+        </section>
+        <section otherprops="solution">
+            <title>Uitwerking</title>
+            <p>Er moet dan aan de tabel <wintitle>Klanten</wintitle> een nieuw veld
+                    <varname>Tussenvoegsel</varname> worden toegevoegd. In het veld
+                    <varname>Achternaam</varname> komt dan alleen <q>Molen</q> te staan. In het veld
+                    <varname>Tussenvoegsel</varname> komt <q>van de</q> te staan. Sorteren op
+                    <varname>Achternaam</varname> geeft dan de gewenste weergave. Op een etiket kan
+                dan op één regel achter elkaar de velden <varname>Voornaam</varname>
+                <varname>Tussenvoegsel</varname> en <varname>Achternaam</varname> worden gezet.</p>
+        </section>
+    </body>
+</topic>

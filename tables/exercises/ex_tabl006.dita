@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ex_tabl006" xml:lang="nl-NL">
+    <title>Opgave: tabl006 - Veld doelgroep met keuzelijst</title>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords/>
+        </metadata>
+    </prolog>
+    <body>
+        <section>
+            <p>De behoefte bestaat om iedere klant in te kunnen delen in een van de volgende
+                doelgroepen: top klant, goede klant, kleine klant. Daarvoor moet het ontwerp van de
+                tabel Klanten worden aangepast. Maak in deze tabel een nieuw veld met de naam
+                Doelgroep. Voor dit veld moet een keuzelijst maken met de hiervoor genoemde
+                waarden.</p>
+        </section>
+        <section otherprops="solution">
+            <title>Uitwerking</title>
+            <p>Open de tabel <wintitle>Klanten</wintitle> in de ontwerpweergave. Voeg een veld
+                    <varname>Doelgroep</varname> toe. Kies bij Gegevenstype" voor Wizard opzoeken….
+                Geef bij het dan volgende dialoogscherm aan dat de waarden worden ingetypt. Er is
+                maar 1 kolom nodig. Typ in deze kolom onder elkaar in: top klant, goede klant,
+                kleine klant. Gebruik voor het bijschrift de tekst <q>Doelgroep</q>.</p>
+        </section>
+    </body>
+</topic>

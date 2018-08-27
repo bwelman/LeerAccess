@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ex_quer029" xml:lang="nl-NL">
+    <title>Opgave: quer029 - Kruistabel omzet per klant per maand</title>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords/>
+        </metadata>
+    </prolog>
+    <body>
+        <section>
+            <p>Maak met behulp van een kruistabelquery een overzicht van de totale omzet per klant
+                per maand in 2010. Maak daartoe eerst een gewone query <varname>Omzet per klant per
+                    maand in 2010</varname> en gebruik deze query als basis voor de kruistabelquery.
+                Voor de klant mogen de klantcodes gebruikt worden en voor de maand de maandnummers.
+                Geef ook de totale omzet per klant in 2010 in de kruistabel weer. Sla de
+                kruistabelquery op onder de naam <userinput>quer029</userinput>.</p>
+        </section>
+        <section otherprops="answer">
+            <title>Antwoord</title>
+            <image keyref="ex_quer029_result"/>
+            <note conkeyref="note/reservation"/>
+        </section>
+        <section otherprops="solution">
+            <title>Uitwerking</title>
+            <p>De selectiequery kun je vanuit niets maken, maar je kunt ook het ontwerp van quer012
+                als basis nemen. Het maandnummer kun je uit het veld <varname>Orderdatum</varname>
+                halen met de functie <codeph>Month()</codeph> en het jaar met de functie
+                    <codeph>Year()</codeph>. De waarde 2010 moet bij de laatste als criterium worden toegevoegd.<fig>
+                    <title>Ontwerp selectiequery</title>
+                    <image keyref="ex_quer029_design_selection">
+                        <alt>Ontwerp selectiequery</alt>
+                    </image>
+                </fig></p>
+            <p>Voor Kies <menucascade>
+                    <uicontrol>Maken</uicontrol>
+                    <uicontrol>Wizard Query</uicontrol>
+                    <uicontrol>Wizard Kruistabelquery</uicontrol>
+                </menucascade>. Gebruik de selctiequery als basis. Gebruik veld
+                    <varname>Klantcode</varname> voor de rijkoppen, veld <varname>Maand</varname>
+                voor de kolomkoppen en <varname>Som(Omzet)</varname> voor de waarden.<fig>
+                    <title>Ontwerp kruistabelquery</title>
+                    <image keyref="ex_quer029_design_crosstab">
+                        <alt>Ontwerp kruistabelquery</alt>
+                    </image>
+                </fig></p>
+        </section>
+    </body>
+</topic>

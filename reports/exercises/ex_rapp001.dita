@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ex_rapp001" xml:lang="nl-NL">
+    <title>Opgave: rapp001 - Verkoop per regio per doos</title>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords/>
+        </metadata>
+    </prolog>
+    <body>
+        <section>
+            <p>Maak onderstaand rapport met per regio de verkoop per doos. Hierbij moet ook berekend
+                en getoond worden de totale omzet per regio en het percentage van de omzet over alle
+                regio's. Bewaar het rapport onder de naam <userinput>rapp001</userinput>.</p>
+            <!--Oude naam: Verkoop per regio per doos met totalen -->
+            <fig>
+                <image keyref="ex_rapp001_report"/>
+            </fig>
+        </section>
+        <section otherprops="answer">
+            <title>Antwoord</title>
+            <note conkeyref="note/reservation"/>
+        </section>
+        <section otherprops="solution">
+            <title>Uitwerking</title>
+            <ol>
+                <li>Kies <menucascade>
+                        <uicontrol>tab Maken</uicontrol>
+                        <uicontrol>Wizard Rapport (groep Rapporten)</uicontrol>
+                    </menucascade>.</li>
+                <li>Kies als gegevensbron de query <wintitle>Verkoop per regio per doos</wintitle>
+                    en voeg alle velden toe. Neem als groepeerniveau het veld
+                        <varname>Regio</varname>. Sorteer oplopend op het veld
+                        <varname>Doosnaam</varname>. Kies bij <uicontrol>Opties voor
+                        totalen</uicontrol> voor <uicontrol>Som</uicontrol>, laat weergeven
+                        <uicontrol>Details en totalen</uicontrol> en <uicontrol>Percentage van
+                        totaal</uicontrol>.</li>
+                <li>Pas indien nodig in de ontwerpweergave de breedte van de vakken voor de bedragen
+                    aan zodat deze goed worden weergegeven. </li>
+            </ol>
+        </section>
+    </body>
+</topic>

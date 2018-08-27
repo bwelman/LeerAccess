@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ex_norm015" xml:lang="nl-NL">
+    <title>Opgave: norm015 - Integratie</title>
+    <prolog>
+        <critdates>
+            <created date="2017-10-16"/>
+            <revised modified="2017-10-16"/>
+        </critdates>
+        <metadata>
+            <keywords/>
+        </metadata>
+    </prolog>
+    <body>
+        <section><p>In verband met het Europese kampioenschap voetbal wil de NPS in samenwerking met
+                een aantal kranten een klein geautomatiseerd informatiesysteem ontwikkelen. De
+                bedoeling is de televisiekijkers en de krantenlezers zo goed mogelijk te informeren
+                over het kampioenschap. Men acht daarvoor de onderstaande overzichten
+                noodzakelijk.</p>
+            <p>Men wil een overzicht waarin per land staat aangegeven welke voetballers er opgesteld
+                kunnen worden. De bijbehorende informatiebehoeftestructuur is:</p>
+            <codeblock>LAND (<u>landnaam</u>, trainer)
+VOETBALLER (<u>voetballernaam</u>, <u>landnaam</u>, club)</codeblock>
+            <p>Men wil tevens een overzicht verschaffen van de begeleiders per land. De bijbehorende
+                informatiebehoeftestructuur is:</p>
+            <codeblock>LAND (<u>landnummer</u>, landnaam)</codeblock>
+            <codeblock>BEGELEIDER (<u>begeleider</u>, landnummer, functie)</codeblock>
+            <p>Men wil regelmatig een topscorerslijst maken. De informatie-behoefte-structuur
+                is:</p>
+            <codeblock>SPELER (<u>spelernummer</u>, naam, land, aantal goals)</codeblock>
+            <p>Tenslotte wil men per club een lijst met daarop de spelers die een club aan een
+                bepaald land uitleent. Informatiebehoeftestructuur:</p>
+            <codeblock>CLUB (<u>clubnaam</u>, <u>land</u>)
+SPELER (naam, land, clubnaam)</codeblock>
+            <ol>
+                <li>Teken van elke informatiebehoeftestructuur het gegevensstructuurdiagram.</li>
+                <li>Integreer de vier afzonderlijke informatiebehoeftestructuren tot één totale
+                    geïntegreerde informatie-behoefte-structuur.</li>
+                <li>Teken het totale, geïntegreerde gegevens-structuur-diagram.</li>
+            </ol>
+        </section>
+        <section otherprops="solution">
+            <title>Uitwerking</title>
+            <p>Overzicht voetballers per land: <fig>
+                    <image keyref="ex_norm015_players_country"/>
+                </fig></p>
+            <p>Begeleiders per land: <fig>
+                    <image keyref="ex_norm015_supervisors_country"/>
+                </fig>
+            </p>
+            <p>Topscorers: <fig>
+                    <image keyref="ex_norm015_topscorers"/>
+                </fig>
+            </p>
+            <p>Clubs met spelers per land: <fig>
+                    <image keyref="ex_norm015_clubs_players_country"/>
+                </fig>
+            </p>
+            <p>Geïntegreerde structuur, een mogelijke oplossing: </p>
+            <fig>
+                <image keyref="ex_norm015_relations"/>
+            </fig>
+        </section>
+    </body>
+</topic>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ex_norm013" xml:lang="nl-NL">
+    <title>Opgave: norm013 - Bestelbon</title>
+    <prolog>
+        <critdates>
+            <created date="2017-10-16"/>
+            <revised modified="2017-10-16"/>
+        </critdates>
+        <metadata>
+            <keywords/>
+        </metadata>
+    </prolog>
+    <body>
+        <section><p>Bestelbon van de firma DataRex:</p>
+            <fig>
+                <title>Bestelbon</title>
+                <image keyref="ex_norm013_data"/>
+            </fig>
+            <ol>
+                <li>Leg uit wat een procesgegeven is. Noem de procesgegevens in bovenstaande
+                    bestelbon.</li>
+                <li>Leg uit wat wordt bedoeld met een herhalende (of repeterende) groep. Geef aan
+                    wat dat is bij bovenstaande bestelbon.</li>
+                <li>Ontwerp de database uit de bestelbon. Geef daarbij alle gevolgde stappen
+                    aan.</li>
+                <li>Teken het gegevensstructuurdiagram.</li>
+            </ol>
+        </section>
+        <section otherprops="solution">
+            <title>Uitwerking</title>
+            <p>Procesgegevens zijn gegevens die afgeleid kunnen worden uit andere gegevens, vaak
+                door een berekening. Op de bestelbon zijn de volgende procesgegevens aan te treffen:<ul>
+                    <li>bedrag = prijs * aantal</li>
+                    <li>BTW bedrag = BTW percentage (afgeleid van btwcode) * bedrag</li>
+                    <li>Het subtotaal van de bedragen</li>
+                    <li>Het subtotaal van de BTW bedragen</li>
+                    <li>Het totaalbedrag</li>
+                </ul></p>
+            <p>Een herhalende (repeterende) groep is een groep van gegevens die vaker dan 1 keer
+                voorkomen, die zich dus herhaalt.Op de bestelbon zijn de regels met daarin de
+                bestellingen, herhalende groepen.</p>
+            <dl>
+                <dlentry>
+                    <dt>Constante gegevens</dt>
+                    <dd>Naam van de firma Datarex en het bankrekeningnummer. Van de betalingstermijn
+                        (hier 14 dagen) kan via de bon niet nagegaan worden of dit voor alle
+                        leveranciers hetzelfde is. In dat geval is het ook een constant gegeven.
+                        Verschilt de betalingstermijn per leverancier, dan is het een gegeven dat
+                        bij de leverancier hoort. Verder wordt het BTW percentage dat aan de btwcode
+                        gekoppeld is, als een constant gegeven beschouwd. Dit is ook maar de vraag
+                        of dit goed is, want btwpercentages kunnen in de tijd veranderen. Constante
+                        gegevens wordt niet opgenomen. En de betalingstermijn wordt ook als een
+                        constant gegeven beschouwd</dd>
+                </dlentry>
+                <dlentry>
+                    <dt>Procesgegevens</dt>
+                    <dd>Zie hiervoor. Deze procesgegevens worden niet opgenomen.</dd>
+                </dlentry>
+                <dlentry>
+                    <dt>Elementaire gegevens</dt>
+                    <dd>Bonnummer, Leveranciernummer, Naam, Adres, Plaats, artikelnummer, aantal,
+                        omschrijving, prijs, btwcode</dd>
+                </dlentry>
+            </dl>
+            <p>0
+                NV<codeblock>BON (<u>bonnummer</u>, leveranciernr, naam, adres, plaats, RG[artikelnr, aantal, omschrijving, prijs, btwcode])</codeblock>
+            </p>
+            <p>1
+                NV<codeblock>BON (<u>bonnummer</u>, leveranciernr, naam, adres, plaats)
+BONREGEL (<u>bonnummer</u>, <u>artikelnr</u>, aantal, omschrijving, prijs, btwcode)</codeblock>
+            </p>
+            <p>2 NV
+                <codeblock>BON (<u>bonnummer</u>, leveranciernr, naam, adres, plaats)
+BONREGEL (<u>bonnummer</u>, <u>artikelnr</u>, aantal)
+ARTIKEL (<u>artikelnr</u>, omschrijving, prijs, btwcode)</codeblock>
+            </p>
+            <p>3 NV
+                <codeblock>BON (<u>bonnummer</u>, leveranciernr)
+LEVERANCIER (<u>leveranciernr</u>, naam, adres, plaats)
+BONREGEL (<u>bonnummer</u>, <u>artikelnr</u>, aantal)
+ARTIKEL (<u>artikelnr</u>, omschrijving, prijs, btwcode)</codeblock>
+            </p>
+            <fig>
+                <image keyref="ex_norm013_dsd"/>
+            </fig>
+        </section>
+    </body>
+</topic>

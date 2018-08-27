@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ex_rapp006" xml:lang="nl-NL">
+    <title>Opgave: rapp006 - Doos per pagina</title>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords/>
+        </metadata>
+    </prolog>
+    <body>
+        <section>
+            <p>Maak een kopie van rapport <wintitle>rapp005</wintitle> en noem het rapport
+                    <userinput>rapp006</userinput>. Verander het ontwerp van het rapport zodanig dat
+                iedere doos op een nieuwe pagina begint.</p>
+            <note type="tip"> Zet de eigenschap <varname>Nieuwe pagina</varname> voor de
+                    <varname>Koptekst (Doosnaam)</varname> op de waarde <option>Voor
+                sectie</option>. </note>
+        </section>
+        <section otherprops="solution">
+            <title>Uitwerking</title>
+            <ol>
+                <li>Kopieer en plak <wintitle>rapp005</wintitle> en noem de kopie
+                        <userinput>rapp006</userinput>.</li>
+                <li>Open rapport <wintitle>rapp006</wintitle> in Ontwerpweergave.</li>
+                <li>Zet de eigenschap <varname>Nieuwe pagina</varname> voor de <varname>Koptekst
+                        (Doosnaam)</varname> op de waarde <option>Voor sectie</option>. </li>
+            </ol>
+        </section>
+    </body>
+</topic>

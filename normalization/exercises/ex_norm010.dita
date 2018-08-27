@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ex_norm010" xml:lang="nl-NL">
+    <title>Opgave: norm010 - Sleutels en tabellen</title>
+    <prolog>
+        <critdates>
+            <created date="2017-10-16"/>
+            <revised modified="2017-10-16"/>
+        </critdates>
+        <metadata>
+            <keywords/>
+        </metadata>
+    </prolog>
+    <body>
+        <section>
+            <p>Ga uit van de volgende verzameling gegevens van docenten:</p>
+            <fig>
+                <image keyref="ex_norm010_data"/>
+            </fig>
+            <ol>
+                <li>Beschrijf op de formele wijze de tabel met de diverse velden.</li>
+                <li>Noem van elk veld een gegevenswaarde. Noem ook het gegevenstype van het veld.
+                    Welke gegevenstypen komen niet in deze tabel voor?</li>
+                <li>Wat is de sleutel van de tabel? Is dit een primaire sleutel?</li>
+                <li>Welke zou de sleutel zijn als het veld uit de vorige vraag niet in de tabel
+                    voorkwam? Is dit dan nog steeds een primaire sleutel?</li>
+            </ol>
+        </section>
+        <section otherprops="solution">
+            <title>Uitwerking</title>
+            <ol>
+                <li>De tabel bevat de volgende persoonlijke gegevens van docenten: personeelsummer,
+                    de achternaam, postcode, woonplaats, telefoonnummer en geboortedatum</li>
+                <li><simpletable>
+                        <sthead>
+                            <stentry>naam</stentry>
+                            <stentry>waarde</stentry>
+                            <stentry>gegevenstype</stentry>
+                        </sthead>
+                        <strow>
+                            <stentry>persnr</stentry>
+                            <stentry>7623</stentry>
+                            <stentry>Numeriek</stentry>
+                        </strow>
+                        <strow>
+                            <stentry>docnaam</stentry>
+                            <stentry>Albrecht</stentry>
+                            <stentry>Tekst</stentry>
+                        </strow>
+                        <strow>
+                            <stentry>docadres</stentry>
+                            <stentry>Schoolstraat 26</stentry>
+                            <stentry>Tekst</stentry>
+                        </strow>
+                        <strow>
+                            <stentry>postcode</stentry>
+                            <stentry>6512 JH</stentry>
+                            <stentry>Tekst</stentry>
+                        </strow>
+                        <strow>
+                            <stentry>woonplaats</stentry>
+                            <stentry>Nijmegen</stentry>
+                            <stentry>Tekst</stentry>
+                        </strow>
+                        <strow>
+                            <stentry>telnr</stentry>
+                            <stentry>024-3245537</stentry>
+                            <stentry>Tekst</stentry>
+                        </strow>
+                        <strow>
+                            <stentry>gebdat</stentry>
+                            <stentry>12-03-1975</stentry>
+                            <stentry>Datum/tijd</stentry>
+                        </strow>
+                    </simpletable>Gegevenstypen die niet voorkomen zijn: memo, valuta, ja/nee,
+                    OLE-object, hyperlink, bijlage</li>
+                <li>persnr, een primaire sleutel</li>
+                <li>Lastige vraag, antwoord hangt af van waar je allemaal rekening mee moet houden.
+                    Je zult een aantal vragen moeten bedenken zoals "Kun je twee docenten hebben met
+                    dezelfde achternaam op hetzelfde adres, met hetzelfde telefoonnummer? De
+                    combinatie met unieke waarden kan de primaire sleutel zijn.</li>
+            </ol>
+        </section>
+    </body>
+</topic>

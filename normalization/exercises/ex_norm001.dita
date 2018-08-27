@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ex_norm001" xml:lang="nl-NL">
+    <title>Opgave: norm001 - Orders</title>
+    <prolog>
+        <critdates>
+            <created date="2017-10-16"/>
+            <revised modified="2017-10-16"/>
+        </critdates>
+        <metadata>
+            <keywords/>
+        </metadata>
+    </prolog>
+    <body>
+        <section>
+            <p>Normaliseer de volgende tabel met gegevens:</p>
+            <image keyref="ex_norm001_data"/>
+        </section>
+        <section otherprops="solution">
+            <title>Uitwerking</title>
+            <codeblock>ORDER (<u>ordernr</u>, orderdatum, klantnr)
+KLANT (<u>klantnr</u>, naam, adres, postcode, plaats)
+ORDERREGEL (<u>ordernr</u>, <u>artnr</u>, aantal, prijs)
+ARTIKEL (<u>artnr</u>, omschr, adviesprijs)</codeblock>
+            <p>In de tabel ORDERREGEL is een veld prijs opgenomen om het mogelijk te maken dat de
+                prijs op de factuur afwijkt van de adviesprijs.</p>
+        </section>
+    </body>
+</topic>

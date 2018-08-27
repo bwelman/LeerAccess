@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ex_quer015" xml:lang="nl-NL">
+    <title>Opgave: quer015 - Bonbons met vulling en zonder noot</title>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords/>
+        </metadata>
+    </prolog>
+    <body>
+        <section>
+            <p>Maak een overzicht van de bonbons die wel een vulling maar geen noot bevatten. Sla de
+                query op onder naam <userinput>quer015</userinput>.</p>
+        </section>
+        <section otherprops="answer">
+            <title>Antwoord</title>
+			<p>Resultaat query: 22 bonbons</p>
+            <image keyref="ex_quer015_result"/>
+            <note conkeyref="note/reservation"/>
+        </section>
+        <section otherprops="solution">
+            <title>Uitwerking</title>
+            <image keyref="ex_quer015_design"/>
+        </section>
+    </body>
+</topic>

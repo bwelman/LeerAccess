@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ex_rapp007" xml:lang="nl-NL">
+    <title>Opgave: rapp007 - Doosetiketten</title>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords/>
+        </metadata>
+    </prolog>
+    <body>
+        <section>
+            <p>Maak etiketten voor alle bonbondozen volgens het model zoals hierna afgebeeld. Bewaar
+                het rapport onder de naam <userinput>rapp007</userinput>.</p>
+            <p>Etikettype <q>Avery J8163 99mmx38mm</q>, Letter Consolas 12pt normaal, zwart.</p>
+            <codeblock>Alle Seizoenen
+
+Code   : ALLS
+Gewicht: 150 gram</codeblock>
+        </section>
+        <section otherprops="solution">
+            <title>Uitwerking</title>
+            <ol>
+                <li>Selecteer tabel <varname>Dozen</varname>.</li>
+                <li>Kies <menucascade>
+                        <uicontrol>tab Maken</uicontrol>
+                        <uicontrol>Etiketten (groep Rapporten)</uicontrol>
+                    </menucascade>.</li>
+                <li>Selecteer de juiste etiketsoort.</li>
+                <li>Stel lettertype, tekengrootte en tekengewicht in.</li>
+                <li>Voeg de velden en tekst toe volgens
+                    voorbeeld:<codeblock>{Doosnaam}
+
+Code  : {Dooscode}
+Gewicht: {Gewicht} gram</codeblock></li>
+                <li>Sorteer oplopend op Dooscode.</li>
+            </ol>
+        </section>
+    </body>
+</topic>

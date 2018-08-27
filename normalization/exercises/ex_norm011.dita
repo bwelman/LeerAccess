@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ex_norm011" xml:lang="nl-NL">
+    <title>Opgave: norm011 - Doe-het-zelf zaak</title>
+    <prolog>
+        <critdates>
+            <created date="2017-10-16"/>
+            <revised modified="2017-10-16"/>
+        </critdates>
+        <metadata>
+            <keywords/>
+        </metadata>
+    </prolog>
+    <body>
+        <section>
+            <p>Een doe-het-zelfzaak verkoopt een groot aantal artikelen. Bestellingen ter aanvulling
+                van de voorraad worden gedaan via een inkooporder.</p>
+            <p>De bestellingen gaan per leverancier altijd via dezelfde inkoper. De inkoper maakt de
+                diverse prijsafspraken voor de te leveren artikelen. De levering van een artikel is
+                niet gebonden aan één leverancier. Op een inkooporder staat altijd minstens één
+                orderregel. Het maximum aantal orderregels is 24. De inkooporder staat in de figuur
+                hierna.</p>
+            <fig>
+                <image keyref="ex_norm011_data"/>
+            </fig>
+            <ol>
+                <li>Ontwerp de database uit het orderformulier. Geef daarbij alle gevolgde stappen
+                    aan.</li>
+                <li>Teken het bijbehorende gegevensstructuurdiagram.</li>
+            </ol>
+        </section>
+        <section otherprops="solution">
+            <title>Uitwerking</title>
+            <dl>
+                <dlentry>
+                    <dt>Constante gegevens</dt>
+                    <dd>Naam van de doe-het-zelf zaak. Dit gegeven wordt niet opgenomen.</dd>
+                </dlentry>
+                <dlentry>
+                    <dt>Procesgegevens</dt>
+                    <dd>bedrag = aantal * prijs (niet op order vermeld) en Totaalbedrag. Deze
+                        procesgegevens worden niet opgenomen.</dd>
+                </dlentry>
+                <dlentry>
+                    <dt>Elementaire gegevens</dt>
+                    <dd>ordernummer, orderdatum, leveranciernr, adres, postcode, plaats, artikelnr,
+                        omschrijving, aantal, prijs, leverdatum, inkoper.</dd>
+                </dlentry>
+            </dl>
+            <p>0
+                NV<codeblock>ORDER (<u>ordernr</u>, orderdatum, leveranciernr, adres, postcode, plaats, leverdatum, inkoper, RG[artikelnr, omschrijving, aantal, prijs])</codeblock>
+            </p>
+            <p>1
+                NV<codeblock>ORDER (<u>ordernr</u>, orderdatum, leveranciernr, adres, postcode, plaats, leverdatum, inkoper)
+ORDERREGEL (<u>factuurnr</u>, <u>artikelnr</u>, omschrijving, aantal, prijs)</codeblock>
+            </p>
+            <p>2 NV
+                <codeblock>ORDER (<u>ordernr</u>, orderdatum, leveranciernr, adres, postcode, plaats, leverdatum, inkoper)
+ORDERREGEL (<u>factuurnr</u>, <u>artikelnr</u>, aantal)
+ARTIKEL (<u>artikelnr</u>, omschrijving, prijs)</codeblock>
+            </p>
+            <p>3 NV
+                <codeblock>ORDER (<u>ordernr</u>, orderdatum, leveranciernr, leverdatum, inkoper)
+LEVERANCIER (<u>leveranciernr</u>, adres, postcode, plaats)
+ORDERREGEL (<u>factuurnr</u>, <u>artikelnr</u>, aantal)
+ARTIKEL (<u>artikelnr</u>, omschrijving, prijs)</codeblock>
+            </p>
+            <fig>
+                <image keyref="ex_norm011_dsd"/>
+            </fig>
+        </section>
+    </body>
+</topic>

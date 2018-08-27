@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ex_norm012" xml:lang="nl-NL">
+    <title>Opgave: norm012 - Vrachtbrief</title>
+    <prolog>
+        <critdates>
+            <created date="2017-10-16"/>
+            <revised modified="2017-10-16"/>
+        </critdates>
+        <metadata>
+            <keywords/>
+        </metadata>
+    </prolog>
+    <body>
+        <section><p>Een groothandel vervoert binnen Nederland zelf de vrachten naar de diverse
+                klanten. De vrachtwagen wordt bij de expeditie geladen en de vracht wordt vervolgens
+                naar de diverse klanten gebracht.</p>
+            <p>Per dag wordt voor elke vrachtwagen één vrachtbrief gemaakt met daarop de informatie
+                voor de chauffeur. In de figuur hierna staat een voorbeeld van zo’n vrachtbrief.</p>
+            <fig>
+                <title>Vrachtbrief</title>
+                <image keyref="ex_norm012_data"/>
+            </fig>
+            <ol>
+                <li>Ga ervan uit dat een vrachtwagen uniek geïdentificeerd wordt met het kenteken.
+                    Ontwerp de database uit de vrachtbrief. Geef daarbij alle gevolgde stappen
+                    aan.</li>
+                <li>Wat verandert er in de gegevensbehoeftestructuur als niet het kenteken de auto's
+                    uniek zou identificeren, maar alleen het autonummer?</li>
+                <li>Teken het gegevens structuurdiagram.</li>
+            </ol>
+        </section>
+        <section otherprops="solution">
+            <title>Uitwerking</title>
+            <dl>
+                <dlentry>
+                    <dt>Procesgegevens</dt>
+                    <dd>Totaalgewicht = som van de afzonderlijke gewichten. Dit procesgegeven wordt
+                        niet opgenomen.</dd>
+                </dlentry>
+                <dlentry>
+                    <dt>Elementaire gegevens</dt>
+                    <dd>vrachtnummer, datum, autonummer, kenteken, merk, laadvermogen, klantnr,
+                        naam, adres, plaats, colli, gewicht, chauffeur.</dd>
+                </dlentry>
+            </dl>
+            <p>0
+                NV<codeblock>VRACHT (<u>vrachtnummer</u>, datum, autonummer, kenteken, merk, laadvermogen, chauffeur, RG[klantnr, naam, adres, plaats, colli, gewicht])</codeblock>
+            </p>
+            <p>1
+                NV<codeblock>VRACHT (<u>vrachtnummer</u>, datum, autonummer, kenteken, merk, laadvermogen, chauffeur)
+VRACHTREGEL (<u>vrachtnummer</u>, <u>klantnr</u>, naam, adres, plaats, colli, gewicht)</codeblock>
+            </p>
+            <p>2 NV
+                <codeblock>VRACHT (<u>vrachtnummer</u>, datum, autonummer, kenteken, merk, laadvermogen, chauffeur)
+VRACHTREGEL (<u>vrachtnummer</u>, <u>klantnr</u>, colli, gewicht)
+KLANT (<u>klantnr</u>, naam, adres, plaats)</codeblock>
+            </p>
+            <p>3 NV
+                <codeblock>VRACHT (<u>vrachtnummer</u>, datum, kenteken, chauffeur)
+VRACHTAUTO (<u>kenteken</u>, autonummer, merk, laadvermogen)
+VRACHTREGEL (<u>vrachtnummer</u>, <u>klantnr</u>, colli, gewicht)
+KLANT (<u>klantnr</u>, naam, adres, plaats)</codeblock>
+            </p>
+            <fig>
+                <image keyref="ex_norm012_dsd"/>
+            </fig>
+        </section>
+    </body>
+</topic>

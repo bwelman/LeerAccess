@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ex_norm003" xml:lang="nl-NL">
+    <title>Opgave: norm003 - Cursusoverzicht</title>
+    <prolog>
+        <critdates>
+            <created date="2017-10-16"/>
+            <revised modified="2017-10-16"/>
+        </critdates>
+        <metadata>
+            <keywords/>
+        </metadata>
+    </prolog>
+    <body>
+        <section>
+            <p>Bij een bedrijf kunnen de werknemers cursussen volgen. De directie wenst periodiek
+                een overzicht te krijgen van de door zijn werknemers gevolgde cursussen volgens
+                onderstaande lay-out:</p>
+            <fig>
+                <image keyref="ex_norm003_data"/>
+            </fig>
+            <p>Dezelfde cursussen kunnen op meerdere tijdstippen worden aangeboden. Een werknemer
+                kan eventueel een bepaalde cursus op een ander tijdstip opnieuw volgen.</p>
+            <p>Ontwerp voor deze gegevens een genormaliseerd systeem.</p>
+        </section>
+        <section otherprops="solution">
+            <title>Uitwerking</title>
+            <codeblock>WERKNEMERS (<u>werknemernr</u>, naam, afd)
+AFDELINGEN (<u>afd</u>, chef)
+CURSUSSEN (<u>cursusnr</u>, cursusomschr)
+DEELNAMES (<u>werknemernr</u>, <u>cursusnr</u>, <u>datum</u>)</codeblock>
+        </section>
+    </body>
+</topic>

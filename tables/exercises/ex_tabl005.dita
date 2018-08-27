@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ex_tabl005" xml:lang="nl-NL">
+    <title>Opgave: tabl005 - Samengestelde sleutel</title>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords/>
+        </metadata>
+    </prolog>
+    <body>
+        <section>
+            <p>Bij deze opdracht moet je beschikken over de tabel <wintitle>Vervoer</wintitle> die
+                eerder in de cursus gemaakt moest worden. Wanneer in jouw database deze tabel niet
+                aanwezig is, dan heb je twee mogelijkheden:<ul>
+                    <li>Je voert alsnog de opdracht uit waarbij je de tabel vervoer maakt.</li>
+                    <li>Je gebruikt de database <filepath>Vervoer.accdb</filepath> waarin de tabel
+                        Vervoer al voor je gemaakt is.</li>
+                </ul></p>
+            <p>In de tabel <wintitle>Vervoer</wintitle> heeft het veld <varname>ID
+                    vervoersbedrijf</varname> regelmatig dezelfde waarde. Zo zie je 13 keer de
+                waarde 1. Daarom kan dit veld niet als primaire sleutel dienen. De waarde van iedere
+                afleverprovincie komt drie keer voor omdat ieder vervoerbedrijf per provincie een
+                tarief heeft. Het veld <varname>Aflever-provincie</varname> kan dus ook niet dienen
+                als primaire sleutel. De combinatie van de velden <varname>ID
+                    vervoersbedrijf</varname> en <varname>Aflever-provincie</varname> is wel uniek
+                en kan dus als primaire sleutel gebruikt worden. Stel de primaire sleutel in de
+                tabel <wintitle>Vervoer</wintitle> in.</p>
+        </section>
+        <section otherprops="solution">
+            <title>Uitwerking</title>
+            <p>Open de tabel <wintitle>Vervoer</wintitle> in de Ontwerpweergave. Selecteer de velden
+                    <varname>ID vervoersbedrijf</varname> en <varname>Aflever-provincie</varname>.
+                Klik daarna op de knop <uicontrol>Primaire sleutel</uicontrol>.</p>
+        </section>
+    </body>
+</topic>

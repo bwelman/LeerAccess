@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ex_expl002" xml:lang="nl-NL">
+  <title>Opgave: expl002 - Selectie Klanten op plaatsnaam</title>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords/>
+        </metadata>
+    </prolog>
+  <body>
+    <section>
+      <p>Maak een selectie van de klanten die in Enschede, Hengelo of Almelo wonen.</p>
+    </section>
+    <section otherprops="answer">
+      <title>Antwoord</title>
+      <p>Het resultaat bestaat uit 12 records.</p>
+    </section>
+    <section otherprops="solution">
+      <title>Uitwerking</title>
+      <p>Open de tabel <wintitle>Klanten</wintitle>. Klik op de filterpijl aan het eind van de
+        kolomkop <varname>Plaats</varname> en selecteer uitsluitend Almelo, Enschede, Hengelo.</p>
+    </section>
+  </body>
+</topic>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ex_quer008" xml:lang="nl-NL">
+    <title>Opgave: quer008 - Klanten niet uit Amsterdam</title>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords/>
+        </metadata>
+    </prolog>
+    <body>
+        <section>
+            <p>Geef een overzicht van alle klanten die niet in Amsterdam wonen. Sla de query op
+                onder de naam <userinput>quer008</userinput>.</p>
+            <note type="tip">Zoek eerst uit welke expressie je in een criterium moet gebruiken voor
+                    <q>niet gelijk aan</q>.</note>
+        </section>
+        <section otherprops="answer">
+            <title>Antwoord</title>
+            <p>Resultaat query: 293 klanten</p>
+            <note conkeyref="note/reservation"/>
+        </section>
+        <section otherprops="solution">
+            <title>Uitwerking</title>
+            <image keyref="ex_quer008_design"/>
+        </section>
+    </body>
+</topic>

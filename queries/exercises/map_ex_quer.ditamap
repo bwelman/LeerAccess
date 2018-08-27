@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map id="map_ex_quer" xml:lang="nl-NL">
+    <title>Opgaven Query's</title>
+    <keydef keys="ex_quer001_design1" href="images/ex_quer001_design1.png" format="png"/>
+    <keydef keys="ex_quer001_design2" href="images/ex_quer001_design2.png" format="png"/>
+    <keydef keys="ex_quer002_design" href="images/ex_quer002_design.png" format="png"/>
+    <keydef keys="ex_quer003_design" href="images/ex_quer003_design.png" format="png"/>
+    <keydef keys="ex_quer004_design" href="images/ex_quer004_design.png" format="png"/>
+    <keydef keys="ex_quer005_design" href="images/ex_quer005_design.png" format="png"/>
+    <keydef keys="ex_quer006_design" href="images/ex_quer006_design.png" format="png"/>
+    <keydef keys="ex_quer007_design" href="images/ex_quer007_design.png" format="png"/>
+    <keydef keys="ex_quer008_design" href="images/ex_quer008_design.png" format="png"/>
+    <keydef keys="ex_quer009_design" href="images/ex_quer009_design.png" format="png"/>
+    <keydef keys="ex_quer009_result" href="images/ex_quer009_result.png" format="png"/>
+    <keydef keys="ex_quer010_design" href="images/ex_quer010_design.png" format="png"/>
+    <keydef keys="ex_quer010_result" href="images/ex_quer010_result.png" format="png"/>
+    <keydef keys="ex_quer011_design" href="images/ex_quer011_design.png" format="png"/>
+    <keydef keys="ex_quer011_result" href="images/ex_quer011_result.png" format="png"/>
+    <keydef keys="ex_quer012_design" href="images/ex_quer012_design.png" format="png"/>
+    <keydef keys="ex_quer012_result" href="images/ex_quer012_result.png" format="png"/>
+    <keydef keys="ex_quer013_design" href="images/ex_quer013_design.png" format="png"/>
+    <keydef keys="ex_quer014_design" href="images/ex_quer014_design.png" format="png"/>
+    <keydef keys="ex_quer014_result" href="images/ex_quer014_result.png" format="png"/>
+    <keydef keys="ex_quer015_design" href="images/ex_quer015_design.png" format="png"/>
+    <keydef keys="ex_quer015_result" href="images/ex_quer015_result.png" format="png"/>
+    <keydef keys="ex_quer016_design" href="images/ex_quer016_design.png" format="png"/>
+    <keydef keys="ex_quer016_result" href="images/ex_quer016_result.png" format="png"/>
+    <keydef keys="ex_quer017_design" href="images/ex_quer017_design.png" format="png"/>
+    <keydef keys="ex_quer017_result" href="images/ex_quer017_result.png" format="png"/>
+    <keydef keys="ex_quer018_design" href="images/ex_quer018_design.png" format="png"/>
+    <keydef keys="ex_quer018_result" href="images/ex_quer018_result.png" format="png"/>
+    <keydef keys="ex_quer019_design" href="images/ex_quer019_design.png" format="png"/>
+    <keydef keys="ex_quer019_result" href="images/ex_quer019_result.png" format="png"/>
+    <keydef keys="ex_quer020_design" href="images/ex_quer020_design.png" format="png"/>
+    <keydef keys="ex_quer020_result" href="images/ex_quer020_result.png" format="png"/>
+    <keydef keys="ex_quer021_design" href="images/ex_quer021_design.png" format="png"/>
+    <keydef keys="ex_quer021_result" href="images/ex_quer021_result.png" format="png"/>
+    <keydef keys="ex_quer023_design" href="images/ex_quer023_design.png" format="png"/>
+    <keydef keys="ex_quer023_result" href="images/ex_quer023_result.png" format="png"/>
+    <keydef keys="ex_quer024_design" href="images/ex_quer024_design.png" format="png"/>
+    <keydef keys="ex_quer024_result" href="images/ex_quer024_result.png" format="png"/>
+    <keydef keys="ex_quer025_design" href="images/ex_quer025_design.png" format="png"/>
+    <keydef keys="ex_quer026_design" href="images/ex_quer026_design.png" format="png"/>
+    <keydef keys="ex_quer027_design" href="images/ex_quer027_design.png" format="png"/>
+    <keydef keys="ex_quer027_result" href="images/ex_quer027_result.png" format="png"/>
+    <keydef keys="ex_quer028_design" href="images/ex_quer028_design.png" format="png"/>
+    <keydef keys="ex_quer029_design_selection" href="images/ex_quer029_design_selection.png" format="png"/>
+    <keydef keys="ex_quer029_design_crosstab" href="images/ex_quer029_design_crosstab.png" format="png"/>
+    <keydef keys="ex_quer029_result" href="images/ex_quer029_result.png" format="png"/>
+    <topichead navtitle="Opgaven">
+        <topicref href="ex_quer001.dita" scope="local" type="topic" audience="level1"/>
+        <topicref href="ex_quer002.dita" scope="local" type="topic" audience="level1"/>
+        <topicref href="ex_quer003.dita" scope="local" type="topic" audience="level1"/>
+        <topicref href="ex_quer004.dita" scope="local" type="topic" audience="level1"/>
+        <topicref href="ex_quer005.dita" scope="local" type="topic" audience="level1"/>
+        <topicref href="ex_quer006.dita" scope="local" type="topic" audience="level1"/>
+        <topicref href="ex_quer007.dita" scope="local" type="topic" audience="level1"/>
+        <topicref href="ex_quer008.dita" scope="local" type="topic" audience="level1"/>
+        <topicref href="ex_quer009.dita" scope="local" type="topic" audience="level1"/>
+        <topicref href="ex_quer010.dita" scope="local" type="topic" audience="level1"/>
+        <topicref href="ex_quer011.dita" scope="local" type="topic" audience="level1"/>
+        <topicref href="ex_quer012.dita" scope="local" type="topic" audience="level1"/>
+        <topicref href="ex_quer013.dita" scope="local" type="topic" audience="level1"/>
+        <topicref href="ex_quer014.dita" scope="local" type="topic" audience="level1"/>
+        <topicref href="ex_quer015.dita" scope="local" type="topic" audience="level1"/>
+        <topicref href="ex_quer016.dita" scope="local" type="topic" audience="level1"/>
+        <topicref href="ex_quer017.dita" scope="local" type="topic" audience="level1"/>
+        <topicref href="ex_quer018.dita" scope="local" type="topic" audience="level1"/>
+        <topicref href="ex_quer019.dita" scope="local" type="topic" audience="level1"/>
+        <topicref href="ex_quer020.dita" scope="local" type="topic" audience="level1"/>
+        <topicref href="ex_quer021.dita" scope="local" type="topic" audience="level1"/>
+        <topicref href="ex_quer023.dita" scope="local" type="topic" audience="level2"/>
+        <topicref href="ex_quer024.dita" scope="local" type="topic" audience="level2"/>
+        <topicref href="ex_quer025.dita" scope="local" type="topic" audience="level2"/>
+        <topicref href="ex_quer026.dita" scope="local" type="topic" audience="level2"/>
+        <topicref href="ex_quer027.dita" scope="local" type="topic" audience="level2"/>
+        <topicref href="ex_quer028.dita" scope="local" type="topic" audience="level2"/>
+        <topicref href="ex_quer029.dita" scope="local" type="topic" audience="level2"/>
+    </topichead>
+</map>

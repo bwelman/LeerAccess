@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ex_norm005" xml:lang="nl-NL">
+    <title>Opgave: norm005 - Klantcontacten</title>
+    <prolog>
+        <critdates>
+            <created date="2017-10-16"/>
+            <revised modified="2017-10-16"/>
+        </critdates>
+        <metadata>
+            <keywords/>
+        </metadata>
+    </prolog>
+    <body>
+        <section>
+            <p>De tabel KLANT bevat klantgegevens. De tabel CONTACT bevat de gegevens van
+                contactpersonen bij een klant. Bij een klant kunnen 0, 1 of meer contactpersonen
+                horen en 1 contactpersoon hoort bij precies 1 klant. Bij de contactpersonen van een
+                klant komt de combinatie achternaam en voornaam maar één keer voor. Verder kunnen
+                meerdere contactpersonen van een klant hetzelfde telefoonnummer hebben.</p>
+            <codeblock>KLANT (<u>Klantnr</u>, Naam, Adres, Postcode, Plaats)
+CONTACT (Achternaam, Voornaam, Bedrijf, telefoonnr)</codeblock>
+            <ol>
+                <li>Definieer een geschikte sleutel bij de tabel CONTACT zonder een extra veld toe
+                    te voegen.</li>
+                <li>De tabellen CONTACT en KLANT moeten gekoppeld worden. Leg uit welke velden
+                    gekoppeld moeten worden en wat primaire en secundaire tabel is bij de
+                    koppeling.</li>
+                <li>Stel dat je de structuur van de tabel CONTACT mag veranderen. Wat is een meer
+                    gebruikelijke manier om de tabellen CONTACT en KLANT te koppelen en wat is dan
+                    de nieuwe structuur? Het doel is een eenvoudiger invoer met behoud van de
+                    relatie.</li>
+            </ol>
+        </section>
+        <section otherprops="solution">
+            <title>Uitwerking</title>
+            <ol>
+                <li>Sleutel: Achternaam + Voornaam + Bedrijf</li>
+                <li>Het veld <varname>Bedrijf</varname> uit de tabel CONTACT koppelen aan veld
+                        <varname>Naam</varname> uit de tabel KLANT. De tabel KLANT is de primaire
+                    tabel en de tabel CONTACT is de secundaire tabel.</li>
+                <li>Verwijder het veld <varname>Bedrijf</varname> in de tabel CONTACT en voeg het
+                        <varname>Klantnr</varname> toe in deze tabel.</li>
+            </ol>
+        </section>
+    </body>
+</topic>

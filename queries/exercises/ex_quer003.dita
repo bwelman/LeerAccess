@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ex_quer003" xml:lang="nl-NL">
+    <title>Opgave: quer003 - Bonbondozen met lage prijs</title>
+    <prolog>
+        <critdates>
+            <created date="2017-10-05"/>
+            <revised modified="2017-10-05"/>
+        </critdates>
+        <metadata>
+            <keywords/>
+        </metadata>
+    </prolog>
+    <body>
+        <section>
+            <p>Toon de Bonbondozen waarvan de prijs hoogstens € 17,50 bedraagt. Toon van de dozen de
+                Dooscode, de doosnaam en de prijs. Sla de query op onder de naam
+                    <userinput>quer003</userinput>.</p>
+        </section>
+        <section otherprops="answer">
+            <title>Antwoord</title>
+            <p>Resultaat query: 4 dozen</p>
+            <note conkeyref="note/reservation"/>
+        </section>
+        <section otherprops="solution">
+            <title>Uitwerking</title>
+            <image keyref="ex_quer003_design"/>
+        </section>
+    </body>
+</topic>

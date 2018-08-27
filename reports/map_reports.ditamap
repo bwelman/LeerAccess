@@ -28,5 +28,6 @@
         <topicref href="reports_grouping.dita" scope="local" type="task" audience="level2"/>
         <topicref href="reports_pictures.dita" scope="local" type="task"
             audience="level2"/>
+        <mapref href="exercises/map_ex_rapp.ditamap" format="ditamap"/>
     </topicref>
 </map>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="ex_norm014" xml:lang="nl-NL">
+    <title>Opgave: norm014 - Boekingen</title>
+    <prolog>
+        <critdates>
+            <created date="2017-10-16"/>
+            <revised modified="2017-10-16"/>
+        </critdates>
+        <metadata>
+            <keywords/>
+        </metadata>
+    </prolog>
+    <body>
+        <section>
+            <p>Het boekingsbureau Cultuur heeft voor het seizoen 2001 - 2002 het Passe-partout
+                ingevoerd. Cultuurliefhebbers kunnen uit een bijzonder gevarieerd aanbod 5
+                voorstellingen kiezen en deze tegen een vriendenprijsje bezoeken. Het boekingsbureau
+                heeft van elke voorstelling een aantal toegangs-kaarten beschikbaar en doet de
+                overgebleven kaarten in de losse verkoop. Als de belangstelling groter is dan het
+                beschikbaar aantal kaarten dan wordt een wachtlijst bijgehouden. De office-manager
+                van boekingsbureau Cultuur heeft gevraagd om hiervoor een database te ontwerpen. Zij
+                wil naast het aanmaken en afdrukken van de passe-partouts ook overzichtslijsten van
+                de deelnemers per voorstelling. Een voorbeeld van een passe-partout zie je in de
+                figuur hierna</p>
+            <fig>
+                <title>Voorbeeld van een Passepartout</title>
+                <image keyref="ex_norm014_data"/>
+            </fig>
+            <ol>
+                <li>Normaliseer het passe-partout. Geef alle stappen van het normalisatieproces
+                    duidelijk weer. Houd hierbij rekening met de volgende zaken.<ul>
+                        <li>De datum van uitgifte van het Passe-partout wordt bij het aanmaken
+                            vastgelegd als eigenschap van het passepartout.</li>
+                        <li>De data op de regel van de voorstelling is de datum van die betreffende
+                            voorstelling.</li>
+                        <li>Bij een Passe-partout moeten kaarten van 5 verschillende voorstellingen
+                            zijn gekocht.</li>
+                        <li>Een voorstelling wordt geïdentificeerd met een identificatienummer, dat
+                            niet staat afgedrukt op het passepartout.</li>
+                    </ul></li>
+                <li>Teken het bijbehorende Gegevensstructuur diagram in Bachman weergave. Let op dat
+                    je duidelijk de verbindingsvelden aangeeft.</li>
+            </ol>
+        </section>
+        <section otherprops="solution">
+            <title>Uitwerking</title>
+            <dl>
+                <dlentry>
+                    <dt>Procesgegevens</dt>
+                    <dd>bedrag, totaal aantal en totaal bedrag Deze procesgegevens worden niet
+                        opgenomen.</dd>
+                </dlentry>
+                <dlentry>
+                    <dt>Elementaire gegevens</dt>
+                    <dd>pasnr, klantnr, voornaam, achternaam, plaats, postcode, telefoon,
+                        datumuitgifte, datum, aantal, titel, theater, prijs</dd>
+                </dlentry>
+            </dl>
+            <p>0
+                NV<codeblock>PAS (<u>pasnr</u>, datumuitgifte, klantnr, voornaam, achternaam, adres, postcode, plaats, telefoon, RG[idnummer, datum, aantal, titel, theater, prijs])</codeblock>
+            </p>
+            <p>1
+                NV<codeblock>PAS (<u>pasnr</u>, datumuitgifte, klantnr, voornaam, achternaam, adres, postcode, plaats, telefoon)
+PASREGEL (<u>pasnr</u>, <u>idnummer</u>, datum, aantal, titel, theater, prijs)</codeblock>
+            </p>
+            <p>Aannames:<ul>
+                    <li>Een voorstelling kan in alle theaters draaien.</li>
+                    <li>De prijs is een eigenschap van een voorstelling en daarom in alle theaters
+                        hetzelfde.</li>
+                </ul></p>
+            <p>2 NV
+                <codeblock>PAS (<u>pasnr</u>, datumuitgifte, klantnr, voornaam, achternaam, adres, postcode, plaats, telefoon)
+PASREGEL (<u>pasnr</u>, <u>idnummer</u>, datum, aantal, theater)
+VOORSTELLING (<u>idnummer</u>, titel, prijs)</codeblock>
+            </p>
+            <p>3 NV
+                <codeblock>PAS (<u>pasnr</u>, datumuitgifte, klantnr)
+KLANT (<u>klantnr</u>, voornaam, achternaam, adres, postcode, plaats, telefoon)
+PASREGEL (<u>pasnr</u>, <u>idnummer</u>, datum, aantal, theater)
+VOORSTELLING (<u>idnummer</u>, titel, prijs)</codeblock>
+            </p>
+            <fig>
+                <image keyref="ex_norm014_dsd"/>
+            </fig>
+        </section>
+    </body>
+</topic>
