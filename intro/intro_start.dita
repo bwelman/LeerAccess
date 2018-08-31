@@ -17,7 +17,7 @@
     <taskbody>
         <context>De mogelijkheden om Access op te starten hangen af van de manier waarop het systeem
             geïnstalleerd is. Deze cursus gaat uit van een standaard installatie van Microsoft
-            Office <keyword keyref="officeversion"/> NL op een systeem met Windows 7 NL. Op bijna
+            Office <keyword keyref="productversion"/> NL op een systeem met Windows 7 NL. Op bijna
             alle computers kan Access via de startknop van Windows gestart worden en deze methode
             wordt hierna beschreven.<note type="tip">De handigste manier om Access te starten is via
                 een snelkoppeling op het bureaublad of via een knop op de taakbalk.</note></context>
