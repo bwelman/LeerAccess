@@ -17,7 +17,8 @@
                 <li>studenten in het middelbaar en hoger onderwijs</li>
             <li>mensen in het bedrijfsleven die <ph keyref="productname"/> gebruiken</li>
             </ol></p>
-        <p>het boek verschilt op meerdere manieren van andere <ph keyref="productname"/> studieboeken.</p>
+        <p>Het boek verschilt op meerdere manieren van andere <ph keyref="productname"/>
+            studieboeken.</p>
         <ul>
             <li>Het is gratis en online, waardoor het voor een breed publiek toegankelijk is.</li>
             <li>De online versie wordt regelmatig bijgewerkt. Je hoeft niet tot de volgende editie
@@ -37,6 +38,8 @@
                 onderwijs stelt. Veel van de opgaven zijn voortgekomen uit ervaringen van studenten
                 in de beroepspraktijk tijdens stages en afstuderen.</li>
         </ul>
+        <note type="important">Bij dit studieboek horen hulpbestanden die je nodig hebt bij het maken
+            van de taken en de opgaven. Download deze via <xref keyref="practicefiles">hulpbestanden</xref>.</note>
         <p><b>Een digitale versie van het studieboek kan gekocht worden in PDF en EPUB formaat.</b><ul>
                 <li>PDF: geschikt voor het lezen op een pc/laptop en voor het maken van een papieren
                     afdruk. De inhoud is doorzoekbaar en er kan in- en uitgezoomd worden.</li>
@@ -44,6 +47,6 @@
                     Lettertype en -grootte kunnen aangepast worden (afhankelijk van het apparaat).
                     De inhoud is doorzoekbaar.</li>
             </ul></p>
-        <p>Informatie over hoe een digitale versie aangeschaft kan worden volgt spoedig.</p>
+        <p>Voor het aanschaffen van een PDF en EPUB ga naar <xref keyref="buylink">Digitale versie kopen</xref>.</p>
     </body>
 </topic>
