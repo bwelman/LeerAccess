@@ -45,6 +45,7 @@
         </topicmeta>
     </keydef>
     <keydef keys="buylink" href="https://gumroad.com/products/ZxRTE" scope="external" format="html"/>
+    <keydef keys="cover" href="images/cover_access.png" scope="local" format="png"/>
     <keydef keys="practicefiles" href="http://www.leeraccess.softwijs.nl/_download/Access2016NL_hulpbestanden.zip" scope="external" format="html"/>
     <keydef keys="access_window" href="images/access_window.png" format="png"/>
     <keydef keys="asterisk" href="images/asterisk.png" format="png"/>
