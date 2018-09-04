@@ -39,7 +39,7 @@
                 <person>Ben Welman</person>
             </bookowner>
         </bookrights>
-        <data name="covergraphic" value="common/images/cover_access.png"/>
+        <data name="covergraphic" value="common/images/cover_access_nl.png"/>
     </bookmeta>
     <frontmatter>
         <booklists>
