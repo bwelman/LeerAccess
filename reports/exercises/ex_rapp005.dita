@@ -18,7 +18,10 @@
                 ontwerp zodanig dat het totale bedrag per doos naast de doosnaam wordt
                 afgedrukt.</p>
             <fig>
-                <image keyref="ex_rapp005_report"/>
+                <title>Rapport November 2009</title>
+                <image keyref="ex_rapp005_report">
+                    <alt>Rapport November 2009</alt>
+                </image>
             </fig>
         </section>
         <section otherprops="solution">

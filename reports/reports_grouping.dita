@@ -2,7 +2,7 @@
 <!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
 <task id="reports_grouping" xml:lang="nl-NL">
     <title>Taak: Groepsrapport</title>
-    <shortdesc>het maken van een gegroepeerd rapport, met de Wizard rapport op basis van een
+    <shortdesc>Het maken van een gegroepeerd rapport, met de Wizard rapport op basis van een
         query.</shortdesc>
     <prolog>
         <critdates>
@@ -22,9 +22,9 @@
                 alsmede de detailgegevens van elke order. Zie als voorbeeld de figuur hierna waarin
                 een gedeelte van het rapport te zien is over november 2009.</p>
             <fig>
-                <title>Gedeelte van een rapportweergave</title>
+                <title>Rapport November 2009</title>
                 <image keyref="group_report_result">
-                    <alt>Weergave van het rapport</alt>
+                    <alt>Rapport November 2009</alt>
                 </image>
             </fig>
             <p>ANALYSE</p>
