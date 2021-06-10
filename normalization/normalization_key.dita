@@ -7,7 +7,7 @@
     <prolog>
         <critdates>
             <created date="2017-10-05"/>
-            <revised modified="2017-10-05"/>
+            <revised modified="2021-06-10"/>
         </critdates>
         <metadata>
             <keywords>
@@ -18,15 +18,15 @@
         </metadata>
     </prolog>
     <conbody>
-        <p>In de tabellen van een relationele database zijn gelijksoortige gegevens opgeslagen in de
-            velden van records (rijen). Records moeten gevonden kunnen worden via een unieke waarde
-            van deze gegevens. Zo'n unieke waarde wordt een <term>kandidaatsleutel</term> genoemd.
-            Vaak is er in een tabel maar één kandidaatsleutel, maar het is mogelijk dat er meerdere
-            kandidaatsleutels zijn. Uit de beschikbare kandidaatsleutels wordt er eentje gekozen tot
-            de <term>(primaire) sleutel</term>. Een tabel moet daarom zo ontworpen worden dat er een
-            sleutel gedefinieerd kan worden. Wanneer zo'n sleutel niet uit de gegevens samengesteld
-            kan worden moet er een kunstmatig sleutelveld gemaakt worden. Vaak is dat een nummer,
-            een id. Enkele voorbeelden van mogelijke sleutelvelden:<ul>
+        <p>Records in een tabel moeten gevonden kunnen worden via een unieke waarde van een of
+            meerdere gegevens. Een veld (of combinatie van velden) met zo'n unieke waarde wordt een
+                <term>kandidaatsleutel</term> genoemd. Wanneer er in een tabel maar één
+            kandidaatsleutel is, dan wordt dat vanzelfsprekend de <term>sleutel</term> van de tabel.
+            Zijn er meerdere kandidaatsleutels beschikbaar, dan moet je er daar eentje uit kiezen en
+            tot <term>sleutel</term> benoemen. Een tabel moet daarom zo ontworpen worden dat er
+            altijd een sleutel gedefinieerd kan worden. Wanneer zo'n sleutel niet uit de gegevens
+            samengesteld kan worden, dan moet er een kunstmatig sleutelveld gemaakt worden. Vaak is
+            dat een nummer, een id. Enkele voorbeelden van veel voorkomende sleutelvelden zijn:<ul>
                 <li>Artikelnummer</li>
                 <li>Klantnummer</li>
                 <li>Ordernummer</li>
@@ -34,19 +34,20 @@
                 <li>Burgerservicenummer (BSN)</li>
                 <li>IBAN</li>
             </ul></p>
-        <p>Een sleutel bestaat uit 1 of meerdere veldnamen uit een tabel. Iedere sleutelwaarde is
-            uniek; d.w.z. dat iedere sleutelwaarde slechts één keer in de tabel mag voorkomen.
-            Verder moet de sleutel minimaal zijn, uit zo min mogelijk veldnamen bestaan.</p>
+        <p>Een sleutel van een tabel bestaat  dus uit 1 of meerdere veldnamen uit die tabel. Iedere
+            sleutelwaarde moet uniek zijn, wat wil zeggen dat iedere sleutelwaarde slechts één keer
+            in de tabel mag voorkomen. Verder moet de sleutel uit zo min mogelijk veldnamen
+            bestaan.</p>
         <p>Enkele voorbeelden.</p>
         <example>
-            <title>Voorbeeld 1</title>
+            <title>Voorbeeld 1: Auto</title>
             <p>Mogelijke unieke kenmerken voor een auto zijn het chassisnummer en het kenteken.
                 Hierdoor kan bijvoorbeeld het kenteken een sleutel zijn in een tabel met gegevens
                 van auto's:</p>
             <codeblock>AUTO (<u>kenteken</u>, merk, type, gewicht, brandstof, kleur)</codeblock>
         </example>
         <example>
-            <title>Voorbeeld 2</title>
+            <title>Voorbeeld 2: Producten</title>
             <p>Een tabel PRODUCTEN heeft de volgende inhoud:<simpletable>
                     <sthead>
                         <stentry>afmeting</stentry>
@@ -94,16 +95,17 @@
                         <stentry>100</stentry>
                     </strow>
                 </simpletable></p>
-            <p>Zowel afmeting, kleur als lengte kan niet als sleutel voor de tabel dienen, omdat in
-                elk veld (kolom) geen unieke waarde voorkomt. Via een combinatie van velden is wel
-                een unieke waarde te vinden. Ga na dat de volgende combinaties geschikte
+            <p>Zowel <varname>afmeting</varname>, <varname>kleur</varname> als
+                    <varname>lengte</varname> kan hier niet als sleutel voor de tabel dienen, omdat
+                in elk van deze velden geen unieke waarde voorkomt. Via een combinatie van velden is
+                wel een unieke waarde te vinden. Ga na dat de volgende combinaties geschikte
                 kandidaatsleutels voor deze tabel zijn:<ul>
                     <li><codeph><u>afmeting</u>, <u>lengte</u></codeph></li>
                     <li><codeph><u>kleur</u>, <u>lengte</u></codeph></li>
                 </ul></p>
         </example>
         <example>
-            <title>Voorbeeld 3</title>
+            <title>Voorbeeld 3: Adressen</title>
             <p>Een deel van de inhoud van een tabel met adresgegevens ziet er als volgt uit: <simpletable>
                     <sthead>
                         <stentry>straat</stentry>
@@ -134,22 +136,23 @@
                 kandidaatsleutel is:<codeblock><u>postcode</u>, <u>huisnr</u></codeblock></p>
         </example>
         <example>
-            <title>Voorbeeld 4</title>
+            <title>Voorbeeld 4: Klantgegevens</title>
             <p>Een bedrijf heeft de volgende gegevensverzameling voor klanten:
                 <codeblock>KLANTEN (naam, adres, postcode, plaats, telnr)</codeblock></p>
-            <p>Het kan voorkomen dat twee klanten op hetzelfde adres wonen. Indien dit het geval is
-                hebben ze echter verschillende namen: bijvoorbeeld H. Linde sr. en H. Linde jr. Het
-                kan ook voorkomen dat exact dezelfde klantnaam tweemaal in de tabel voorkomt. In dat
-                geval betreft het twee klanten die op verschillende adressen wonen.</p>
-            <p>Ga na dat de sleutel hier niet uit één veld kan bestaande te vinden en dat de
-                volgende combinaties geschikte kandidaatsleutels voor deze tabel zijn:<ul>
+            <p>Ga er hierbij vanuit dat het kan voorkomen dat twee klanten op hetzelfde adres wonen.
+                Indien dit het geval is hebben ze echter verschillende namen: bijvoorbeeld H. Linden
+                en K. Linde, of H. Linde sr. en H. Linde jr. Het kan ook voorkomen dat exact
+                dezelfde klantnaam tweemaal in de tabel voorkomt. In dat geval betreft het twee
+                klanten die op verschillende adressen wonen.</p>
+            <p>Ga na dat de sleutel hier niet uit één veld kan bestaan en dat de volgende
+                combinaties geschikte kandidaatsleutels voor deze tabel zijn:<ul>
                     <li><codeph><u>naam</u>, <u>telnr</u></codeph></li>
                     <li><codeph><u>naam</u>, <u>adres</u>, <u>postcode</u></codeph></li>
                 </ul></p>
             <p>In de praktijk wordt vaak een uniek klantnummer voor elke klant ingevoerd.</p>
         </example>
         <example>
-            <title>Voorbeeld 5</title>
+            <title>Voorbeeld 5: Boeken</title>
             <p>Een kleine bibliotheek heeft ongeveer 9000 boeken (dubbele exemplaren mogelijk) en
                 400 leden. Men heeft de volgende informatiebehoeften:</p>
             <ul>
@@ -177,10 +180,10 @@
                         </strow>
                     </simpletable>
                 </li>
-                <li>Van ieder boek dat uitgeleend wordt moet bijgehouden worden: het nummer van het
-                    boek, het nummer van het lid en de datum waarop het boek uiterlijk terug bezorgd
-                    dient te worden. Eens per week worden er etiketten en brieven uitgeprint
-                    betreffende de boeken die minstens 1 maand te laat zijn.</li>
+                <li>Van ieder boek dat uitgeleend wordt moet het volgende worden bijgehouden: het
+                    nummer van het boek, het nummer van het lid en de datum waarop het boek
+                    uiterlijk terug bezorgd dient te worden. Eens per week worden er etiketten en
+                    brieven uitgeprint met de boeken die minstens 1 maand te laat zijn.</li>
                 <li>Op het etiket staan de gegevens van het lid waarvan 1 of meerdere boeken
                     minstens 1 maand te laat zijn. In de brief staan de gegevens van het lid en de
                     gegevens van de boeken die minstens 1 maand te laat zijn.</li>
@@ -296,9 +299,9 @@ UITLEEN (<u>Boeknr</u>, Lidnr, Terugdatum)</codeblock>Een
                 gedurende een jaar bewaard worden. De opzet van de tabel moet hierdoor gewijzigd
                 worden.</p>
             <p>Ga na dat in de huidige opzet van de tabel <wintitle>UITLEEN</wintitle> het veld
-                    <varname>Boeknr</varname> inderdaad als sleutel kan dienen, dat dit in de nieuwe
-                opzet niet meer kan en dat de combinatie <codeph><u>Boeknr</u>,
-                    <u>Terugdatum</u></codeph> een kandidaatsleutel is.</p>
+                    <varname>Boeknr</varname> inderdaad als sleutel kan dienen, maar dat dit in de
+                nieuwe opzet niet meer kan. Ga verder na dat de combinatie <codeph><u>Boeknr</u>,
+                        <u>Terugdatum</u></codeph> in de nieuwe opzet een kandidaatsleutel is.</p>
         </example>
     </conbody>
 </concept>

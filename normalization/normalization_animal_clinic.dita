@@ -6,7 +6,7 @@
     <prolog>
         <critdates>
             <created date="2017-10-05"/>
-            <revised modified="2017-10-05"/>
+            <revised modified="2021-06-10"/>
         </critdates>
         <metadata>
             <keywords/>
@@ -21,31 +21,31 @@
                 <alt>Behandelingen dieren</alt>
             </image>
         </fig>
-        <p>Het plan is om deze gegevens in een database bij te gaan houden waarvoor een
-            genormaliseerde structuur van tabellen moet worden opgesteld.</p>
+        <p>Het plan is om deze gegevens bij te houden in een database, waarvoor een genormaliseerde
+            structuur van tabellen moet worden opgesteld.</p>
         <section>
             <title>0 NV</title>
             <p>Alle gegevens zijn elementaire gegevens, behalve het attribuut
                     <varname>behandeling</varname>. Dit is een samengesteld gegeven dat opgesplitst
                 kan worden in een <varname>behandelnr</varname> en een
                     <varname>behandelnaam</varname>.</p>
-            <p>Per dier worden meerdere behandelingen bijgehouden, bezoekdatum en behandeling vormen
-                dus een Repeterende Groep (RG).</p>
+            <p>Per dier worden meerdere behandelingen bijgehouden, <varname>bezoekdatum</varname> en
+                    <varname>behandeling</varname> vormen dus een Repeterende Groep (RG).</p>
             <codeblock>DIER (<u>diernr</u>, diernaam, diertype, leeftijd, eigenaar, RG [bezoekdatum, behandelnr, behandelnaam])</codeblock>
         </section>
         <section>
             <title>1 NV</title>
             <p>De repeterende groep wordt afgesplitst van tabel <varname>DIER</varname> en in een
                 nieuwe tabel <varname>BEZOEK</varname> geplaatst. Aan deze tabel wordt de sleutel
-                van tabel <varname>DIER</varname> toegevoegd. De sleutel van de nieuwe tabel is
-                samengesteld uit drie velden. Ga dit na.</p>
+                van tabel <varname>DIER</varname> toegevoegd. Ga na dat de sleutel van de nieuwe
+                tabel moet worden samengesteld uit drie velden.</p>
             <codeblock>DIER (<u>diernr</u>, diernaam, diertype, leeftijd, eigenaar)
 BEZOEK (<u>diernr</u>, <u>bezoekdatum</u>, <u>behandelnr</u>, behandelnaam)</codeblock>
         </section>
         <section>
             <title>2 NV</title>
             <p>In tabel <varname>BEZOEK</varname> hangt het veld <varname>behandelnaam</varname>
-                alleen af van het veld <varname>behandelnr</varname>, wordt daarom uit deze tabel
+                alleen af van het veld <varname>behandelnr</varname> en wordt daarom uit deze tabel
                 gehaald en in een nieuwe tabel <varname>BEHANDELING</varname> ondergebracht waaraan
                 tevens het sleutelveld <varname>behandelnr</varname> wordt toegevoegd.</p>
             <codeblock>DIER (<u>diernr</u>, diernaam, diertype, leeftijd, eigenaar)

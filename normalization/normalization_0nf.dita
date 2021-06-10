@@ -6,7 +6,7 @@
     <prolog>
         <critdates>
             <created date="2017-10-05"/>
-            <revised modified="2017-10-05"/>
+            <revised modified="2021-06-10"/>
         </critdates>
         <metadata>
             <keywords>
@@ -22,24 +22,25 @@
     </prolog>
     <conbody>
         <p>De eerste stap is het bepalen van de benodigde gegevens (<term>attributen</term>),
-            uitgaande van de informatiebehoefte. Op de factuur zijn verschillende soorten gegevens
-            die niet allemaal worden meegenomen. De gegevens kunnen onderscheiden worden in:</p>
+            uitgaande van de informatiebehoefte. In de praktijk kunnen reeds aanwezige papieren
+            afdrukken als hulpmiddel gebruikt worden. Op de factuur van de firma Verschoor zijn
+            verschillende soorten gegevens te zien die in de volgende groepen verdeeld kunnen
+            worden:</p>
         <dl>
             <dlentry>
                 <dt>Constante gegevens</dt>
                 <dd>Dit zijn gegevens die steeds hetzelfde zijn. Op de factuur zijn dit de gegevens
                     van de groothandel zelf (naam en adresgegevens). Deze gegevens kunnen in de loop
                     van de tijd wel veranderen, maar gedurende een bepaalde periode mogen ze als
-                    constant beschouwd worden. Het is zelfs mogelijk deze gegevens vooraf op de
-                    factuur te drukken. Constante gegevens worden niet opgenomen naar de
-                    database.</dd>
+                    constant beschouwd worden. Vaak zijn facturen al vooraf bedrukt met deze
+                    gegevens. Constante gegevens neem je niet op in de database.</dd>
             </dlentry>
             <dlentry>
                 <dt>Procesgegevens</dt>
                 <dd>Procesgegevens zijn gegevens die uit andere gegevens kunnen worden afgeleid,
                     bijvoorbeeld doordat ze uit die andere gegevens berekend kunnen worden.
-                    Procesgegevens worden niet opgenomen in de database. Op de factuur komen de
-                    volgende procesgegevens voor:<ul>
+                    Procesgegevens neem je ook niet op in de database. Op de factuur van Verschoor
+                    komen de volgende procesgegevens voor:<ul>
                         <li><varname>Bedrag</varname>, wordt berekend via <varname>Aantal</varname>
                             x <varname>Prijs</varname>.</li>
                         <li><varname>Subtotaal</varname>, wordt berekend door alle bedragen op te
@@ -55,21 +56,22 @@
             <dlentry>
                 <dt>Elementaire gegevens</dt>
                 <dd>Elementaire gegevens zijn alle essentiële gegevens die niet opgesplitst kunnen
-                    worden. De elementaire gegevens worden in de database opgenomen. Op de factuur
-                    komen de volgende elementaire gegevens voor: <varname>Datum</varname>,
-                        <varname>Klantnaam</varname>, <varname>Adres</varname>,
-                        <varname>Postcode</varname>, <varname>Plaats</varname>,
-                        <varname>Telefoon</varname>, <varname>Artikelnr</varname>,
-                        <varname>Artikelomschrijving</varname>, <varname>Aantal</varname>,
-                        <varname>Prijs</varname> en <varname>Korting</varname>.</dd>
+                    worden. Deze elementaire gegevens worden in de database opgenomen. Op de factuur
+                    van Verschoor komen de volgende elementaire gegevens voor:
+                        <varname>Datum</varname>, <varname>Klantnaam</varname>,
+                        <varname>Adres</varname>, <varname>Postcode</varname>,
+                        <varname>Plaats</varname>, <varname>Telefoon</varname>,
+                        <varname>Artikelnr</varname>, <varname>Artikelomschrijving</varname>,
+                        <varname>Aantal</varname>, <varname>Prijs</varname> en
+                        <varname>Korting</varname>.</dd>
             </dlentry>
             <dlentry>
                 <dt>Samengestelde gegevens</dt>
                 <dd>Dit zijn gegevens die opgesplitst kunnen worden in elementaire gegevens. De zo
                     ontstane elementaire gegevens worden in de database opgenomen. Op de factuur is
-                        <varname>Factuurcode</varname> een samengesteld gegeven, omdat deze te
-                    splitsen is in een factuurnummer (10000) en een afkorting van de verkoper (POY).
-                    Aan de groep met elementaire gegevens wordt daarom toegevoegd
+                        <varname>Factuurcode</varname> een samengesteld gegeven, omdat deze bestaat
+                    uit een combinatie van een factuurnummer (10000) en een afkorting van de
+                    verkoper (POY). Aan de groep met elementaire gegevens wordt daarom toegevoegd
                         <varname>Factuurnr</varname> en <varname>Verkoper</varname>.<note
                         type="notice">Adres zou ook opgesplitst kunnen worden in straatnaam en
                         huisnummer. Voor deze informatiebehoefte is dit niet van belang en daarom is
@@ -79,14 +81,13 @@
         <p>De verzamelde lijst met elementaire gegevens (eigenschappen, attributen) voor de factuur
             is
             dan<codeblock>FACTUUR (Factuurnr, Verkoper, Datum, Klantnaam, Adres, Postcode, Plaats, Telefoon, Artikelnr, Artikelomschrijving, Aantal, Prijs, Korting)</codeblock></p>
-        <p>De attributen die vaker dan één keer voorkomen worden ook wel een <term>Repeterende
-                Groep</term> (<term xml:lang="en-US">Repeating Group</term>) genoemd, afgekort als
-                <term>RG</term>. Omdat op de factuur meerdere factuurregels met artikelen voorkomen
-            vormen de attributen <varname>Artikelnr</varname>,
-                <varname>Artikelomschrijving</varname>, <varname>Aantal</varname> en
-                <varname>Prijs</varname> een <term>RG</term>. Het is als voorbereiding op de
-            volgende stap handig om een RG in de lijst aan te duiden.</p>
-        <p>Als laatste moet een sleutel worden aangewezen. Dit wordt <varname>Factuurnr</varname> en
+        <p>De attributen die vaker dan één keer op de factuur voor kunnen komen worden ook wel een
+                <term>Repeterende Groep</term> genoemd, afgekort als <term>RG</term>. Omdat op de
+            factuur meerdere factuurregels met artikelen voorkomen vormen de attributen
+                <varname>Artikelnr</varname>, <varname>Artikelomschrijving</varname>,
+                <varname>Aantal</varname> en <varname>Prijs</varname> een <term>RG</term>. Het is
+            als voorbereiding op de volgende stap handig om een RG in de notatie aan te geven.</p>
+        <p>Tot slot moet een sleutel worden aangewezen. Dit wordt <varname>Factuurnr</varname> en
             dit attribuut wordt in de lijst onderstreept. De <term>0 NV</term> ziet er dan als volgt
             uit:</p>
         <p><codeblock>FACTUUR (<u>Factuurnr</u>, Verkoper, Datum, Klantnaam, Adres, Postcode, Plaats, Telefoon, Korting, RG [Artikelnr, Artikelomschrijving, Aantal, Prijs])</codeblock></p>

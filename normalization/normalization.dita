@@ -6,7 +6,7 @@
     <prolog>
         <critdates>
             <created date="2017-10-05"/>
-            <revised modified="2017-10-05"/>
+            <revised modified="2021-06-10"/>
         </critdates>
         <metadata>
             <keywords>
@@ -16,8 +16,8 @@
     </prolog>
     <conbody>
         <p>Normaliseren is een stapsgewijs proces om een relationele database te ontwerpen. Dit doe
-            je vooral om te voorkomen dat hetzelfde gegeven op meerdere plekken wordt vastgelegd.
-            Het eindresultaat bestaat uit een overzicht van de tabellen met hun velden en de
+            je vooral om te voorkomen dat dezelfde gegevens op meerdere plekken worden vastgelegd.
+            Het eindresultaat van het proces is een overzicht van de tabellen met hun velden en de
             relaties tussen de tabellen. Dit ontwerpproces doe je met pen en papier, hier komt geen
             computer aan te pas. In dit hoofdstuk wordt het normalisatieproces tot en met de derde
             normaalvorm behandeld.</p>

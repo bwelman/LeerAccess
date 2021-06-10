@@ -7,7 +7,7 @@
     <prolog>
         <critdates>
             <created date="2017-10-05"/>
-            <revised modified="2017-10-05"/>
+            <revised modified="2021-06-10"/>
         </critdates>
         <metadata>
             <keywords>
@@ -26,10 +26,11 @@
             zijn in de tabel <varname>FACTUUR</varname> de attributen <varname>Adres</varname>,
                 <varname>Postcode</varname>, <varname>Plaats</varname> en
                 <varname>Telefoon</varname> functioneel afhankelijk van het attribuut
-                <varname>Klantnaam</varname> want bij iedere Klantnaam hoort precies één waarde voor
-            Adres, Postcode, Plaats en Telefoon.<note type="notice">Ook wanneer de Klantnaam niet
-                uniek is, worden dit soort bij elkaar behorende gegevens toch in een nieuwe tabel
-                ondergebracht waarbij dan een uniek klantnummer wordt bedacht.</note></p>
+                <varname>Klantnaam</varname>, want bij iedere Klantnaam hoort precies één waarde
+            voor Adres, Postcode, Plaats en Telefoon.<note type="notice">Ook wanneer de Klantnaam
+                niet uniek is, worden dit soort bij elkaar behorende gegevens vaak toch in een
+                nieuwe tabel ondergebracht waaraan dan een uniek id veld wordt toegevoegd,
+                bijvoorbeeld een uniek klantnummer.</note></p>
         <p>De klantgegevens worden in een nieuwe tabel <varname>KLANT</varname> ondergebracht en het
             veld <varname>Klantnaam</varname> wordt hiervan de sleutel.</p>
         <p>De <term>3 NV</term> wordt dan:</p>
@@ -37,5 +38,10 @@
 KLANT (<u>Klantnaam</u>, Adres, Postcode, Plaats, Telefoon)
 FACTUURREGEL (<u>Factuurnr</u>, <u>Artikelnr</u>, Aantal, Verkoopprijs)
 ARTIKEL (<u>Artikelnr</u>, Artikelomschrijving, Adviesprijs)</codeblock>
+        <p>
+            <note id="note_lsh_z5b_xpb" type="notice">Ga na hoe de derde normaalvorm eruit zou zijn
+                wanneer je voor de tabel KLANT gebruik maakt van een uniek veld
+                    <varname>Klantnr</varname>.</note>
+        </p>
     </conbody>
 </concept>

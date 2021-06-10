@@ -6,7 +6,7 @@
     <prolog>
         <critdates>
             <created date="2017-10-05"/>
-            <revised modified="2017-10-05"/>
+            <revised modified="2021-06-10"/>
         </critdates>
         <metadata>
             <keywords>
@@ -17,43 +17,32 @@
         </metadata>
     </prolog>
     <conbody>
-        <p>Een gegevensstructuurdiagram (GSD) is een tekening waarmee de relaties tussen tabellen op
-            een overzichtelijke manier kunnen worden weergegeven.</p>
+        <p>Een gegevensstructuurdiagram (GSD) is een grafische weergave van de relaties tussen de
+            tabellen.</p>
         <fig>
             <title>Voorbeeld Gegevensstructuurdiagram</title>
             <image keyref="example_dsd">
                 <alt>Voorbeeld GSD</alt>
             </image>
         </fig>
-        <p>Vaak wordt bij de pijl ook het attribuut vermeld waarmee de koppeling tot stand wordt
+        <p>Tussen deze vier tabellen bestaan verschillende relaties, zoals:<ul id="ul_rxl_nwb_xpb">
+                <li>Een factuur hoort bij precies één klant. In het GSD gaat er vanuit FACTUUR een
+                    enkele lijn naar KLANT.</li>
+                <li>Een klant kan meerdere facturen hebben. In het GSD gaat er vanuit KLANT meerdere
+                    lijnen naar FACTUUR via de vertakking aan het eind.</li>
+                <li>Op een factuur kunnen meerdere factuurregels staan.</li>
+                <li>Een factuurregel hoort altijd bij één factuur.</li>
+                <li>Een artikel kan in meerdere factuurregels voorkomen.</li>
+                <li>Een factuurregel heeft altijd betrekking op één artikel.</li>
+            </ul></p>
+        <p>Vaak wordt bij de lijn ook het veld vermeld waarmee de koppeling tot stand wordt
             gebracht.</p>
-        <p>De betekenis van de enkele en de dubbele pijl is als volgt:</p>
-        <dl>
-            <dlentry>
-                <dt>Klant ->> Factuur</dt>
-                <dd>Bij één klant kunnen meerdere facturen horen.</dd>
-            </dlentry>
-            <dlentry>
-                <dt>Factuur -> Klant</dt>
-                <dd>Een factuur hoort altijd bij één klant.</dd>
-            </dlentry>
-            <dlentry>
-                <dt>Factuur ->>Factuurregel</dt>
-                <dd>Bij één factuur kunnen meerdere factuurregels horen.</dd>
-            </dlentry>
-            <dlentry>
-                <dt>Factuurregel -> Factuur</dt>
-                <dd>Een factuurregel hoort altijd bij één factuur.</dd>
-            </dlentry>
-            <dlentry>
-                <dt>Artikel ->> Factuurregel</dt>
-                <dd>Een artikel kan op meerdere factuurregels voorkomen.</dd>
-            </dlentry>
-            <dlentry>
-                <dt>Factuurregel -> Artikel</dt>
-                <dd>Een factuurregel heeft altijd betrekking op één artikel.</dd>
-            </dlentry>
-        </dl>
+        <p>Bij een GSD worden de volgende symbolen gebruikt:<ul id="ul_stj_fyb_xpb">
+                <li>RECHTHOEK: voor een tabel.</li>
+                <li>ENKELE LIJN: voor precies één.</li>
+                <li>VERTAKTE LIJN: voor meerdere</li>
+            </ul></p>
+        <p>De betekenis van de lijnen is als volgt:</p>
         <p>Een relatiediagram in Access ziet er als volgt uit<fig id="fig_vpg_zlm_qbb">
                 <title>Relaties in Access</title>
                 <image keyref="example_relations" id="image_wpg_zlm_qbb">

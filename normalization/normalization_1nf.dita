@@ -21,18 +21,18 @@
         </metadata>
     </prolog>
     <conbody>
-        <p>Om van de nulde naar de eerste normaalvorm te komen worden alle RG's afgesplitst en in
-            een nieuwe gegevensgroep (tabel) ondergebracht. Om een koppeling tussen de tabellen
-            mogelijk te maken wordt aan de nieuwe tabel toegevoegd de sleutel van de tabel waaruit
-            de RG vandaan komt. Van de nieuwe tabel wordt dan de sleutel vastgesteld. Meestal is dit
-            een combinatie van de sleutel van de oorspronkelijke tabel, de <term>vreemde
-                sleutel</term> (<term xml:lang="en-US">foreign key</term>), met het gegeven dat
-            binnen de RG een sleutelrol vervult.</p>
-        <p>In de 0NV komt maar 1 RG voor met Artikelnr als kandidaatsleutel: <codeph>RG
-                    [<u>Artikelnr</u>, Artikelomschrijving, Aantal, Prijs)</codeph></p>
+        <p>Om van de nulde naar de eerste normaalvorm te komen worden alle Repeterende Groepen
+            afgesplitst en in een nieuwe gegevensgroep (tabel) ondergebracht. Om een koppeling
+            tussen de tabellen mogelijk te maken wordt aan de nieuwe tabel toegevoegd de sleutel van
+            de tabel waaruit de RG vandaan komt. Van de nieuwe tabel wordt dan de sleutel
+            vastgesteld. Meestal is dit een combinatie van de sleutel van de oorspronkelijke tabel,
+            de <term>vreemde sleutel</term> (<term xml:lang="en-US">foreign key</term>), met het
+            veld dat binnen de RG een sleutelrol vervult.</p>
+        <p>In de 0NV komt maar 1 RG voor met <varname>Artikelnr</varname> als kandidaatsleutel:
+                <codeph>RG [<u>Artikelnr</u>, Artikelomschrijving, Aantal, Prijs)</codeph></p>
         <p>Deze gegevensgroep wordt ondergebracht in een nieuwe tabel
                 <varname>FACTUURREGEL</varname> waaraan de sleutel van de oorspronkelijke tabel,
-                <varname>Factuurnr</varname>, wordt toegevoegd. Samen vormen deze de
+                <varname>Factuurnr</varname>, nog wordt toegevoegd. Samen vormen deze twee velden de
                 <term>samengestelde sleutel</term> van de nieuwe tabel
                 <varname>FACTUURREGEL</varname>.</p>
         <p>De <term>1 NV</term> wordt dan:</p>
